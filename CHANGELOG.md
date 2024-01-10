@@ -35,6 +35,11 @@ Will become CHANGELOG for grscheller.boring_math
 
 ## Version - PyPI releases begin with "v"
 
+### Veresion 0.0.4 - commit date 2024-01-10
+
+* first coding change in years!
+* configured gh-pages
+
 ### Version 0.0.0.3 - commit date 2023-12-06
 
 * added pyproject.toml
