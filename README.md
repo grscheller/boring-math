@@ -1,11 +1,11 @@
-# PyPI grscheller.boring_math
+# PyPI grscheller.boring_math - development branch (main)
 
-Modernizing an old Python library I wrote years ago.
+Daddy's Boring Math Library,
 
-## Daddy's Boring Math Library
+## Overview
 
-Simple example of Python package with both a library and executables.
-The name for this project was suggested by my 13 year old daughter Mary.
+* Example of a Python package with both a libraries and executables
+* Package name suggested by my then 13 year old daughter Mary
 
 ## Source Code
 
@@ -13,8 +13,13 @@ The name for this project was suggested by my 13 year old daughter Mary.
 * [pythag3.py][2]: Executable to computes Pythagorean Triples
 * [ackermann.py][3]: Executable to computes Ackermann Function
 
+### Detailed API for grscheller.datastructures package
+
+* [Detailed grscheller.datastructures API's][4]
+
 ---
 
 [1]: src/grscheller/boring_math/integer_math.py
 [2]: src/grscheller/boring_math/bin/pythag3.py
 [3]: src/grscheller/boring_math/bin/ackermann.py
+[4]: https://grscheller.github.io/datastructures/
