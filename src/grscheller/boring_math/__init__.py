@@ -17,7 +17,7 @@
    Pyton based mathematics library and example executables.
 """
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2023 Geoffrey R. Scheller"
 __license__ = "Appache License 2.0"
