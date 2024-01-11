@@ -19,7 +19,7 @@ Daddy's Boring Math Library,
 
 ---
 
-[1]: README.d/grscheller/boring_math/integer_math.md
+[1]: README.d/integer_math.md
 [2]: src/grscheller/boring_math/bin/pythag3.py
 [3]: src/grscheller/boring_math/bin/ackermann.py
 [4]: https://grscheller.github.io/datastructures/
