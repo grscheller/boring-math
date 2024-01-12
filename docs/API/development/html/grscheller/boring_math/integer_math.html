@@ -54,8 +54,7 @@ from typing import Iterator
 from itertools import islice
 
 __all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;primes&#39;,
-           &#39;pythag3&#39;, &#39;ackermann&#39;,
-           &#39;fibonacci&#39;, &#39;fibonacci_list&#39;, &#39;fibonacci_tuple&#39;]
+           &#39;pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
 
 # Number Theory mathematical Functions.
 
@@ -111,7 +110,7 @@ def primes(start: int=2, end_before: int=100) -&gt; Iterator:
     # return sieve after trimming unwanted values
     return (x for x in sieve if x &gt;= start)
 
-# Pythagorean Triples related mathematical functions.
+# Pythagorean Triples Iterator
 
 def pythag3(a_max: int=3, all_max: int|None=None) -&gt; Iterator:
     &#34;&#34;&#34;This iterator finds all primative pythagorean triples
@@ -201,35 +200,15 @@ def ackermann(m: int, n:int) -&gt; int:
 
     return acker[0]
 
-# Fibonacci related mathematical functions.
+# Fibonacci Iterator
 
-def _fibonacci(fib0: int, fib1: int) -&gt; int:
+def fibonacci(fib0: int, fib1: int) -&gt; Iterator:
     &#34;&#34;&#34;Returns an iterator to a Fibonacci sequence whose
     first two terms are fib0 and fib1.
     &#34;&#34;&#34;
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1
-
-def fibonacci(fib0: int=0, fib1: int=1, count=None|int) -&gt; int:
-    &#34;&#34;&#34;Returns an iterator to a Fibonacci sequence whose
-    first two terms are fib0 and fib1.  The iterator ends
-    after count times.
-
-    Please note: fib0 and fib1 can be any objects where
-    the &#34;+&#34; operator has been defined.
-    &#34;&#34;&#34;
-    if count is None:
-        return _fibonacci(fib0, fib1)
-    return islice(_fibonacci(fib0, fib1), count)
-
-def fibonacci_list(fib0: int=0, fib1: int=1, count: int=10) -&gt; list:
-    &#34;&#34;&#34;Returns an list with a fibonacci sequence&#34;&#34;&#34;
-    return list(fibonacci(fib0, fib1, count))
-
-def fibonacci_tuple(fib0: int=0, fib1: int=1, count: int=10) -&gt; tuple:
-    &#34;&#34;&#34;Returns a tuple with a fibonacci sequence&#34;&#34;&#34;
-    return tuple(fibonacci_list(fib0, fib1, count))
 
 if __name__ == &#39;__main__&#39;:
     sys.exit(0)</code></pre>
@@ -281,58 +260,22 @@ ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0</p></div>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
-<span>def <span class="ident">fibonacci</span></span>(<span>fib0: int = 0, fib1: int = 1, count=None | int) ‑> int</span>
+<span>def <span class="ident">fibonacci</span></span>(<span>fib0: int, fib1: int) ‑> Iterator</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Returns an iterator to a Fibonacci sequence whose
-first two terms are fib0 and fib1.
-The iterator ends
-after count times.</p>
-<p>Please note: fib0 and fib1 can be any objects where
-the "+" operator has been defined.</p></div>
+first two terms are fib0 and fib1.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def fibonacci(fib0: int=0, fib1: int=1, count=None|int) -&gt; int:
+<pre><code class="python">def fibonacci(fib0: int, fib1: int) -&gt; Iterator:
     &#34;&#34;&#34;Returns an iterator to a Fibonacci sequence whose
-    first two terms are fib0 and fib1.  The iterator ends
-    after count times.
-
-    Please note: fib0 and fib1 can be any objects where
-    the &#34;+&#34; operator has been defined.
+    first two terms are fib0 and fib1.
     &#34;&#34;&#34;
-    if count is None:
-        return _fibonacci(fib0, fib1)
-    return islice(_fibonacci(fib0, fib1), count)</code></pre>
-</details>
-</dd>
-<dt id="grscheller.boring_math.integer_math.fibonacci_list"><code class="name flex">
-<span>def <span class="ident">fibonacci_list</span></span>(<span>fib0: int = 0, fib1: int = 1, count: int = 10) ‑> list</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Returns an list with a fibonacci sequence</p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def fibonacci_list(fib0: int=0, fib1: int=1, count: int=10) -&gt; list:
-    &#34;&#34;&#34;Returns an list with a fibonacci sequence&#34;&#34;&#34;
-    return list(fibonacci(fib0, fib1, count))</code></pre>
-</details>
-</dd>
-<dt id="grscheller.boring_math.integer_math.fibonacci_tuple"><code class="name flex">
-<span>def <span class="ident">fibonacci_tuple</span></span>(<span>fib0: int = 0, fib1: int = 1, count: int = 10) ‑> tuple</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Returns a tuple with a fibonacci sequence</p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def fibonacci_tuple(fib0: int=0, fib1: int=1, count: int=10) -&gt; tuple:
-    &#34;&#34;&#34;Returns a tuple with a fibonacci sequence&#34;&#34;&#34;
-    return tuple(fibonacci_list(fib0, fib1, count))</code></pre>
+    while True:
+        yield fib0
+        fib0, fib1 = fib1, fib0+fib1</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.gcd"><code class="name flex">
@@ -521,8 +464,6 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 <ul class="two-column">
 <li><code><a title="grscheller.boring_math.integer_math.ackermann" href="#grscheller.boring_math.integer_math.ackermann">ackermann</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
-<li><code><a title="grscheller.boring_math.integer_math.fibonacci_list" href="#grscheller.boring_math.integer_math.fibonacci_list">fibonacci_list</a></code></li>
-<li><code><a title="grscheller.boring_math.integer_math.fibonacci_tuple" href="#grscheller.boring_math.integer_math.fibonacci_tuple">fibonacci_tuple</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.primes" href="#grscheller.boring_math.integer_math.primes">primes</a></code></li>

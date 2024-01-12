@@ -33,4 +33,6 @@ The values a, b, c > 0 represent integer sides of a right triangle.
 
 ## Fibonacci Sequences
 
-* TODO:
+* Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator
+  * Return an iterator for a Fibonacci sequence
+  * Defaults to 0, 1, 1, 2, 3, 5, 8, ....

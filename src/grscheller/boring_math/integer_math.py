@@ -24,8 +24,7 @@ from typing import Iterator
 from itertools import islice
 
 __all__ = ['gcd', 'lcm', 'primes',
-           'pythag3', 'ackermann',
-           'fibonacci', 'fibonacci_list', 'fibonacci_tuple']
+           'pythag3', 'ackermann', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -81,7 +80,7 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
     # return sieve after trimming unwanted values
     return (x for x in sieve if x >= start)
 
-# Pythagorean Triples related mathematical functions.
+# Pythagorean Triples Iterator
 
 def pythag3(a_max: int=3, all_max: int|None=None) -> Iterator:
     """This iterator finds all primative pythagorean triples
@@ -171,35 +170,15 @@ def ackermann(m: int, n:int) -> int:
 
     return acker[0]
 
-# Fibonacci related mathematical functions.
+# Fibonacci Iterator
 
-def _fibonacci(fib0: int, fib1: int) -> int:
+def fibonacci(fib0: int, fib1: int) -> Iterator:
     """Returns an iterator to a Fibonacci sequence whose
     first two terms are fib0 and fib1.
     """
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1
-
-def fibonacci(fib0: int=0, fib1: int=1, count=None|int) -> int:
-    """Returns an iterator to a Fibonacci sequence whose
-    first two terms are fib0 and fib1.  The iterator ends
-    after count times.
-
-    Please note: fib0 and fib1 can be any objects where
-    the "+" operator has been defined.
-    """
-    if count is None:
-        return _fibonacci(fib0, fib1)
-    return islice(_fibonacci(fib0, fib1), count)
-
-def fibonacci_list(fib0: int=0, fib1: int=1, count: int=10) -> list:
-    """Returns an list with a fibonacci sequence"""
-    return list(fibonacci(fib0, fib1, count))
-
-def fibonacci_tuple(fib0: int=0, fib1: int=1, count: int=10) -> tuple:
-    """Returns a tuple with a fibonacci sequence"""
-    return tuple(fibonacci_list(fib0, fib1, count))
 
 if __name__ == '__main__':
     sys.exit(0)
