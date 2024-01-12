@@ -19,6 +19,10 @@ classifiers = [
 dependencies = []
 dynamic = ["version", "description"]
 
+[project.scripts]
+pythag3 = "integer_math_bin:pythag3"
+ackerman = "integer_math_bin:ackerman"
+
 [project.urls]
 Source = "https://github.com/grscheller/boring_math"
 Changelog = "https://github.com/grscheller/boring_math/blob/main/CHANGELOG.md"
