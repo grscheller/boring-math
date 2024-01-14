@@ -20,8 +20,8 @@ dependencies = []
 dynamic = ["version", "description"]
 
 [project.scripts]
-pythag3 = "integer_math_bin:pythag3"
-ackerman = "integer_math_bin:ackerman"
+pythag3 = "integer_math_cli:pythag3_cli"
+ackermann = "integer_math_cli:ackermann_cli"
 
 [project.urls]
 Source = "https://github.com/grscheller/boring_math"
@@ -30,7 +30,7 @@ Documentation = "https://grscheller.github.io/boring_math/"
 
 [tool.pylsp-mypy]
 live-mode = true
-strict = false
+strict = true
 report_progress = true
 
 [tool.ruff]

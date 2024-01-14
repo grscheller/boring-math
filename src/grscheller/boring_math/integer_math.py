@@ -94,39 +94,39 @@ def pythag3(a_max: int=3, all_max: int|None=None) -> Iterator:
     If called with two arguments generate all triples with
     a <= a_max and a,b,c <= all_max
     """
-    def cap_max_abc(_a_max: int, _all_max: int) -> int:
+    def cap_max_abc(a_max: int, all_max: int) -> int:
         """Returns capped max values for sides a,b,c where
         based on a_max and all_max given by caller of pythag3.
 
-        note: _a_max and _c_max are integers
-        note: _b_max is a function of side a
+        note: a_max and _c_max are integers
+        note: b_max is a function of side a
         """
         # Limit values to those where geometry
         # based optimization assumptions hold.
-        if _a_max < 3:
-            _a_max = 2
+        if a_max < 3:
+            a_max = 2
 
         # For a given value of a, theoretically there
         # are no more triples beyond this value of b.
-        def _b_max_uncapped(a):
+        def b_max_uncapped(a):
             return (a**2 - 1)//2
 
-        if _all_max is None:
-            _b_max = _b_max_uncapped
+        if all_max is None:
+            b_max = b_max_uncapped
         else:
-            if _all_max < 5:
-                _all_max = 4
-            if _all_max < _a_max + 2:
-                _a_max = _all_max - 2
+            if all_max < 5:
+                all_max = 4
+            if all_max < a_max + 2:
+                a_max = all_max - 2
 
-            def _b_max_capped(a):
-                return min((_b_max_uncapped(a), int((_all_max**2 - a**2)**0.5)))
+            def b_max_capped(a):
+                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
 
-            _b_max = _b_max_capped
+            b_max = b_max_capped
 
-        _c_max = int((_a_max**2 + _b_max(_a_max)**2)**(0.5)) + 1
+        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
 
-        return _a_max, _b_max, _c_max
+        return a_max, b_max, c_max
 
     # Cap triples to those with sides no bigger than all_max
     a_max, b_max, c_max = cap_max_abc(a_max, all_max)

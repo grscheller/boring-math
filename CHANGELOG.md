@@ -1,4 +1,4 @@
-# CHANGELOG: grscheller-python-libs
+# CHANGELOG: grscheller.boring_math
 
 Will become CHANGELOG for grscheller.boring_math
 
@@ -35,9 +35,15 @@ Will become CHANGELOG for grscheller.boring_math
 
 ## Version - PyPI releases begin with "v"
 
+### Veresion 0.0.8 - commit date 2024-01-14
+
+* working on pyproject.toml infrastructure for PyPI releases
+* will use Flit as the packaging/publishing tool
+* replaced bin/ scripts with boring_math.integer_math_cli entry pts
+
 ### Veresion 0.0.4 - commit date 2024-01-10
 
-* first coding change in years!
+* first coding changes in years!
 * configured gh-pages
 
 ### Version 0.0.0.3 - commit date 2023-12-06
