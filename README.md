@@ -1,6 +1,6 @@
-# PyPI grscheller.boring_math - development branch (main)
+# PyPI grscheller.boring_math
 
-Daddy's Boring Math Library,
+Daddy's Boring Math Library.
 
 ## Overview
 
