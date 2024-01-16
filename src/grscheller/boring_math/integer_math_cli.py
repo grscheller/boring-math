@@ -20,7 +20,6 @@ Supports OS independent CLI scripts demostrating the integer_math module.
 from __future__ import annotations
 
 import sys
-from typing import Iterator
 from grscheller.boring_math.integer_math import ackermann, pythag3
 
 __all__ = ['pythag3_cli', 'ackermann_cli']
