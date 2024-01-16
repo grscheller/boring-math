@@ -1,10 +1,8 @@
-# CHANGELOG: grscheller.boring_math
-
-Will become CHANGELOG for grscheller.boring_math
+# CHANGELOG: grscheller.boring-math
 
 ## Overview
 
-* Single Maintainer PyPI Package
+* Single Maintainer PyPI Project
 * Rolling Release Model
   * maintained on GitHub, software is an Alpha release 
   * maintainer will not back port bug fixes to previous versions
@@ -34,6 +32,14 @@ Will become CHANGELOG for grscheller.boring_math
     * not to be taken too seriously
 
 ## Version - PyPI releases begin with "v"
+
+### Veresion 0.0.8 - commit date 2024-01-14
+
+* changed projects name from boring_math to boring-math
+* both GitHub repo and future PyPI repo
+* more in alignment with what I see on PyPI
+* project is grscheller.boring-math
+* package is still grscheller.boring_math
 
 ### Veresion 0.0.8 - commit date 2024-01-14
 

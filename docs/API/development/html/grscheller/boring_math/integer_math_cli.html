@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>grscheller.boring_math.integer_math_cli API documentation</title>
-<meta name="description" content="Boring Math integer library cli scripts …" />
+<meta name="description" content="Entry points for grscheller.boring_math.integer_math cli scripts …" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,13 +22,13 @@
 <h1 class="title">Module <code>grscheller.boring_math.integer_math_cli</code></h1>
 </header>
 <section id="section-intro">
-<p>Boring Math integer library cli scripts</p>
-<p>CLI functions of an integer pure math nature.</p>
+<p>Entry points for grscheller.boring_math.integer_math cli scripts</p>
+<p>Supports OS independent CLI scripts demostrating the integer_math module.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python"># Copyright 2016-2023 Geoffrey R. Scheller
+<pre><code class="python"># Copyright 2016-2024 Geoffrey R. Scheller
 #
 # Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
 # you may not use this file except in compliance with the License.
@@ -42,15 +42,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-&#34;&#34;&#34;Boring Math integer library cli scripts
+&#34;&#34;&#34;Entry points for grscheller.boring_math.integer_math cli scripts
 
-CLI functions of an integer pure math nature.
+Supports OS independent CLI scripts demostrating the integer_math module.
 &#34;&#34;&#34;
 
 from __future__ import annotations
 
 import sys
-from typing import Iterator
 from grscheller.boring_math.integer_math import ackermann, pythag3
 
 __all__ = [&#39;pythag3_cli&#39;, &#39;ackermann_cli&#39;]
