@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math.integer_math cli scripts
+"""Entry points for grscheller.boring_math.integer_math cli scripts.
 
-Supports OS independent CLI scripts demostrating the integer_math module.
+Supports automatically generated OS independent CLI scripts.
 """
 
 from __future__ import annotations
