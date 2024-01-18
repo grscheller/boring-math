@@ -3,7 +3,7 @@ requires = ["flit_core>=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "grscheller.boring_math"
+name = "grscheller.boring-math"
 authors = [
     { name = "Geoffrey R. Scheller", email = "geoffrey@scheller.com" },
 ]
@@ -19,14 +19,18 @@ classifiers = [
 dependencies = []
 dynamic = ["version", "description"]
 
+[project.scripts]
+pythag3 = "grscheller.boring_math.integer_math_cli:pythag3_cli"
+ackermann = "grscheller.boring_math.integer_math_cli:ackermann_cli"
+
 [project.urls]
-Source = "https://github.com/grscheller/boring_math"
-Changelog = "https://github.com/grscheller/boring_math/blob/main/CHANGELOG.md"
-Documentation = "https://grscheller.github.io/boring_math/"
+Source = "https://github.com/grscheller/boring-math"
+Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
+Documentation = "https://grscheller.github.io/boring-math/"
 
 [tool.pylsp-mypy]
 live-mode = true
-strict = false
+strict = true
 report_progress = true
 
 [tool.ruff]
