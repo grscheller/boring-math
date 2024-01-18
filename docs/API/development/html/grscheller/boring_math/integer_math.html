@@ -63,8 +63,10 @@ def gcd(fst: int, snd: int) -&gt; int:
 
     Takes two integers, returns gcd &gt;= 0.
 
-    Note: gcd(0,0) returns 0 but in this case the gcd does not exist.
+    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     &#34;&#34;&#34;
+    fst = abs(fst)
+    snd = abs(snd)
     while snd &gt; 0:
         fst, snd = snd, fst % snd
 
@@ -72,13 +74,12 @@ def gcd(fst: int, snd: int) -&gt; int:
 
 def lcm(fst: int, snd: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple of two integers.
-       Takes two integers, returns lcm &gt;=0.
+       Takes two integers, returns lcm &gt;= 0.
     &#34;&#34;&#34;
-    common = gcd(fst, snd)
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
     fst //= common
-    snd //= common
 
-    return abs(fst*snd*common)
+    return abs(fst*snd)
 
 def primes(start: int=2, end_before: int=100) -&gt; Iterator:
     &#34;&#34;&#34;Return an iterator for the prime numbers Using
@@ -293,7 +294,7 @@ first two terms are fib0 and fib1.</p></div>
 <dd>
 <div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
 <p>Takes two integers, returns gcd &gt;= 0.</p>
-<p>Note: gcd(0,0) returns 0 but in this case the gcd does not exist.</p></div>
+<p>Note: gcd(0,0) returns 0 but in this case the gcd does not exist</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -303,8 +304,10 @@ first two terms are fib0 and fib1.</p></div>
 
     Takes two integers, returns gcd &gt;= 0.
 
-    Note: gcd(0,0) returns 0 but in this case the gcd does not exist.
+    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     &#34;&#34;&#34;
+    fst = abs(fst)
+    snd = abs(snd)
     while snd &gt; 0:
         fst, snd = snd, fst % snd
 
@@ -316,20 +319,19 @@ first two terms are fib0 and fib1.</p></div>
 </code></dt>
 <dd>
 <div class="desc"><p>Finds the least common multiple of two integers.
-Takes two integers, returns lcm &gt;=0.</p></div>
+Takes two integers, returns lcm &gt;= 0.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def lcm(fst: int, snd: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple of two integers.
-       Takes two integers, returns lcm &gt;=0.
+       Takes two integers, returns lcm &gt;= 0.
     &#34;&#34;&#34;
-    common = gcd(fst, snd)
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
     fst //= common
-    snd //= common
 
-    return abs(fst*snd*common)</code></pre>
+    return abs(fst*snd)</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">

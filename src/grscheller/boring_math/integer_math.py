@@ -33,8 +33,10 @@ def gcd(fst: int, snd: int) -> int:
 
     Takes two integers, returns gcd >= 0.
 
-    Note: gcd(0,0) returns 0 but in this case the gcd does not exist.
+    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     """
+    fst = abs(fst)
+    snd = abs(snd)
     while snd > 0:
         fst, snd = snd, fst % snd
 
@@ -42,13 +44,12 @@ def gcd(fst: int, snd: int) -> int:
 
 def lcm(fst: int, snd: int) -> int:
     """Finds the least common multiple of two integers.
-       Takes two integers, returns lcm >=0.
+       Takes two integers, returns lcm >= 0.
     """
-    common = gcd(fst, snd)
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
     fst //= common
-    snd //= common
 
-    return abs(fst*snd*common)
+    return abs(fst*snd)
 
 def primes(start: int=2, end_before: int=100) -> Iterator:
     """Return an iterator for the prime numbers Using
