@@ -2,9 +2,13 @@
 
 PyPI releases begin with `v`.
 
+## Veresion v0.1.0 - PyPI release date 2024-01-17
+
+* initial PyPI grscheller.boring-math release
+
 ## Veresion 0.0.8 - commit date 2024-01-14
 
-* changed projects name from boring_math to boring-math
+* changed project's name from boring_math to boring-math
 * both GitHub repo and future PyPI repo
 * more in alignment with what I see on PyPI
 * project is grscheller.boring-math
