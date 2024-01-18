@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
-<title>grscheller.boring_math.bin.pythag3 API documentation</title>
-<meta name="description" content="Find all primative pythagorian triples up to a given level …" />
+<title>grscheller.boring_math.integer_math_cli API documentation</title>
+<meta name="description" content="Entry points for grscheller.boring_math.integer_math cli scripts …" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -19,70 +19,105 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>grscheller.boring_math.bin.pythag3</code></h1>
+<h1 class="title">Module <code>grscheller.boring_math.integer_math_cli</code></h1>
 </header>
 <section id="section-intro">
-<p>Find all primative pythagorian triples up to a given level.</p>
-<p>A pythagorian triple are three integers (a,b,c) such
-that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1</p>
-<p>Usage: pythag3.py n [m]</p>
-<p>If called with one argument generate all triples with a &lt;= n.
-If called with two arguments generate all triples with a &lt;= n and a,b,c &lt;= m</p>
+<p>Entry points for grscheller.boring_math.integer_math cli scripts.</p>
+<p>Supports automatically generated OS independent CLI scripts.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">#!/usr/bin/env python
-# Copyright 2016-2023 Geoffrey R. Scheller
+<pre><code class="python"># Copyright 2016-2024 Geoffrey R. Scheller
 #
-# 
 # Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-&#34;&#34;&#34;Find all primative pythagorian triples up to a given level.
+&#34;&#34;&#34;Entry points for grscheller.boring_math.integer_math cli scripts.
 
-A pythagorian triple are three integers (a,b,c) such
-that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1
-
-Usage: pythag3.py n [m]
-
-If called with one argument generate all triples with a &lt;= n.
-If called with two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+Supports automatically generated OS independent CLI scripts.
 &#34;&#34;&#34;
 
-__author__ = &#34;Geoffrey Scheller&#34;
+from __future__ import annotations
 
 import sys
-from grscheller.boring_math.integer_math import pythag3
+from grscheller.boring_math.integer_math import ackermann, pythag3
 
-def main():
-    &#34;&#34;&#34;Main entry point for pythag3.py&#34;&#34;&#34;
+__all__ = [&#39;pythag3_cli&#39;, &#39;ackermann_cli&#39;]
+
+# Number Theory mathematical script entry points
+
+# Pythagorean Triples generator script
+
+def pythag3_cli() -&gt; None:
+    &#34;&#34;&#34;Find all primative pythagorian triples up to a given level.
+
+    A pythagorian triple are three integers (a,b,c) such
+    that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1
+
+    Usage: pythag3.py n [m]
+
+    One argument generates all triples with a &lt;= n.
+    Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+    &#34;&#34;&#34;
 
     # Argument processing with some idiot checking
     args = sys.argv[1:]
 
-    if len(args) == 1:
-        pythag3_iter = pythag3(int(args[0]))
-    elif len(args) == 2:
-        pythag3_iter = pythag3(int(args[0]), int(args[1]))
+    if len(args) &gt; 1:
+        pythagTriples = pythag3(int(args[0]), int(args[1]))
+    elif len(args) &gt; 0:
+        pythagTriples = pythag3(int(args[0]))
     else:
-        pythag3_iter = pythag3()
+        pythagTriples = pythag3()
 
     # Print out Pythagean Triples
-    for triple in pythag3_iter:
+    for triple in pythagTriples:
         print(triple)
 
-if __name__ == &#34;__main__&#34;:
-    main()</code></pre>
+# Computable but not primitive recursive functions scripts
+
+def ackermann_cli() -&gt; None:
+    &#34;&#34;&#34;Ackermann function is defined recursively by:
+
+        ackermann(0,n) = n+1
+        ackermann(m,0) = ackermann(m-1,1)
+        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+
+    Usage: ackermann.py m n
+    &#34;&#34;&#34;
+    # Argument parsing and checking
+    args = sys.argv[1:]
+    if len(args) == 2:
+        try:
+            m = int(args[0])
+            n = int(args[1])
+            if m &lt; 0 or n &lt; 0:
+                print(&#34;Error: Negative integer argument given&#34; , file=sys.stderr)
+                sys.exit(1)
+        except ValueError:
+            print(&#34;Error: Non-integer argument given&#34;, file=sys.stderr)
+            sys.exit(1)
+    else:
+        print(&#34;Error: ackermann.py takes 2 arguments&#34;, file=sys.stderr)
+        sys.exit(1)
+
+    # Compute value
+    print(ackermann(m, n))
+
+# Fibonacci script entry points
+
+if __name__ == &#39;__main__&#39;:
+    sys.exit(0)</code></pre>
 </details>
 </section>
 <section>
@@ -92,30 +127,87 @@ if __name__ == &#34;__main__&#34;:
 <section>
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
-<dt id="grscheller.boring_math.bin.pythag3.main"><code class="name flex">
-<span>def <span class="ident">main</span></span>(<span>)</span>
+<dt id="grscheller.boring_math.integer_math_cli.ackermann_cli"><code class="name flex">
+<span>def <span class="ident">ackermann_cli</span></span>(<span>) ‑> None</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Main entry point for pythag3.py</p></div>
+<div class="desc"><p>Ackermann function is defined recursively by:</p>
+<pre><code>ackermann(0,n) = n+1
+ackermann(m,0) = ackermann(m-1,1)
+ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+</code></pre>
+<p>Usage: ackermann.py m n</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def main():
-    &#34;&#34;&#34;Main entry point for pythag3.py&#34;&#34;&#34;
+<pre><code class="python">def ackermann_cli() -&gt; None:
+    &#34;&#34;&#34;Ackermann function is defined recursively by:
+
+        ackermann(0,n) = n+1
+        ackermann(m,0) = ackermann(m-1,1)
+        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+
+    Usage: ackermann.py m n
+    &#34;&#34;&#34;
+    # Argument parsing and checking
+    args = sys.argv[1:]
+    if len(args) == 2:
+        try:
+            m = int(args[0])
+            n = int(args[1])
+            if m &lt; 0 or n &lt; 0:
+                print(&#34;Error: Negative integer argument given&#34; , file=sys.stderr)
+                sys.exit(1)
+        except ValueError:
+            print(&#34;Error: Non-integer argument given&#34;, file=sys.stderr)
+            sys.exit(1)
+    else:
+        print(&#34;Error: ackermann.py takes 2 arguments&#34;, file=sys.stderr)
+        sys.exit(1)
+
+    # Compute value
+    print(ackermann(m, n))</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math_cli.pythag3_cli"><code class="name flex">
+<span>def <span class="ident">pythag3_cli</span></span>(<span>) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find all primative pythagorian triples up to a given level.</p>
+<p>A pythagorian triple are three integers (a,b,c) such
+that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1</p>
+<p>Usage: pythag3.py n [m]</p>
+<p>One argument generates all triples with a &lt;= n.
+Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pythag3_cli() -&gt; None:
+    &#34;&#34;&#34;Find all primative pythagorian triples up to a given level.
+
+    A pythagorian triple are three integers (a,b,c) such
+    that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1
+
+    Usage: pythag3.py n [m]
+
+    One argument generates all triples with a &lt;= n.
+    Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+    &#34;&#34;&#34;
 
     # Argument processing with some idiot checking
     args = sys.argv[1:]
 
-    if len(args) == 1:
-        pythag3_iter = pythag3(int(args[0]))
-    elif len(args) == 2:
-        pythag3_iter = pythag3(int(args[0]), int(args[1]))
+    if len(args) &gt; 1:
+        pythagTriples = pythag3(int(args[0]), int(args[1]))
+    elif len(args) &gt; 0:
+        pythagTriples = pythag3(int(args[0]))
     else:
-        pythag3_iter = pythag3()
+        pythagTriples = pythag3()
 
     # Print out Pythagean Triples
-    for triple in pythag3_iter:
+    for triple in pythagTriples:
         print(triple)</code></pre>
 </details>
 </dd>
@@ -132,12 +224,13 @@ if __name__ == &#34;__main__&#34;:
 <ul id="index">
 <li><h3>Super-module</h3>
 <ul>
-<li><code><a title="grscheller.boring_math.bin" href="index.html">grscheller.boring_math.bin</a></code></li>
+<li><code><a title="grscheller.boring_math" href="index.html">grscheller.boring_math</a></code></li>
 </ul>
 </li>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="">
-<li><code><a title="grscheller.boring_math.bin.pythag3.main" href="#grscheller.boring_math.bin.pythag3.main">main</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math_cli.ackermann_cli" href="#grscheller.boring_math.integer_math_cli.ackermann_cli">ackermann_cli</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math_cli.pythag3_cli" href="#grscheller.boring_math.integer_math_cli.pythag3_cli">pythag3_cli</a></code></li>
 </ul>
 </li>
 </ul>
