@@ -1,10 +1,34 @@
-# CHANGELOG: grscheller.boring-math
+# CHANGELOG
 
-PyPI releases begin with `v`.
+Changelog for the grscheller.boring-math PyPI project.
+Version numbers for PyPI releases begin with a `v`.
+
+Semantic Versioning will be used:
+
+* Semantic versioning for PyPI releases:
+  * first digit means
+    * A major event, epoch, or paradigm shift
+  * second digit means
+    * PyPI breaking API changes or PyPI major changes
+  * third digit either means
+    * PyPI API additions, PyPI bugfixes or minor changes
+    * Significant documentation updates
+
+## Veresion v0.1.1 - PyPI release date 2024-01-20
+
+* fixed some negative value edge cases
+  * lcm(0,0) now gives 0 instead of a divide by zero exception
+    * some authors leave lcm(0, 0) as undefined
+    * lcm(0, 0) = 0 does make sense
+      * since a*0 = 0 for all a >= 0
+      * 0 is the smallest non-negative interger a such that a*0 = 0
+      * most math theorems remain true for this case
+* README.md improvements
 
 ## Veresion v0.1.0 - PyPI release date 2024-01-17
 
 * initial PyPI grscheller.boring-math release
+* updated pyproject.toml to be in alignment with grscheller.datastrucutes
 
 ## Veresion 0.0.8 - commit date 2024-01-14
 

@@ -18,6 +18,13 @@ classifiers = [
 ]
 dependencies = []
 dynamic = ["version", "description"]
+keywords = [
+    "math", "mathematics",
+    "lcm", "gcd", "primes",
+    "pythagorean triples", "pythag3",
+    "ackermann",
+    "fibonacci"
+]
 
 [project.scripts]
 pythag3 = "grscheller.boring_math.integer_math_cli:pythag3_cli"
@@ -27,6 +34,9 @@ ackermann = "grscheller.boring_math.integer_math_cli:ackermann_cli"
 Source = "https://github.com/grscheller/boring-math"
 Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
 Documentation = "https://grscheller.github.io/boring-math/"
+
+[tool.flit.sdist]
+exclude = ["docs/*", ".github/*", ".gitignore"]
 
 [tool.pylsp-mypy]
 live-mode = true
