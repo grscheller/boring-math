@@ -50,10 +50,9 @@ Library of functions of an integer pure math nature.
 from __future__ import annotations
 
 import sys
-from typing import Iterator
-from itertools import islice
+from typing import Iterator, Tuple
 
-__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;primes&#39;,
+__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;primes&#39;,
            &#39;pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
 
 # Number Theory mathematical Functions.
@@ -65,8 +64,8 @@ def gcd(fst: int, snd: int) -&gt; int:
 
     Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     &#34;&#34;&#34;
-    fst = abs(fst)
-    snd = abs(snd)
+    fst, snd = abs(fst), abs(snd)
+    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
     while snd &gt; 0:
         fst, snd = snd, fst % snd
 
@@ -81,9 +80,18 @@ def lcm(fst: int, snd: int) -&gt; int:
 
     return abs(fst*snd)
 
+def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
+    &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
+       
+       Note: One use case is when dividing two factored BigInts. This is the main
+             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    &#39;&#39;&#39;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common
+
 def primes(start: int=2, end_before: int=100) -&gt; Iterator:
-    &#34;&#34;&#34;Return an iterator for the prime numbers Using
-    the Sieve of Eratosthenes algorithm.
+    &#34;&#34;&#34;Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+    algorithm.
     &#34;&#34;&#34;
     if start &gt;= end_before or end_before &lt; 3:
         return []
@@ -306,8 +314,8 @@ first two terms are fib0 and fib1.</p></div>
 
     Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     &#34;&#34;&#34;
-    fst = abs(fst)
-    snd = abs(snd)
+    fst, snd = abs(fst), abs(snd)
+    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
     while snd &gt; 0:
         fst, snd = snd, fst % snd
 
@@ -334,19 +342,40 @@ Takes two integers, returns lcm &gt;= 0.</p></div>
     return abs(fst*snd)</code></pre>
 </details>
 </dd>
+<dt id="grscheller.boring_math.integer_math.mkCoprime"><code class="name flex">
+<span>def <span class="ident">mkCoprime</span></span>(<span>fst: int, snd: int) ‑> Tuple(int, int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
+<p>Note: One use case is when dividing two factored BigInts. This is the main
+motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
+    &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
+       
+       Note: One use case is when dividing two factored BigInts. This is the main
+             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    &#39;&#39;&#39;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common</code></pre>
+</details>
+</dd>
 <dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">
 <span>def <span class="ident">primes</span></span>(<span>start: int = 2, end_before: int = 100) ‑> Iterator</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Return an iterator for the prime numbers Using
-the Sieve of Eratosthenes algorithm.</p></div>
+<div class="desc"><p>Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+algorithm.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def primes(start: int=2, end_before: int=100) -&gt; Iterator:
-    &#34;&#34;&#34;Return an iterator for the prime numbers Using
-    the Sieve of Eratosthenes algorithm.
+    &#34;&#34;&#34;Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+    algorithm.
     &#34;&#34;&#34;
     if start &gt;= end_before or end_before &lt; 3:
         return []
@@ -474,6 +503,7 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 <li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.mkCoprime" href="#grscheller.boring_math.integer_math.mkCoprime">mkCoprime</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.primes" href="#grscheller.boring_math.integer_math.primes">primes</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.pythag3" href="#grscheller.boring_math.integer_math.pythag3">pythag3</a></code></li>
 </ul>

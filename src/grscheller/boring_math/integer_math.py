@@ -20,10 +20,9 @@ Library of functions of an integer pure math nature.
 from __future__ import annotations
 
 import sys
-from typing import Iterator
-from itertools import islice
+from typing import Iterator, Tuple
 
-__all__ = ['gcd', 'lcm', 'primes',
+__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes',
            'pythag3', 'ackermann', 'fibonacci']
 
 # Number Theory mathematical Functions.
@@ -35,8 +34,8 @@ def gcd(fst: int, snd: int) -> int:
 
     Note: gcd(0,0) returns 0 but in this case the gcd does not exist
     """
-    fst = abs(fst)
-    snd = abs(snd)
+    fst, snd = abs(fst), abs(snd)
+    fst, snd = (fst, snd) if fst > snd else (snd, fst)
     while snd > 0:
         fst, snd = snd, fst % snd
 
@@ -51,9 +50,18 @@ def lcm(fst: int, snd: int) -> int:
 
     return abs(fst*snd)
 
+def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
+    '''Makes 2 integers coprime by dividing out their common factors.
+       
+       Note: One use case is when dividing two factored BigInts. This is the main
+             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    '''
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common
+
 def primes(start: int=2, end_before: int=100) -> Iterator:
-    """Return an iterator for the prime numbers Using
-    the Sieve of Eratosthenes algorithm.
+    """Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+    algorithm.
     """
     if start >= end_before or end_before < 3:
         return []
