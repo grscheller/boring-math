@@ -20,9 +20,11 @@ Library of functions of an integer pure math nature.
 from __future__ import annotations
 
 import sys
+import math
 from typing import Iterator, Tuple
+from grscheller.datastructures.queues import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes',
+__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes', 'comb',
            'pythag3', 'ackermann', 'fibonacci']
 
 # Number Theory mathematical Functions.
@@ -86,6 +88,28 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 
     # return sieve after trimming unwanted values
     return (x for x in sieve if x >= start)
+
+# Combinations and Permantations
+
+def comb(n: int, m: int) -> int:
+    """Implements combinations of n items taken m at a time in a way that works
+    efficiently for Python builtin big arbitrary length integers.
+
+    TODO: m = 0 & n = 0 & m = n edge cases
+    TODO: m < 0 & n < 0 idiot checking
+    """
+    topFactors = CircularArray(*range(n, n - m, -1))
+    botFactors = CircularArray(*range(m, 1, -1))
+    while botFactors:
+        bot = botFactors.popL()
+        while True:
+            top = topFactors.popL()
+            top, bot = mkCoprime(top, bot)
+            if top > 1:
+                topFactors.pushR(top)
+            if bot == 1:
+                break
+    return math.prod(topFactors)
 
 # Pythagorean Triples
 
