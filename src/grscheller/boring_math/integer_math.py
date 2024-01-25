@@ -1,11 +1,11 @@
 # Copyright 2016-2023 Geoffrey R. Scheller
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -54,7 +54,7 @@ def lcm(fst: int, snd: int) -> int:
 
 def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
     '''Makes 2 integers coprime by dividing out their common factors.
-       
+
        Note: One use case is when dividing two factored BigInts. This is the main
              motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
     '''
@@ -94,12 +94,49 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 def comb(n: int, m: int) -> int:
     """Implements combinations of n items taken m at a time in a way that works
     efficiently for Python builtin big arbitrary length integers.
-
-    TODO: m = 0 & n = 0 & m = n edge cases
-    TODO: m < 0 & n < 0 idiot checking
     """
-    topFactors = CircularArray(*range(n, n - m, -1))
-    botFactors = CircularArray(*range(m, 1, -1))
+    # deal with edge cases (mostly for optimizations)
+    if type(n) is not int or type(n) is not int:
+        raise TypeError('n & m must both be of type int for comb(n, m)')
+    if n < 0 or m < 0:
+        raise ValueError('n and m must be a non-negavive ints for comb(n, m)')
+    if m == 0:
+        return 1
+    if m >= n:
+        if m > n:
+            return 0
+        else:
+            return 1
+    if m > (n // 2):
+        m = n - m
+
+    # Prepare data structures with optimizations
+    top = [*range(n - m + 1, n + 1)]
+    bot = [*range(m, 1, -1)]
+    topFactors = CircularArray()
+    botFactors = CircularArray()
+
+    size = len(top)
+    if size < 2:
+        topFactors.pushR(*top)
+    else:
+        if size % 2 == 1:
+            top.append(top.pop() * top.pop())
+            size -= 1
+        for ii in range(size // 2):
+            topFactors.pushR(top[ii] * top[size - ii - 1])
+
+    size = len(bot)
+    if size < 2:
+        botFactors.pushR(*bot)
+    else:
+        if size % 2 == 1:
+            bot.append(bot.pop() * bot.pop())
+            size -= 1
+        for ii in range(size // 2):
+            botFactors.pushR(bot[ii] * bot[size - ii - 1])
+
+    # basic algorithm - works for all n >= m >= 0
     while botFactors:
         bot = botFactors.popL()
         while True:
@@ -109,6 +146,7 @@ def comb(n: int, m: int) -> int:
                 topFactors.pushR(top)
             if bot == 1:
                 break
+
     return math.prod(topFactors)
 
 # Pythagorean Triples
@@ -185,7 +223,7 @@ def ackermann(m: int, n:int) -> int:
 
     Ackerman's function is an example of a function that is computable
     but not primatively recursive. It quickly becomes computationally
-    intractable for relatively small values of m and n. 
+    intractable for relatively small values of m and n.
     """
     # Model a function stack with a list, then
     # evaluate innermost ackermann function first.
