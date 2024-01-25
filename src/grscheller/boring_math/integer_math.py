@@ -95,46 +95,30 @@ def comb(n: int, m: int) -> int:
     """Implements combinations of n items taken m at a time in a way that works
     efficiently for Python builtin big arbitrary length integers.
     """
-    # deal with edge cases (mostly for optimizations)
     if type(n) is not int or type(n) is not int:
-        raise TypeError('n & m must both be of type int for comb(n, m)')
+        raise TypeError('for comb(b, n) n and m must both be non-negative integers')
     if n < 0 or m < 0:
-        raise ValueError('n and m must be a non-negavive ints for comb(n, m)')
-    if m == 0:
-        return 1
-    if m >= n:
-        if m > n:
-            return 0
-        else:
-            return 1
+        raise ValueError('for comb(n, m) n and m must be a non-negavive ints')
+    if m > n:
+        return 0
+
+    # using comb(n, m) = comb(n, n-m) makes both topFactors & botFactors smaller
     if m > (n // 2):
         m = n - m
 
     # Prepare data structures with optimizations
-    top = [*range(n - m + 1, n + 1)]
-    bot = [*range(m, 1, -1)]
-    topFactors = CircularArray()
-    botFactors = CircularArray()
+    topFactors = CircularArray(*range(n - m + 1, n + 1))
+    botFactors = CircularArray(*range(m, 1, -1))
 
-    size = len(top)
-    if size < 2:
-        topFactors.pushR(*top)
-    else:
-        if size % 2 == 1:
-            top.append(top.pop() * top.pop())
-            size -= 1
-        for ii in range(size // 2):
-            topFactors.pushR(top[ii] * top[size - ii - 1])
-
-    size = len(bot)
-    if size < 2:
-        botFactors.pushR(*bot)
-    else:
-        if size % 2 == 1:
-            bot.append(bot.pop() * bot.pop())
-            size -= 1
-        for ii in range(size // 2):
-            botFactors.pushR(bot[ii] * bot[size - ii - 1])
+    # size = len(top)
+    # if size < 2:
+    #     topFactors.pushR(*top)
+    # else:
+    #     if size % 2 == 1:
+    #         top.pushR(top.popL() * top.popR())
+    #         size -= 1
+    #     for ii in range(size // 2):
+    #         topFactors.pushL(top[ii] * top[size - ii - 1])
 
     # basic algorithm - works for all n >= m >= 0
     while botFactors:
