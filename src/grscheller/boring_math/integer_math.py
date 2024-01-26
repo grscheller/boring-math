@@ -91,7 +91,7 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 
 # Combinations and Permantations
 
-def comb(n: int, m: int) -> int:
+def comb(n: int, m: int, grs: int=1024) -> int:
     """Implements combinations of n items taken m at a time in a way that works
     efficiently for Python builtin big arbitrary length integers.
     """
@@ -106,21 +106,30 @@ def comb(n: int, m: int) -> int:
     if m > (n // 2):
         m = n - m
 
-    # Prepare data structures with optimizations
+    def compact(ca: CircularArray, targetSize: int = 45) -> CircularArray:
+        """Reduce the length of the circular array by factors of 2 by
+        combinding factors from each end.
+        """
+        ca1 = ca
+        while len(ca1) > targetSize:
+            ca2 = CircularArray()
+            size = len(ca1)
+            if size % 2 == 1:
+                ca1.pushR(ca1.popL() * ca1.popR())
+                size -= 1
+            for ii in range(size // 2):
+                ca2.pushL(ca1[ii] * ca1[size - ii - 1])
+            ca1 = ca2
+        return ca1
+
+    # Prepare data structures
     topFactors = CircularArray(*range(n - m + 1, n + 1))
     botFactors = CircularArray(*range(m, 1, -1))
 
-    # size = len(top)
-    # if size < 2:
-    #     topFactors.pushR(*top)
-    # else:
-    #     if size % 2 == 1:
-    #         top.pushR(top.popL() * top.popR())
-    #         size -= 1
-    #     for ii in range(size // 2):
-    #         topFactors.pushL(top[ii] * top[size - ii - 1])
+    topFactors = compact(topFactors, grs)
+    botFactors = compact(botFactors, grs)
 
-    # basic algorithm - works for all n >= m >= 0
+
     while botFactors:
         bot = botFactors.popL()
         while True:
@@ -130,6 +139,26 @@ def comb(n: int, m: int) -> int:
                 topFactors.pushR(top)
             if bot == 1:
                 break
+
+    # top = topFactors.popL()
+    # bot = botFactors.popL()
+    # count = 0
+    # while True:
+    #     count += 1
+    #     top, bot = mkCoprime(top, bot)
+    #     if top == 1:
+    #         top = topFactors.popL()
+    #         count = 0
+    #     if bot > 1:
+    #         botFactors.pushR(bot)
+    #     if botFactors:
+    #         break
+    #     else:
+    #         bot = botFactors.popL()
+    #     if count > len(botFactors):
+    #         topFactors.pushR(top)
+    #         top = topFactors.popL()
+    #         count = 0
 
     return math.prod(topFactors)
 
