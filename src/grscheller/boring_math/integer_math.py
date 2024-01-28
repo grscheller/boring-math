@@ -91,24 +91,27 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 
 # Combinations and Permantations
 
-def comb(n: int, m: int, grs: int=1024) -> int:
-    """Implements combinations of n items taken m at a time in a way that works
-    efficiently for Python builtin big arbitrary length integers.
+def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -> int:
+    """Implements C(n,m), the number of combinations of n items taken m at a time,
+    in a way that works efficiently for Python's arbitrary length integers. Compares
+    well with math.comb() which is probably C code.
+
+    Raises: ValueError if n < 0 or m < 0
     """
-    if type(n) is not int or type(n) is not int:
-        raise TypeError('for comb(b, n) n and m must both be non-negative integers')
     if n < 0 or m < 0:
-        raise ValueError('for comb(n, m) n and m must be a non-negavive ints')
-    if m > n:
+        raise ValueError('for C(n, m) n and m must be a non-negavive ints')
+    if n == m or m == 0:
+        return 1
+    elif m > n:
         return 0
 
-    # using comb(n, m) = comb(n, n-m) makes both topFactors & botFactors smaller
+    # using C(n, m) = C(n, n-m) to reduce number of factors in calculation
     if m > (n // 2):
         m = n - m
 
-    def compact(ca: CircularArray, targetSize: int = 45) -> CircularArray:
+    def compact(ca: CircularArray, targetSize: int) -> CircularArray:
         """Reduce the length of the circular array by factors of 2 by
-        combinding factors from each end.
+        combinding factors from each end, O(ln(n)).
         """
         ca1 = ca
         while len(ca1) > targetSize:
@@ -124,41 +127,21 @@ def comb(n: int, m: int, grs: int=1024) -> int:
 
     # Prepare data structures
     topFactors = CircularArray(*range(n - m + 1, n + 1))
-    botFactors = CircularArray(*range(m, 1, -1))
+    bottomFactors = CircularArray(*range(m, 1, -1))
 
-    topFactors = compact(topFactors, grs)
-    botFactors = compact(botFactors, grs)
+    # Compact data structures
+    topFactors = compact(topFactors, factorsNumerator)
+    bottomFactors = compact(bottomFactors, factorsDenominator)
 
-
-    while botFactors:
-        bot = botFactors.popL()
-        while True:
-            top = topFactors.popL()
-            top, bot = mkCoprime(top, bot)
+    # Cancel all factors in denominator before multiplying
+    # the remaining factors in the numerator.
+    for bottom in bottomFactors:
+        for ii in range(len(topFactors)):
+            top, bottom = mkCoprime(topFactors.popL(), bottom)
             if top > 1:
                 topFactors.pushR(top)
-            if bot == 1:
+            if bottom == 1:
                 break
-
-    # top = topFactors.popL()
-    # bot = botFactors.popL()
-    # count = 0
-    # while True:
-    #     count += 1
-    #     top, bot = mkCoprime(top, bot)
-    #     if top == 1:
-    #         top = topFactors.popL()
-    #         count = 0
-    #     if bot > 1:
-    #         botFactors.pushR(bot)
-    #     if botFactors:
-    #         break
-    #     else:
-    #         bot = botFactors.popL()
-    #     if count > len(botFactors):
-    #         topFactors.pushR(top)
-    #         top = topFactors.popL()
-    #         count = 0
 
     return math.prod(topFactors)
 

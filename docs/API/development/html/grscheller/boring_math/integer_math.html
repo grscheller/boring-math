@@ -29,13 +29,13 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python"># Copyright 2016-2023 Geoffrey R. Scheller
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -50,9 +50,11 @@ Library of functions of an integer pure math nature.
 from __future__ import annotations
 
 import sys
+import math
 from typing import Iterator, Tuple
+from grscheller.datastructures.queues import CircularArray
 
-__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;primes&#39;,
+__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;primes&#39;, &#39;comb&#39;,
            &#39;pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
 
 # Number Theory mathematical Functions.
@@ -82,7 +84,7 @@ def lcm(fst: int, snd: int) -&gt; int:
 
 def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
-       
+
        Note: One use case is when dividing two factored BigInts. This is the main
              motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
     &#39;&#39;&#39;
@@ -116,6 +118,62 @@ def primes(start: int=2, end_before: int=100) -&gt; Iterator:
 
     # return sieve after trimming unwanted values
     return (x for x in sieve if x &gt;= start)
+
+# Combinations and Permantations
+
+def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -&gt; int:
+    &#34;&#34;&#34;Implements C(n,m), the number of combinations of n items taken m at a time,
+    in a way that works efficiently for Python&#39;s arbitrary length integers. Compares
+    well with math.comb() which is probably C code.
+
+    Raises: ValueError if n &lt; 0 or m &lt; 0
+    &#34;&#34;&#34;
+    if n &lt; 0 or m &lt; 0:
+        raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
+    if n == m or m == 0:
+        return 1
+    elif m &gt; n:
+        return 0
+
+    # using C(n, m) = C(n, n-m) to reduce number of factors in calculation
+    if m &gt; (n // 2):
+        m = n - m
+
+    def compact(ca: CircularArray, targetSize: int) -&gt; CircularArray:
+        &#34;&#34;&#34;Reduce the length of the circular array by factors of 2 by
+        combinding factors from each end, O(ln(n)).
+        &#34;&#34;&#34;
+        ca1 = ca
+        while len(ca1) &gt; targetSize:
+            ca2 = CircularArray()
+            size = len(ca1)
+            if size % 2 == 1:
+                ca1.pushR(ca1.popL() * ca1.popR())
+                size -= 1
+            for ii in range(size // 2):
+                ca2.pushL(ca1[ii] * ca1[size - ii - 1])
+            ca1 = ca2
+        return ca1
+
+    # Prepare data structures
+    topFactors = CircularArray(*range(n - m + 1, n + 1))
+    bottomFactors = CircularArray(*range(m, 1, -1))
+
+    # Compact data structures
+    topFactors = compact(topFactors, factorsNumerator)
+    bottomFactors = compact(bottomFactors, factorsDenominator)
+
+    # Cancel all factors in denominator before multiplying
+    # the remaining factors in the numerator.
+    for bottom in bottomFactors:
+        for ii in range(len(topFactors)):
+            top, bottom = mkCoprime(topFactors.popL(), bottom)
+            if top &gt; 1:
+                topFactors.pushR(top)
+            if bottom == 1:
+                break
+
+    return math.prod(topFactors)
 
 # Pythagorean Triples
 
@@ -191,7 +249,7 @@ def ackermann(m: int, n:int) -&gt; int:
 
     Ackerman&#39;s function is an example of a function that is computable
     but not primatively recursive. It quickly becomes computationally
-    intractable for relatively small values of m and n. 
+    intractable for relatively small values of m and n.
     &#34;&#34;&#34;
     # Model a function stack with a list, then
     # evaluate innermost ackermann function first.
@@ -256,7 +314,7 @@ intractable for relatively small values of m and n.</p></div>
 
     Ackerman&#39;s function is an example of a function that is computable
     but not primatively recursive. It quickly becomes computationally
-    intractable for relatively small values of m and n. 
+    intractable for relatively small values of m and n.
     &#34;&#34;&#34;
     # Model a function stack with a list, then
     # evaluate innermost ackermann function first.
@@ -275,6 +333,73 @@ intractable for relatively small values of m and n.</p></div>
             acker.append(nn-1)
 
     return acker[0]</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.comb"><code class="name flex">
+<span>def <span class="ident">comb</span></span>(<span>n: int, m: int, factorsNumerator: int = 66, factorsDenominator: int = 4) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Implements C(n,m), the number of combinations of n items taken m at a time,
+in a way that works efficiently for Python's arbitrary length integers. Compares
+well with math.comb() which is probably C code.</p>
+<p>Raises: ValueError if n &lt; 0 or m &lt; 0</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -&gt; int:
+    &#34;&#34;&#34;Implements C(n,m), the number of combinations of n items taken m at a time,
+    in a way that works efficiently for Python&#39;s arbitrary length integers. Compares
+    well with math.comb() which is probably C code.
+
+    Raises: ValueError if n &lt; 0 or m &lt; 0
+    &#34;&#34;&#34;
+    if n &lt; 0 or m &lt; 0:
+        raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
+    if n == m or m == 0:
+        return 1
+    elif m &gt; n:
+        return 0
+
+    # using C(n, m) = C(n, n-m) to reduce number of factors in calculation
+    if m &gt; (n // 2):
+        m = n - m
+
+    def compact(ca: CircularArray, targetSize: int) -&gt; CircularArray:
+        &#34;&#34;&#34;Reduce the length of the circular array by factors of 2 by
+        combinding factors from each end, O(ln(n)).
+        &#34;&#34;&#34;
+        ca1 = ca
+        while len(ca1) &gt; targetSize:
+            ca2 = CircularArray()
+            size = len(ca1)
+            if size % 2 == 1:
+                ca1.pushR(ca1.popL() * ca1.popR())
+                size -= 1
+            for ii in range(size // 2):
+                ca2.pushL(ca1[ii] * ca1[size - ii - 1])
+            ca1 = ca2
+        return ca1
+
+    # Prepare data structures
+    topFactors = CircularArray(*range(n - m + 1, n + 1))
+    bottomFactors = CircularArray(*range(m, 1, -1))
+
+    # Compact data structures
+    topFactors = compact(topFactors, factorsNumerator)
+    bottomFactors = compact(bottomFactors, factorsDenominator)
+
+    # Cancel all factors in denominator before multiplying
+    # the remaining factors in the numerator.
+    for bottom in bottomFactors:
+        for ii in range(len(topFactors)):
+            top, bottom = mkCoprime(topFactors.popL(), bottom)
+            if top &gt; 1:
+                topFactors.pushR(top)
+            if bottom == 1:
+                break
+
+    return math.prod(topFactors)</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
@@ -355,7 +480,7 @@ motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).</p></div>
 </summary>
 <pre><code class="python">def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
-       
+
        Note: One use case is when dividing two factored BigInts. This is the main
              motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
     &#39;&#39;&#39;
@@ -500,6 +625,7 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="two-column">
 <li><code><a title="grscheller.boring_math.integer_math.ackermann" href="#grscheller.boring_math.integer_math.ackermann">ackermann</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.comb" href="#grscheller.boring_math.integer_math.comb">comb</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
