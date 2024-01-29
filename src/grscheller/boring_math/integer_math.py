@@ -89,7 +89,7 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
     # return sieve after trimming unwanted values
     return (x for x in sieve if x >= start)
 
-# Combinations and Permantations
+# Combinatorics
 
 def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -> int:
     """Implements C(n,m), the number of combinations of n items taken m at a time,

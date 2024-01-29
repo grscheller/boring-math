@@ -5,12 +5,14 @@ Daddy's boring math library.
 * Functions of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * Example of a Python package with both libraries and executables
+* For detailed API documentation click [here][1].
 
 ## Overview
 
 Here are the modules which make up the grscheller.boring_math package.
 
 * [Integer Math Module](#integer-math-module)
+  * [Combinatorics](#combinatorics)
   * [Fibonacci Sequences](#fibonacci-sequences)
   * [Number Theory](#number-theory)
   * [Pythagorean Triples](#pythagorean-triples)
@@ -24,11 +26,25 @@ Here are the modules which make up the grscheller.boring_math package.
 
 ### Integer Math Module
 
+#### Combinatorics
+
+* Function **comb**(n: int, m: int) -> int
+  * returns C(n,m) - the number of n items taken m at a time
+  * contains two additional default parameters that can be adjusted
+    * factorsNumerator = 66
+    * factorsDenonator = 4
+  * actually comb(n, m, 1, 1) runs faster for reasonably small n and m
+    * better choice for inner loops and printable results
+    * about 3 times slower than C based math.comb(n, m)
+    * these default paramenters are better for larger results
+  * goal is for it to work reasonably well after math.comb bogs down
+  * suspect it will really shine for pypy when it supports Python 3.11
+
 #### Fibonacci Sequences
 
 * Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator
-  * Return an iterator for a Fibonacci sequence
-  * Defaults to `0, 1, 1, 2, 3, 5, 8, ...`
+  * return an iterator for a Fibonacci sequence
+  * defaults to `0, 1, 1, 2, 3, 5, 8, ...`
 
 #### Number theory 
 
@@ -84,3 +100,5 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
     * two arguments outputs all triples with `a <= n` and `a, b, c <= m`
 
 ---
+
+[1]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
