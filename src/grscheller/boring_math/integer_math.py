@@ -22,7 +22,7 @@ from __future__ import annotations
 import sys
 import math
 from typing import Iterator, Tuple
-from grscheller.datastructures.queues import CircularArray
+from grscheller.circular_array.circulararray import CircularArray
 
 __all__ = ['gcd', 'lcm', 'mkCoprime', 'primes', 'comb',
            'pythag3', 'ackermann', 'fibonacci']
