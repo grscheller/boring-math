@@ -11,20 +11,23 @@ license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.11"
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "License :: OSI Approved :: Apache Software License"
 ]
-dependencies = ["grscheller.circular-array"]
+dependencies = ["grscheller.circular-array >= 0.1.0, < 1"]
 dynamic = ["version", "description"]
 keywords = [
     "math", "mathematics",
-    "lcm", "gcd", "primes",
+    "lcm", "gcd", "primes", "comb",
     "pythagorean triples", "pythag3",
     "ackermann",
     "fibonacci"
 ]
+
+[project.optional-dependencies]
+test = ["pytest >=7.4"]
 
 [project.scripts]
 pythag3 = "grscheller.boring_math.integer_math_cli:pythag3_cli"
@@ -45,9 +48,6 @@ report_progress = true
 
 [tool.ruff]
 target-version = "py311"
-
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401"]
 
 [tool.ruff.format]
 quote-style = "single"
