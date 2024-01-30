@@ -173,7 +173,7 @@ def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -&
             if bottom == 1:
                 break
 
-    return math.prod(topFactors)
+    return topFactors.foldL(lambda x, y: x * y)
 
 # Pythagorean Triples
 
@@ -399,7 +399,7 @@ well with math.comb() which is probably C code.</p>
             if bottom == 1:
                 break
 
-    return math.prod(topFactors)</code></pre>
+    return topFactors.foldL(lambda x, y: x * y)</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">

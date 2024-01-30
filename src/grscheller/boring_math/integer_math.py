@@ -20,7 +20,6 @@ Library of functions of an integer pure math nature.
 from __future__ import annotations
 
 import sys
-import math
 from typing import Iterator, Tuple
 from grscheller.circular_array.circulararray import CircularArray
 
@@ -143,7 +142,7 @@ def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) ->
             if bottom == 1:
                 break
 
-    return math.prod(topFactors)
+    return topFactors.foldL(lambda x, y: x * y)
 
 # Pythagorean Triples
 

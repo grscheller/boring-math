@@ -27,7 +27,7 @@ class Test_ackerman:
         assert ackermann(1, 6) == 8
         assert ackermann(1, 7) == 9
         assert ackermann(1, 8) == 10
-        assert ackermann(1, 27) == 29      # using patterns
+        assert ackermann(1, 27) == 29      # inferring from patterns
         assert ackermann(2, 0) == 3
         assert ackermann(2, 1) == 5
         assert ackermann(2, 2) == 7
@@ -35,14 +35,15 @@ class Test_ackerman:
         assert ackermann(2, 4) == 11
         assert ackermann(2, 5) == 13
         assert ackermann(2, 6) == 15
-        assert ackermann(2, 13) == 29      # using patterns
+        assert ackermann(2, 13) == 29      # inferring from patterns
         assert ackermann(3, 0) == 5
         assert ackermann(3, 1) == 13
-        assert ackermann(3, 2) == 29       # using patterns
-        assert ackermann(3, 3) == 61       # using patterns
+        assert ackermann(3, 2) == 29       # inferring from patterns
+        assert ackermann(3, 3) == 61       # inferring from patterns
         assert ackermann(3, 4) == 125
         assert ackermann(3, 8) == 2045     # not hand computed
         assert ackermann(4, 0) == 13
       # assert ackermann(4, 1) == 65533    # not hand computed!
+        assert ackermann(0, 21) == 22
+        assert ackermann(4, 0) == ackermann(3, 1)
         assert ackermann(3, 7) == ackermann(2, ackermann(3, 6))
-

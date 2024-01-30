@@ -96,4 +96,3 @@ class Test_comb:
         assert comb(13000, 454) == comb(13000, 454, 10, 6)
         assert comb(20000, 15) == comb(20000, 15, 5, 11) == math.comb(20000, 15)
         assert comb(20, 15) == comb(20, 15, 50, 110) == math.comb(20, 15)
-

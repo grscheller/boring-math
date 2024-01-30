@@ -28,8 +28,8 @@ class Test_pythag3:
             assert 4 <= b <= 100
             assert 5 <= c <= 100
 
-    def spot_check(self):
-        triples = set(pythag3(1000))
+    def test_spot_check(self):
+        triples = set(pythag3(40))
         assert (3, 4, 5) in triples
         assert (5, 12, 13) in triples
         assert (8, 15, 17) in triples
