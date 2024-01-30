@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import sys
 from typing import Iterator, Tuple
-from grscheller.circular_array.circulararray import CircularArray
+from grscheller.circular_array import CircularArray
 
 __all__ = ['gcd', 'lcm', 'mkCoprime', 'primes', 'comb',
            'pythag3', 'ackermann', 'fibonacci']
