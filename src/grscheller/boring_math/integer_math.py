@@ -159,11 +159,11 @@ def pythag3(a_max: int=3, all_max: int|None=None) -> Iterator:
     If called with two arguments generate all triples with
     a <= a_max and a,b,c <= all_max
     """
-    def cap_max_abc(a_max: int, all_max: int) -> int:
+    def cap_max_abc(a_max: int, all_max: int=None) -> int:
         """Returns capped max values for sides a,b,c where
         based on a_max and all_max given by caller of pythag3.
 
-        note: a_max and _c_max are integers
+        note: a_max and c_max are integers
         note: b_max is a function of side a
         """
         # Limit values to those where geometry
