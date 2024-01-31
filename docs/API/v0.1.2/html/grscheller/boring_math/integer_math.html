@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>grscheller.boring_math.integer_math API documentation</title>
+<meta name="description" content="Boring Math integer library …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>grscheller.boring_math.integer_math</code></h1>
+</header>
+<section id="section-intro">
+<p>Boring Math integer library</p>
+<p>Library of functions of an integer pure math nature.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># Copyright 2016-2023 Geoffrey R. Scheller
+#
+# Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+&#34;&#34;&#34;Boring Math integer library
+
+Library of functions of an integer pure math nature.
+&#34;&#34;&#34;
+
+from __future__ import annotations
+
+import sys
+from typing import Iterator, Tuple
+from grscheller.circular_array import CircularArray
+
+__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;primes&#39;, &#39;comb&#39;,
+           &#39;pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
+
+# Number Theory mathematical Functions.
+
+def gcd(fst: int, snd: int) -&gt; int:
+    &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
+
+    Takes two integers, returns gcd &gt;= 0.
+
+    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
+    &#34;&#34;&#34;
+    fst, snd = abs(fst), abs(snd)
+    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
+    while snd &gt; 0:
+        fst, snd = snd, fst % snd
+
+    return fst
+
+def lcm(fst: int, snd: int) -&gt; int:
+    &#34;&#34;&#34;Finds the least common multiple of two integers.
+       Takes two integers, returns lcm &gt;= 0.
+    &#34;&#34;&#34;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    fst //= common
+
+    return abs(fst*snd)
+
+def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
+    &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
+
+       Note: One use case is when dividing two factored BigInts. This is the main
+             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    &#39;&#39;&#39;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common
+
+def primes(start: int=2, end_before: int=100) -&gt; Iterator:
+    &#34;&#34;&#34;Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+    algorithm.
+    &#34;&#34;&#34;
+    if start &gt;= end_before or end_before &lt; 3:
+        return []
+    if start &lt; 2:
+        start = 2
+
+    sieve = [x for x in range(3, end_before, 2) if x % 3 != 0]
+    stop = int(end_before**(0.5)) + 1
+    front = -1
+    for prime in sieve:
+        front += 1
+        if prime &gt; stop:
+            break
+        for pot_prime in sieve[-1:front:-1]:
+            if pot_prime % prime == 0:
+                sieve.remove(pot_prime)
+
+    if start &lt;= 3 &lt; end_before:  # We missed [2, 3] but
+        sieve.insert(0, 3)       # saved about 60% for
+    if start &lt;= 2 &lt; end_before:  # the initial storage
+        sieve.insert(0, 2)       # space.
+
+    # return sieve after trimming unwanted values
+    return (x for x in sieve if x &gt;= start)
+
+# Combinatorics
+
+def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -&gt; int:
+    &#34;&#34;&#34;Implements C(n,m), the number of combinations of n items taken m at a time,
+    in a way that works efficiently for Python&#39;s arbitrary length integers. Compares
+    well with math.comb() which is probably C code.
+
+    Raises: ValueError if n &lt; 0 or m &lt; 0
+    &#34;&#34;&#34;
+    if n &lt; 0 or m &lt; 0:
+        raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
+    if n == m or m == 0:
+        return 1
+    elif m &gt; n:
+        return 0
+
+    # using C(n, m) = C(n, n-m) to reduce number of factors in calculation
+    if m &gt; (n // 2):
+        m = n - m
+
+    def compact(ca: CircularArray, targetSize: int) -&gt; CircularArray:
+        &#34;&#34;&#34;Reduce the length of the circular array by factors of 2 by
+        combinding factors from each end, O(ln(n)).
+        &#34;&#34;&#34;
+        ca1 = ca
+        while len(ca1) &gt; targetSize:
+            ca2 = CircularArray()
+            size = len(ca1)
+            if size % 2 == 1:
+                ca1.pushR(ca1.popL() * ca1.popR())
+                size -= 1
+            for ii in range(size // 2):
+                ca2.pushL(ca1[ii] * ca1[size - ii - 1])
+            ca1 = ca2
+        return ca1
+
+    # Prepare data structures
+    topFactors = CircularArray(*range(n - m + 1, n + 1))
+    bottomFactors = CircularArray(*range(m, 1, -1))
+
+    # Compact data structures
+    topFactors = compact(topFactors, factorsNumerator)
+    bottomFactors = compact(bottomFactors, factorsDenominator)
+
+    # Cancel all factors in denominator before multiplying
+    # the remaining factors in the numerator.
+    for bottom in bottomFactors:
+        for ii in range(len(topFactors)):
+            top, bottom = mkCoprime(topFactors.popL(), bottom)
+            if top &gt; 1:
+                topFactors.pushR(top)
+            if bottom == 1:
+                break
+
+    return topFactors.foldL(lambda x, y: x * y)
+
+# Pythagorean Triples
+
+def pythag3(a_max: int=3, all_max: int|None=None) -&gt; Iterator:
+    &#34;&#34;&#34;This iterator finds all primative pythagorean triples
+    up to a given level.  A Pythagorean triple are three
+    integers (a,b,c) such that a^2 + b^2 = c^2 where
+    x,y,z &gt; 0 and gcd(a,b,c) = 1
+
+    If called with one argument, generates all triples with
+    a &lt;= a_max
+
+    If called with two arguments generate all triples with
+    a &lt;= a_max and a,b,c &lt;= all_max
+    &#34;&#34;&#34;
+    def cap_max_abc(a_max: int, all_max: int=None) -&gt; int:
+        &#34;&#34;&#34;Returns capped max values for sides a,b,c where
+        based on a_max and all_max given by caller of pythag3.
+
+        note: a_max and c_max are integers
+        note: b_max is a function of side a
+        &#34;&#34;&#34;
+        # Limit values to those where geometry
+        # based optimization assumptions hold.
+        if a_max &lt; 3:
+            a_max = 2
+
+        # For a given value of a, theoretically there
+        # are no more triples beyond this value of b.
+        def b_max_uncapped(a):
+            return (a**2 - 1)//2
+
+        if all_max is None:
+            b_max = b_max_uncapped
+        else:
+            if all_max &lt; 5:
+                all_max = 4
+            if all_max &lt; a_max + 2:
+                a_max = all_max - 2
+
+            def b_max_capped(a):
+                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
+
+            b_max = b_max_capped
+
+        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
+
+        return a_max, b_max, c_max
+
+    # Cap triples to those with sides no bigger than all_max
+    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
+
+    # Hypothrnuse perfect square lookup dictionary
+    # Note: hypotenuse always odd for Pythagorean triples
+    squares = {h*h: h for h in range(5, c_max + 1, 2)}
+
+    # Calculate Pythagorean triples
+    for side_a in range(3, a_max + 1):
+        for side_b in range(side_a + 1, b_max(side_a) + 1):
+            csq = side_a**2 + side_b**2
+            if csq in squares:
+                if gcd(side_a, side_b) == 1:
+                    yield side_a, side_b, squares[csq]
+
+# Computable but not primitive recursive functions
+
+def ackermann(m: int, n:int) -&gt; int:
+    &#34;&#34;&#34;Ackermann function is defined recursively by:
+
+    ackermann(0,n) = n+1
+    ackermann(m,0) = ackermann(m-1,1)
+    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+
+    Ackerman&#39;s function is an example of a function that is computable
+    but not primatively recursive. It quickly becomes computationally
+    intractable for relatively small values of m and n.
+    &#34;&#34;&#34;
+    # Model a function stack with a list, then
+    # evaluate innermost ackermann function first.
+    acker = [m, n]
+
+    while len(acker) &gt; 1:
+        mm, nn = acker[-2:]
+        if mm &lt; 1:
+            acker[-1] = acker.pop() + 1
+        elif nn &lt; 1:
+            acker[-2] = acker[-2] - 1
+            acker[-1] = 1
+        else:
+            acker[-2] = mm - 1
+            acker[-1] = mm
+            acker.append(nn-1)
+
+    return acker[0]
+
+# Fibonacci Iterator
+
+def fibonacci(fib0: int, fib1: int) -&gt; Iterator:
+    &#34;&#34;&#34;Returns an iterator to a Fibonacci sequence whose
+    first two terms are fib0 and fib1.
+    &#34;&#34;&#34;
+    while True:
+        yield fib0
+        fib0, fib1 = fib1, fib0+fib1
+
+if __name__ == &#39;__main__&#39;:
+    sys.exit(0)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="grscheller.boring_math.integer_math.ackermann"><code class="name flex">
+<span>def <span class="ident">ackermann</span></span>(<span>m: int, n: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ackermann function is defined recursively by:</p>
+<p>ackermann(0,n) = n+1
+ackermann(m,0) = ackermann(m-1,1)
+ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0</p>
+<p>Ackerman's function is an example of a function that is computable
+but not primatively recursive. It quickly becomes computationally
+intractable for relatively small values of m and n.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ackermann(m: int, n:int) -&gt; int:
+    &#34;&#34;&#34;Ackermann function is defined recursively by:
+
+    ackermann(0,n) = n+1
+    ackermann(m,0) = ackermann(m-1,1)
+    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+
+    Ackerman&#39;s function is an example of a function that is computable
+    but not primatively recursive. It quickly becomes computationally
+    intractable for relatively small values of m and n.
+    &#34;&#34;&#34;
+    # Model a function stack with a list, then
+    # evaluate innermost ackermann function first.
+    acker = [m, n]
+
+    while len(acker) &gt; 1:
+        mm, nn = acker[-2:]
+        if mm &lt; 1:
+            acker[-1] = acker.pop() + 1
+        elif nn &lt; 1:
+            acker[-2] = acker[-2] - 1
+            acker[-1] = 1
+        else:
+            acker[-2] = mm - 1
+            acker[-1] = mm
+            acker.append(nn-1)
+
+    return acker[0]</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.comb"><code class="name flex">
+<span>def <span class="ident">comb</span></span>(<span>n: int, m: int, factorsNumerator: int = 66, factorsDenominator: int = 4) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Implements C(n,m), the number of combinations of n items taken m at a time,
+in a way that works efficiently for Python's arbitrary length integers. Compares
+well with math.comb() which is probably C code.</p>
+<p>Raises: ValueError if n &lt; 0 or m &lt; 0</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def comb(n: int, m: int, factorsNumerator: int=66, factorsDenominator: int=4) -&gt; int:
+    &#34;&#34;&#34;Implements C(n,m), the number of combinations of n items taken m at a time,
+    in a way that works efficiently for Python&#39;s arbitrary length integers. Compares
+    well with math.comb() which is probably C code.
+
+    Raises: ValueError if n &lt; 0 or m &lt; 0
+    &#34;&#34;&#34;
+    if n &lt; 0 or m &lt; 0:
+        raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
+    if n == m or m == 0:
+        return 1
+    elif m &gt; n:
+        return 0
+
+    # using C(n, m) = C(n, n-m) to reduce number of factors in calculation
+    if m &gt; (n // 2):
+        m = n - m
+
+    def compact(ca: CircularArray, targetSize: int) -&gt; CircularArray:
+        &#34;&#34;&#34;Reduce the length of the circular array by factors of 2 by
+        combinding factors from each end, O(ln(n)).
+        &#34;&#34;&#34;
+        ca1 = ca
+        while len(ca1) &gt; targetSize:
+            ca2 = CircularArray()
+            size = len(ca1)
+            if size % 2 == 1:
+                ca1.pushR(ca1.popL() * ca1.popR())
+                size -= 1
+            for ii in range(size // 2):
+                ca2.pushL(ca1[ii] * ca1[size - ii - 1])
+            ca1 = ca2
+        return ca1
+
+    # Prepare data structures
+    topFactors = CircularArray(*range(n - m + 1, n + 1))
+    bottomFactors = CircularArray(*range(m, 1, -1))
+
+    # Compact data structures
+    topFactors = compact(topFactors, factorsNumerator)
+    bottomFactors = compact(bottomFactors, factorsDenominator)
+
+    # Cancel all factors in denominator before multiplying
+    # the remaining factors in the numerator.
+    for bottom in bottomFactors:
+        for ii in range(len(topFactors)):
+            top, bottom = mkCoprime(topFactors.popL(), bottom)
+            if top &gt; 1:
+                topFactors.pushR(top)
+            if bottom == 1:
+                break
+
+    return topFactors.foldL(lambda x, y: x * y)</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
+<span>def <span class="ident">fibonacci</span></span>(<span>fib0: int, fib1: int) ‑> Iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns an iterator to a Fibonacci sequence whose
+first two terms are fib0 and fib1.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fibonacci(fib0: int, fib1: int) -&gt; Iterator:
+    &#34;&#34;&#34;Returns an iterator to a Fibonacci sequence whose
+    first two terms are fib0 and fib1.
+    &#34;&#34;&#34;
+    while True:
+        yield fib0
+        fib0, fib1 = fib1, fib0+fib1</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.gcd"><code class="name flex">
+<span>def <span class="ident">gcd</span></span>(<span>fst: int, snd: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
+<p>Takes two integers, returns gcd &gt;= 0.</p>
+<p>Note: gcd(0,0) returns 0 but in this case the gcd does not exist</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gcd(fst: int, snd: int) -&gt; int:
+    &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
+
+    Takes two integers, returns gcd &gt;= 0.
+
+    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
+    &#34;&#34;&#34;
+    fst, snd = abs(fst), abs(snd)
+    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
+    while snd &gt; 0:
+        fst, snd = snd, fst % snd
+
+    return fst</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.lcm"><code class="name flex">
+<span>def <span class="ident">lcm</span></span>(<span>fst: int, snd: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds the least common multiple of two integers.
+Takes two integers, returns lcm &gt;= 0.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def lcm(fst: int, snd: int) -&gt; int:
+    &#34;&#34;&#34;Finds the least common multiple of two integers.
+       Takes two integers, returns lcm &gt;= 0.
+    &#34;&#34;&#34;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    fst //= common
+
+    return abs(fst*snd)</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.mkCoprime"><code class="name flex">
+<span>def <span class="ident">mkCoprime</span></span>(<span>fst: int, snd: int) ‑> Tuple(int, int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
+<p>Note: One use case is when dividing two factored BigInts. This is the main
+motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
+    &#39;&#39;&#39;Makes 2 integers coprime by dividing out their common factors.
+
+       Note: One use case is when dividing two factored BigInts. This is the main
+             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    &#39;&#39;&#39;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">
+<span>def <span class="ident">primes</span></span>(<span>start: int = 2, end_before: int = 100) ‑> Iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+algorithm.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def primes(start: int=2, end_before: int=100) -&gt; Iterator:
+    &#34;&#34;&#34;Return an iterator for the prime numbers Using the Sieve of Eratosthenes
+    algorithm.
+    &#34;&#34;&#34;
+    if start &gt;= end_before or end_before &lt; 3:
+        return []
+    if start &lt; 2:
+        start = 2
+
+    sieve = [x for x in range(3, end_before, 2) if x % 3 != 0]
+    stop = int(end_before**(0.5)) + 1
+    front = -1
+    for prime in sieve:
+        front += 1
+        if prime &gt; stop:
+            break
+        for pot_prime in sieve[-1:front:-1]:
+            if pot_prime % prime == 0:
+                sieve.remove(pot_prime)
+
+    if start &lt;= 3 &lt; end_before:  # We missed [2, 3] but
+        sieve.insert(0, 3)       # saved about 60% for
+    if start &lt;= 2 &lt; end_before:  # the initial storage
+        sieve.insert(0, 2)       # space.
+
+    # return sieve after trimming unwanted values
+    return (x for x in sieve if x &gt;= start)</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.pythag3"><code class="name flex">
+<span>def <span class="ident">pythag3</span></span>(<span>a_max: int = 3, all_max: int | None = None) ‑> Iterator</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This iterator finds all primative pythagorean triples
+up to a given level.
+A Pythagorean triple are three
+integers (a,b,c) such that a^2 + b^2 = c^2 where
+x,y,z &gt; 0 and gcd(a,b,c) = 1</p>
+<p>If called with one argument, generates all triples with
+a &lt;= a_max</p>
+<p>If called with two arguments generate all triples with
+a &lt;= a_max and a,b,c &lt;= all_max</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pythag3(a_max: int=3, all_max: int|None=None) -&gt; Iterator:
+    &#34;&#34;&#34;This iterator finds all primative pythagorean triples
+    up to a given level.  A Pythagorean triple are three
+    integers (a,b,c) such that a^2 + b^2 = c^2 where
+    x,y,z &gt; 0 and gcd(a,b,c) = 1
+
+    If called with one argument, generates all triples with
+    a &lt;= a_max
+
+    If called with two arguments generate all triples with
+    a &lt;= a_max and a,b,c &lt;= all_max
+    &#34;&#34;&#34;
+    def cap_max_abc(a_max: int, all_max: int=None) -&gt; int:
+        &#34;&#34;&#34;Returns capped max values for sides a,b,c where
+        based on a_max and all_max given by caller of pythag3.
+
+        note: a_max and c_max are integers
+        note: b_max is a function of side a
+        &#34;&#34;&#34;
+        # Limit values to those where geometry
+        # based optimization assumptions hold.
+        if a_max &lt; 3:
+            a_max = 2
+
+        # For a given value of a, theoretically there
+        # are no more triples beyond this value of b.
+        def b_max_uncapped(a):
+            return (a**2 - 1)//2
+
+        if all_max is None:
+            b_max = b_max_uncapped
+        else:
+            if all_max &lt; 5:
+                all_max = 4
+            if all_max &lt; a_max + 2:
+                a_max = all_max - 2
+
+            def b_max_capped(a):
+                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
+
+            b_max = b_max_capped
+
+        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
+
+        return a_max, b_max, c_max
+
+    # Cap triples to those with sides no bigger than all_max
+    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
+
+    # Hypothrnuse perfect square lookup dictionary
+    # Note: hypotenuse always odd for Pythagorean triples
+    squares = {h*h: h for h in range(5, c_max + 1, 2)}
+
+    # Calculate Pythagorean triples
+    for side_a in range(3, a_max + 1):
+        for side_b in range(side_a + 1, b_max(side_a) + 1):
+            csq = side_a**2 + side_b**2
+            if csq in squares:
+                if gcd(side_a, side_b) == 1:
+                    yield side_a, side_b, squares[csq]</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="grscheller.boring_math" href="index.html">grscheller.boring_math</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="grscheller.boring_math.integer_math.ackermann" href="#grscheller.boring_math.integer_math.ackermann">ackermann</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.comb" href="#grscheller.boring_math.integer_math.comb">comb</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.mkCoprime" href="#grscheller.boring_math.integer_math.mkCoprime">mkCoprime</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.primes" href="#grscheller.boring_math.integer_math.primes">primes</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.pythag3" href="#grscheller.boring_math.integer_math.pythag3">pythag3</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

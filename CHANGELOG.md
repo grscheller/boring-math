@@ -14,6 +14,13 @@ Semantic Versioning will be used:
     * PyPI API additions, PyPI bugfixes or minor changes
     * Significant documentation updates
 
+## Veresion v0.1.2 - PyPI release date 2024-01-30
+
+* now needs CircularArray v0.1.2
+  * integer_math comb uses new foldL method of CircularArray
+  * CircularArray was split out of grscheller.satastructures
+* test suite written
+
 ## Veresion v0.1.1 - PyPI release date 2024-01-20
 
 * fixed some negative value edge cases
@@ -25,12 +32,12 @@ Semantic Versioning will be used:
       * most math theorems remain true for this case
 * README.md improvements
 
-## Veresion v0.1.0 - PyPI release date 2024-01-17
+## Version v0.1.0 - PyPI release date 2024-01-17
 
 * initial PyPI grscheller.boring-math release
 * updated pyproject.toml to be in alignment with grscheller.datastrucutes
 
-## Veresion 0.0.8 - commit date 2024-01-14
+## Version 0.0.8 - commit date 2024-01-14
 
 * changed project's name from boring_math to boring-math
 * both GitHub repo and future PyPI repo
@@ -38,13 +45,13 @@ Semantic Versioning will be used:
 * project is grscheller.boring-math
 * package is still grscheller.boring_math
 
-## Veresion 0.0.8 - commit date 2024-01-14
+## Version 0.0.8 - commit date 2024-01-14
 
 * working on pyproject.toml infrastructure for PyPI releases
 * will use Flit as the packaging/publishing tool
 * replaced bin/ scripts with boring_math.integer_math_cli entry pts
 
-## Veresion 0.0.4 - commit date 2024-01-10
+## Version 0.0.4 - commit date 2024-01-10
 
 * first coding changes in years!
 * configured gh-pages

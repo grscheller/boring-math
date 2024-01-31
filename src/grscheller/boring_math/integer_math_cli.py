@@ -1,4 +1,4 @@
-# Copyright 2016-2024 Geoffrey R. Scheller
+# Copyright 2023-2024 Geoffrey R. Scheller
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,10 +19,13 @@ Supports automatically generated OS independent CLI scripts.
 
 from __future__ import annotations
 
+__all__ = ['pythag3_cli', 'ackermann_cli']
+__author__ = "Geoffrey R. Scheller"
+__copyright__ = "Copyright (c) 2023-2024 Geoffrey R. Scheller"
+__license__ = "Apache License 2.0"
+
 import sys
 from grscheller.boring_math.integer_math import ackermann, pythag3
-
-__all__ = ['pythag3_cli', 'ackermann_cli']
 
 # Number Theory mathematical script entry points
 
