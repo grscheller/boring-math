@@ -1,11 +1,12 @@
-# PyPI grscheller.boring-math
+# PyPI grscheller.boring-math Project
 
 Daddy's boring math library.
 
-* Functions of a mathematical nature
+* Python package of functions of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * Example of a Python package with both libraries and executables
-* For detailed API documentation click [here][1].
+$ View the [grscheller.boring-math][1] project on PyPI
+* Detailed [API documentation][2]
 
 ## Overview
 
@@ -57,7 +58,9 @@ Here are the modules which make up the grscheller.boring_math package.
   * takes two integers, returns least common multiple (lcm)
 
 * Function **primes**(start: int=2, end_before: int=100) -> Iterator
-  * takes two integers, returns least common multiple (lcm)
+  * takes two integers, returns an iterator of primes
+  * starting at first prime at or after `start`
+  * ending at last prime before `end_before`
 
 #### Pythagorean Triples
 
@@ -101,4 +104,5 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
 
 ---
 
-[1]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
+[1]: https://pypi.org/project/grscheller.boring-math/
+[2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
