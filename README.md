@@ -98,7 +98,7 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
   * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a*a + b*b = c*c` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
-  * Usage: `pythag3 m [n]`
+  * Usage: `pythag3 n [m]`
     * one argument outputs all triples with `a <= n`
     * two arguments outputs all triples with `a <= n` and `a, b, c <= m`
 
