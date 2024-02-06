@@ -90,10 +90,16 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 
 # Combinatorics
 
-def comb(n: int, m: int, factorsNumerator: int=400, factorsDenominator: int=4) -> int:
-    """Implements C(n,m), the number of combinations of n items taken m at a time,
-    in a way that works efficiently for Python's arbitrary length integers. Compares
-    well with math.comb() which is probably C code.
+def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
+    """Implements C(n,m), the number of combinations of n items taken m at
+    a time, in a way that works efficiently for Python's arbitrary length
+    integers. Default parameters geared to large values of n and m. These
+    defaults work reasonably well for smaller (human size) values.
+
+    For inner loops with smaller values, use targetTop = targetBot = 1, or
+    just use math.comb(n, m) instead.
+
+    I am hoping pypy's JIT compiler will give better performance.
 
     Raises: ValueError if n < 0 or m < 0
     """
@@ -108,75 +114,33 @@ def comb(n: int, m: int, factorsNumerator: int=400, factorsDenominator: int=4) -
     if m > (n // 2):
         m = n - m
 
-    def _compact2(topFactors: CircularArray,
-                  botFactors: CircularArray,
-                  targetSize: int) -> (CircularArray, CircularArray):
-        """REDO:Reduce the length of the circular array by factors of 2 by
-        combinding factors from each end and and cancelling common factors.
-        For C(n,m) the length of topFactors is the same as the botFactors.
-        O(ln(n)).
-        """
-        tops = topFactors
-        bots = botFactors
-        while len(tops) > targetSize:
-            topsNext = CircularArray()
-            botsNext = CircularArray()
-            size = len(tops)
-            if size % 2 == 1:
-                mid = size // 2
-                top, bot = mkCoprime(tops[mid], bots[mid])
-                topsNext.pushL(top)
-                botsNext.pushL(bot)
-                for ii in range(size // 2):
-                    top, bot = mkCoprime(tops[ii]*tops[-ii - 1],
-                                         bots[ii]*bots[-ii - 1])
-                    topsNext.pushL(top)
-                    botsNext.pushR(bot)
-            else:
-                for ii in range(size // 2):
-                    top, bot = mkCoprime(tops[ii]*tops[-ii - 1],
-                                         bots[ii]*bots[-ii - 1])
-                    topsNext.pushL(top)
-                    botsNext.pushR(bot)
-            tops = topsNext
-            bots = botsNext
-        return tops, bots
-
-    def _compact1(ca: CircularArray, targetSize: int) -> CircularArray:
-        """REDO:Reduce the length of the circular array by factors of 2 by
-        combinding factors from each end, O(ln(n)).
-        """
-        ca1 = ca
-        while len(ca1) > targetSize:
-            ca2 = CircularArray()
-            size = len(ca1)
-            if size % 2 == 1:
-                ca1.pushR(ca1.popL() * ca1.popR())
-                size -= 1
-            for ii in range(size // 2):
-                ca2.pushL(ca1[ii] * ca1[-ii - 1])
-            ca1 = ca2
-        return ca1
-
     # Prepare data structures
-    topFactors = CircularArray(*range(n - m + 1, n + 1))
-    bottomFactors = CircularArray(*range(1, m+1))
+    tops = CircularArray(*range(n - m + 1, n + 1))
+    bots = CircularArray(*range(1, m+1))
 
-    # Compact data structures
-    topFactors, bottomFactors = _compact2(topFactors, bottomFactors, factorsNumerator)
-    bottomFactors = _compact1(bottomFactors, factorsDenominator)
+    # Compacting data structures makes algorithm work better for larger values
+    size = len(tops)
+    while size > targetTop:
+        size -= 1
+        top, bot = mkCoprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
+        tops.pushR(top)
+        bots.pushR(bot)
 
-    # Cancel all factors in denominator before multiplying
-    # the remaining factors in the numerator.
-    for bottom in bottomFactors:
-        for ii in range(len(topFactors)):
-            top, bottom = mkCoprime(topFactors.popL(), bottom)
+    while size > targetBot:
+        size -= 1
+        bots.pushR(bots.popL() * bots.popL())
+
+    # Cancel all factors in denominator before multiplying the remaining factors
+    # in the numerator.
+    for bot in bots:
+        for ii in range(len(tops)):
+            top, bot = mkCoprime(tops.popL(), bot)
             if top > 1:
-                topFactors.pushR(top)
-            if bottom == 1:
+                tops.pushR(top)
+            if bot == 1:
                 break
 
-    return topFactors.foldL(lambda x, y: x * y)
+    return tops.foldL(lambda x, y: x * y)
 
 # Pythagorean Triples
 
