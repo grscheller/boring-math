@@ -89,10 +89,11 @@ class Test_comb:
         assert comb(2001, 30) == math.comb(2001, 30)
         assert comb(2002, 200) == math.comb(2002, 200)
         assert comb(2003, 1000) == math.comb(2003, 1000)
+        assert comb(130061, 45411) == math.comb(130061, 45411)
 
     def test_paramenters(self):
         assert comb(3000, 45) == comb(3000, 45, 1, 1)
         assert comb(1300, 450) == comb(1300, 450, 2, 2)
-        assert comb(13000, 454) == comb(13000, 454, 10, 6)
-        assert comb(20000, 15) == comb(20000, 15, 5, 11) == math.comb(20000, 15)
-        assert comb(20, 15) == comb(20, 15, 50, 110) == math.comb(20, 15)
+        assert comb(13000, 454) == comb(13000, 454, 100, 4)
+        assert comb(20000, 15) == comb(20000, 15, 400, 5) == math.comb(20000, 15)
+        assert comb(2000, 500) == comb(2000, 1500, 150, 8) == math.comb(2000, 1500)
