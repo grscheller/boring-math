@@ -5,8 +5,9 @@ Daddy's boring math library.
 * Python package of functions of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * Example of a Python package with both libraries and executables
-$ View the [grscheller.boring-math][1] project on PyPI
-* Detailed [API documentation][2]
+* [grscheller.circular-array][1] project on PyPI
+* [Detailed API documentation][2] on GH-Pages
+* [Source code][3] on GitHub
 
 ## Overview
 
@@ -106,3 +107,4 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
 
 [1]: https://pypi.org/project/grscheller.boring-math/
 [2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
+[3]: https://github.com/grscheller/boring-math
