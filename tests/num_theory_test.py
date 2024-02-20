@@ -48,3 +48,7 @@ class Test_simple_ones:
     def test_primes(self):
         generated = list(primes(10, 50))
         assert generated == [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+        generated = list(primes(10, 8))
+        assert generated == []
+        generated = list(primes(0, 3))
+        assert generated == [2]

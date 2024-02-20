@@ -16,14 +16,13 @@ classifiers = [
     "Operating System :: OS Independent",
     "License :: OSI Approved :: Apache Software License"
 ]
-dependencies = ["grscheller.circular-array >= 0.1.1, < 0.2"]
+dependencies = ["grscheller.circular-array >= 0.1.1, < 1.1"]
 dynamic = ["version", "description"]
 keywords = [
     "math", "mathematics",
-    "lcm", "gcd", "primes", "comb",
-    "pythagorean triples", "pythag3",
-    "ackermann",
-    "fibonacci"
+    "lcm", "gcd", "primes",
+    "comb", "combinations",
+    "pythagorean triples", "ackermann", "fibonacci"
 ]
 
 [project.optional-dependencies]
