@@ -23,8 +23,9 @@ import sys
 from typing import Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes', 'comb',
-           'pythag3', 'ackermann', 'fibonacci']
+__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes',
+           'iSqrt', 'comb',
+           'pythag3', 'pythag3_2', 'ackermann', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -59,6 +60,25 @@ def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
     '''
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
+
+def iSqrt(n: int) -> int:
+    '''Returns for n >= 0 the greatest m such that m*m <= n, since m is the greatest
+    such integer then we must have m*m <= n < (m+1)*(m+1).
+
+    Raises: ValueError if n < 0
+    '''
+    if n < 0:
+        msg = 'iSqrt(n): n must be nonNegtice'
+        raise ValueError(msg)
+    high = n
+    low = 1
+    while high > low:
+        high = (high + low) // 2
+        low = n // high
+    return high
+
+def isSqr(n: int):
+    return n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator:
     """Return an iterator for the prime numbers Using the Sieve of Eratosthenes
@@ -204,6 +224,64 @@ def pythag3(a_max: int=3, all_max: int|None=None) -> Iterator:
             if csq in squares:
                 if gcd(side_a, side_b) == 1:
                     yield side_a, side_b, squares[csq]
+
+def pythag3_2(a_max: int=3, all_max: int|None=None) -> Iterator:
+    """This iterator finds all primative pythagorean triples
+    up to a given level.  A Pythagorean triple are three
+    integers (a,b,c) such that a^2 + b^2 = c^2 where
+    x,y,z > 0 and gcd(a,b,c) = 1
+
+    If called with one argument, generates all triples with
+    a <= a_max
+
+    If called with two arguments generate all triples with
+    a <= a_max and a,b,c <= all_max
+    """
+    def cap_max_abc(a_max: int, all_max: int=None) -> int:
+        """Returns capped max values for sides a,b,c where
+        based on a_max and all_max given by caller of pythag3.
+
+        note: a_max and c_max are integers
+        note: b_max is a function of side a
+        """
+        # Limit values to those where geometry
+        # based optimization assumptions hold.
+        if a_max < 3:
+            a_max = 2
+
+        # For a given value of a, theoretically there
+        # are no more triples beyond this value of b.
+        def b_max_uncapped(a):
+            return (a**2 - 1)//2
+
+        if all_max is None:
+            b_max = b_max_uncapped
+        else:
+            if all_max < 5:
+                all_max = 4
+            if all_max < a_max + 2:
+                a_max = all_max - 2
+
+            def b_max_capped(a):
+                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
+
+            b_max = b_max_capped
+
+        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
+
+        return a_max, b_max, c_max
+
+    # Cap triples to those with sides no bigger than all_max
+    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
+
+    # Calculate Pythagorean triples
+    for side_a in range(3, a_max + 1):
+        for side_b in range(side_a + 1, b_max(side_a) + 1):
+            if gcd(side_a, side_b) == 1:
+                csq = side_a*side_a + side_b*side_b
+                side_c = iSqrt(csq)
+                if side_c*side_c == csq:
+                    yield side_a, side_b, side_c
 
 # Computable but not primitive recursive functions
 
