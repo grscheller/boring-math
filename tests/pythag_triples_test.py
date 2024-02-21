@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import pythag3
+from grscheller.boring_math.integer_math import Pythag3
 
 class Test_pythag3:
     def test_triples(self):
-        for triple in pythag3(40):
+        for triple in Pythag3.triples(40):
             a, b, c = triple
             assert a*a + b*b == c*c
             assert a <= 40
 
-        for triple in pythag3(60, 100):
+        for triple in Pythag3.triples(60, 100):
             a, b, c = triple
             assert a*a + b*b == c*c
             assert 3 <= a <= 60
@@ -29,13 +29,13 @@ class Test_pythag3:
             assert 5 <= c <= 100
 
     def test_spot_check(self):
-        triples = set(pythag3(40))
+        triples = set(Pythag3.triples(40))
         assert (3, 4, 5) in triples
         assert (5, 12, 13) in triples
         assert (8, 15, 17) in triples
         assert (23, 264, 265) in triples
 
-        triples = set(pythag3(200, 500))
+        triples = set(Pythag3.triples(200, 500))
         assert (23, 264, 265) in triples
         assert (189, 340, 389) in triples
         assert (87, 416, 425) in triples

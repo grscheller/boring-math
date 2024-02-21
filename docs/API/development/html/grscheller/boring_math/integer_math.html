@@ -23,7 +23,7 @@
 </header>
 <section id="section-intro">
 <p>Boring Math integer library</p>
-<p>Library of functions of an integer pure math nature.</p>
+<p>Library of functions and classes of an integer pure math nature.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -44,17 +44,18 @@
 
 &#34;&#34;&#34;Boring Math integer library
 
-Library of functions of an integer pure math nature.
+Library of functions and classes of an integer pure math nature.
 &#34;&#34;&#34;
 
 from __future__ import annotations
 
 import sys
-from typing import Iterator, Tuple
+from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;primes&#39;, &#39;comb&#39;,
-           &#39;pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
+__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;,
+           &#39;primes&#39;, &#39;iSqrt&#39;, &#39;isSqr&#39;, &#39;comb&#39;,
+           &#39;Pythag3&#39;, &#39;ackermann&#39;, &#39;fibonacci&#39;]
 
 # Number Theory mathematical Functions.
 
@@ -89,6 +90,25 @@ def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#39;&#39;&#39;
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
+
+def iSqrt(n: int) -&gt; int:
+    &#39;&#39;&#39;Returns for n &gt;= 0 the greatest m such that m*m &lt;= n, since m is the greatest
+    such integer then we must have m*m &lt;= n &lt; (m+1)*(m+1).
+
+    Raises: ValueError if n &lt; 0
+    &#39;&#39;&#39;
+    if n &lt; 0:
+        msg = &#39;iSqrt(n): n must be nonNegtice&#39;
+        raise ValueError(msg)
+    high = n
+    low = 1
+    while high &gt; low:
+        high = (high + low) // 2
+        low = n // high
+    return high
+
+def isSqr(n: int):
+    return n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -&gt; Iterator:
     &#34;&#34;&#34;Return an iterator for the prime numbers Using the Sieve of Eratosthenes
@@ -174,66 +194,54 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
 
 # Pythagorean Triples
 
-def pythag3(a_max: int=3, all_max: int|None=None) -&gt; Iterator:
-    &#34;&#34;&#34;This iterator finds all primative pythagorean triples
-    up to a given level.  A Pythagorean triple are three
-    integers (a,b,c) such that a^2 + b^2 = c^2 where
-    x,y,z &gt; 0 and gcd(a,b,c) = 1
+class Pythag3():
+    @staticmethod
+    def cap_abc(a_max: int, abc_max: int=0) -&gt; Tuple(int, Callable[[int], int], int):
+        &#34;&#34;&#34;Returns capped max values for sides a,b,c&#34;&#34;&#34;
+        b_uncapped = lambda a: (a**2 - 1) // 2  # Theoretically, given side a
+                                                # there are no more triples
+                                                # beyond this value for side b.
+        a_cap = 2 if a_max &lt; 3 else a_max
 
-    If called with one argument, generates all triples with
-    a &lt;= a_max
-
-    If called with two arguments generate all triples with
-    a &lt;= a_max and a,b,c &lt;= all_max
-    &#34;&#34;&#34;
-    def cap_max_abc(a_max: int, all_max: int=None) -&gt; int:
-        &#34;&#34;&#34;Returns capped max values for sides a,b,c where
-        based on a_max and all_max given by caller of pythag3.
-
-        note: a_max and c_max are integers
-        note: b_max is a function of side a
-        &#34;&#34;&#34;
-        # Limit values to those where geometry
-        # based optimization assumptions hold.
-        if a_max &lt; 3:
-            a_max = 2
-
-        # For a given value of a, theoretically there
-        # are no more triples beyond this value of b.
-        def b_max_uncapped(a):
-            return (a**2 - 1)//2
-
-        if all_max is None:
-            b_max = b_max_uncapped
+        if abc_max &lt; 1:
+            b_cap = b_uncapped
         else:
-            if all_max &lt; 5:
-                all_max = 4
-            if all_max &lt; a_max + 2:
-                a_max = all_max - 2
+            abc_cap = 4 if abc_max &lt; 5 else abc_max 
+            if abc_cap &lt; a_cap + 2:
+                a_cap = abc_cap - 2
+            b_cap = lambda a: min(b_uncapped(a), iSqrt(abc_cap**2 - a**2))
 
-            def b_max_capped(a):
-                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
+        c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
 
-            b_max = b_max_capped
+        return a_cap, b_cap, c_cap
 
-        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
+    @classmethod
+    def triples(cls, a_max: int=3, abc_max: int=0) -&gt; Iterator:
+        &#34;&#34;&#34;This iterator finds all primative pythagorean triples
+        up to a given level.  A Pythagorean triple are three
+        integers (a,b,c) such that a^2 + b^2 = c^2 where
+        x,y,z &gt; 0 and gcd(a,b,c) = 1
 
-        return a_max, b_max, c_max
+        If called with one argument, generates all triples with
+        a &lt;= a_max
 
-    # Cap triples to those with sides no bigger than all_max
-    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
+        If called with two arguments generate all triples with
+        a &lt;= a_max and a,b,c &lt;= all_max
+        &#34;&#34;&#34;
+        # Cap triples to those with sides no bigger than all_max`
+        a_cap, b_cap, c_cap = cls.cap_abc(a_max, abc_max)
 
-    # Hypothrnuse perfect square lookup dictionary
-    # Note: hypotenuse always odd for Pythagorean triples
-    squares = {h*h: h for h in range(5, c_max + 1, 2)}
+        # Hypothrnuse perfect square lookup dictionary
+        # Note: hypotenuse always odd for Pythagorean triples
+        squares = {h*h: h for h in range(5, c_cap + 1, 2)}
 
-    # Calculate Pythagorean triples
-    for side_a in range(3, a_max + 1):
-        for side_b in range(side_a + 1, b_max(side_a) + 1):
-            csq = side_a**2 + side_b**2
-            if csq in squares:
-                if gcd(side_a, side_b) == 1:
-                    yield side_a, side_b, squares[csq]
+        # Calculate Pythagorean triples
+        for side_a in range(3, a_cap + 1):
+            for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
+                csq = side_a**2 + side_b**2
+                if csq in squares:
+                    if gcd(side_a, side_b) == 1:
+                        yield side_a, side_b, squares[csq]
 
 # Computable but not primitive recursive functions
 
@@ -446,6 +454,47 @@ first two terms are fib0 and fib1.</p></div>
     return fst</code></pre>
 </details>
 </dd>
+<dt id="grscheller.boring_math.integer_math.iSqrt"><code class="name flex">
+<span>def <span class="ident">iSqrt</span></span>(<span>n: int) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns for n &gt;= 0 the greatest m such that m<em>m &lt;= n, since m is the greatest
+such integer then we must have m</em>m &lt;= n &lt; (m+1)*(m+1).</p>
+<p>Raises: ValueError if n &lt; 0</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def iSqrt(n: int) -&gt; int:
+    &#39;&#39;&#39;Returns for n &gt;= 0 the greatest m such that m*m &lt;= n, since m is the greatest
+    such integer then we must have m*m &lt;= n &lt; (m+1)*(m+1).
+
+    Raises: ValueError if n &lt; 0
+    &#39;&#39;&#39;
+    if n &lt; 0:
+        msg = &#39;iSqrt(n): n must be nonNegtice&#39;
+        raise ValueError(msg)
+    high = n
+    low = 1
+    while high &gt; low:
+        high = (high + low) // 2
+        low = n // high
+    return high</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.isSqr"><code class="name flex">
+<span>def <span class="ident">isSqr</span></span>(<span>n: int)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def isSqr(n: int):
+    return n == iSqrt(n)**2</code></pre>
+</details>
+</dd>
 <dt id="grscheller.boring_math.integer_math.lcm"><code class="name flex">
 <span>def <span class="ident">lcm</span></span>(<span>fst: int, snd: int) ‑> int</span>
 </code></dt>
@@ -526,8 +575,103 @@ algorithm.</p></div>
     return (x for x in sieve if x &gt;= start)</code></pre>
 </details>
 </dd>
-<dt id="grscheller.boring_math.integer_math.pythag3"><code class="name flex">
-<span>def <span class="ident">pythag3</span></span>(<span>a_max: int = 3, all_max: int | None = None) ‑> Iterator</span>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="grscheller.boring_math.integer_math.Pythag3"><code class="flex name class">
+<span>class <span class="ident">Pythag3</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Pythag3():
+    @staticmethod
+    def cap_abc(a_max: int, abc_max: int=0) -&gt; Tuple(int, Callable[[int], int], int):
+        &#34;&#34;&#34;Returns capped max values for sides a,b,c&#34;&#34;&#34;
+        b_uncapped = lambda a: (a**2 - 1) // 2  # Theoretically, given side a
+                                                # there are no more triples
+                                                # beyond this value for side b.
+        a_cap = 2 if a_max &lt; 3 else a_max
+
+        if abc_max &lt; 1:
+            b_cap = b_uncapped
+        else:
+            abc_cap = 4 if abc_max &lt; 5 else abc_max 
+            if abc_cap &lt; a_cap + 2:
+                a_cap = abc_cap - 2
+            b_cap = lambda a: min(b_uncapped(a), iSqrt(abc_cap**2 - a**2))
+
+        c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
+
+        return a_cap, b_cap, c_cap
+
+    @classmethod
+    def triples(cls, a_max: int=3, abc_max: int=0) -&gt; Iterator:
+        &#34;&#34;&#34;This iterator finds all primative pythagorean triples
+        up to a given level.  A Pythagorean triple are three
+        integers (a,b,c) such that a^2 + b^2 = c^2 where
+        x,y,z &gt; 0 and gcd(a,b,c) = 1
+
+        If called with one argument, generates all triples with
+        a &lt;= a_max
+
+        If called with two arguments generate all triples with
+        a &lt;= a_max and a,b,c &lt;= all_max
+        &#34;&#34;&#34;
+        # Cap triples to those with sides no bigger than all_max`
+        a_cap, b_cap, c_cap = cls.cap_abc(a_max, abc_max)
+
+        # Hypothrnuse perfect square lookup dictionary
+        # Note: hypotenuse always odd for Pythagorean triples
+        squares = {h*h: h for h in range(5, c_cap + 1, 2)}
+
+        # Calculate Pythagorean triples
+        for side_a in range(3, a_cap + 1):
+            for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
+                csq = side_a**2 + side_b**2
+                if csq in squares:
+                    if gcd(side_a, side_b) == 1:
+                        yield side_a, side_b, squares[csq]</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="grscheller.boring_math.integer_math.Pythag3.cap_abc"><code class="name flex">
+<span>def <span class="ident">cap_abc</span></span>(<span>a_max: int, abc_max: int = 0) ‑> Tuple(int, Callable[[int], int], int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns capped max values for sides a,b,c</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def cap_abc(a_max: int, abc_max: int=0) -&gt; Tuple(int, Callable[[int], int], int):
+    &#34;&#34;&#34;Returns capped max values for sides a,b,c&#34;&#34;&#34;
+    b_uncapped = lambda a: (a**2 - 1) // 2  # Theoretically, given side a
+                                            # there are no more triples
+                                            # beyond this value for side b.
+    a_cap = 2 if a_max &lt; 3 else a_max
+
+    if abc_max &lt; 1:
+        b_cap = b_uncapped
+    else:
+        abc_cap = 4 if abc_max &lt; 5 else abc_max 
+        if abc_cap &lt; a_cap + 2:
+            a_cap = abc_cap - 2
+        b_cap = lambda a: min(b_uncapped(a), iSqrt(abc_cap**2 - a**2))
+
+    c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
+
+    return a_cap, b_cap, c_cap</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.Pythag3.triples"><code class="name flex">
+<span>def <span class="ident">triples</span></span>(<span>a_max: int = 3, abc_max: int = 0) ‑> Iterator</span>
 </code></dt>
 <dd>
 <div class="desc"><p>This iterator finds all primative pythagorean triples
@@ -543,7 +687,8 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def pythag3(a_max: int=3, all_max: int|None=None) -&gt; Iterator:
+<pre><code class="python">@classmethod
+def triples(cls, a_max: int=3, abc_max: int=0) -&gt; Iterator:
     &#34;&#34;&#34;This iterator finds all primative pythagorean triples
     up to a given level.  A Pythagorean triple are three
     integers (a,b,c) such that a^2 + b^2 = c^2 where
@@ -555,50 +700,16 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
     If called with two arguments generate all triples with
     a &lt;= a_max and a,b,c &lt;= all_max
     &#34;&#34;&#34;
-    def cap_max_abc(a_max: int, all_max: int=None) -&gt; int:
-        &#34;&#34;&#34;Returns capped max values for sides a,b,c where
-        based on a_max and all_max given by caller of pythag3.
-
-        note: a_max and c_max are integers
-        note: b_max is a function of side a
-        &#34;&#34;&#34;
-        # Limit values to those where geometry
-        # based optimization assumptions hold.
-        if a_max &lt; 3:
-            a_max = 2
-
-        # For a given value of a, theoretically there
-        # are no more triples beyond this value of b.
-        def b_max_uncapped(a):
-            return (a**2 - 1)//2
-
-        if all_max is None:
-            b_max = b_max_uncapped
-        else:
-            if all_max &lt; 5:
-                all_max = 4
-            if all_max &lt; a_max + 2:
-                a_max = all_max - 2
-
-            def b_max_capped(a):
-                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
-
-            b_max = b_max_capped
-
-        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
-
-        return a_max, b_max, c_max
-
-    # Cap triples to those with sides no bigger than all_max
-    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
+    # Cap triples to those with sides no bigger than all_max`
+    a_cap, b_cap, c_cap = cls.cap_abc(a_max, abc_max)
 
     # Hypothrnuse perfect square lookup dictionary
     # Note: hypotenuse always odd for Pythagorean triples
-    squares = {h*h: h for h in range(5, c_max + 1, 2)}
+    squares = {h*h: h for h in range(5, c_cap + 1, 2)}
 
     # Calculate Pythagorean triples
-    for side_a in range(3, a_max + 1):
-        for side_b in range(side_a + 1, b_max(side_a) + 1):
+    for side_a in range(3, a_cap + 1):
+        for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
             csq = side_a**2 + side_b**2
             if csq in squares:
                 if gcd(side_a, side_b) == 1:
@@ -606,8 +717,8 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 </details>
 </dd>
 </dl>
-</section>
-<section>
+</dd>
+</dl>
 </section>
 </article>
 <nav id="sidebar">
@@ -627,10 +738,22 @@ a &lt;= a_max and a,b,c &lt;= all_max</p></div>
 <li><code><a title="grscheller.boring_math.integer_math.comb" href="#grscheller.boring_math.integer_math.comb">comb</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.iSqrt" href="#grscheller.boring_math.integer_math.iSqrt">iSqrt</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.isSqr" href="#grscheller.boring_math.integer_math.isSqr">isSqr</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.mkCoprime" href="#grscheller.boring_math.integer_math.mkCoprime">mkCoprime</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.primes" href="#grscheller.boring_math.integer_math.primes">primes</a></code></li>
-<li><code><a title="grscheller.boring_math.integer_math.pythag3" href="#grscheller.boring_math.integer_math.pythag3">pythag3</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="grscheller.boring_math.integer_math.Pythag3" href="#grscheller.boring_math.integer_math.Pythag3">Pythag3</a></code></h4>
+<ul class="">
+<li><code><a title="grscheller.boring_math.integer_math.Pythag3.cap_abc" href="#grscheller.boring_math.integer_math.Pythag3.cap_abc">cap_abc</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.Pythag3.triples" href="#grscheller.boring_math.integer_math.Pythag3.triples">triples</a></code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -25,7 +25,7 @@ __copyright__ = "Copyright (c) 2023-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"
 
 import sys
-from grscheller.boring_math.integer_math import ackermann, pythag3
+from grscheller.boring_math.integer_math import ackermann, Pythag3
 
 # Number Theory mathematical script entry points
 
@@ -47,11 +47,11 @@ def pythag3_cli() -> None:
     args = sys.argv[1:]
 
     if len(args) > 1:
-        pythagTriples = pythag3(int(args[0]), int(args[1]))
+        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
     elif len(args) > 0:
-        pythagTriples = pythag3(int(args[0]))
+        pythagTriples = Pythag3.tuples(int(args[0]))
     else:
-        pythagTriples = pythag3()
+        pythagTriples = Pythag3.tuples()
 
     # Print out Pythagean Triples
     for triple in pythagTriples:

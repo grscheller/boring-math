@@ -14,18 +14,18 @@
 
 """Boring Math integer library
 
-Library of functions of an integer pure math nature.
+Library of functions and classes of an integer pure math nature.
 """
 
 from __future__ import annotations
 
 import sys
-from typing import Iterator, Tuple
+from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime', 'primes',
-           'iSqrt', 'comb',
-           'pythag3', 'pythag3_2', 'ackermann', 'fibonacci']
+__all__ = ['gcd', 'lcm', 'mkCoprime',
+           'primes', 'iSqrt', 'isSqr', 'comb',
+           'Pythag3', 'ackermann', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -164,124 +164,54 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
 # Pythagorean Triples
 
-def pythag3(a_max: int=3, all_max: int|None=None) -> Iterator:
-    """This iterator finds all primative pythagorean triples
-    up to a given level.  A Pythagorean triple are three
-    integers (a,b,c) such that a^2 + b^2 = c^2 where
-    x,y,z > 0 and gcd(a,b,c) = 1
+class Pythag3():
+    @staticmethod
+    def cap_abc(a_max: int, abc_max: int=0) -> Tuple(int, Callable[[int], int], int):
+        """Returns capped max values for sides a,b,c"""
+        b_uncapped = lambda a: (a**2 - 1) // 2  # Theoretically, given side a
+                                                # there are no more triples
+                                                # beyond this value for side b.
+        a_cap = 2 if a_max < 3 else a_max
 
-    If called with one argument, generates all triples with
-    a <= a_max
-
-    If called with two arguments generate all triples with
-    a <= a_max and a,b,c <= all_max
-    """
-    def cap_max_abc(a_max: int, all_max: int=None) -> int:
-        """Returns capped max values for sides a,b,c where
-        based on a_max and all_max given by caller of pythag3.
-
-        note: a_max and c_max are integers
-        note: b_max is a function of side a
-        """
-        # Limit values to those where geometry
-        # based optimization assumptions hold.
-        if a_max < 3:
-            a_max = 2
-
-        # For a given value of a, theoretically there
-        # are no more triples beyond this value of b.
-        def b_max_uncapped(a):
-            return (a**2 - 1)//2
-
-        if all_max is None:
-            b_max = b_max_uncapped
+        if abc_max < 1:
+            b_cap = b_uncapped
         else:
-            if all_max < 5:
-                all_max = 4
-            if all_max < a_max + 2:
-                a_max = all_max - 2
+            abc_cap = 4 if abc_max < 5 else abc_max 
+            if abc_cap < a_cap + 2:
+                a_cap = abc_cap - 2
+            b_cap = lambda a: min(b_uncapped(a), iSqrt(abc_cap**2 - a**2))
 
-            def b_max_capped(a):
-                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
+        c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
 
-            b_max = b_max_capped
+        return a_cap, b_cap, c_cap
 
-        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
+    @classmethod
+    def triples(cls, a_max: int=3, abc_max: int=0) -> Iterator:
+        """This iterator finds all primative pythagorean triples
+        up to a given level.  A Pythagorean triple are three
+        integers (a,b,c) such that a^2 + b^2 = c^2 where
+        x,y,z > 0 and gcd(a,b,c) = 1
 
-        return a_max, b_max, c_max
+        If called with one argument, generates all triples with
+        a <= a_max
 
-    # Cap triples to those with sides no bigger than all_max
-    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
-
-    # Hypothrnuse perfect square lookup dictionary
-    # Note: hypotenuse always odd for Pythagorean triples
-    squares = {h*h: h for h in range(5, c_max + 1, 2)}
-
-    # Calculate Pythagorean triples
-    for side_a in range(3, a_max + 1):
-        for side_b in range(side_a + 1, b_max(side_a) + 1):
-            csq = side_a**2 + side_b**2
-            if csq in squares:
-                if gcd(side_a, side_b) == 1:
-                    yield side_a, side_b, squares[csq]
-
-def pythag3_2(a_max: int=3, all_max: int|None=None) -> Iterator:
-    """This iterator finds all primative pythagorean triples
-    up to a given level.  A Pythagorean triple are three
-    integers (a,b,c) such that a^2 + b^2 = c^2 where
-    x,y,z > 0 and gcd(a,b,c) = 1
-
-    If called with one argument, generates all triples with
-    a <= a_max
-
-    If called with two arguments generate all triples with
-    a <= a_max and a,b,c <= all_max
-    """
-    def cap_max_abc(a_max: int, all_max: int=None) -> int:
-        """Returns capped max values for sides a,b,c where
-        based on a_max and all_max given by caller of pythag3.
-
-        note: a_max and c_max are integers
-        note: b_max is a function of side a
+        If called with two arguments generate all triples with
+        a <= a_max and a,b,c <= all_max
         """
-        # Limit values to those where geometry
-        # based optimization assumptions hold.
-        if a_max < 3:
-            a_max = 2
+        # Cap triples to those with sides no bigger than all_max`
+        a_cap, b_cap, c_cap = cls.cap_abc(a_max, abc_max)
 
-        # For a given value of a, theoretically there
-        # are no more triples beyond this value of b.
-        def b_max_uncapped(a):
-            return (a**2 - 1)//2
+        # Hypothrnuse perfect square lookup dictionary
+        # Note: hypotenuse always odd for Pythagorean triples
+        squares = {h*h: h for h in range(5, c_cap + 1, 2)}
 
-        if all_max is None:
-            b_max = b_max_uncapped
-        else:
-            if all_max < 5:
-                all_max = 4
-            if all_max < a_max + 2:
-                a_max = all_max - 2
-
-            def b_max_capped(a):
-                return min((b_max_uncapped(a), int((all_max**2 - a**2)**0.5)))
-
-            b_max = b_max_capped
-
-        c_max = int((a_max**2 + b_max(a_max)**2)**(0.5)) + 1
-
-        return a_max, b_max, c_max
-
-    # Cap triples to those with sides no bigger than all_max
-    a_max, b_max, c_max = cap_max_abc(a_max, all_max)
-
-    # Calculate Pythagorean triples
-    for side_a in range(3, a_max + 1):
-        for side_b in range(side_a + 1, b_max(side_a) + 1):
-            if gcd(side_a, side_b) == 1:
-                csq = side_a*side_a + side_b*side_b
-                side_c = iSqrt(csq)
-                if side_c*side_c == csq:
-                    yield side_a, side_b, side_c
+        # Calculate Pythagorean triples
+        for side_a in range(3, a_cap + 1):
+            for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
+                csq = side_a**2 + side_b**2
+                if csq in squares:
+                    if gcd(side_a, side_b) == 1:
+                        yield side_a, side_b, squares[csq]
 
 # Computable but not primitive recursive functions
 

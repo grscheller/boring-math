@@ -55,7 +55,7 @@ __copyright__ = &#34;Copyright (c) 2023-2024 Geoffrey R. Scheller&#34;
 __license__ = &#34;Apache License 2.0&#34;
 
 import sys
-from grscheller.boring_math.integer_math import ackermann, pythag3
+from grscheller.boring_math.integer_math import ackermann, Pythag3
 
 # Number Theory mathematical script entry points
 
@@ -77,11 +77,11 @@ def pythag3_cli() -&gt; None:
     args = sys.argv[1:]
 
     if len(args) &gt; 1:
-        pythagTriples = pythag3(int(args[0]), int(args[1]))
+        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
     elif len(args) &gt; 0:
-        pythagTriples = pythag3(int(args[0]))
+        pythagTriples = Pythag3.tuples(int(args[0]))
     else:
-        pythagTriples = pythag3()
+        pythagTriples = Pythag3.tuples()
 
     # Print out Pythagean Triples
     for triple in pythagTriples:
@@ -203,11 +203,11 @@ Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m</p></div>
     args = sys.argv[1:]
 
     if len(args) &gt; 1:
-        pythagTriples = pythag3(int(args[0]), int(args[1]))
+        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
     elif len(args) &gt; 0:
-        pythagTriples = pythag3(int(args[0]))
+        pythagTriples = Pythag3.tuples(int(args[0]))
     else:
-        pythagTriples = pythag3()
+        pythagTriples = Pythag3.tuples()
 
     # Print out Pythagean Triples
     for triple in pythagTriples:

@@ -18,6 +18,26 @@ Version numbers for PyPI releases begin with a `v`.
   * commit count (thrashing)
   * dont to be taken too seriously
 
+## Version = 0.2.0.0 - commit date 2024-02-21
+* All implementations going forward for integer_math module will use
+  just integer based algorithms. I can't really compete with C based
+  code from the Python standard library. The algorithms will then be
+  of use if ported to a platform without floating point arithmetic.
+* added two new functions to the integer_math module
+  * iSqrt() find the int square root of an int
+    * does samething as math.isqrt()
+  * isSqr() return true if argurment is a perfect square
+* changed integer_math pythag3() function into a classmethod
+  * pythag3() -> Pythag3.triples() 
+  * preliminary steps
+  * fould unrelated tweak to increase speed by 2X
+  * removed use of floating point numbers
+
+## Version = v0.1.3 - PyPI release date 2024-02-20
+
+* Forgot to update pyproject.toml dependencies
+  * dependencies = ["grscheller.circular-array >= 0.1.1, < 1.1"]
+
 ## Veresion v0.1.2 - PyPI release date 2024-01-30
 
 * now needs CircularArray v0.1.2
