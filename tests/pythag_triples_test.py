@@ -16,12 +16,14 @@ from grscheller.boring_math.integer_math import Pythag3
 
 class Test_pythag3:
     def test_triples(self):
-        for triple in Pythag3.triples(40):
+        pythag3 = Pythag3()
+
+        for triple in pythag3.triples(40):
             a, b, c = triple
             assert a*a + b*b == c*c
             assert a <= 40
 
-        for triple in Pythag3.triples(60, 100):
+        for triple in pythag3.triples(2, 60, 100):
             a, b, c = triple
             assert a*a + b*b == c*c
             assert 3 <= a <= 60
@@ -29,14 +31,25 @@ class Test_pythag3:
             assert 5 <= c <= 100
 
     def test_spot_check(self):
-        triples = set(Pythag3.triples(40))
+        pythag3 = Pythag3()
+
+        triples = set(pythag3.triples(3, 40))
         assert (3, 4, 5) in triples
         assert (5, 12, 13) in triples
         assert (8, 15, 17) in triples
         assert (23, 264, 265) in triples
 
-        triples = set(Pythag3.triples(200, 500))
+        triples = set(pythag3.triples(1, 200, 500))
         assert (23, 264, 265) in triples
         assert (189, 340, 389) in triples
         assert (87, 416, 425) in triples
         assert (33, 544, 545) not in triples
+
+    def test_extend_squares(self):
+        pythag3 = Pythag3()
+
+        triples = set(pythag3.triples(1060, 1063))
+        assert len(triples) == 6
+
+        triples = set(pythag3.triples(2060, 2067, 20000))
+        assert len(triples) == 3

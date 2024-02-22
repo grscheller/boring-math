@@ -39,19 +39,21 @@ def pythag3_cli() -> None:
 
     Usage: pythag3.py n [m]
 
-    One argument generates all triples with a <= n.
     Two arguments generate all triples with a <= n and a,b,c <= m
+    One argument generates all triples with a <= n
+    No arguments generates all triples with 3 <= a <= 100
     """
+    pythag3 = Pythag3()
 
     # Argument processing with some idiot checking
     args = sys.argv[1:]
 
     if len(args) > 1:
-        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
+        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
     elif len(args) > 0:
-        pythagTriples = Pythag3.tuples(int(args[0]))
+        pythagTriples = pythag3.triples(3, int(args[0]))
     else:
-        pythagTriples = Pythag3.tuples()
+        pythagTriples = pythag3.triples(3, 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:

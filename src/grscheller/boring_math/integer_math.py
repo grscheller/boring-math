@@ -165,53 +165,57 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 # Pythagorean Triples
 
 class Pythag3():
+    """ A Pythagorean triple is a tuple of three integers (a,b,c) such that
+    a**2 + b**2 = c**2 where a,b,c > 0 and gcd(a,b,c) = 1
+    """
+    def __init__(self, last_square: int=500):
+        last_h = 5 if last_square < 5 else last_square
+        if gcd(last_h, 2) == 0:
+            last_h -= 1
+        # Perfect square lookup dictionary
+        self.squares = {h*h: h for h in range(5, last_h + 1, 2)}
+        self.last_h = last_h
+
+    def extend_squares(self, last_square):
+        if last_square > self.last_h:
+            if gcd(last_square, 2) == 0:
+                last_square -= 1
+            for h in range(self.last_h + 1, last_square + 1, 2):
+                self.squares[h*h] = h
+
     @staticmethod
-    def cap_abc(a_max: int, abc_max: int=0) -> Tuple(int, Callable[[int], int], int):
+    def cap_sides(a_max: int, max: int=0) -> Tuple(int, Callable[[int], int], int):
         """Returns capped max values for sides a,b,c"""
-        b_uncapped = lambda a: (a**2 - 1) // 2  # Theoretically, given side a
-                                                # there are no more triples
-                                                # beyond this value for side b.
         a_cap = 2 if a_max < 3 else a_max
 
-        if abc_max < 1:
-            b_cap = b_uncapped
+        b_final = lambda a: (a**2 - 1) // 2  # theoretically, given side a there are no
+        if max < 1:                          # more triples beyond this value for side b
+            b_cap = b_final
         else:
-            abc_cap = 4 if abc_max < 5 else abc_max 
-            if abc_cap < a_cap + 2:
-                a_cap = abc_cap - 2
-            b_cap = lambda a: min(b_uncapped(a), iSqrt(abc_cap**2 - a**2))
+            cap = 4 if max < 5 else max 
+            if cap < a_cap + 2:
+                a_cap = cap - 2
+            b_cap = lambda a: min(b_final(a), iSqrt(cap**2 - a**2))
 
         c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
 
         return a_cap, b_cap, c_cap
 
-    @classmethod
-    def triples(cls, a_max: int=3, abc_max: int=0) -> Iterator:
-        """This iterator finds all primative pythagorean triples
-        up to a given level.  A Pythagorean triple are three
-        integers (a,b,c) such that a^2 + b^2 = c^2 where
-        x,y,z > 0 and gcd(a,b,c) = 1
-
-        If called with one argument, generates all triples with
-        a <= a_max
-
-        If called with two arguments generate all triples with
-        a <= a_max and a,b,c <= all_max
+    def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
+        """This iterator finds all primative pythagorean triples (a, b, c)
+        where a_start <= a <= a_max and 0 < a < b < c < max.
         """
-        # Cap triples to those with sides no bigger than all_max`
-        a_cap, b_cap, c_cap = cls.cap_abc(a_max, abc_max)
-
-        # Hypothrnuse perfect square lookup dictionary
-        # Note: hypotenuse always odd for Pythagorean triples
-        squares = {h*h: h for h in range(5, c_cap + 1, 2)}
+        a_init = 3 if a_start < 3 else a_start
+        a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
+        self.extend_squares(c_cap)
 
         # Calculate Pythagorean triples
-        for side_a in range(3, a_cap + 1):
+        for side_a in range(a_init, a_cap + 1):
             for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
                 csq = side_a**2 + side_b**2
-                if csq in squares:
+                if csq in self.squares:
                     if gcd(side_a, side_b) == 1:
-                        yield side_a, side_b, squares[csq]
+                        yield side_a, side_b, self.squares[csq]
 
 # Computable but not primitive recursive functions
 

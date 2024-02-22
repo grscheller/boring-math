@@ -69,19 +69,21 @@ def pythag3_cli() -&gt; None:
 
     Usage: pythag3.py n [m]
 
-    One argument generates all triples with a &lt;= n.
     Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+    One argument generates all triples with a &lt;= n
+    No arguments generates all triples with 3 &lt;= a &lt;= 100
     &#34;&#34;&#34;
+    pythag3 = Pythag3()
 
     # Argument processing with some idiot checking
     args = sys.argv[1:]
 
     if len(args) &gt; 1:
-        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
+        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
     elif len(args) &gt; 0:
-        pythagTriples = Pythag3.tuples(int(args[0]))
+        pythagTriples = pythag3.triples(3, int(args[0]))
     else:
-        pythagTriples = Pythag3.tuples()
+        pythagTriples = pythag3.triples(3, 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:
@@ -181,8 +183,9 @@ ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
 <p>A pythagorian triple are three integers (a,b,c) such
 that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1</p>
 <p>Usage: pythag3.py n [m]</p>
-<p>One argument generates all triples with a &lt;= n.
-Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m</p></div>
+<p>Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+One argument generates all triples with a &lt;= n
+No arguments generates all triples with 3 &lt;= a &lt;= 100</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -195,19 +198,21 @@ Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m</p></div>
 
     Usage: pythag3.py n [m]
 
-    One argument generates all triples with a &lt;= n.
     Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
+    One argument generates all triples with a &lt;= n
+    No arguments generates all triples with 3 &lt;= a &lt;= 100
     &#34;&#34;&#34;
+    pythag3 = Pythag3()
 
     # Argument processing with some idiot checking
     args = sys.argv[1:]
 
     if len(args) &gt; 1:
-        pythagTriples = Pythag3.tuples(int(args[0]), int(args[1]))
+        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
     elif len(args) &gt; 0:
-        pythagTriples = Pythag3.tuples(int(args[0]))
+        pythagTriples = pythag3.triples(3, int(args[0]))
     else:
-        pythagTriples = Pythag3.tuples()
+        pythagTriples = pythag3.triples(3, 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:
