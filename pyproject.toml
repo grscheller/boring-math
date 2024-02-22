@@ -29,8 +29,8 @@ keywords = [
 test = ["pytest >=7.4"]
 
 [project.scripts]
-pythag3 = "grscheller.boring_math.integer_math_cli:pythag3_cli"
-ackermann = "grscheller.boring_math.integer_math_cli:ackermann_cli"
+pythag3 = "grscheller.boring_math.pythag3_cli:pythag3_cli"
+ackermann = "grscheller.boring_math.recursive_cli:ackermann_cli"
 
 [project.urls]
 Source = "https://github.com/grscheller/boring-math"

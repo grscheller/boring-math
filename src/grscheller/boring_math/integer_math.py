@@ -19,13 +19,11 @@ Library of functions and classes of an integer pure math nature.
 
 from __future__ import annotations
 
-import sys
 from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime',
-           'primes', 'iSqrt', 'isSqr', 'comb',
-           'Pythag3', 'ackermann', 'fibonacci']
+__all__ = ['gcd', 'lcm', 'mkCoprime', 'iSqrt', 'isSqr', 'primes',
+           'comb', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -162,92 +160,6 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
     return tops.foldL(lambda x, y: x * y)
 
-# Pythagorean Triples
-
-class Pythag3():
-    """ A Pythagorean triple is a tuple of three integers (a,b,c) such that
-    a**2 + b**2 = c**2 where a,b,c > 0 and gcd(a,b,c) = 1
-    """
-    def __init__(self, last_square: int=500):
-        last_h = 5 if last_square < 5 else last_square
-        if gcd(last_h, 2) == 0:
-            last_h -= 1
-        # Perfect square lookup dictionary
-        self.squares = {h*h: h for h in range(5, last_h + 1, 2)}
-        self.last_h = last_h
-
-    def extend_squares(self, last_square):
-        if last_square > self.last_h:
-            if gcd(last_square, 2) == 0:
-                last_square -= 1
-            for h in range(self.last_h + 1, last_square + 1, 2):
-                self.squares[h*h] = h
-
-    @staticmethod
-    def cap_sides(a_max: int, max: int=0) -> Tuple(int, Callable[[int], int], int):
-        """Returns capped max values for sides a,b,c"""
-        a_cap = 2 if a_max < 3 else a_max
-
-        b_final = lambda a: (a**2 - 1) // 2  # theoretically, given side a there are no
-        if max < 1:                          # more triples beyond this value for side b
-            b_cap = b_final
-        else:
-            cap = 4 if max < 5 else max 
-            if cap < a_cap + 2:
-                a_cap = cap - 2
-            b_cap = lambda a: min(b_final(a), iSqrt(cap**2 - a**2))
-
-        c_cap = iSqrt(a_cap**2 + b_cap(a_cap)**2) + 1
-
-        return a_cap, b_cap, c_cap
-
-    def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
-        """This iterator finds all primative pythagorean triples (a, b, c)
-        where a_start <= a <= a_max and 0 < a < b < c < max.
-        """
-        a_init = 3 if a_start < 3 else a_start
-        a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
-        self.extend_squares(c_cap)
-
-        # Calculate Pythagorean triples
-        for side_a in range(a_init, a_cap + 1):
-            for side_b in range(side_a + 1, b_cap(side_a) + 1, 2):
-                csq = side_a**2 + side_b**2
-                if csq in self.squares:
-                    if gcd(side_a, side_b) == 1:
-                        yield side_a, side_b, self.squares[csq]
-
-# Computable but not primitive recursive functions
-
-def ackermann(m: int, n:int) -> int:
-    """Ackermann function is defined recursively by:
-
-    ackermann(0,n) = n+1
-    ackermann(m,0) = ackermann(m-1,1)
-    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
-
-    Ackerman's function is an example of a function that is computable
-    but not primatively recursive. It quickly becomes computationally
-    intractable for relatively small values of m and n.
-    """
-    # Model a function stack with a list, then
-    # evaluate innermost ackermann function first.
-    acker = [m, n]
-
-    while len(acker) > 1:
-        mm, nn = acker[-2:]
-        if mm < 1:
-            acker[-1] = acker.pop() + 1
-        elif nn < 1:
-            acker[-2] = acker[-2] - 1
-            acker[-1] = 1
-        else:
-            acker[-2] = mm - 1
-            acker[-1] = mm
-            acker.append(nn-1)
-
-    return acker[0]
-
 # Fibonacci Iterator
 
 def fibonacci(fib0: int, fib1: int) -> Iterator:
@@ -257,6 +169,3 @@ def fibonacci(fib0: int, fib1: int) -> Iterator:
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1
-
-if __name__ == '__main__':
-    sys.exit(0)

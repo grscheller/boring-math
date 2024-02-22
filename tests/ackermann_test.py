@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import ackermann
+from grscheller.boring_math.recursive import ackermann
 
 class Test_ackerman:
     def test_ack(self):

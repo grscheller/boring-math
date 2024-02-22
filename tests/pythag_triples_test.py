@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import Pythag3
+from grscheller.boring_math.pythag3 import Pythag3
 
 class Test_pythag3:
     def test_triples(self):
@@ -53,3 +53,14 @@ class Test_pythag3:
 
         triples = set(pythag3.triples(2060, 2067, 20000))
         assert len(triples) == 3
+
+        triples = set(pythag3.triples(20000, 20025, 60000))
+        assert (20001, 55720, 59201) in triples
+        assert (20003, 25596, 32485) in triples
+        assert (20007, 27224, 33785) in triples
+        assert (20008, 23175, 30617) in triples
+        assert (20020, 30099, 36149) in triples
+        assert (20025, 21352, 29273) in triples 
+        assert (20008, 57855, 61217) not in triples
+        assert (3, 4, 5) not in triples
+        assert (6, 6, 6) not in triples
