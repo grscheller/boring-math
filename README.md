@@ -35,6 +35,8 @@ grscheller.boring_math package.
 
 ---
 
+## Libraries
+
 ### Integer Math Module
 
 #### Number theory
@@ -52,6 +54,8 @@ grscheller.boring_math package.
   * starting at first prime at or after `start`
   * ending at last prime before `end_before`
 
+---
+
 #### Combinatorics
 
 * Function **comb**(n: int, m: int) -> int
@@ -66,11 +70,15 @@ grscheller.boring_math package.
       * are better for larger results
       * work reasonably well for smaller results
 
+---
+
 #### Fibonacci sequences
 
 * Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator
   * return an iterator for a Fibonacci sequence
   * defaults to `0, 1, 1, 2, 3, 5, 8, ...`
+
+---
 
 ### Pythagorean Triple Module
 
@@ -82,6 +90,8 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
   * Return an interator of tuples of Pythagorean Tiples
   * Side `a <= a_max` and sides `a, b, c <= all_max`
   * Iterator finds all primative pythagorean triples up to a given a_max
+
+---
 
 ### Recursive Function Module
 
@@ -95,7 +105,9 @@ An example of a total computable function that is not primitive recursive.
 
 ---
 
-### CLI Applications
+## CLI Applications
+
+Implemented in a platform independent way via pyproject.toml.
 
 ### Pythagorean Triples
 
