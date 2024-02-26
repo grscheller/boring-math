@@ -5,7 +5,7 @@ Daddy's boring math library.
 * Python package of functions of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * Example of a Python package with both libraries and executables
-* [grscheller.circular-array][1] project on PyPI
+* [grscheller.boring-math][1] project on PyPI
 * [Detailed API documentation][2] on GH-Pages
 * [Source code][3] on GitHub
 
@@ -110,7 +110,6 @@ Implemented in a platform independent way via pyproject.toml.
 #### Pythagorean triple app
 
 * CLI App **pythag3**
-  * entry point for program pythag3
   * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a*a + b*b = c*c` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
@@ -122,16 +121,21 @@ Implemented in a platform independent way via pyproject.toml.
 
 #### Ackermann's function
 
-Computes the value or a [fairly standard][4] definition of the Ackermann
-function. Ackermann discovered early examples of total computable
-functions that are not primitively recursive. He was a student of
-Hilbert.
+Ackermann, a student of Hilbert, discovered early examples of totally
+computable functions that are not primitively recursive.
+
+A [fairly standard][4] definition of the Ackermann function is
+recursively defined for `m,n >= 0` by
+
+```
+     ackermann(0,n) = n+1
+     ackermann(m,0) = ackermann(m-1,1)
+     ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))
+```
 
 * CLI App **ackerman**
-  * Ackermann's function is defined recursively by
-    * `ackermann(0,n) = n+1`
-    * `ackermann(m,0) = ackermann(m-1,1)`
-    * `ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))` for `m,n > 0`
+  * Given two non-negative integers, evaluates Ackermann's function
+  * Implements the recursion via a Python array
   * Usage: `ackerman m n`
 
 [1]: https://pypi.org/project/grscheller.boring-math/
