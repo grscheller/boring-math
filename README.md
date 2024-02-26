@@ -9,10 +9,12 @@ Daddy's boring math library.
 * [Detailed API documentation][2] on GH-Pages
 * [Source code][3] on GitHub
 
-Below are the modules and executables which make up the
+## Overview
+
+Here are the modules and executables which make up the
 grscheller.boring_math package.
 
-## Library Modules
+### Library Modules
 
 * [Integer Math Module](#integer-math-module)
   * [Number Theory](#number-theory)
@@ -25,15 +27,15 @@ grscheller.boring_math package.
 * [Recursive Function Module](#recursive-function-module)
   * [Ackermann's Function](#function-ackermann)
 
-## CLI Applications
+---
+
+### CLI Applications
 
 * [Pythagorean Triples](#pythagorean-triples)
   * [Pythagorean Triples App](#pythagorean-triple-app)
 
 * [Recursive Function Theory](#recursive-function-theory)
   * [Ackermann's Function App](#ackermanns-function)
-
----
 
 ## Libraries
 
@@ -78,8 +80,6 @@ grscheller.boring_math package.
   * return an iterator for a Fibonacci sequence
   * defaults to `0, 1, 1, 2, 3, 5, 8, ...`
 
----
-
 ### Pythagorean Triple Module
 
 #### Pythagorean triple iterator
@@ -91,8 +91,6 @@ The values `a, b, c > 0` represent integer sides of a right triangle.
   * Side `a <= a_max` and sides `a, b, c <= all_max`
   * Iterator finds all primative pythagorean triples up to a given a_max
 
----
-
 ### Recursive Function Module
 
 #### Function **ackermann**
@@ -102,8 +100,6 @@ An example of a total computable function that is not primitive recursive.
 * Function **ackermann**(m: int, n: int) -> int
   * Ackermann's function is a doublely recursively defined function
   * Becomes numerically intractable after m=4
-
----
 
 ## CLI Applications
 
@@ -137,8 +133,6 @@ Hilbert.
     * `ackermann(m,0) = ackermann(m-1,1)`
     * `ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))` for `m,n > 0`
   * Usage: `ackerman m n`
-
----
 
 [1]: https://pypi.org/project/grscheller.boring-math/
 [2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
