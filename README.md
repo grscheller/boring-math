@@ -9,12 +9,10 @@ Daddy's boring math library.
 * [Detailed API documentation][2] on GH-Pages
 * [Source code][3] on GitHub
 
-## Overview
-
-Here are the modules and executables which make up the
+Below are the modules and executables which make up the
 grscheller.boring_math package.
 
-### Library Modules
+## Library Modules
 
 * [Integer Math Module](#integer-math-module)
   * [Number Theory](#number-theory)
@@ -27,7 +25,7 @@ grscheller.boring_math package.
 * [Recursive Function Module](#recursive-function-module)
   * [Ackermann's Function](#function-ackermann)
 
-### CLI Applications
+## CLI Applications
 
 * [Pythagorean Triples](#pythagorean-triples)
   * [Pythagorean Triples App](#pythagorean-triple-app)
