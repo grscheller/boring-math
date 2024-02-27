@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>grscheller.boring_math.pythag3-cli API documentation</title>
-<meta name="description" content="Entry points for grscheller.boring_math.pythag3 cli script …" />
+<meta name="description" content="Entry points for grscheller.boring_math.pythag3 cli scripts …" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,8 +22,8 @@
 <h1 class="title">Module <code>grscheller.boring_math.pythag3-cli</code></h1>
 </header>
 <section id="section-intro">
-<p>Entry points for grscheller.boring_math.pythag3 cli script.</p>
-<p>Supports automatically generated OS independent CLI scripts.</p>
+<p>Entry points for grscheller.boring_math.pythag3 cli scripts.</p>
+<p>Supports automatically generated OS independent CLI scripts via pyproject.toml.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -42,9 +42,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-&#34;&#34;&#34;Entry points for grscheller.boring_math.pythag3 cli script.
+&#34;&#34;&#34;Entry points for grscheller.boring_math.pythag3 cli scripts.
 
-Supports automatically generated OS independent CLI scripts.
+Supports automatically generated OS independent CLI scripts via pyproject.toml.
 &#34;&#34;&#34;
 
 from __future__ import annotations
@@ -60,28 +60,33 @@ from grscheller.boring_math.pythag3 import Pythag3
 # Pythagorean Triples generator script
 
 def pythag3_cli() -&gt; None:
-    &#34;&#34;&#34;Find all primative pythagorian triples up to a given level.
+    &#34;&#34;&#34;Find all possible primative pythagorian triples up to a given level.
 
-    A pythagorian triple are three integers (a,b,c) such
-    that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1
+    A pythagorian triple are three integers (a, b, c) such
+    that a*a + b*b = c*c where a, b, c &gt; 0 and gcd(a, b, c) = 1
 
-    Usage: pythag3.py n [m]
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
-    One argument generates all triples with a &lt;= n
-    No arguments generates all triples with 3 &lt;= a &lt;= 100
+    - 3 arguments print all triples with n1 &lt;= a &lt;= n2 and a,b,c &lt;= n3
+    - 2 arguments print all triples with n1 &lt;= a &lt;= n2
+    - 1 argument prints all triples with a &lt;= n1
+    - 0 arguments print all triples with 3 &lt;= a &lt;= 100
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 
-    # Argument processing with some idiot checking
     args = sys.argv[1:]
 
-    if len(args) &gt; 1:
-        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
-    elif len(args) &gt; 0:
-        pythagTriples = pythag3.triples(3, int(args[0]))
+    if len(args) &gt; 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]),
+                                            max = int(args[2]))
+    elif len(args) == 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]))
+    elif leng(args) == 1:
+        pythagTriples = pythag3.triples(a_start = 3, a_max = int(args[0]))
     else:
-        pythagTriples = pythag3.triples(3, 100)
+        pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:
@@ -99,40 +104,48 @@ def pythag3_cli() -&gt; None:
 <span>def <span class="ident">pythag3_cli</span></span>(<span>) ‑> None</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Find all primative pythagorian triples up to a given level.</p>
-<p>A pythagorian triple are three integers (a,b,c) such
-that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1</p>
-<p>Usage: pythag3.py n [m]</p>
-<p>Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
-One argument generates all triples with a &lt;= n
-No arguments generates all triples with 3 &lt;= a &lt;= 100</p></div>
+<div class="desc"><p>Find all possible primative pythagorian triples up to a given level.</p>
+<p>A pythagorian triple are three integers (a, b, c) such
+that a<em>a + b</em>b = c*c where a, b, c &gt; 0 and gcd(a, b, c) = 1</p>
+<p>Usage: pythag3.py [n1 [n2 [n3]]]</p>
+<ul>
+<li>3 arguments print all triples with n1 &lt;= a &lt;= n2 and a,b,c &lt;= n3</li>
+<li>2 arguments print all triples with n1 &lt;= a &lt;= n2</li>
+<li>1 argument prints all triples with a &lt;= n1</li>
+<li>0 arguments print all triples with 3 &lt;= a &lt;= 100</li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def pythag3_cli() -&gt; None:
-    &#34;&#34;&#34;Find all primative pythagorian triples up to a given level.
+    &#34;&#34;&#34;Find all possible primative pythagorian triples up to a given level.
 
-    A pythagorian triple are three integers (a,b,c) such
-    that a^2 + b^2 = c^2 where x,y,z &gt; 0 and gcd(a,b,c) = 1
+    A pythagorian triple are three integers (a, b, c) such
+    that a*a + b*b = c*c where a, b, c &gt; 0 and gcd(a, b, c) = 1
 
-    Usage: pythag3.py n [m]
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Two arguments generate all triples with a &lt;= n and a,b,c &lt;= m
-    One argument generates all triples with a &lt;= n
-    No arguments generates all triples with 3 &lt;= a &lt;= 100
+    - 3 arguments print all triples with n1 &lt;= a &lt;= n2 and a,b,c &lt;= n3
+    - 2 arguments print all triples with n1 &lt;= a &lt;= n2
+    - 1 argument prints all triples with a &lt;= n1
+    - 0 arguments print all triples with 3 &lt;= a &lt;= 100
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 
-    # Argument processing with some idiot checking
     args = sys.argv[1:]
 
-    if len(args) &gt; 1:
-        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
-    elif len(args) &gt; 0:
-        pythagTriples = pythag3.triples(3, int(args[0]))
+    if len(args) &gt; 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]),
+                                            max = int(args[2]))
+    elif len(args) == 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]))
+    elif leng(args) == 1:
+        pythagTriples = pythag3.triples(a_start = 3, a_max = int(args[0]))
     else:
-        pythagTriples = pythag3.triples(3, 100)
+        pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:

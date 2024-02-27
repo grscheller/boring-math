@@ -86,10 +86,10 @@ grscheller.boring_math package.
 
 The values `a, b, c > 0` represent integer sides of a right triangle.
 
-* Function **pythag3**(a_max: int=3, all_max: int|None=None) -> Iterator
-  * Return an interator of tuples of Pythagorean Tiples
-  * Side `a <= a_max` and sides `a, b, c <= all_max`
-  * Iterator finds all primative pythagorean triples up to a given a_max
+* Method **Pythag3.triples**(a_start: int=3, a_max: int=3, max: int=0) -> Iterator
+  * Returns an interator of tuples of primative Pythagorean Triples
+  * Side `a <= a_max` and sides `a, b, c <= max`
+  * Iterator finds all primative pythagorean within the given parameters
 
 ### Recursive Function Module
 
@@ -113,9 +113,11 @@ Implemented in a platform independent way via pyproject.toml.
   * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a*a + b*b = c*c` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
-  * Usage: `pythag3 n [m]`
-    * one argument outputs all triples with `a <= n`
-    * two arguments outputs all triples with `a <= n` and `a, b, c <= m`
+  * Usage: `pythag3 [n1 [n2 [n3]]`
+    * 3 arguments print all triples with n1 <= a <= n2 and a,b,c <= n3
+    * 2 arguments print all triples with n1 <= a <= n2
+    * 1 argument prints all triples with a <= n1
+    * 0 arguments print all triples with 3 <= a <= 100
 
 ### Recursive Function Theory
 

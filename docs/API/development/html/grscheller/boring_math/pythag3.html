@@ -23,9 +23,9 @@
 </header>
 <section id="section-intro">
 <p>Pythagorean triple module</p>
-<p>Class Pythag3 for generating Pythaorean triples. A Pythagorean triple is
-a tuple of three integers (a,b,c) such that
-a<strong>2 + b</strong>2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
+<p>A primative Pythagorean triple is a tuple of three integers (a,b,c)
+such that a<em>a + b</em>b = c*c where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
+<p>Geometrically, a, b, c represent the sides of a right trianle.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -46,9 +46,10 @@ a<strong>2 + b</strong>2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
 
 &#34;&#34;&#34;Pythagorean triple module
 
-Class Pythag3 for generating Pythaorean triples. A Pythagorean triple is
-a tuple of three integers (a,b,c) such that
-a**2 + b**2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1
+A primative Pythagorean triple is a tuple of three integers (a,b,c)
+such that a*a + b*b = c*c where a,b,c &gt; 0 and gcd(a,b,c) = 1
+
+Geometrically, a, b, c represent the sides of a right trianle.
 &#34;&#34;&#34;
 
 from __future__ import annotations
@@ -59,9 +60,7 @@ from grscheller.boring_math import gcd, iSqrt
 __all__ = [&#39;Pythag3&#39;]
 
 class Pythag3():
-    &#34;&#34;&#34; A Pythagorean triple is a tuple of three integers (a,b,c) such that
-    a**2 + b**2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1
-    &#34;&#34;&#34;
+    &#34;&#34;&#34;Class supporting the generation of primative Pythagorean triples&#34;&#34;&#34;
     def __init__(self, last_square: int=500):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
         if last_h &lt; 5:
@@ -72,6 +71,7 @@ class Pythag3():
         self.last_h = last_h
 
     def extend_squares(self, last_to_square):
+        &#34;&#34;&#34;Extend self.squares, the perfect square lookup table&#34;&#34;&#34;
         last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
         if last_h &gt; self.last_h:
             # Extend perfect square lookup dictionary
@@ -98,10 +98,11 @@ class Pythag3():
         return a_cap, b_cap, c_cap
 
     def triples(self, a_start: int=3, a_max: int=3, max: int=0) -&gt; Iterator:
-        &#34;&#34;&#34;This iterator finds all primative pythagorean triples (a, b, c)
-        where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
+        &#34;&#34;&#34;This iterator finds all possible primative pythagorean triples
+        (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
-        When max = 0 all possible Pythagorean triples for all sides a.
+        For max = 0 all theoretically possible Pythagorean triples are
+        generated for sides a &lt;= a_max.
         &#34;&#34;&#34;
         a_init = 3 if a_start &lt; 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
@@ -130,16 +131,13 @@ class Pythag3():
 <span>(</span><span>last_square: int = 500)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>A Pythagorean triple is a tuple of three integers (a,b,c) such that
-a<strong>2 + b</strong>2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p></div>
+<div class="desc"><p>Class supporting the generation of primative Pythagorean triples</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class Pythag3():
-    &#34;&#34;&#34; A Pythagorean triple is a tuple of three integers (a,b,c) such that
-    a**2 + b**2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1
-    &#34;&#34;&#34;
+    &#34;&#34;&#34;Class supporting the generation of primative Pythagorean triples&#34;&#34;&#34;
     def __init__(self, last_square: int=500):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
         if last_h &lt; 5:
@@ -150,6 +148,7 @@ a<strong>2 + b</strong>2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p></div>
         self.last_h = last_h
 
     def extend_squares(self, last_to_square):
+        &#34;&#34;&#34;Extend self.squares, the perfect square lookup table&#34;&#34;&#34;
         last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
         if last_h &gt; self.last_h:
             # Extend perfect square lookup dictionary
@@ -176,10 +175,11 @@ a<strong>2 + b</strong>2 = c**2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p></div>
         return a_cap, b_cap, c_cap
 
     def triples(self, a_start: int=3, a_max: int=3, max: int=0) -&gt; Iterator:
-        &#34;&#34;&#34;This iterator finds all primative pythagorean triples (a, b, c)
-        where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
+        &#34;&#34;&#34;This iterator finds all possible primative pythagorean triples
+        (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
-        When max = 0 all possible Pythagorean triples for all sides a.
+        For max = 0 all theoretically possible Pythagorean triples are
+        generated for sides a &lt;= a_max.
         &#34;&#34;&#34;
         a_init = 3 if a_start &lt; 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
@@ -230,12 +230,13 @@ def cap_sides(a_max: int, max: int=0) -&gt; Tuple(int, Callable[[int], int], int
 <span>def <span class="ident">extend_squares</span></span>(<span>self, last_to_square)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Extend self.squares, the perfect square lookup table</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def extend_squares(self, last_to_square):
+    &#34;&#34;&#34;Extend self.squares, the perfect square lookup table&#34;&#34;&#34;
     last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
     if last_h &gt; self.last_h:
         # Extend perfect square lookup dictionary
@@ -248,18 +249,20 @@ def cap_sides(a_max: int, max: int=0) -&gt; Tuple(int, Callable[[int], int], int
 <span>def <span class="ident">triples</span></span>(<span>self, a_start: int = 3, a_max: int = 3, max: int = 0) ‑> Iterator</span>
 </code></dt>
 <dd>
-<div class="desc"><p>This iterator finds all primative pythagorean triples (a, b, c)
-where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.</p>
-<p>When max = 0 all possible Pythagorean triples for all sides a.</p></div>
+<div class="desc"><p>This iterator finds all possible primative pythagorean triples
+(a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.</p>
+<p>For max = 0 all theoretically possible Pythagorean triples are
+generated for sides a &lt;= a_max.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def triples(self, a_start: int=3, a_max: int=3, max: int=0) -&gt; Iterator:
-    &#34;&#34;&#34;This iterator finds all primative pythagorean triples (a, b, c)
-    where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
+    &#34;&#34;&#34;This iterator finds all possible primative pythagorean triples
+    (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
-    When max = 0 all possible Pythagorean triples for all sides a.
+    For max = 0 all theoretically possible Pythagorean triples are
+    generated for sides a &lt;= a_max.
     &#34;&#34;&#34;
     a_init = 3 if a_start &lt; 3 else a_start
     a_cap, b_cap, c_cap = self.cap_sides(a_max, max)

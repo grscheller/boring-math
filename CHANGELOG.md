@@ -18,6 +18,10 @@ Version numbers for PyPI releases begin with a `v`.
   * commit count (thrashing)
   * dont to be taken too seriously
 
+## Version = 0.2.1.0 - commit date 2024-02-27
+* Updated pythag3 cli script to provide more functionality
+* docstring and README.md improvements
+
 ## Version = 0.2.0.0 - commit date 2024-02-21
 * All implementations going forward for integer_math module will use
   just integer based algorithms. I can't really compete with C based

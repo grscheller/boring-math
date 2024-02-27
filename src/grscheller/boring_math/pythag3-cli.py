@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math.pythag3 cli script.
+"""Entry points for grscheller.boring_math.pythag3 cli scripts.
 
-Supports automatically generated OS independent CLI scripts.
+Supports automatically generated OS independent CLI scripts via pyproject.toml.
 """
 
 from __future__ import annotations
@@ -30,28 +30,33 @@ from grscheller.boring_math.pythag3 import Pythag3
 # Pythagorean Triples generator script
 
 def pythag3_cli() -> None:
-    """Find all primative pythagorian triples up to a given level.
+    """Find all possible primative pythagorian triples up to a given level.
 
-    A pythagorian triple are three integers (a,b,c) such
-    that a^2 + b^2 = c^2 where x,y,z > 0 and gcd(a,b,c) = 1
+    A pythagorian triple are three integers (a, b, c) such
+    that a*a + b*b = c*c where a, b, c > 0 and gcd(a, b, c) = 1
 
-    Usage: pythag3.py n [m]
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Two arguments generate all triples with a <= n and a,b,c <= m
-    One argument generates all triples with a <= n
-    No arguments generates all triples with 3 <= a <= 100
+    - 3 arguments print all triples with n1 <= a <= n2 and a,b,c <= n3
+    - 2 arguments print all triples with n1 <= a <= n2
+    - 1 argument prints all triples with a <= n1
+    - 0 arguments print all triples with 3 <= a <= 100
     """
     pythag3 = Pythag3()
 
-    # Argument processing with some idiot checking
     args = sys.argv[1:]
 
-    if len(args) > 1:
-        pythagTriples = pythag3.triples(int(3, args[0]), int(args[1]))
-    elif len(args) > 0:
-        pythagTriples = pythag3.triples(3, int(args[0]))
+    if len(args) > 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]),
+                                            max = int(args[2]))
+    elif len(args) == 2:
+        pythagTriples = pythag3.triples(a_start = int(args[0]),
+                                          a_max = int(args[1]))
+    elif leng(args) == 1:
+        pythagTriples = pythag3.triples(a_start = 3, a_max = int(args[0]))
     else:
-        pythagTriples = pythag3.triples(3, 100)
+        pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
 
     # Print out Pythagean Triples
     for triple in pythagTriples:
