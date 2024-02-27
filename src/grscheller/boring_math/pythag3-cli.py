@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math.pythag3 cli scripts.
+"""Entry points for grscheller.boring_math pythag3 cli script.
 
-Supports automatically generated OS independent CLI scripts via pyproject.toml.
+The pythag3 script is automatically generated in an OS independent way via
+the [project.scripts] section of pyproject.toml.
 """
 
 from __future__ import annotations
@@ -30,17 +31,20 @@ from grscheller.boring_math.pythag3 import Pythag3
 # Pythagorean Triples generator script
 
 def pythag3_cli() -> None:
-    """Find all possible primative pythagorian triples up to a given level.
+    """Print all possible primative pythagorian triples satifying input
+    parameters.
 
     A pythagorian triple are three integers (a, b, c) such
-    that a*a + b*b = c*c where a, b, c > 0 and gcd(a, b, c) = 1
+    that a^2 + b^2 = c^2 where a, b, c > 0 and gcd(a, b, c) = 1
 
     Usage: pythag3.py [n1 [n2 [n3]]]
 
-    - 3 arguments print all triples with n1 <= a <= n2 and a,b,c <= n3
-    - 2 arguments print all triples with n1 <= a <= n2
-    - 1 argument prints all triples with a <= n1
-    - 0 arguments print all triples with 3 <= a <= 100
+      where
+
+      3 arguments print all triples with n1 <= a <= n2 and a,b,c <= n3
+      2 arguments print all triples with n1 <= a <= n2
+      1 argument prints all triples with a <= n1
+      0 arguments print all triples with 3 <= a <= 100
     """
     pythag3 = Pythag3()
 

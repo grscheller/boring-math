@@ -24,8 +24,8 @@
 <section id="section-intro">
 <p>Pythagorean triple module</p>
 <p>A primative Pythagorean triple is a tuple of three integers (a,b,c)
-such that a<em>a + b</em>b = c*c where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
-<p>Geometrically, a, b, c represent the sides of a right trianle.</p>
+such that a^2 + b^2 = c^2 where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
+<p>Geometrically a, b, c represent the sides of a right trianle.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -47,9 +47,9 @@ such that a<em>a + b</em>b = c*c where a,b,c &gt; 0 and gcd(a,b,c) = 1</p>
 &#34;&#34;&#34;Pythagorean triple module
 
 A primative Pythagorean triple is a tuple of three integers (a,b,c)
-such that a*a + b*b = c*c where a,b,c &gt; 0 and gcd(a,b,c) = 1
+such that a^2 + b^2 = c^2 where a,b,c &gt; 0 and gcd(a,b,c) = 1
 
-Geometrically, a, b, c represent the sides of a right trianle.
+Geometrically a, b, c represent the sides of a right trianle.
 &#34;&#34;&#34;
 
 from __future__ import annotations
@@ -102,7 +102,7 @@ class Pythag3():
         (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
         For max = 0 all theoretically possible Pythagorean triples are
-        generated for sides a &lt;= a_max.
+        generated with sides a_start &lt;= a &lt;= a_max.
         &#34;&#34;&#34;
         a_init = 3 if a_start &lt; 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
@@ -179,7 +179,7 @@ class Pythag3():
         (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
         For max = 0 all theoretically possible Pythagorean triples are
-        generated for sides a &lt;= a_max.
+        generated with sides a_start &lt;= a &lt;= a_max.
         &#34;&#34;&#34;
         a_init = 3 if a_start &lt; 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
@@ -252,7 +252,7 @@ def cap_sides(a_max: int, max: int=0) -&gt; Tuple(int, Callable[[int], int], int
 <div class="desc"><p>This iterator finds all possible primative pythagorean triples
 (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.</p>
 <p>For max = 0 all theoretically possible Pythagorean triples are
-generated for sides a &lt;= a_max.</p></div>
+generated with sides a_start &lt;= a &lt;= a_max.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -262,7 +262,7 @@ generated for sides a &lt;= a_max.</p></div>
     (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max.
 
     For max = 0 all theoretically possible Pythagorean triples are
-    generated for sides a &lt;= a_max.
+    generated with sides a_start &lt;= a &lt;= a_max.
     &#34;&#34;&#34;
     a_init = 3 if a_start &lt; 3 else a_start
     a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
