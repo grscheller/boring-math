@@ -43,7 +43,8 @@ def gcd(fst: int, snd: int) -> int:
 
 def lcm(fst: int, snd: int) -> int:
     """Finds the least common multiple of two integers.
-       Takes two integers, returns lcm >= 0.
+
+    Takes two integers, returns lcm >= 0.
     """
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     fst //= common
@@ -53,8 +54,8 @@ def lcm(fst: int, snd: int) -> int:
 def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
     '''Makes 2 integers coprime by dividing out their common factors.
 
-       Note: One use case is when dividing two factored BigInts. This is the main
-             motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+    Note: One use case is when dividing two factored BigInts. This is the main
+          motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
     '''
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common

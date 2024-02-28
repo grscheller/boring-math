@@ -34,16 +34,20 @@ def pythag3_cli() -> None:
     """Print all possible primative pythagorian triples satifying input
     parameters.
 
-    A pythagorian triple are three integers (a, b, c) such
-    that a^2 + b^2 = c^2 where a, b, c > 0 and gcd(a, b, c) = 1
+    A pythagorian triple are three integers (a, b, c)
 
-    Usage: pythag3.py [n1 [n2 [n3]]]
+    such that a^2 + b^2 = c^2 where a, b, c > 0 and gcd(a, b, c) = 1
 
-      where
+    Just a test: `a*a + b**2 = c^2 + d*d`
+
+    Usage: pythag3.py [n1 [n2 [n3]]] where
 
       3 arguments print all triples with n1 <= a <= n2 and a,b,c <= n3
+
       2 arguments print all triples with n1 <= a <= n2
+
       1 argument prints all triples with a <= n1
+
       0 arguments print all triples with 3 <= a <= 100
     """
     pythag3 = Pythag3()

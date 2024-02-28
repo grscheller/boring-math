@@ -15,6 +15,7 @@
 """Pythagorean triple module
 
 A primative Pythagorean triple is a tuple of three integers (a,b,c)
+
 such that a^2 + b^2 = c^2 where a,b,c > 0 and gcd(a,b,c) = 1
 
 Geometrically a, b, c represent the sides of a right trianle.

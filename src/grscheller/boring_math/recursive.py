@@ -22,12 +22,14 @@ def ackermann(m: int, n:int) -> int:
     """Ackermann function is defined recursively by:
 
     ackermann(0,n) = n+1
+
     ackermann(m,0) = ackermann(m-1,1)
+
     ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
 
     Ackermann's function is an example of a function that is computable
     but not primatively recursive. It quickly becomes computationally
-   : intractable for relatively small values of m and n.
+    intractable for relatively small values of m.
     """
     # Model a function stack with a list, then
     # evaluate innermost ackermann function first.
