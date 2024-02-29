@@ -26,36 +26,33 @@ __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonac
 
 # Number Theory mathematical Functions.
 
-def gcd(fst: int, snd: int) -> int:
+def gcd(m: int, n: int) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers
-
     * takes two integers, returns `gcd >= 0`
-    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
+    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     """
-    fst, snd = abs(fst), abs(snd)
-    fst, snd = (fst, snd) if fst > snd else (snd, fst)
-    while snd > 0:
-        fst, snd = snd, fst % snd
+    mm, nn = abs(m), abs(n)
+    mm, nn = (mm, nn) if mm > nn else (nn, mm)
+    while nn > 0:
+        mm, nn = nn, mm % nn
 
-    return fst
+    return 1 if 0 == m == n else mm
 
-def lcm(fst: int, snd: int) -> int:
+def lcm(m: int, n: int) -> int:
     """Finds the least common multiple (lcm) of two integers.
-
     * takes two integers `m` and `n`
     * returns `lcm(m, n) > 0`
     """
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    fst //= common
-
-    return abs(fst*snd)
+    m //= gcd(m, n)
+    return abs(m*n)
 
 def coprime(m: int, n: int) -> Tuple(int, int):
     """Makes 2 integers coprime by dividing out their common factors.
     * returns `(0, 0)` when `n = m = 0`
+    * returned coprimed values retain their original signs
     """
-    common = 1 if 0 == m == n else gcd(m, n)
-    return m // common, n // common
+    coPrime = lambda mm, nn, common: mm//common, nn//common
+    return coPrime(m, n, gcd(m, n))
 
 def iSqrt(n: int) -> int:
     """Integer square root of a non-negative integer.
@@ -63,7 +60,7 @@ def iSqrt(n: int) -> int:
     * raises: ValueError if `n < 0`
     """
     if n < 0:
-        msg = 'iSqrt(n): n must be nonNegtice'
+        msg = 'iSqrt(n): n must be non-negative'
         raise ValueError(msg)
     high = n
     low = 1
@@ -107,14 +104,14 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     """Implements `C(n,m)`, the number of combinations of `n` items taken `m`
     at a time, in a way that works efficiently for Python's arbitrary length
-    integers. Default parameters geared to large values of `n` and `m`.
+    integers.
 
+    * default parameters geared to large values of `n` and `m`.
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
     * or just use math.comb(n, m) instead
     * it is hoped pypy's JIT compiler will give better performance
-
-    Raises: ValueError if `n < 0` or `m < 0`
+    * raises `ValueError` if `n < 0` or `m < 0`
     """
     if n < 0 or m < 0:
         raise ValueError('for C(n, m) n and m must be a non-negavive ints')

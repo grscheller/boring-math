@@ -45,16 +45,14 @@ grscheller.boring_math package.
 
 * Function **gcd**(fst: int, snd: int) -> int
   * takes two integers, returns greatest common divisor (gcd)
-  * where `gcd >= 0`
-  * `gcd(0,0)` returns `0` but in this case the gcd does not exist
+  * always returns `gcd > 0`
+  * `gcd(0,0)` returns `1` but in this case the gcd does not exist
+  * this default value more "natural"
+    * than math module's default `0`
+    * takes edge case checking out of `lcm` and `coprime`
 
 * Function **lcm**(fst: int, snd: int) -> int
   * takes two integers, returns least common multiple (lcm)
-
-* Function **primes**(start: int=2, end_before: int=100) -> Iterator
-  * takes two integers, returns an iterator of primes
-  * starting at first prime at or after `start`
-  * ending at last prime before `end_before`
 
 * Function **coprime**(m: int, n: int) -> Tuple(int, int)
   * make two integers coprime by dividing out their common factors
@@ -67,6 +65,11 @@ grscheller.boring_math package.
 * Function **isSqr**(n: int) -> bool
   * returns true if `n` is a perfect square
   * raises ValueError if `n < 0`
+
+* Function **primes**(start: int=2, end_before: int=100) -> Iterator
+  * takes two integers, returns an iterator of primes
+  * starting at first prime at or after `start`
+  * ending at last prime before `end_before`
 
 ---
 

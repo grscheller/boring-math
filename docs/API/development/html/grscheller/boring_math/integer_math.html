@@ -56,36 +56,33 @@ __all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;coprime&#39;, &#39;iSqrt&#39;, &#3
 
 # Number Theory mathematical Functions.
 
-def gcd(fst: int, snd: int) -&gt; int:
+def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
-
     * takes two integers, returns `gcd &gt;= 0`
-    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
+    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
-    fst, snd = abs(fst), abs(snd)
-    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
-    while snd &gt; 0:
-        fst, snd = snd, fst % snd
+    mm, nn = abs(m), abs(n)
+    mm, nn = (mm, nn) if mm &gt; nn else (nn, mm)
+    while nn &gt; 0:
+        mm, nn = nn, mm % nn
 
-    return fst
+    return 1 if 0 == m == n else mm
 
-def lcm(fst: int, snd: int) -&gt; int:
+def lcm(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple (lcm) of two integers.
-
     * takes two integers `m` and `n`
     * returns `lcm(m, n) &gt; 0`
     &#34;&#34;&#34;
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    fst //= common
-
-    return abs(fst*snd)
+    m //= gcd(m, n)
+    return abs(m*n)
 
 def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
     * returns `(0, 0)` when `n = m = 0`
+    * returned coprimed values retain their original signs
     &#34;&#34;&#34;
-    common = 1 if 0 == m == n else gcd(m, n)
-    return m // common, n // common
+    coPrime = lambda mm, nn, common: mm//common, nn//common
+    return coPrime(m, n, gcd(m, n))
 
 def iSqrt(n: int) -&gt; int:
     &#34;&#34;&#34;Integer square root of a non-negative integer.
@@ -93,7 +90,7 @@ def iSqrt(n: int) -&gt; int:
     * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0:
-        msg = &#39;iSqrt(n): n must be nonNegtice&#39;
+        msg = &#39;iSqrt(n): n must be non-negative&#39;
         raise ValueError(msg)
     high = n
     low = 1
@@ -137,14 +134,14 @@ def primes(start: int=2, end_before: int=100) -&gt; Iterator:
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
     &#34;&#34;&#34;Implements `C(n,m)`, the number of combinations of `n` items taken `m`
     at a time, in a way that works efficiently for Python&#39;s arbitrary length
-    integers. Default parameters geared to large values of `n` and `m`.
+    integers.
 
+    * default parameters geared to large values of `n` and `m`.
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
     * or just use math.comb(n, m) instead
     * it is hoped pypy&#39;s JIT compiler will give better performance
-
-    Raises: ValueError if `n &lt; 0` or `m &lt; 0`
+    * raises `ValueError` if `n &lt; 0` or `m &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0 or m &lt; 0:
         raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
@@ -207,14 +204,15 @@ def fibonacci(fib0: int, fib1: int) -&gt; Iterator:
 <dd>
 <div class="desc"><p>Implements <code>C(n,m)</code>, the number of combinations of <code>n</code> items taken <code>m</code>
 at a time, in a way that works efficiently for Python's arbitrary length
-integers. Default parameters geared to large values of <code>n</code> and <code>m</code>.</p>
+integers.</p>
 <ul>
+<li>default parameters geared to large values of <code>n</code> and <code>m</code>.</li>
 <li>these defaults work reasonably well for smaller (human size) values</li>
 <li>for inner loops with smaller values, use <code>targetTop = targetBot = 1</code></li>
 <li>or just use math.comb(n, m) instead</li>
 <li>it is hoped pypy's JIT compiler will give better performance</li>
-</ul>
-<p>Raises: ValueError if <code>n &lt; 0</code> or <code>m &lt; 0</code></p></div>
+<li>raises <code>ValueError</code> if <code>n &lt; 0</code> or <code>m &lt; 0</code></li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -222,14 +220,14 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <pre><code class="python">def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
     &#34;&#34;&#34;Implements `C(n,m)`, the number of combinations of `n` items taken `m`
     at a time, in a way that works efficiently for Python&#39;s arbitrary length
-    integers. Default parameters geared to large values of `n` and `m`.
+    integers.
 
+    * default parameters geared to large values of `n` and `m`.
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
     * or just use math.comb(n, m) instead
     * it is hoped pypy&#39;s JIT compiler will give better performance
-
-    Raises: ValueError if `n &lt; 0` or `m &lt; 0`
+    * raises `ValueError` if `n &lt; 0` or `m &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0 or m &lt; 0:
         raise ValueError(&#39;for C(n, m) n and m must be a non-negavive ints&#39;)
@@ -276,7 +274,8 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </code></dt>
 <dd>
 <div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.
-* returns <code>(0, 0)</code> when <code>n = m = 0</code></p></div>
+* returns <code>(0, 0)</code> when <code>n = m = 0</code>
+* returned coprimed values retain their original signs</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -284,9 +283,10 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <pre><code class="python">def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
     * returns `(0, 0)` when `n = m = 0`
+    * returned coprimed values retain their original signs
     &#34;&#34;&#34;
-    common = 1 if 0 == m == n else gcd(m, n)
-    return m // common, n // common</code></pre>
+    coPrime = lambda mm, nn, common: mm//common, nn//common
+    return coPrime(m, n, gcd(m, n))</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
@@ -306,30 +306,27 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.gcd"><code class="name flex">
-<span>def <span class="ident">gcd</span></span>(<span>fst: int, snd: int) ‑> int</span>
+<span>def <span class="ident">gcd</span></span>(<span>m: int, n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
-<ul>
-<li>takes two integers, returns <code>gcd &gt;= 0</code></li>
-<li>will return <code>0</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</li>
-</ul></div>
+<div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers
+* takes two integers, returns <code>gcd &gt;= 0</code>
+* will return <code>1</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def gcd(fst: int, snd: int) -&gt; int:
+<pre><code class="python">def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
-
     * takes two integers, returns `gcd &gt;= 0`
-    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
+    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
-    fst, snd = abs(fst), abs(snd)
-    fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
-    while snd &gt; 0:
-        fst, snd = snd, fst % snd
+    mm, nn = abs(m), abs(n)
+    mm, nn = (mm, nn) if mm &gt; nn else (nn, mm)
+    while nn &gt; 0:
+        mm, nn = nn, mm % nn
 
-    return fst</code></pre>
+    return 1 if 0 == m == n else mm</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.iSqrt"><code class="name flex">
@@ -349,7 +346,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
     * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0:
-        msg = &#39;iSqrt(n): n must be nonNegtice&#39;
+        msg = &#39;iSqrt(n): n must be non-negative&#39;
         raise ValueError(msg)
     high = n
     low = 1
@@ -374,28 +371,23 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.lcm"><code class="name flex">
-<span>def <span class="ident">lcm</span></span>(<span>fst: int, snd: int) ‑> int</span>
+<span>def <span class="ident">lcm</span></span>(<span>m: int, n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Finds the least common multiple (lcm) of two integers.</p>
-<ul>
-<li>takes two integers <code>m</code> and <code>n</code></li>
-<li>returns <code>lcm(m, n) &gt; 0</code></li>
-</ul></div>
+<div class="desc"><p>Finds the least common multiple (lcm) of two integers.
+* takes two integers <code>m</code> and <code>n</code>
+* returns <code>lcm(m, n) &gt; 0</code></p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def lcm(fst: int, snd: int) -&gt; int:
+<pre><code class="python">def lcm(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple (lcm) of two integers.
-
     * takes two integers `m` and `n`
     * returns `lcm(m, n) &gt; 0`
     &#34;&#34;&#34;
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    fst //= common
-
-    return abs(fst*snd)</code></pre>
+    m //= gcd(m, n)
+    return abs(m*n)</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">
