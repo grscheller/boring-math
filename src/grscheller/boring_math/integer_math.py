@@ -28,6 +28,7 @@ __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonac
 
 def gcd(m: int, n: int) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers
+
     * takes two integers, returns `gcd >= 0`
     * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     """
@@ -40,6 +41,7 @@ def gcd(m: int, n: int) -> int:
 
 def lcm(m: int, n: int) -> int:
     """Finds the least common multiple (lcm) of two integers.
+
     * takes two integers `m` and `n`
     * returns `lcm(m, n) > 0`
     """
@@ -48,6 +50,7 @@ def lcm(m: int, n: int) -> int:
 
 def coprime(m: int, n: int) -> Tuple(int, int):
     """Makes 2 integers coprime by dividing out their common factors.
+
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     """
@@ -56,6 +59,7 @@ def coprime(m: int, n: int) -> Tuple(int, int):
 
 def iSqrt(n: int) -> int:
     """Integer square root of a non-negative integer.
+
     * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
     * raises: ValueError if `n < 0`
     """

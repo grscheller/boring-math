@@ -58,6 +58,7 @@ __all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;coprime&#39;, &#39;iSqrt&#39;, &#3
 
 def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
+
     * takes two integers, returns `gcd &gt;= 0`
     * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
@@ -70,6 +71,7 @@ def gcd(m: int, n: int) -&gt; int:
 
 def lcm(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple (lcm) of two integers.
+
     * takes two integers `m` and `n`
     * returns `lcm(m, n) &gt; 0`
     &#34;&#34;&#34;
@@ -78,6 +80,7 @@ def lcm(m: int, n: int) -&gt; int:
 
 def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
+
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     &#34;&#34;&#34;
@@ -86,6 +89,7 @@ def coprime(m: int, n: int) -&gt; Tuple(int, int):
 
 def iSqrt(n: int) -&gt; int:
     &#34;&#34;&#34;Integer square root of a non-negative integer.
+
     * return the unique `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
     * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
@@ -273,15 +277,18 @@ integers.</p>
 <span>def <span class="ident">coprime</span></span>(<span>m: int, n: int) ‑> Tuple(int, int)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.
-* returns <code>(0, 0)</code> when <code>n = m = 0</code>
-* returned coprimed values retain their original signs</p></div>
+<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
+<ul>
+<li>returns <code>(0, 0)</code> when <code>n = m = 0</code></li>
+<li>returned coprimed values retain their original signs</li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
+
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     &#34;&#34;&#34;
@@ -309,15 +316,18 @@ integers.</p>
 <span>def <span class="ident">gcd</span></span>(<span>m: int, n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers
-* takes two integers, returns <code>gcd &gt;= 0</code>
-* will return <code>1</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</p></div>
+<div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
+<ul>
+<li>takes two integers, returns <code>gcd &gt;= 0</code></li>
+<li>will return <code>1</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
+
     * takes two integers, returns `gcd &gt;= 0`
     * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
@@ -333,15 +343,18 @@ integers.</p>
 <span>def <span class="ident">iSqrt</span></span>(<span>n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Integer square root of a non-negative integer.
-* return the unique <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code>
-* raises: ValueError if <code>n &lt; 0</code></p></div>
+<div class="desc"><p>Integer square root of a non-negative integer.</p>
+<ul>
+<li>return the unique <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code></li>
+<li>raises: ValueError if <code>n &lt; 0</code></li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def iSqrt(n: int) -&gt; int:
     &#34;&#34;&#34;Integer square root of a non-negative integer.
+
     * return the unique `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
     * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
@@ -374,15 +387,18 @@ integers.</p>
 <span>def <span class="ident">lcm</span></span>(<span>m: int, n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Finds the least common multiple (lcm) of two integers.
-* takes two integers <code>m</code> and <code>n</code>
-* returns <code>lcm(m, n) &gt; 0</code></p></div>
+<div class="desc"><p>Finds the least common multiple (lcm) of two integers.</p>
+<ul>
+<li>takes two integers <code>m</code> and <code>n</code></li>
+<li>returns <code>lcm(m, n) &gt; 0</code></li>
+</ul></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def lcm(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple (lcm) of two integers.
+
     * takes two integers `m` and `n`
     * returns `lcm(m, n) &gt; 0`
     &#34;&#34;&#34;
