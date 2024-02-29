@@ -39,12 +39,12 @@ def pythag3_cli() -> None:
 
     Usage: pythag3.py [n1 [n2 [n3]]]
 
-    | # of args | Prints all possible tuples of triples satifying |
+    | # of args |     Prints all possible `a, b, c` satifying     |
     |:---------:|:-----------------------------------------------:|
-    |    `3`    | `n1 <= a <= n2` and `a,b,c <= n3`               |
-    |    `2`    | `n1 <= a <= n2`                                 |
-    |    `1`    | `a <= n1`                                       |
-    |    `0`    | `3 <= a <= 100`                                 |
+    |    `3`    |     `n1 <= a <= n2` and `a,b,c <= n3`           |
+    |    `2`    |     `n1 <= a <= n2`                             |
+    |    `1`    |     `a <= n1`                                   |
+    |    `0`    |     `3 <= a <= 100`                             |
     """
     pythag3 = Pythag3()
 
