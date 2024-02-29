@@ -37,14 +37,14 @@ def pythag3_cli() -> None:
     * such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
-    Usage: pythag3.py [n1 [n2 [n3]]]
+    Usage: pythag3.py [m [n [max]]]
 
-    | # of args |     | Prints all possible `a, b, c` satifying  |
-    |:---------:|:---:|-----------------------------------------:|
-    |    `3`    |     | `n1 <= a <= n2` and `a,b,c <= n3`        |
-    |    `2`    |     | `n1 <= a <= n2`                          |
-    |    `1`    |     | `a <= n1`                                |
-    |    `0`    |     | `3 <= a <= 100`                          |
+    | # of args |     | Prints all possible triples `(a, b, c)` satifying  |
+    |:---------:| --- |:-------------------------------------------------- |
+    |    `3`    |     | `m <= a <= n` and `a,b,c <= max`                   |
+    |    `2`    |     | `m <= a <= n`                                      |
+    |    `1`    |     | `a <= m`                                           |
+    |    `0`    |     | `3 <= a <= 100`                                    |
     """
     pythag3 = Pythag3()
 

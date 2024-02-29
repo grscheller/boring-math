@@ -68,14 +68,14 @@ def pythag3_cli() -&gt; None:
     * such a triple is primative when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
-    Usage: pythag3.py [n1 [n2 [n3]]]
+    Usage: pythag3.py [m [n [max]]]
 
-    | # of args |     | Prints all possible `a, b, c` satifying  |
-    |:---------:|:---:|-----------------------------------------:|
-    |    `3`    |     | `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`        |
-    |    `2`    |     | `n1 &lt;= a &lt;= n2`                          |
-    |    `1`    |     | `a &lt;= n1`                                |
-    |    `0`    |     | `3 &lt;= a &lt;= 100`                          |
+    | # of args |     | Prints all possible triples `(a, b, c)` satifying  |
+    |:---------:| --- |:-------------------------------------------------- |
+    |    `3`    |     | `m &lt;= a &lt;= n` and `a,b,c &lt;= max`                   |
+    |    `2`    |     | `m &lt;= a &lt;= n`                                      |
+    |    `1`    |     | `a &lt;= m`                                           |
+    |    `0`    |     | `3 &lt;= a &lt;= 100`                                    |
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 
@@ -115,35 +115,35 @@ def pythag3_cli() -&gt; None:
 <li>such a triple is primative when <code>a, b, c &gt; 0</code> and <code>gcd(a, b, c) = 1</code></li>
 <li>geometrically <code>a, b, c</code> represent the sides of a right triangle</li>
 </ul>
-<p>Usage: pythag3.py [n1 [n2 [n3]]]</p>
+<p>Usage: pythag3.py [m [n [max]]]</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;"># of args</th>
-<th style="text-align: center;"></th>
-<th style="text-align: right;">Prints all possible <code>a, b, c</code> satifying</th>
+<th></th>
+<th style="text-align: left;">Prints all possible triples <code>(a, b, c)</code> satifying</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;"><code>3</code></td>
-<td style="text-align: center;"></td>
-<td style="text-align: right;"><code>n1 &lt;= a &lt;= n2</code> and <code>a,b,c &lt;= n3</code></td>
+<td></td>
+<td style="text-align: left;"><code>m &lt;= a &lt;= n</code> and <code>a,b,c &lt;= max</code></td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>2</code></td>
-<td style="text-align: center;"></td>
-<td style="text-align: right;"><code>n1 &lt;= a &lt;= n2</code></td>
+<td></td>
+<td style="text-align: left;"><code>m &lt;= a &lt;= n</code></td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>1</code></td>
-<td style="text-align: center;"></td>
-<td style="text-align: right;"><code>a &lt;= n1</code></td>
+<td></td>
+<td style="text-align: left;"><code>a &lt;= m</code></td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>0</code></td>
-<td style="text-align: center;"></td>
-<td style="text-align: right;"><code>3 &lt;= a &lt;= 100</code></td>
+<td></td>
+<td style="text-align: left;"><code>3 &lt;= a &lt;= 100</code></td>
 </tr>
 </tbody>
 </table></div>
@@ -158,14 +158,14 @@ def pythag3_cli() -&gt; None:
     * such a triple is primative when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
-    Usage: pythag3.py [n1 [n2 [n3]]]
+    Usage: pythag3.py [m [n [max]]]
 
-    | # of args |     | Prints all possible `a, b, c` satifying  |
-    |:---------:|:---:|-----------------------------------------:|
-    |    `3`    |     | `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`        |
-    |    `2`    |     | `n1 &lt;= a &lt;= n2`                          |
-    |    `1`    |     | `a &lt;= n1`                                |
-    |    `0`    |     | `3 &lt;= a &lt;= 100`                          |
+    | # of args |     | Prints all possible triples `(a, b, c)` satifying  |
+    |:---------:| --- |:-------------------------------------------------- |
+    |    `3`    |     | `m &lt;= a &lt;= n` and `a,b,c &lt;= max`                   |
+    |    `2`    |     | `m &lt;= a &lt;= n`                                      |
+    |    `1`    |     | `a &lt;= m`                                           |
+    |    `0`    |     | `3 &lt;= a &lt;= 100`                                    |
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 
