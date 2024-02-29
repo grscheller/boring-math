@@ -59,8 +59,7 @@ def coprime(fst: int, snd: int) -> Tuple(int, int):
     return fst // common, snd // common
 
 def iSqrt(n: int) -> int:
-    """For `n >= 0` returns the greatest `m` such that `m*m <= n`. Since `m` is the
-    greatest such integer then we must have `m*m <= n < (m+1)*(m+1)`
+    """For `n >= 0` returns the greatest `m` such that `m*m <= n < (m+1)*(m+1)`
 
     Raises: ValueError if `n < 0`
     """
@@ -75,6 +74,7 @@ def iSqrt(n: int) -> int:
     return high
 
 def isSqr(n: int):
+    """Return true if integer argument is a perfect square"""
     return n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator:

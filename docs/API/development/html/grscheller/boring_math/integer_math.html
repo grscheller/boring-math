@@ -89,8 +89,7 @@ def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
     return fst // common, snd // common
 
 def iSqrt(n: int) -&gt; int:
-    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n`. Since `m` is the
-    greatest such integer then we must have `m*m &lt;= n &lt; (m+1)*(m+1)`
+    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
 
     Raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
@@ -105,6 +104,7 @@ def iSqrt(n: int) -&gt; int:
     return high
 
 def isSqr(n: int):
+    &#34;&#34;&#34;Return true if integer argument is a perfect square&#34;&#34;&#34;
     return n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -&gt; Iterator:
@@ -338,16 +338,14 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <span>def <span class="ident">iSqrt</span></span>(<span>n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>For <code>n &gt;= 0</code> returns the greatest <code>m</code> such that <code>m*m &lt;= n</code>. Since <code>m</code> is the
-greatest such integer then we must have <code>m*m &lt;= n &lt; (m+1)*(m+1)</code></p>
+<div class="desc"><p>For <code>n &gt;= 0</code> returns the greatest <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code></p>
 <p>Raises: ValueError if <code>n &lt; 0</code></p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def iSqrt(n: int) -&gt; int:
-    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n`. Since `m` is the
-    greatest such integer then we must have `m*m &lt;= n &lt; (m+1)*(m+1)`
+    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
 
     Raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
@@ -366,12 +364,13 @@ greatest such integer then we must have <code>m*m &lt;= n &lt; (m+1)*(m+1)</code
 <span>def <span class="ident">isSqr</span></span>(<span>n: int)</span>
 </code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Return true if integer argument is a perfect square</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def isSqr(n: int):
+    &#34;&#34;&#34;Return true if integer argument is a perfect square&#34;&#34;&#34;
     return n == iSqrt(n)**2</code></pre>
 </details>
 </dd>
