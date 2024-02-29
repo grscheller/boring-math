@@ -30,7 +30,7 @@ def gcd(fst: int, snd: int) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers
 
     * takes two integers, returns `gcd >= 0`
-    * note that `gcd(0,0)` returns `0` but in this case the gcd does not exist
+    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
     """
     fst, snd = abs(fst), abs(snd)
     fst, snd = (fst, snd) if fst > snd else (snd, fst)
@@ -53,7 +53,7 @@ def lcm(fst: int, snd: int) -> int:
 def coprime(fst: int, snd: int) -> Tuple(int, int):
     """Makes 2 integers coprime by dividing out their common factors.
 
-    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
     """
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common

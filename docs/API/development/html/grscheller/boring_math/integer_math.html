@@ -60,7 +60,7 @@ def gcd(fst: int, snd: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
 
     * takes two integers, returns `gcd &gt;= 0`
-    * note that `gcd(0,0)` returns `0` but in this case the gcd does not exist
+    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
     fst, snd = abs(fst), abs(snd)
     fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
@@ -83,7 +83,7 @@ def lcm(fst: int, snd: int) -&gt; int:
 def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
 
-    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
     &#34;&#34;&#34;
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
@@ -277,7 +277,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </code></dt>
 <dd>
 <div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
-<p>Setting <code><a title="grscheller.boring_math.integer_math.coprime" href="#grscheller.boring_math.integer_math.coprime">coprime()</a>(0, 0)</code> to <code>(0, 0)</code> and not <code>(1, 1)</code> is the natural choice.</p></div>
+<p>Returning <code>(0, 0)</code> and not <code>(1, 1)</code> when <code>fst = snd = 0</code> is the natural choice.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -285,7 +285,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <pre><code class="python">def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
 
-    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
     &#34;&#34;&#34;
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common</code></pre>
@@ -314,7 +314,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
 <ul>
 <li>takes two integers, returns <code>gcd &gt;= 0</code></li>
-<li>note that <code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd()</a>(0,0)</code> returns <code>0</code> but in this case the gcd does not exist</li>
+<li>will return <code>0</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</li>
 </ul></div>
 <details class="source">
 <summary>
@@ -324,7 +324,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
 
     * takes two integers, returns `gcd &gt;= 0`
-    * note that `gcd(0,0)` returns `0` but in this case the gcd does not exist
+    * will return `0` when `fst = snd = 0` but in this case the gcd does not exist
     &#34;&#34;&#34;
     fst, snd = abs(fst), abs(snd)
     fst, snd = (fst, snd) if fst &gt; snd else (snd, fst)
