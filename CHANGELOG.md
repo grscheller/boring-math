@@ -18,6 +18,15 @@ Version numbers for PyPI releases begin with a `v`.
   * commit count (thrashing)
   * dont to be taken too seriously
 
+## Version = 0.2.2.0 - commit date 2024-02-28
+* renamed integer_math.mkCoprime to integer_math.coprime
+  * do it now before PyPI v0.3.0
+* realized pdoc uses Markdown as its preferred mrkup language
+  * some differences
+    * incorporates some GitHub Markdown additions
+    * will format google-style & numpydoc style comments
+    * lists are one dimensional, not higherarchical
+
 ## Version = 0.2.1.0 - commit date 2024-02-27
 * Updated pythag3 cli script to provide more functionality
 * docstring and README.md improvements

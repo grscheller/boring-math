@@ -26,7 +26,6 @@ def ackermann(m: int, n:int) -> int:
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
     ```
-
     Ackermann's function is an example of a function that is computable
     but not primatively recursive. It quickly becomes computationally
     intractable for relatively small values of `m`.

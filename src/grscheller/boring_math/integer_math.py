@@ -22,7 +22,7 @@ from __future__ import annotations
 from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
+__all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -50,10 +50,10 @@ def lcm(fst: int, snd: int) -> int:
 
     return abs(fst*snd)
 
-def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
+def coprime(fst: int, snd: int) -> Tuple(int, int):
     """Makes 2 integers coprime by dividing out their common factors.
 
-    Setting `mkCoprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
     """
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
@@ -112,7 +112,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
-      * or just use math.comb(n, m) instead
+    * or just use math.comb(n, m) instead
     * it is hoped pypy's JIT compiler will give better performance
 
     Raises: ValueError if `n < 0` or `m < 0`
@@ -136,7 +136,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     size = len(tops)
     while size > targetTop:
         size -= 1
-        top, bot = mkCoprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
+        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
         tops.pushR(top)
         bots.pushR(bot)
 
@@ -148,7 +148,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     # in the numerator.
     for bot in bots:
         for ii in range(len(tops)):
-            top, bot = mkCoprime(tops.popL(), bot)
+            top, bot = coprime(tops.popL(), bot)
             if top > 1:
                 tops.pushR(top)
             if bot == 1:

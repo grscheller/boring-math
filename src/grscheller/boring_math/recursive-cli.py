@@ -32,14 +32,14 @@ from grscheller.boring_math.recursive import ackermann
 
 def ackermann_cli() -> None:
     """Ackermann function is defined recursively by:
+
     ```
        ackermann(0,n) = n+1
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
     ```
-    Usage: `ackermann m n`
+    Usage: `ackermann m n` where `m, n >= 0`
     """
-    # Argument parsing and checking
     args = sys.argv[1:]
     if len(args) == 2:
         try:

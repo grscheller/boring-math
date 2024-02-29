@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import gcd, lcm, mkCoprime, primes
+from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes
 
 class Test_simple_ones:
     def test_gcd(self):
@@ -38,12 +38,12 @@ class Test_simple_ones:
         assert lcm(2*3*25*7, 3*5*11) == 2*3*25*7*11
 
     def test_mkCoprime(self):
-        assert mkCoprime(0, 0) == (0, 0)
-        assert mkCoprime(5, 0) == (1, 0)
-        assert mkCoprime(0, 4) == (0, 1)
-        assert mkCoprime(1, 4) == (1, 4)
-        assert mkCoprime(6, 15) == (2, 5)
-        assert mkCoprime(2*3*4*5, 3*4*5*11) == (2, 11)
+        assert coprime(0, 0) == (0, 0)
+        assert coprime(5, 0) == (1, 0)
+        assert coprime(0, 4) == (0, 1)
+        assert coprime(1, 4) == (1, 4)
+        assert coprime(6, 15) == (2, 5)
+        assert coprime(2*3*4*5, 3*4*5*11) == (2, 11)
 
     def test_primes(self):
         generated = list(primes(10, 50))

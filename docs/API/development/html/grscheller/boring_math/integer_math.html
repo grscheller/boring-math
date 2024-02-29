@@ -52,7 +52,7 @@ from __future__ import annotations
 from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;mkCoprime&#39;, &#39;iSqrt&#39;, &#39;isSqr&#39;, &#39;primes&#39;, &#39;comb&#39;, &#39;fibonacci&#39;]
+__all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;coprime&#39;, &#39;iSqrt&#39;, &#39;isSqr&#39;, &#39;primes&#39;, &#39;comb&#39;, &#39;fibonacci&#39;]
 
 # Number Theory mathematical Functions.
 
@@ -80,10 +80,10 @@ def lcm(fst: int, snd: int) -&gt; int:
 
     return abs(fst*snd)
 
-def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
+def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
 
-    Setting `mkCoprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
     &#34;&#34;&#34;
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
@@ -142,7 +142,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
 
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
-      * or just use math.comb(n, m) instead
+    * or just use math.comb(n, m) instead
     * it is hoped pypy&#39;s JIT compiler will give better performance
 
     Raises: ValueError if `n &lt; 0` or `m &lt; 0`
@@ -166,7 +166,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
     size = len(tops)
     while size &gt; targetTop:
         size -= 1
-        top, bot = mkCoprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
+        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
         tops.pushR(top)
         bots.pushR(bot)
 
@@ -178,7 +178,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -&gt; int:
     # in the numerator.
     for bot in bots:
         for ii in range(len(tops)):
-            top, bot = mkCoprime(tops.popL(), bot)
+            top, bot = coprime(tops.popL(), bot)
             if top &gt; 1:
                 tops.pushR(top)
             if bot == 1:
@@ -227,7 +227,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
-      * or just use math.comb(n, m) instead
+    * or just use math.comb(n, m) instead
     * it is hoped pypy&#39;s JIT compiler will give better performance
 
     Raises: ValueError if `n &lt; 0` or `m &lt; 0`
@@ -251,7 +251,7 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
     size = len(tops)
     while size &gt; targetTop:
         size -= 1
-        top, bot = mkCoprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
+        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
         tops.pushR(top)
         bots.pushR(bot)
 
@@ -263,13 +263,32 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
     # in the numerator.
     for bot in bots:
         for ii in range(len(tops)):
-            top, bot = mkCoprime(tops.popL(), bot)
+            top, bot = coprime(tops.popL(), bot)
             if top &gt; 1:
                 tops.pushR(top)
             if bot == 1:
                 break
 
     return tops.foldL(lambda x, y: x * y)</code></pre>
+</details>
+</dd>
+<dt id="grscheller.boring_math.integer_math.coprime"><code class="name flex">
+<span>def <span class="ident">coprime</span></span>(<span>fst: int, snd: int) ‑> Tuple(int, int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
+<p>Setting <code><a title="grscheller.boring_math.integer_math.coprime" href="#grscheller.boring_math.integer_math.coprime">coprime()</a>(0, 0)</code> to <code>(0, 0)</code> and not <code>(1, 1)</code> is the natural choice.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
+    &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
+
+    Setting `coprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
+    &#34;&#34;&#34;
+    common = 1 if 0 == fst == snd else gcd(fst, snd)
+    return fst // common, snd // common</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
@@ -381,25 +400,6 @@ greatest such integer then we must have <code>m*m &lt;= n &lt; (m+1)*(m+1)</code
     return abs(fst*snd)</code></pre>
 </details>
 </dd>
-<dt id="grscheller.boring_math.integer_math.mkCoprime"><code class="name flex">
-<span>def <span class="ident">mkCoprime</span></span>(<span>fst: int, snd: int) ‑> Tuple(int, int)</span>
-</code></dt>
-<dd>
-<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
-<p>Setting <code><a title="grscheller.boring_math.integer_math.mkCoprime" href="#grscheller.boring_math.integer_math.mkCoprime">mkCoprime()</a>(0, 0)</code> to <code>(0, 0)</code> and not <code>(1, 1)</code> is the natural choice.</p></div>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-</summary>
-<pre><code class="python">def mkCoprime(fst: int, snd: int) -&gt; Tuple(int, int):
-    &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
-
-    Setting `mkCoprime(0, 0)` to `(0, 0)` and not `(1, 1)` is the natural choice.
-    &#34;&#34;&#34;
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    return fst // common, snd // common</code></pre>
-</details>
-</dd>
 <dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">
 <span>def <span class="ident">primes</span></span>(<span>start: int = 2, end_before: int = 100) ‑> Iterator</span>
 </code></dt>
@@ -455,12 +455,12 @@ greatest such integer then we must have <code>m*m &lt;= n &lt; (m+1)*(m+1)</code
 <li><h3><a href="#header-functions">Functions</a></h3>
 <ul class="two-column">
 <li><code><a title="grscheller.boring_math.integer_math.comb" href="#grscheller.boring_math.integer_math.comb">comb</a></code></li>
+<li><code><a title="grscheller.boring_math.integer_math.coprime" href="#grscheller.boring_math.integer_math.coprime">coprime</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.fibonacci" href="#grscheller.boring_math.integer_math.fibonacci">fibonacci</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.iSqrt" href="#grscheller.boring_math.integer_math.iSqrt">iSqrt</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.isSqr" href="#grscheller.boring_math.integer_math.isSqr">isSqr</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm</a></code></li>
-<li><code><a title="grscheller.boring_math.integer_math.mkCoprime" href="#grscheller.boring_math.integer_math.mkCoprime">mkCoprime</a></code></li>
 <li><code><a title="grscheller.boring_math.integer_math.primes" href="#grscheller.boring_math.integer_math.primes">primes</a></code></li>
 </ul>
 </li>
