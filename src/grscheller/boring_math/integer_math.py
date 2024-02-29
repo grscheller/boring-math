@@ -22,17 +22,16 @@ from __future__ import annotations
 from typing import Callable, Iterator, Tuple
 from grscheller.circular_array import CircularArray
 
-__all__ = ['gcd', 'lcm', 'mkCoprime', 'iSqrt', 'isSqr', 'primes',
-           'comb', 'fibonacci']
+__all__ = ['gcd', 'lcm', 'mkCoprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
 def gcd(fst: int, snd: int) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers
 
-    Takes two integers, returns gcd >= 0.
+    Takes two integers, returns `gcd >= 0`
 
-    Note: gcd(0,0) returns 0 but in this case the gcd does not exist
+    Note: `gcd(0,0)` returns `0` but in this case the gcd does not exist
     """
     fst, snd = abs(fst), abs(snd)
     fst, snd = (fst, snd) if fst > snd else (snd, fst)
@@ -44,7 +43,7 @@ def gcd(fst: int, snd: int) -> int:
 def lcm(fst: int, snd: int) -> int:
     """Finds the least common multiple of two integers.
 
-    Takes two integers, returns lcm >= 0.
+    Takes two integers, returns `lcm >= 0`
     """
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     fst //= common
@@ -55,16 +54,16 @@ def mkCoprime(fst: int, snd: int) -> Tuple(int, int):
     '''Makes 2 integers coprime by dividing out their common factors.
 
     Note: One use case is when dividing two factored BigInts. This is the main
-          motivation for choosing mkCoprime(0, 0) = (0, 0) instead of (1, 1).
+          motivation for choosing `mkCoprime(0, 0) = (0, 0)` instead of `(1, 1)`
     '''
     common = 1 if 0 == fst == snd else gcd(fst, snd)
     return fst // common, snd // common
 
 def iSqrt(n: int) -> int:
     '''Returns for n >= 0 the greatest m such that m*m <= n, since m is the greatest
-    such integer then we must have m*m <= n < (m+1)*(m+1).
+    such integer then we must have `m*m <= n < (m+1)*(m+1)`
 
-    Raises: ValueError if n < 0
+    Raises: ValueError if `n < 0`
     '''
     if n < 0:
         msg = 'iSqrt(n): n must be nonNegtice'
@@ -80,9 +79,7 @@ def isSqr(n: int):
     return n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator:
-    """Return an iterator for the prime numbers Using the Sieve of Eratosthenes
-    algorithm.
-    """
+    """Return a prime number iterator using the Sieve of Eratosthenes algorithm"""
     if start >= end_before or end_before < 3:
         return []
     if start < 2:
@@ -110,17 +107,17 @@ def primes(start: int=2, end_before: int=100) -> Iterator:
 # Combinatorics
 
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
-    """Implements C(n,m), the number of combinations of n items taken m at
-    a time, in a way that works efficiently for Python's arbitrary length
-    integers. Default parameters geared to large values of n and m. These
-    defaults work reasonably well for smaller (human size) values.
+    """Implements C(n,m), the number of combinations of `n` items taken `m`
+    at a time, in a way that works efficiently for Python's arbitrary length
+    integers. Default parameters geared to large values of `n` and `m`.
+    These defaults work reasonably well for smaller (human size) values.
 
     For inner loops with smaller values, use targetTop = targetBot = 1, or
     just use math.comb(n, m) instead.
 
     I am hoping pypy's JIT compiler will give better performance.
 
-    Raises: ValueError if n < 0 or m < 0
+    Raises: ValueError if `n < 0` or `m < 0`
     """
     if n < 0 or m < 0:
         raise ValueError('for C(n, m) n and m must be a non-negavive ints')
@@ -165,7 +162,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
 def fibonacci(fib0: int, fib1: int) -> Iterator:
     """Returns an iterator to a Fibonacci sequence whose
-    first two terms are fib0 and fib1.
+    first two terms are `fib0` and `fib1`.
     """
     while True:
         yield fib0

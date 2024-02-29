@@ -62,13 +62,19 @@ from grscheller.boring_math.recursive import ackermann
 def ackermann_cli() -&gt; None:
     &#34;&#34;&#34;Ackermann function is defined recursively by:
 
+    ```
     ackermann(0,n) = n+1
-
     ackermann(m,0) = ackermann(m-1,1)
-
     ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+    ```
 
-    Usage: ackermann m n
+    ```
+       ackermann(0,n) = n+1
+       ackermann(m,0) = ackermann(m-1,1)
+       ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+    ```
+
+    Usage: `ackermann m n`
     &#34;&#34;&#34;
     # Argument parsing and checking
     args = sys.argv[1:]
@@ -102,10 +108,15 @@ def ackermann_cli() -&gt; None:
 </code></dt>
 <dd>
 <div class="desc"><p>Ackermann function is defined recursively by:</p>
-<p>ackermann(0,n) = n+1</p>
-<p>ackermann(m,0) = ackermann(m-1,1)</p>
-<p>ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0</p>
-<p>Usage: ackermann m n</p></div>
+<pre><code>ackermann(0,n) = n+1
+ackermann(m,0) = ackermann(m-1,1)
+ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+</code></pre>
+<pre><code>   ackermann(0,n) = n+1
+   ackermann(m,0) = ackermann(m-1,1)
+   ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+</code></pre>
+<p>Usage: <code>ackermann m n</code></p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -113,13 +124,19 @@ def ackermann_cli() -&gt; None:
 <pre><code class="python">def ackermann_cli() -&gt; None:
     &#34;&#34;&#34;Ackermann function is defined recursively by:
 
+    ```
     ackermann(0,n) = n+1
-
     ackermann(m,0) = ackermann(m-1,1)
-
     ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+    ```
 
-    Usage: ackermann m n
+    ```
+       ackermann(0,n) = n+1
+       ackermann(m,0) = ackermann(m-1,1)
+       ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
+    ```
+
+    Usage: `ackermann m n`
     &#34;&#34;&#34;
     # Argument parsing and checking
     args = sys.argv[1:]

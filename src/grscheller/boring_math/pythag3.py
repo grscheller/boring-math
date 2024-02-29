@@ -68,10 +68,12 @@ class Pythag3():
 
     def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
         """This iterator finds all possible primative pythagorean triples
-        (a, b, c) where a_start <= a <= a_max and 0 < a < b < c < max.
 
-        For max = 0 all theoretically possible Pythagorean triples are
-        generated with sides a_start <= a <= a_max.
+        `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`
+
+        For `max = 0` all theoretically possible Pythagorean triples are generated
+
+        for `a_start <= a <= a_max`
         """
         a_init = 3 if a_start < 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
