@@ -80,18 +80,17 @@ def lcm(fst: int, snd: int) -&gt; int:
 
     return abs(fst*snd)
 
-def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
+def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
-
-    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
+    * returns `(0, 0)` when `n = m = 0`
     &#34;&#34;&#34;
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    return fst // common, snd // common
+    common = 1 if 0 == m == n else gcd(m, n)
+    return m // common, n // common
 
 def iSqrt(n: int) -&gt; int:
-    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
-
-    Raises: ValueError if `n &lt; 0`
+    &#34;&#34;&#34;Integer square root of a non-negative integer.
+    * return the unique `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
+    * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0:
         msg = &#39;iSqrt(n): n must be nonNegtice&#39;
@@ -103,9 +102,9 @@ def iSqrt(n: int) -&gt; int:
         low = n // high
     return high
 
-def isSqr(n: int):
-    &#34;&#34;&#34;Return true if integer argument is a perfect square&#34;&#34;&#34;
-    return n == iSqrt(n)**2
+def isSqr(n: int) -&gt; bool:
+    &#34;&#34;&#34;Returns true if integer argument is a perfect square&#34;&#34;&#34;
+    return false if n &lt; 0 else n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -&gt; Iterator:
     &#34;&#34;&#34;Return a prime number iterator using the *Sieve of Eratosthenes* algorithm&#34;&#34;&#34;
@@ -273,22 +272,21 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.coprime"><code class="name flex">
-<span>def <span class="ident">coprime</span></span>(<span>fst: int, snd: int) ‑> Tuple(int, int)</span>
+<span>def <span class="ident">coprime</span></span>(<span>m: int, n: int) ‑> Tuple(int, int)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
-<p>Returning <code>(0, 0)</code> and not <code>(1, 1)</code> when <code>fst = snd = 0</code> is the natural choice.</p></div>
+<div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.
+* returns <code>(0, 0)</code> when <code>n = m = 0</code></p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def coprime(fst: int, snd: int) -&gt; Tuple(int, int):
+<pre><code class="python">def coprime(m: int, n: int) -&gt; Tuple(int, int):
     &#34;&#34;&#34;Makes 2 integers coprime by dividing out their common factors.
-
-    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
+    * returns `(0, 0)` when `n = m = 0`
     &#34;&#34;&#34;
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    return fst // common, snd // common</code></pre>
+    common = 1 if 0 == m == n else gcd(m, n)
+    return m // common, n // common</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.fibonacci"><code class="name flex">
@@ -338,16 +336,17 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 <span>def <span class="ident">iSqrt</span></span>(<span>n: int) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>For <code>n &gt;= 0</code> returns the greatest <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code></p>
-<p>Raises: ValueError if <code>n &lt; 0</code></p></div>
+<div class="desc"><p>Integer square root of a non-negative integer.
+* return the unique <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code>
+* raises: ValueError if <code>n &lt; 0</code></p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def iSqrt(n: int) -&gt; int:
-    &#34;&#34;&#34;For `n &gt;= 0` returns the greatest `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
-
-    Raises: ValueError if `n &lt; 0`
+    &#34;&#34;&#34;Integer square root of a non-negative integer.
+    * return the unique `m` such that `m*m &lt;= n &lt; (m+1)*(m+1)`
+    * raises: ValueError if `n &lt; 0`
     &#34;&#34;&#34;
     if n &lt; 0:
         msg = &#39;iSqrt(n): n must be nonNegtice&#39;
@@ -361,17 +360,17 @@ integers. Default parameters geared to large values of <code>n</code> and <code>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.isSqr"><code class="name flex">
-<span>def <span class="ident">isSqr</span></span>(<span>n: int)</span>
+<span>def <span class="ident">isSqr</span></span>(<span>n: int) ‑> bool</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Return true if integer argument is a perfect square</p></div>
+<div class="desc"><p>Returns true if integer argument is a perfect square</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def isSqr(n: int):
-    &#34;&#34;&#34;Return true if integer argument is a perfect square&#34;&#34;&#34;
-    return n == iSqrt(n)**2</code></pre>
+<pre><code class="python">def isSqr(n: int) -&gt; bool:
+    &#34;&#34;&#34;Returns true if integer argument is a perfect square&#34;&#34;&#34;
+    return false if n &lt; 0 else n == iSqrt(n)**2</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.lcm"><code class="name flex">

@@ -56,6 +56,18 @@ grscheller.boring_math package.
   * starting at first prime at or after `start`
   * ending at last prime before `end_before`
 
+* Function **coprime**(m: int, n: int) -> Tuple(int, int)
+  * make two integers coprime by dividing out their common factors
+  * returns `(0, 0)` when `n = m = 0`
+
+* Function **iSqrt**(n: int) -> int
+  * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
+  * raises: ValueError if `n < 0`
+
+* Function **isSqr**(n: int) -> bool
+  * returns true if `n` is a perfect square
+  * raises ValueError if `n < 0`
+
 ---
 
 #### Combinatorics

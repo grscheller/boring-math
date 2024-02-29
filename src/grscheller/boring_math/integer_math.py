@@ -50,18 +50,17 @@ def lcm(fst: int, snd: int) -> int:
 
     return abs(fst*snd)
 
-def coprime(fst: int, snd: int) -> Tuple(int, int):
+def coprime(m: int, n: int) -> Tuple(int, int):
     """Makes 2 integers coprime by dividing out their common factors.
-
-    Returning `(0, 0)` and not `(1, 1)` when `fst = snd = 0` is the natural choice.
+    * returns `(0, 0)` when `n = m = 0`
     """
-    common = 1 if 0 == fst == snd else gcd(fst, snd)
-    return fst // common, snd // common
+    common = 1 if 0 == m == n else gcd(m, n)
+    return m // common, n // common
 
 def iSqrt(n: int) -> int:
-    """For `n >= 0` returns the greatest `m` such that `m*m <= n < (m+1)*(m+1)`
-
-    Raises: ValueError if `n < 0`
+    """Integer square root of a non-negative integer.
+    * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
+    * raises: ValueError if `n < 0`
     """
     if n < 0:
         msg = 'iSqrt(n): n must be nonNegtice'
@@ -73,9 +72,9 @@ def iSqrt(n: int) -> int:
         low = n // high
     return high
 
-def isSqr(n: int):
-    """Return true if integer argument is a perfect square"""
-    return n == iSqrt(n)**2
+def isSqr(n: int) -> bool:
+    """Returns true if integer argument is a perfect square"""
+    return false if n < 0 else n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator:
     """Return a prime number iterator using the *Sieve of Eratosthenes* algorithm"""
