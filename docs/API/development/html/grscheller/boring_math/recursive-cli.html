@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>grscheller.boring_math.recursive-cli API documentation</title>
-<meta name="description" content="Entry points for grscheller.boring_math.integer_math cli scripts …" />
+<meta name="description" content="Entry points for grscheller.boring_math.integer_math CLI scripts …" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,8 +22,9 @@
 <h1 class="title">Module <code>grscheller.boring_math.recursive-cli</code></h1>
 </header>
 <section id="section-intro">
-<p>Entry points for grscheller.boring_math.integer_math cli scripts.</p>
-<p>Supports automatically generated OS independent CLI scripts.</p>
+<p>Entry points for grscheller.boring_math.integer_math CLI scripts.</p>
+<p>Scripts are automatically generated in an OS independent way by the
+package build backend based on the project.scripts section of pyproject.toml.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -42,9 +43,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-&#34;&#34;&#34;Entry points for grscheller.boring_math.integer_math cli scripts.
+&#34;&#34;&#34;Entry points for grscheller.boring_math.integer_math CLI scripts.
 
-Supports automatically generated OS independent CLI scripts.
+Scripts are automatically generated in an OS independent way by the
+package build backend based on the project.scripts section of pyproject.toml.
 &#34;&#34;&#34;
 
 from __future__ import annotations
@@ -61,19 +63,11 @@ from grscheller.boring_math.recursive import ackermann
 
 def ackermann_cli() -&gt; None:
     &#34;&#34;&#34;Ackermann function is defined recursively by:
-
-    ```
-    ackermann(0,n) = n+1
-    ackermann(m,0) = ackermann(m-1,1)
-    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
-    ```
-
     ```
        ackermann(0,n) = n+1
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
     ```
-
     Usage: `ackermann m n`
     &#34;&#34;&#34;
     # Argument parsing and checking
@@ -108,10 +102,6 @@ def ackermann_cli() -&gt; None:
 </code></dt>
 <dd>
 <div class="desc"><p>Ackermann function is defined recursively by:</p>
-<pre><code>ackermann(0,n) = n+1
-ackermann(m,0) = ackermann(m-1,1)
-ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
-</code></pre>
 <pre><code>   ackermann(0,n) = n+1
    ackermann(m,0) = ackermann(m-1,1)
    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
@@ -123,19 +113,11 @@ ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
 </summary>
 <pre><code class="python">def ackermann_cli() -&gt; None:
     &#34;&#34;&#34;Ackermann function is defined recursively by:
-
-    ```
-    ackermann(0,n) = n+1
-    ackermann(m,0) = ackermann(m-1,1)
-    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
-    ```
-
     ```
        ackermann(0,n) = n+1
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m &gt; 0
     ```
-
     Usage: `ackermann m n`
     &#34;&#34;&#34;
     # Argument parsing and checking

@@ -14,8 +14,8 @@
 
 """Entry points for grscheller.boring_math pythag3 cli script.
 
-The pythag3 script is automatically generated in an OS independent way via
-the project.scripts section of pyproject.toml.
+Script is automatically generated in an OS independent way by the
+package build backend based on the `project.scripts` section of `pyproject.toml`.
 """
 
 from __future__ import annotations
@@ -31,21 +31,20 @@ from grscheller.boring_math.pythag3 import Pythag3
 # Pythagorean Triples generator script
 
 def pythag3_cli() -> None:
-    """Print all possible primative pythagorian triples satifying input parameters.
+    """Prints tuples of primative pythagorian triples.
 
-    A pythagorian triple are three integers `(a, b, c)`
+    * *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+    * such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
+    * geometrically `a, b, c` represent the sides of a right triangle
 
-    such that `a**2 + b**2 = c**2` where `a, b, c > 0` and `gcd(a, b, c) = 1`
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Usage: pythag3.py [n1 [n2 [n3]]] where
-
-    `3` arguments print all triples with `n1 <= a <= n2` and `a,b,c <= n3`
-
-    `2` arguments print all triples with `n1 <= a <= n2`
-
-    `1` argument prints all triples with `a <= n1`
-
-    `0` arguments print all triples with `3 <= a <= 100`
+    | #args | Prints all possible tuples of triples satifying |
+    |:-----:|:----------------------------------------------- |
+    |  `3`  | `n1 <= a <= n2` and `a,b,c <= n3`               |
+    |  `2`  | `n1 <= a <= n2`                                 |
+    |  `1`  | `a <= n1`                                       |
+    |  `0`  | `3 <= a <= 100`                                 |
     """
     pythag3 = Pythag3()
 

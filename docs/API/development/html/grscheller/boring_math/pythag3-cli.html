@@ -23,8 +23,8 @@
 </header>
 <section id="section-intro">
 <p>Entry points for grscheller.boring_math pythag3 cli script.</p>
-<p>The pythag3 script is automatically generated in an OS independent way via
-the project.scripts section of pyproject.toml.</p>
+<p>Script is automatically generated in an OS independent way by the
+package build backend based on the <code>project.scripts</code> section of <code>pyproject.toml</code>.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -45,8 +45,8 @@ the project.scripts section of pyproject.toml.</p>
 
 &#34;&#34;&#34;Entry points for grscheller.boring_math pythag3 cli script.
 
-The pythag3 script is automatically generated in an OS independent way via
-the project.scripts section of pyproject.toml.
+Script is automatically generated in an OS independent way by the
+package build backend based on the `project.scripts` section of `pyproject.toml`.
 &#34;&#34;&#34;
 
 from __future__ import annotations
@@ -62,21 +62,20 @@ from grscheller.boring_math.pythag3 import Pythag3
 # Pythagorean Triples generator script
 
 def pythag3_cli() -&gt; None:
-    &#34;&#34;&#34;Print all possible primative pythagorian triples satifying input parameters.
+    &#34;&#34;&#34;Prints tuples of primative pythagorian triples.
 
-    A pythagorian triple are three integers `(a, b, c)`
+    * *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+    * such a triple is primative when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
+    * geometrically `a, b, c` represent the sides of a right triangle
 
-    such that `a**2 + b**2 = c**2` where `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Usage: pythag3.py [n1 [n2 [n3]]] where
-
-    `3` arguments print all triples with `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`
-
-    `2` arguments print all triples with `n1 &lt;= a &lt;= n2`
-
-    `1` argument prints all triples with `a &lt;= n1`
-
-    `0` arguments print all triples with `3 &lt;= a &lt;= 100`
+    | #args | Prints all possible tuples of triples satifying |
+    |:-----:|:----------------------------------------------- |
+    |  `3`  | `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`               |
+    |  `2`  | `n1 &lt;= a &lt;= n2`                                 |
+    |  `1`  | `a &lt;= n1`                                       |
+    |  `0`  | `3 &lt;= a &lt;= 100`                                 |
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 
@@ -110,34 +109,58 @@ def pythag3_cli() -&gt; None:
 <span>def <span class="ident">pythag3_cli</span></span>(<span>) ‑> None</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Print all possible primative pythagorian triples satifying input parameters.</p>
-<p>A pythagorian triple are three integers <code>(a, b, c)</code></p>
-<p>such that <code>a**2 + b**2 = c**2</code> where <code>a, b, c &gt; 0</code> and <code>gcd(a, b, c) = 1</code></p>
-<p>Usage: pythag3.py [n1 [n2 [n3]]] where</p>
-<p><code>3</code> arguments print all triples with <code>n1 &lt;= a &lt;= n2</code> and <code>a,b,c &lt;= n3</code></p>
-<p><code>2</code> arguments print all triples with <code>n1 &lt;= a &lt;= n2</code></p>
-<p><code>1</code> argument prints all triples with <code>a &lt;= n1</code></p>
-<p><code>0</code> arguments print all triples with <code>3 &lt;= a &lt;= 100</code></p></div>
+<div class="desc"><p>Prints tuples of primative pythagorian triples.</p>
+<ul>
+<li><em>Pythagorian</em> triple are three integers <code>a, b, c</code> where <code>a**2 + b**2 = c**2</code></li>
+<li>such a triple is primative when <code>a, b, c &gt; 0</code> and <code>gcd(a, b, c) = 1</code></li>
+<li>geometrically <code>a, b, c</code> represent the sides of a right triangle</li>
+</ul>
+<p>Usage: pythag3.py [n1 [n2 [n3]]]</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#args</th>
+<th style="text-align: left;">Prints all possible tuples of triples satifying</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>3</code></td>
+<td style="text-align: left;"><code>n1 &lt;= a &lt;= n2</code> and <code>a,b,c &lt;= n3</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>2</code></td>
+<td style="text-align: left;"><code>n1 &lt;= a &lt;= n2</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>1</code></td>
+<td style="text-align: left;"><code>a &lt;= n1</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>0</code></td>
+<td style="text-align: left;"><code>3 &lt;= a &lt;= 100</code></td>
+</tr>
+</tbody>
+</table></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def pythag3_cli() -&gt; None:
-    &#34;&#34;&#34;Print all possible primative pythagorian triples satifying input parameters.
+    &#34;&#34;&#34;Prints tuples of primative pythagorian triples.
 
-    A pythagorian triple are three integers `(a, b, c)`
+    * *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+    * such a triple is primative when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
+    * geometrically `a, b, c` represent the sides of a right triangle
 
-    such that `a**2 + b**2 = c**2` where `a, b, c &gt; 0` and `gcd(a, b, c) = 1`
+    Usage: pythag3.py [n1 [n2 [n3]]]
 
-    Usage: pythag3.py [n1 [n2 [n3]]] where
-
-    `3` arguments print all triples with `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`
-
-    `2` arguments print all triples with `n1 &lt;= a &lt;= n2`
-
-    `1` argument prints all triples with `a &lt;= n1`
-
-    `0` arguments print all triples with `3 &lt;= a &lt;= 100`
+    | #args | Prints all possible tuples of triples satifying |
+    |:-----:|:----------------------------------------------- |
+    |  `3`  | `n1 &lt;= a &lt;= n2` and `a,b,c &lt;= n3`               |
+    |  `2`  | `n1 &lt;= a &lt;= n2`                                 |
+    |  `1`  | `a &lt;= n1`                                       |
+    |  `0`  | `3 &lt;= a &lt;= 100`                                 |
     &#34;&#34;&#34;
     pythag3 = Pythag3()
 

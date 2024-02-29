@@ -14,11 +14,9 @@
 
 """Pythagorean triple module
 
-A primative Pythagorean triple is a tuple of three integers (a,b,c)
-
-such that a^2 + b^2 = c^2 where a,b,c > 0 and gcd(a,b,c) = 1
-
-Geometrically a, b, c represent the sides of a right trianle.
+* *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+* such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
+* geometrically `a, b, c` represent the sides of a right triangle
 """
 
 from __future__ import annotations
@@ -67,13 +65,10 @@ class Pythag3():
         return a_cap, b_cap, c_cap
 
     def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
-        """This iterator finds all possible primative pythagorean triples
+        """Returns an iterator of all possible primative pythagorean triples
 
-        `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`
-
-        For `max = 0` all theoretically possible Pythagorean triples are generated
-
-        for `a_start <= a <= a_max`
+        * `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`
+        * for `max = 0` all theoretically possible *Pythagorean* triples are generated
         """
         a_init = 3 if a_start < 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)

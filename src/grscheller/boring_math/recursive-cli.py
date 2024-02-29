@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math.integer_math cli scripts.
+"""Entry points for grscheller.boring_math.integer_math CLI scripts.
 
-Supports automatically generated OS independent CLI scripts.
+Scripts are automatically generated in an OS independent way by the
+package build backend based on the project.scripts section of pyproject.toml.
 """
 
 from __future__ import annotations
@@ -31,19 +32,11 @@ from grscheller.boring_math.recursive import ackermann
 
 def ackermann_cli() -> None:
     """Ackermann function is defined recursively by:
-
-    ```
-    ackermann(0,n) = n+1
-    ackermann(m,0) = ackermann(m-1,1)
-    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
-    ```
-
     ```
        ackermann(0,n) = n+1
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
     ```
-
     Usage: `ackermann m n`
     """
     # Argument parsing and checking
