@@ -33,18 +33,18 @@ from grscheller.boring_math.pythag3 import Pythag3
 def pythag3_cli() -> None:
     """Prints tuples of primative pythagorian triples.
 
-    * *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+    * *Pythagorian* triple are `3` integers `a, b, c` where `a**2 + b**2 = c**2`
     * such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
     Usage: pythag3.py [m [n [max]]]
 
-    | # of args |     | Prints all possible triples `(a, b, c)` satifying  |
-    |:---------:| --- |:-------------------------------------------------- |
-    |    `3`    |     | `m <= a <= n` and `a,b,c <= max`                   |
-    |    `2`    |     | `m <= a <= n`                                      |
-    |    `1`    |     | `a <= m`                                           |
-    |    `0`    |     | `3 <= a <= 100`                                    |
+    | # of args |     | Prints all possible triples `(a, b, c)` satisfying  |
+    |:---------:| --- |:--------------------------------------------------- |
+    |    `3`    |     | `m <= a <= n` and `a,b,c <= max`                    |
+    |    `2`    |     | `m <= a <= n`                                       |
+    |    `1`    |     | `a <= m`                                            |
+    |    `0`    |     | `3 <= a <= 100`                                     |
     """
     pythag3 = Pythag3()
 
