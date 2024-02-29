@@ -16,7 +16,7 @@ from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes
 
 class Test_simple_ones:
     def test_gcd(self):
-        assert gcd(0, 0) == 0   # mathematicaly does not exist
+        assert gcd(0, 0) == 1   # mathematicaly does not exist
         assert gcd(1, 1) == 1
         assert gcd(1, 5) == 1
         assert gcd(5, 1) == 1

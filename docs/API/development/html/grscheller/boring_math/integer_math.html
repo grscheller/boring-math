@@ -81,7 +81,7 @@ def coprime(m: int, n: int) -&gt; Tuple(int, int):
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     &#34;&#34;&#34;
-    coPrime = lambda mm, nn, common: mm//common, nn//common
+    coPrime = lambda mm, nn, common: (mm//common, nn//common)
     return coPrime(m, n, gcd(m, n))
 
 def iSqrt(n: int) -&gt; int:
@@ -285,7 +285,7 @@ integers.</p>
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     &#34;&#34;&#34;
-    coPrime = lambda mm, nn, common: mm//common, nn//common
+    coPrime = lambda mm, nn, common: (mm//common, nn//common)
     return coPrime(m, n, gcd(m, n))</code></pre>
 </details>
 </dd>
