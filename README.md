@@ -71,9 +71,10 @@ grscheller.boring_math package.
 
 ## CLI Applications
 
-Implemented in a platform independent way via pyproject.toml.
+Implemented in an OS and package build tool independent way via the
+project.scripts section of pyproject.toml.
 
-#### Ackermann's function
+#### Ackermann's function CLI script
 
 Ackermann, a student of Hilbert, discovered early examples of totally
 computable functions that are not primitively recursive.
@@ -87,19 +88,19 @@ recursively defined for `m,n >= 0` by
    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))
 ```
 
-* CLI App **ackerman**
+* CLI script **ackerman**
   * Given two non-negative integers, evaluates Ackermann's function
   * Implements the recursion via a Python array
   * Usage: `ackerman m n`
 
 ---
 
-#### Pythagorean triple app
+#### Pythagorean triple CLI script
 
 Geometrically, a *Pythagorean* triangle is a right triangle with
 with positive integer sdes.
 
-* CLI App **pythag3**
+* CLI script **pythag3**
   * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a**2 + b**2 = c**2` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
