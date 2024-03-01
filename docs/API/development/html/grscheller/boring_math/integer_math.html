@@ -59,15 +59,19 @@ __all__ = [&#39;gcd&#39;, &#39;lcm&#39;, &#39;coprime&#39;, &#39;iSqrt&#39;, &#3
 def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
 
-    * takes two integers, returns `gcd &gt;= 0`
-    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
+    * takes two integers, returns `gcd &gt; 0`
+    * note that mathematically the gcd of `0` and `0` does not exist
+    * `gcd(0, 0) = 1` a better choice than `math.gcd(0, 0) = 0`
+    * `gcd(0, 0) = 1` eliminates `lcm` &amp; `coprime` having to edge case test
+    * `gcd(0, 0)` returning `1` instead of `0` more easily mathematically justified 
     &#34;&#34;&#34;
-    mm, nn = abs(m), abs(n)
-    mm, nn = (mm, nn) if mm &gt; nn else (nn, mm)
-    while nn &gt; 0:
-        mm, nn = nn, mm % nn
-
-    return 1 if 0 == m == n else mm
+    if 0 == m == n:
+        return 1
+    m, n = abs(m), abs(n)
+    m, n = (m, n) if m &gt; n else (n, m)
+    while n &gt; 0:
+        m, n = n, m % n
+    return m
 
 def lcm(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Finds the least common multiple (lcm) of two integers.
@@ -318,8 +322,11 @@ integers.</p>
 <dd>
 <div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers</p>
 <ul>
-<li>takes two integers, returns <code>gcd &gt;= 0</code></li>
-<li>will return <code>1</code> when <code>fst = snd = 0</code> but in this case the gcd does not exist</li>
+<li>takes two integers, returns <code>gcd &gt; 0</code></li>
+<li>note that mathematically the gcd of <code>0</code> and <code>0</code> does not exist</li>
+<li><code>gcd(0, 0) = 1</code> a better choice than <code>math.gcd(0, 0) = 0</code></li>
+<li><code>gcd(0, 0) = 1</code> eliminates <code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm()</a></code> &amp; <code><a title="grscheller.boring_math.integer_math.coprime" href="#grscheller.boring_math.integer_math.coprime">coprime()</a></code> having to edge case test</li>
+<li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd()</a>(0, 0)</code> returning <code>1</code> instead of <code>0</code> more easily mathematically justified</li>
 </ul></div>
 <details class="source">
 <summary>
@@ -328,15 +335,19 @@ integers.</p>
 <pre><code class="python">def gcd(m: int, n: int) -&gt; int:
     &#34;&#34;&#34;Uses Euclidean algorithm to compute the gcd of two integers
 
-    * takes two integers, returns `gcd &gt;= 0`
-    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
+    * takes two integers, returns `gcd &gt; 0`
+    * note that mathematically the gcd of `0` and `0` does not exist
+    * `gcd(0, 0) = 1` a better choice than `math.gcd(0, 0) = 0`
+    * `gcd(0, 0) = 1` eliminates `lcm` &amp; `coprime` having to edge case test
+    * `gcd(0, 0)` returning `1` instead of `0` more easily mathematically justified 
     &#34;&#34;&#34;
-    mm, nn = abs(m), abs(n)
-    mm, nn = (mm, nn) if mm &gt; nn else (nn, mm)
-    while nn &gt; 0:
-        mm, nn = nn, mm % nn
-
-    return 1 if 0 == m == n else mm</code></pre>
+    if 0 == m == n:
+        return 1
+    m, n = abs(m), abs(n)
+    m, n = (m, n) if m &gt; n else (n, m)
+    while n &gt; 0:
+        m, n = n, m % n
+    return m</code></pre>
 </details>
 </dd>
 <dt id="grscheller.boring_math.integer_math.iSqrt"><code class="name flex">

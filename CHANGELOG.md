@@ -18,9 +18,15 @@ Version numbers for PyPI releases begin with a `v`.
   * commit count (thrashing)
   * dont to be taken too seriously
 
+## Version = 0.2.2.1 - commit date 2024-03-01
+* greatly simplified README.md
+  * due to having better control of pdoc documentation
+    * allowing me to be a bit more DRY
+    * now more likely to keep README.md up-to-date with detailed docs
+
 ## Version = 0.2.2.0 - commit date 2024-02-28
 * renamed integer_math.mkCoprime to integer_math.coprime
-  * do it now before PyPI v0.3.0
+  * did it now before PyPI v0.3.0
 * realized pdoc uses Markdown as its preferred mrkup language
   * some differences
     * incorporates some GitHub Markdown additions
@@ -37,10 +43,10 @@ Version numbers for PyPI releases begin with a `v`.
   code from the Python standard library. The algorithms will then be
   of use if ported to a platform without floating point arithmetic.
 * added two new functions to the integer_math module
-  * iSqrt() find the int square root of an int
-    * does samething as math.isqrt()
-  * isSqr() return true if argurment is a perfect square
-* changed integer_math pythag3() function into a classmethod
+  * iSqrt() finds the int square root of an int
+    * does same thing as math.isqrt()
+  * isSqr() return true if integer argurment is a perfect square
+* changed integer_math pythag3() function into a class method
   * pythag3() -> Pythag3.triples() 
   * preliminary steps
   * fould unrelated tweak to increase speed by 2X

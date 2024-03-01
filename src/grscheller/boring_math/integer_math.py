@@ -29,15 +29,19 @@ __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonac
 def gcd(m: int, n: int) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers
 
-    * takes two integers, returns `gcd >= 0`
-    * will return `1` when `fst = snd = 0` but in this case the gcd does not exist
+    * takes two integers, returns `gcd > 0`
+    * note that mathematically the gcd of `0` and `0` does not exist
+    * `gcd(0, 0) = 1` a better choice than `math.gcd(0, 0) = 0`
+    * `gcd(0, 0) = 1` eliminates `lcm` & `coprime` having to edge case test
+    * `gcd(0, 0)` returning `1` instead of `0` more easily mathematically justified 
     """
-    mm, nn = abs(m), abs(n)
-    mm, nn = (mm, nn) if mm > nn else (nn, mm)
-    while nn > 0:
-        mm, nn = nn, mm % nn
-
-    return 1 if 0 == m == n else mm
+    if 0 == m == n:
+        return 1
+    m, n = abs(m), abs(n)
+    m, n = (m, n) if m > n else (n, m)
+    while n > 0:
+        m, n = n, m % n
+    return m
 
 def lcm(m: int, n: int) -> int:
     """Finds the least common multiple (lcm) of two integers.
