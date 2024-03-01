@@ -4,12 +4,13 @@ Daddy's boring math library.
 
 * Python package of functions of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
-* Example of a Python package with both libraries and executables
-* [grscheller.boring-math][1] project on PyPI
-* [Detailed API documentation][2] on GH-Pages
-* [Source code][3] on GitHub
+* Example of a Python package [ ith both libraries and executables
+* See [grscheller.boring-math][1] project on PyPI
+* See [Detailed API documentation][2] on GH-Pages
+* See [Source code][3] on GitHub
 
-Here are the modules and executables which make up the
+Here are the [modules](#library-modules) and
+[executables](#cli-applications) which make up the
 grscheller.boring_math package.
 
 ## Library Modules
@@ -66,26 +67,11 @@ grscheller.boring_math package.
       * becomes numerically intractable after m=4
       * see CLI section below for mathematical definition
 
+===
+
 ## CLI Applications
 
 Implemented in a platform independent way via pyproject.toml.
-
-#### Pythagorean triple app
-
-Geometrically, a *Pythagorean* triangle is a right triangle with
-with positive integer sdes.
-
-* CLI App **pythag3**
-  * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
-    * `a**2 + b**2 = c**2` where `a,b,c > 0` and `gcd(a,b,c) = 1`
-  * The integers `a, b, c` represent the sides of a right triangle
-  * Usage: `pythag3 [m [n [max]]`
-    * 3 arguments print all triples with m <= a <= n and a < b < c <= max
-    * 2 arguments print all triples with m <= a <= n
-    * 1 argument prints all triples with a <= m
-    * 0 arguments print all triples with 3 <= a <= 100
-
----
 
 #### Ackermann's function
 
@@ -105,6 +91,23 @@ recursively defined for `m,n >= 0` by
   * Given two non-negative integers, evaluates Ackermann's function
   * Implements the recursion via a Python array
   * Usage: `ackerman m n`
+
+---
+
+#### Pythagorean triple app
+
+Geometrically, a *Pythagorean* triangle is a right triangle with
+with positive integer sdes.
+
+* CLI App **pythag3**
+  * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
+    * `a**2 + b**2 = c**2` where `a,b,c > 0` and `gcd(a,b,c) = 1`
+  * The integers `a, b, c` represent the sides of a right triangle
+  * Usage: `pythag3 [m [n [max]]`
+    * 3 arguments print all triples with m <= a <= n and a < b < c <= max
+    * 2 arguments print all triples with m <= a <= n
+    * 1 argument prints all triples with a <= m
+    * 0 arguments print all triples with 3 <= a <= 100
 
 [1]: https://pypi.org/project/grscheller.boring-math/
 [2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
