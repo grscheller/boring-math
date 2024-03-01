@@ -67,7 +67,7 @@ grscheller.boring_math package.
       * becomes numerically intractable after m=4
       * see CLI section below for mathematical definition
 
-===
+---
 
 ## CLI Applications
 
@@ -108,6 +108,8 @@ with positive integer sdes.
     * 2 arguments print all triples with m <= a <= n
     * 1 argument prints all triples with a <= m
     * 0 arguments print all triples with 3 <= a <= 100
+
+---
 
 [1]: https://pypi.org/project/grscheller.boring-math/
 [2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
