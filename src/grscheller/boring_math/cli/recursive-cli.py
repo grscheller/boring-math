@@ -12,12 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math recursive CLI scripts.
-
-Scripts are automatically generated in an OS independent way by
-the package build backend based on the `project.scripts` section
-of `pyproject.toml.`
-"""
+"""Entry points for grscheller.boring_math recursive CLI scripts"""
 
 from __future__ import annotations
 

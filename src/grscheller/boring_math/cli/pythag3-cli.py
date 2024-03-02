@@ -12,12 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry point for the grscheller.boring_math pythag3 cli script.
-
-Script is automatically generated in an OS independent way by
-the package build backend based on the `project.scripts` section
-of `pyproject.toml`.
-"""
+"""Entry point for the pythag3 cli script"""
 
 from __future__ import annotations
 
