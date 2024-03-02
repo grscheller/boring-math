@@ -12,5 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""CLI scripts subpackage for the grscheller.boring-math PyPI project"""
+"""CLI scripts module for the grscheller.boring_math Package"""
 

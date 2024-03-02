@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""grscheller.boring-math PyPI project - Mathematics libraries & example executables"""
+"""Mathematics libraries & example executables"""
 
 __version__ = "0.2.2.0"
 __author__ = "Geoffrey R. Scheller"
