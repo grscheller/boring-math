@@ -1,4 +1,4 @@
-# Copyright 2024 Geoffrey R. Scheller
+# Copyright 2016-2024 Geoffrey R. Scheller
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,5 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""CLI scripts module for the grscheller.boring_math Package"""
-
+"""CLI script submodule"""

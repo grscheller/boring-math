@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math pythag3 cli script.
+"""Entry point for the grscheller.boring_math pythag3 cli script.
 
-Script is automatically generated in an OS independent way by the
-package build backend based on the `project.scripts` section of `pyproject.toml`.
+Script is automatically generated in an OS independent way by
+the package build backend based on the `project.scripts` section
+of `pyproject.toml`.
 """
 
 from __future__ import annotations
@@ -28,7 +29,7 @@ __license__ = "Apache License 2.0"
 import sys
 from grscheller.boring_math.pythag3 import Pythag3
 
-# Pythagorean Triples generator script
+# Pythagorean triples generator script
 
 def pythag3_cli() -> None:
     """Prints tuples of primative pythagorian triples.

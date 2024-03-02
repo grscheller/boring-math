@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math.integer_math CLI scripts.
+"""Entry points for grscheller.boring_math recursive CLI scripts.
 
-Scripts are automatically generated in an OS independent way by the
-package build backend based on the project.scripts section of pyproject.toml.
+Scripts are automatically generated in an OS independent way by
+the package build backend based on the `project.scripts` section
+of `pyproject.toml.`
 """
 
 from __future__ import annotations
@@ -28,7 +29,7 @@ __license__ = "Apache License 2.0"
 import sys
 from grscheller.boring_math.recursive import ackermann
 
-# Computable but not primitive recursive functions scripts
+# Scripts for computable but not primitive recursive functions
 
 def ackermann_cli() -> None:
     """Ackermann function is defined recursively by:
