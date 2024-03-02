@@ -1,4 +1,4 @@
-# Copyright 2016-2024 Geoffrey R. Scheller
+# Copyright 2024 Geoffrey R. Scheller
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""grscheller.boring-math PyPI project - Mathematics libraries & example executables"""
+"""CLI scripts subpackage for the grscheller.boring-math PyPI project"""
 
-__version__ = "0.2.2.0"
-__author__ = "Geoffrey R. Scheller"
-__copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
-__license__ = "Apache License 2.0"
-
-from .integer_math import gcd, lcm, coprime, iSqrt, isSqr, primes
-from .integer_math import comb, fibonacci
-from .pythag3 import Pythag3
-from .recursive import ackermann
