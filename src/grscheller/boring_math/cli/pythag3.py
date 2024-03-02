@@ -24,8 +24,6 @@ __license__ = "Apache License 2.0"
 import sys
 from grscheller.boring_math.pythag3 import Pythag3
 
-# Pythagorean triples generator script
-
 def pythag3_cli() -> None:
     """Prints tuples of primative pythagorian triples.
 

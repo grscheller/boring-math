@@ -12,11 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for grscheller.boring_math recursive CLI scripts"""
+"""Entry points for CLI scripts to evaluate the ackermann function
+
+The version of Ackermann's function we are using is defined recursively by
+
+```
+   ackermann(0,n) = n+1
+   ackermann(m,0) = ackermann(m-1,1)
+   ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
+```
+Ackermann's function is an example of a computable but not primitively
+recursive function.
+"""
 
 from __future__ import annotations
 
-__all__ = ['ackermann_cli']
+__all__ = ['ackermann_list_cli']
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2023-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"
@@ -24,18 +35,8 @@ __license__ = "Apache License 2.0"
 import sys
 from grscheller.boring_math.recursive import ackermann
 
-# Scripts for computable but not primitive recursive functions
-
-def ackermann_cli() -> None:
-    """Ackermann function is defined recursively by:
-
-    ```
-       ackermann(0,n) = n+1
-       ackermann(m,0) = ackermann(m-1,1)
-       ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
-    ```
-    Usage: `ackermann m n` where `m, n >= 0`
-    """
+def ackermann_list_cli() -> None:
+    """Evaluate Ackermann's function simulating the recursion with a Python list"""
     args = sys.argv[1:]
     if len(args) == 2:
         try:
