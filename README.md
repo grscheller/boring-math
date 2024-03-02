@@ -2,9 +2,8 @@
 
 Daddy's boring math library.
 
-* Python package of functions of a mathematical nature
+* Python package of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
-* Example of a Python package [ ith both libraries and executables
 * See [grscheller.boring-math][1] project on PyPI
 * See [Detailed API documentation][2] on GH-Pages
 * See [Source code][3] on GitHub

@@ -18,6 +18,11 @@ Version numbers for PyPI releases begin with a `v`.
   * commit count (thrashing)
   * dont to be taken too seriously
 
+## Version = v0.3.0 - PyPI release date 2024-03-02
+* decided it a good time for a PyPI release
+  * want to use some of the newer features in new endeavors
+  * vastly improved documentation over last PyPI release
+
 ## Version = 0.2.2.1 - commit date 2024-03-01
 * greatly simplified README.md
   * due to having better control of pdoc documentation
