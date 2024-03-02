@@ -22,4 +22,4 @@ __license__ = "Apache License 2.0"
 from .integer_math import gcd, lcm, coprime, iSqrt, isSqr, primes
 from .integer_math import comb, fibonacci
 from .pythag3 import Pythag3
-from .recursive import ackermann
+from .recursive import ackermann_list

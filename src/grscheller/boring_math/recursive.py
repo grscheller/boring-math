@@ -16,9 +16,9 @@
 
 from __future__ import annotations
 
-__all__ = ['ackermann']
+__all__ = ['ackermann_list']
 
-def ackermann(m: int, n:int) -> int:
+def ackermann_list(m: int, n:int) -> int:
     """Ackermann function is defined recursively by:
 
     ```

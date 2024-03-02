@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for CLI scripts to evaluate the ackermann function
+"""Entry points for CLI scripts to evaluate Ackermann's function
 
-The version of Ackermann's function we are using is defined recursively by
+The version of Ackermann's function being used is defined recursively by
 
 ```
    ackermann(0,n) = n+1
@@ -33,7 +33,7 @@ __copyright__ = "Copyright (c) 2023-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"
 
 import sys
-from grscheller.boring_math.recursive import ackermann
+from grscheller.boring_math.recursive import ackermann_list
 
 def ackermann_list_cli() -> None:
     """Evaluate Ackermann's function simulating the recursion with a Python list"""
@@ -53,4 +53,4 @@ def ackermann_list_cli() -> None:
         sys.exit(1)
 
     # Compute value
-    print(ackermann(m, n))
+    print(ackermann_list(m, n))
