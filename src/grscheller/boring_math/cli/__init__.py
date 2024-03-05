@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""CLI script submodule
+"""Entry points for automatically generated CLI scripts.
 
-CGI scripts are automatically generated in an OS independent way
-by the package build backend based on the `[project.scripts]` section
-of the `pyproject.toml` file. This module contains the entry points
-for these scripts.
+CGI scripts are automatically generated in an OS independent way by the package build
+backend based on the `[project.scripts]` section of the project's `pyproject.toml` file.
 """

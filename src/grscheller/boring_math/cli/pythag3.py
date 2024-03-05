@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry point for the pythag3 cli script"""
+"""Entry point for the pythag3 cli script."""
 
 from __future__ import annotations
 

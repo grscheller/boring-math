@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Pythagorean triple module
+"""Pythagorean triple iterator class.
 
 * *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
 * such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`

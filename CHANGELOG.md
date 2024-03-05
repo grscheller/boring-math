@@ -83,7 +83,7 @@ Version numbers for PyPI releases begin with a `v`.
 ## Version v0.1.0 - PyPI release date 2024-01-17
 
 * initial PyPI grscheller.boring-math release
-* updated pyproject.toml to be in alignment with grscheller.datastrucutes
+* updated pyproject.toml to align with grscheller.datastructures
 
 ## Version 0.0.8 - commit date 2024-01-14
 

@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Recursive function module.
+
+* function ackermann_list: eval Ackermann's function simulating recursion with a list
+"""
+
 # Computable but not primitive recursive functions
 
 from __future__ import annotations

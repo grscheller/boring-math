@@ -12,10 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Boring Math integer library
-
-Library of functions and classes of an integer pure math nature.
-"""
+"""Library of functions and classes of an integer pure math nature."""
 
 from __future__ import annotations
 
