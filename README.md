@@ -2,14 +2,14 @@
 
 Daddy's boring math library.
 
-* Python package of a mathematical nature
+* Python package of modules of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * See [grscheller.boring-math][1] project on PyPI
 * See [Detailed API documentation][2] on GH-Pages
 * See [Source code][3] on GitHub
 
 Here are the [modules](#library-modules) and
-[executables](#cli-applications) which make up the
+[executables](#cli-applications) which make up the PyPI
 grscheller.boring_math package.
 
 ## Library Modules
