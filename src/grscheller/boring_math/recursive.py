@@ -17,7 +17,7 @@
 * function ackermann_list: eval Ackermann's function simulating recursion with a list
 """
 
-# Computable but not primitive recursive functions
+# Computable but not primitively recursive functions
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ def ackermann_list(m: int, n:int) -> int:
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
     ```
     Ackermann's function is an example of a function that is computable
-    but not primatively recursive. It quickly becomes computationally
+    but not primitively recursive. It quickly becomes computationally
     intractable for relatively small values of `m`.
     """
     # Model a function stack with a list, then

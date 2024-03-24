@@ -14,8 +14,8 @@
 
 """Pythagorean triple iterator class.
 
-* *Pythagorian* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
-* such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
+* *Pythagorean* triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+* such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
 * geometrically `a, b, c` represent the sides of a right triangle
 """
 
@@ -27,7 +27,7 @@ from grscheller.boring_math import gcd, iSqrt
 __all__ = ['Pythag3']
 
 class Pythag3():
-    """Class supporting the generation of primative Pythagorean triples"""
+    """Class supporting the generation of primitive Pythagorean triples"""
     def __init__(self, last_square: int=500):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
         if last_h < 5:
@@ -65,7 +65,7 @@ class Pythag3():
         return a_cap, b_cap, c_cap
 
     def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
-        """Returns an iterator of all possible primative pythagorean triples
+        """Returns an iterator of all possible primitive Pythagorean triples
 
         * `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`
         * for `max = 0` all theoretically possible *Pythagorean* triples are generated
