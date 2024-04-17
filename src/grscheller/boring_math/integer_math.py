@@ -49,14 +49,15 @@ def lcm(m: int, n: int) -> int:
     m //= gcd(m, n)
     return abs(m*n)
 
-def coprime(m: int, n: int) -> Tuple(int, int):
+def coprime(m: int, n: int) -> Tuple[int, int]:
     """Makes 2 integers coprime by dividing out their common factors.
 
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     """
     coPrime = lambda mm, nn, common: (mm//common, nn//common)
-    return coPrime(m, n, gcd(m, n))
+    common = gcd(m, n)
+    return (m // common, n // common)
 
 def iSqrt(n: int) -> int:
     """Integer square root of a non-negative integer.
@@ -76,9 +77,9 @@ def iSqrt(n: int) -> int:
 
 def isSqr(n: int) -> bool:
     """Returns true if integer argument is a perfect square"""
-    return false if n < 0 else n == iSqrt(n)**2
+    return False if n < 0 else n == iSqrt(n)**2
 
-def primes(start: int=2, end_before: int=100) -> Iterator:
+def primes(start: int=2, end_before: int=100) -> Iterator[int]:
     """Return a prime number iterator using the *Sieve of Eratosthenes* algorithm"""
     if start >= end_before or end_before < 3:
         return []
