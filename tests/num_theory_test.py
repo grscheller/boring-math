@@ -15,8 +15,8 @@
 from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes
 
 class Test_simple_ones:
-    def test_gcd(self):
-        assert gcd(0, 0) == 1   # mathematicaly does not exist
+    def test_gcd(self)-> None:
+        assert gcd(0, 0) == 1   # mathematically does not exist
         assert gcd(1, 1) == 1
         assert gcd(1, 5) == 1
         assert gcd(5, 1) == 1
@@ -30,14 +30,14 @@ class Test_simple_ones:
         assert gcd(123454321, 11111) == 11111
         assert gcd(123454321, 1111) == 1
 
-    def test_lcm(self):
+    def test_lcm(self) -> None:
         assert lcm(5, 0) == 0
         assert lcm(0, 11) == 0
         assert lcm(0, 0) == 0
         assert lcm(3, 5) == 15
         assert lcm(2*3*25*7, 3*5*11) == 2*3*25*7*11
 
-    def test_mkCoprime(self):
+    def test_mkCoprime(self) -> None:
         assert coprime(0, 0) == (0, 0)
         assert coprime(5, 0) == (1, 0)
         assert coprime(0, 4) == (0, 1)
@@ -45,7 +45,7 @@ class Test_simple_ones:
         assert coprime(6, 15) == (2, 5)
         assert coprime(2*3*4*5, 3*4*5*11) == (2, 11)
 
-    def test_primes(self):
+    def test_primes(self) -> None:
         generated = list(primes(10, 50))
         assert generated == [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
         generated = list(primes(10, 8))
