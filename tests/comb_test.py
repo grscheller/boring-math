@@ -16,7 +16,7 @@ import math
 from grscheller.boring_math.integer_math import comb
 
 class Test_comb:
-    def test_edge_cases(self):
+    def test_edge_cases(self) -> None:
         assert comb(0, 0) == 1
         assert comb(0, 1) == 0
         assert comb(4, 0) == 1
@@ -65,7 +65,7 @@ class Test_comb:
         else:
             assert False
 
-    def test_small(self):
+    def test_small(self) -> None:
         assert comb(5, 0) == 1
         assert comb(5, 1) == 5
         assert comb(5, 2) == 10
@@ -77,7 +77,7 @@ class Test_comb:
         assert comb(37, 7) == comb(37, 37 - 7)
         assert comb(31, 7) == comb(30, 6) + comb(30, 7)
 
-    def test_with_math_version(self):
+    def test_with_math_version(self) -> None:
         assert comb(11, 8) == math.comb(11, 8)
         assert comb(211, 80) == math.comb(211, 80)
         assert comb(514, 213) == math.comb(514, 213)
@@ -91,7 +91,7 @@ class Test_comb:
         assert comb(2003, 1000) == math.comb(2003, 1000)
         assert comb(130061, 45411) == math.comb(130061, 45411)
 
-    def test_paramenters(self):
+    def test_paramenters(self) -> None:
         assert comb(3000, 45) == comb(3000, 45, 1, 1)
         assert comb(1300, 450) == comb(1300, 450, 2, 2)
         assert comb(13000, 454) == comb(13000, 454, 100, 4)

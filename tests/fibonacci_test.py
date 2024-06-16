@@ -15,7 +15,7 @@
 from grscheller.boring_math.integer_math import fibonacci
 
 class Test_fibonacci:
-    def test_fib(self):
+    def test_fib(self) -> None:
         someFibs = []
         fib0 = 0
         fib1 = 1

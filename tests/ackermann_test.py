@@ -15,7 +15,7 @@
 from grscheller.boring_math.recursive import ackermann_list
 
 class Test_ackerman:
-    def test_ack_list(self):
+    def test_ack_list(self) -> None:
         assert ackermann_list(0, 0) == 1
         assert ackermann_list(0, 5) == 6
         assert ackermann_list(1, 0) == 2

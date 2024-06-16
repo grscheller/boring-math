@@ -22,7 +22,7 @@
 from __future__ import annotations
 
 from typing import Callable, Iterator, Tuple
-from grscheller.boring_math import gcd, iSqrt
+from .integer_math import gcd, iSqrt
 
 __all__ = ['Pythag3']
 
@@ -37,7 +37,7 @@ class Pythag3():
         self.squares = {h*h: h for h in range(5, last_h + 1, 2)}
         self.last_h = last_h
 
-    def extend_squares(self, last_to_square):
+    def extend_squares(self, last_to_square: int) -> None:
         """Extend self.squares, the perfect square lookup table"""
         last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
         if last_h > self.last_h:
@@ -47,13 +47,13 @@ class Pythag3():
             self.last_h = last_h
 
     @staticmethod
-    def cap_sides(a_max: int, max: int=0) -> Tuple(int, Callable[[int], int], int):
+    def cap_sides(a_max: int, max: int=0) -> tuple[int, Callable[[int], int], int]:
         """Returns capped max values for sides a,b,c"""
         a_cap = 2 if a_max < 3 else a_max
 
-        b_final = lambda a: (a**2 - 1) // 2  # theoretically, given side a there are no
-        if max < 1:                          # more triples beyond this value for side b
-            b_cap = b_final
+        b_final: Callable[[int], int] = lambda a: (a**2 - 1) // 2  # theoretically, given side a
+        if max < 1:                                                # there are no more triples
+            b_cap = b_final                                        # beyond this value for side b
         else:
             cap = 4 if max < 5 else max 
             if cap < a_cap + 2:
@@ -64,7 +64,7 @@ class Pythag3():
 
         return a_cap, b_cap, c_cap
 
-    def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator:
+    def triples(self, a_start: int=3, a_max: int=3, max: int=0) -> Iterator[tuple[int, int, int]]:
         """Returns an iterator of all possible primitive Pythagorean triples
 
         * `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`

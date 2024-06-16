@@ -16,7 +16,7 @@
 
 from __future__ import annotations
 
-from typing import Callable, Iterator, Tuple
+from typing import Callable, Generator, Iterator, Never, Tuple
 from grscheller.circular_array import CircularArray
 
 __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
@@ -49,7 +49,7 @@ def lcm(m: int, n: int) -> int:
     m //= gcd(m, n)
     return abs(m*n)
 
-def coprime(m: int, n: int) -> Tuple[int, int]:
+def coprime(m: int, n: int) -> tuple[int, int]:
     """Makes 2 integers coprime by dividing out their common factors.
 
     * returns `(0, 0)` when `n = m = 0`
@@ -82,7 +82,7 @@ def isSqr(n: int) -> bool:
 def primes(start: int=2, end_before: int=100) -> Iterator[int]:
     """Return a prime number iterator using the *Sieve of Eratosthenes* algorithm"""
     if start >= end_before or end_before < 3:
-        return []
+        return (x for x in (0,) if x > 0)
     if start < 2:
         start = 2
 
@@ -160,7 +160,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
 # Fibonacci Iterator
 
-def fibonacci(fib0: int, fib1: int) -> Iterator:
+def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
     """Returns iterator to *Fibonacci* sequence whose beginning `fib0, fib1, ...`"""
     while True:
         yield fib0

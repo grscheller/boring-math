@@ -15,7 +15,7 @@
 from grscheller.boring_math.pythag3 import Pythag3
 
 class Test_pythag3:
-    def test_triples(self):
+    def test_triples(self) -> None:
         pythag3 = Pythag3()
 
         for triple in pythag3.triples(40):
@@ -30,7 +30,7 @@ class Test_pythag3:
             assert 4 <= b <= 100
             assert 5 <= c <= 100
 
-    def test_spot_check(self):
+    def test_spot_check(self) -> None:
         pythag3 = Pythag3()
 
         triples = set(pythag3.triples(3, 40))
@@ -45,7 +45,7 @@ class Test_pythag3:
         assert (87, 416, 425) in triples
         assert (33, 544, 545) not in triples
 
-    def test_extend_squares(self):
+    def test_extend_squares(self) -> None:
         pythag3 = Pythag3()
 
         triples = set(pythag3.triples(1060, 1063))
