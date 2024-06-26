@@ -51,7 +51,7 @@ def pythag3_cli() -> None:
     elif len(args) == 2:
         pythagTriples = pythag3.triples(a_start = int(args[0]),
                                           a_max = int(args[1]))
-    elif leng(args) == 1:
+    elif len(args) == 1:
         pythagTriples = pythag3.triples(a_start = 3, a_max = int(args[0]))
     else:
         pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
