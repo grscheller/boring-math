@@ -31,7 +31,7 @@ def pythag3_cli() -> None:
     * such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
-    Usage: pythag3.py [m [n [max]]]
+    Usage: pythag3 [m [n [max]]]
 
     | # of args |     | Prints all possible triples `(a, b, c)` satisfying  |
     |:---------:| --- |:--------------------------------------------------- |

@@ -36,7 +36,14 @@ import sys
 from grscheller.boring_math.recursive import ackermann_list
 
 def ackermann_list_cli() -> None:
-    """Evaluate Ackermann's function simulating the recursion with a Python list"""
+    """Evaluate Ackermann's function simulating recursion with a Python list.
+
+    Usage: ackerman_list m n
+
+    * gets installed into the virtual environment
+    * becomes numerically intractable after m=4 n=1
+
+    """
     args = sys.argv[1:]
     if len(args) == 2:
         try:
