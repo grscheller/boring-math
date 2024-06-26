@@ -16,7 +16,7 @@ Version numbers for PyPI releases begin with a `v`.
 * forth digit (development environment only):
   * development API additions
   * commit count (thrashing)
-  * dont to be taken too seriously
+  * not to be taken too seriously
 
 ## Version v0.3.1 - PyPI release date 2024-03-09
 
