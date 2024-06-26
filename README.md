@@ -5,7 +5,7 @@ Daddy's boring math library.
 * Python package of modules of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * See [grscheller.boring-math][1] project on PyPI
-* See [Detailed API documentation][2] on GH-Pages
+* See [Detailed API documentation][2] on gh-pages
 * See [Source code][3] on GitHub
 
 Here are the [modules](#library-modules) and
@@ -47,13 +47,13 @@ grscheller.boring_math package.
 
 * Pythagorean Triple Module
   * Pythagorean Triple Class
-    * Method **Pythag3.triples**(a_start: int, a_max: int, max: int) -> Iterator
-      * Returns an interator of tuples of primative *Pythagorean* triples
+    * Method **Pythag3.triples**(`a_start: int`, `a_max: int`, `max: int`) -> Iterator
+      * Returns an iterator of tuples of primitive *Pythagorean* triples
     * A *Pythagorean* triple is a tuple in positive integers (a, b, c)
       * such that `a**2 + b**2 = c**2` 
       * `a, b, c` represent integer sides of a right triangle
-      * a *Pythagorean* triple is primative if gcd of `a, b, c` is `1`
-    * Iterator finds all primative pythagorean such that
+      * a *Pythagorean* triple is primitive if gcd of `a, b, c` is `1`
+    * Iterator finds all primitive Pythagorean Triples such that
       * `0 < a_start <= a < b < c <= max` where `a <= a_max`
       * if `max = 0` find all theoretically possible triples with `a <= a_max`
 
@@ -112,6 +112,6 @@ with positive integer sides.
 ---
 
 [1]: https://pypi.org/project/grscheller.boring-math/
-[2]: https://grscheller.github.io/boring-math/API/development/html/grscheller/boring_math/index.html
-[3]: https://github.com/grscheller/boring-math
+[2]: https://grscheller.github.io/boring-math/
+[3]: https://github.com/grscheller/boring-math/
 [4]: https://mathworld.wolfram.com/AckermannFunction.html

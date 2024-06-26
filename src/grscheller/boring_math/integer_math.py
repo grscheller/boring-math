@@ -16,7 +16,7 @@
 
 from __future__ import annotations
 
-from typing import Callable, Generator, Iterator, Never, Tuple
+from typing import Iterator
 from grscheller.circular_array import CircularArray
 
 __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
@@ -57,7 +57,7 @@ def coprime(m: int, n: int) -> tuple[int, int]:
     """
     coPrime = lambda mm, nn, common: (mm//common, nn//common)
     common = gcd(m, n)
-    return (m // common, n // common)
+    return m//common, n//common
 
 def iSqrt(n: int) -> int:
     """Integer square root of a non-negative integer.
@@ -116,11 +116,11 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     * these defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
     * or just use math.comb(n, m) instead
-    * it is hoped that the PyPy JIT compiler will give better performance
     * raises `ValueError` if `n < 0` or `m < 0`
     """
+    # edge cases, justifying below type: ignore statements
     if n < 0 or m < 0:
-        raise ValueError('for C(n, m) n and m must be a non-negavive ints')
+        raise ValueError('for C(n, m) n and m must be a non-negative ints')
     if n == m or m == 0:
         return 1
     elif m > n:
@@ -138,30 +138,30 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     size = len(tops)
     while size > targetTop:
         size -= 1
-        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
+        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())  # type: ignore
         tops.pushR(top)
         bots.pushR(bot)
 
     while size > targetBot:
         size -= 1
-        bots.pushR(bots.popL() * bots.popL())
+        bots.pushR(bots.popL() * bots.popL())  # type: ignore
 
     # Cancel all factors in denominator before multiplying the remaining factors
     # in the numerator.
     for bot in bots:
         for ii in range(len(tops)):
-            top, bot = coprime(tops.popL(), bot)
+            top, bot = coprime(tops.popL(), bot)  # type: ignore
             if top > 1:
                 tops.pushR(top)
             if bot == 1:
                 break
 
-    return tops.foldL(lambda x, y: x * y)
+    return tops.foldL1(lambda x, y: x * y, 1)
 
 # Fibonacci Iterator
 
 def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
-    """Returns iterator to *Fibonacci* sequence whose beginning `fib0, fib1, ...`"""
+    """Returns iterator to Fibonacci sequence beginning `fib0, fib1, ...`"""
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1

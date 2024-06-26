@@ -25,10 +25,10 @@ import sys
 from grscheller.boring_math.pythag3 import Pythag3
 
 def pythag3_cli() -> None:
-    """Prints tuples of primative pythagorian triples.
+    """Prints tuples of primitive Pythagorean triples.
 
-    * *Pythagorian* triple are `3` integers `a, b, c` where `a**2 + b**2 = c**2`
-    * such a triple is primative when `a, b, c > 0` and `gcd(a, b, c) = 1`
+    * *Pythagorean* triple are `3` integers `a, b, c` where `a**2 + b**2 = c**2`
+    * such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
     * geometrically `a, b, c` represent the sides of a right triangle
 
     Usage: pythag3.py [m [n [max]]]
@@ -56,6 +56,6 @@ def pythag3_cli() -> None:
     else:
         pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
 
-    # Print out Pythagean Triples
+    # Print out Pythagorean Triples
     for triple in pythagTriples:
         print(triple)
