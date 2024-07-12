@@ -22,7 +22,7 @@ grscheller.boring_math package.
     * Function **lcm**(int, int) -> int
       * least common multiple of two integers
       * always returns a non-negative number greater than 0
-    * Function **coprime**(int, int) -> Tuple(int, int)
+    * Function **coprime**(int, int) -> tuple(int, int)
       * make 2 integers coprime by dividing out gcd
       * preserves signs of original numbers
     * Function **iSqrt**(int) -> int
@@ -47,9 +47,9 @@ grscheller.boring_math package.
 
 * Pythagorean Triple Module
   * Pythagorean Triple Class
-    * Method **Pythag3.triples**(`a_start: int`, `a_max: int`, `max: int`) -> Iterator
+    * Method **Pythag3.triples**(`a_start: int`, `a_max: int`, `max: Optional[int]`) -> Iterator
       * Returns an iterator of tuples of primitive *Pythagorean* triples
-    * A *Pythagorean* triple is a tuple in positive integers (a, b, c)
+    * A Pythagorean triple is a tuple in positive integers (a, b, c)
       * such that `a**2 + b**2 = c**2` 
       * `a, b, c` represent integer sides of a right triangle
       * a *Pythagorean* triple is primitive if gcd of `a, b, c` is `1`
