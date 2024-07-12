@@ -19,23 +19,32 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.0 - PyPI release date 2024-07-12
+
+* updated to use grscheller.circular-array 0.3.1
+* minimum Python version now 3.12
+* target Python version now 3.13
+
 ### Version 0.3.1 - PyPI release date 2024-03-09
 
 * reflecting grscheller.circular-array PyPI dependency change
   * dependencies = ["grscheller.circular-array >= 0.2.0, < 2.1"]
 
 ### Version 0.3.0 - PyPI release date 2024-03-02
+
 * decided it a good time for a PyPI release
   * want to use some of the newer features in new endeavors
   * vastly improved documentation over last PyPI release
 
 ### Version 0.2.2.1 - commit date 2024-03-01
+
 * greatly simplified README.md
   * due to having better control of pdoc documentation
     * allowing me to be a bit more DRY
     * now more likely to keep README.md up-to-date with detailed docs
 
 ### Version 0.2.2.0 - commit date 2024-02-28
+
 * renamed integer_math.mkCoprime to integer_math.coprime
   * did it now before PyPI v0.3.0
 * realized pdoc uses Markdown as its preferred mrkup language
@@ -45,10 +54,12 @@ PyPI grscheller.boring-math project.
     * lists are one dimensional, not higherarchical
 
 ### Version 0.2.1.0 - commit date 2024-02-27
+
 * Updated pythag3 cli script to provide more functionality
 * docstring and README.md improvements
 
 ### Version 0.2.0.0 - commit date 2024-02-21
+
 * All implementations going forward for integer_math module will use
   just integer based algorithms. I can't really compete with C based
   code from the Python standard library. The algorithms will then be

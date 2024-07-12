@@ -17,14 +17,14 @@
 from __future__ import annotations
 
 from typing import Iterator
-from grscheller.circular_array import CircularArray
+from grscheller.circular_array.ca import CircularArray
 
 __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
 
 # Number Theory mathematical Functions.
 
 def gcd(m: int, n: int) -> int:
-    """Uses Euclidean algorithm to compute the gcd of two integers
+    """Uses Euclidean algorithm to compute the gcd of two integers.
 
     * takes two integers, returns `gcd > 0`
     * note that mathematically the gcd of `0` and `0` does not exist
@@ -80,7 +80,7 @@ def isSqr(n: int) -> bool:
     return False if n < 0 else n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator[int]:
-    """Return a prime number iterator using the *Sieve of Eratosthenes* algorithm"""
+    """Return a prime number iterator using the Sieve of Eratosthenes algorithm."""
     if start >= end_before or end_before < 3:
         return (x for x in (0,) if x > 0)
     if start < 2:
@@ -108,13 +108,12 @@ def primes(start: int=2, end_before: int=100) -> Iterator[int]:
 # Combinatorics
 
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
-    """Implements `C(n,m)`, the number of combinations of `n` items taken `m`
-    at a time, in a way that works efficiently for Python's arbitrary length
-    integers.
+    """Implements `C(n,m)`, the number of `n` items taken `m` at a time.
 
-    * default parameters geared to large values of `n` and `m`.
-    * these defaults work reasonably well for smaller (human size) values
-    * for inner loops with smaller values, use `targetTop = targetBot = 1`
+    * geared to works efficiently for Python's arbitrary length integers
+    * default parameters geared to large values of n and m
+    * the defaults work reasonably well for smaller (human size) values
+    * for inner loops with smaller values, use targetTop = targetBot = 1
     * or just use math.comb(n, m) instead
     * raises `ValueError` if `n < 0` or `m < 0`
     """
@@ -161,7 +160,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 # Fibonacci Iterator
 
 def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
-    """Returns iterator to Fibonacci sequence beginning `fib0, fib1, ...`"""
+    """Returns iterator to Fibonacci sequence beginning fib0, fib1, ..."""
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1
