@@ -1,8 +1,7 @@
-# PyPI grscheller.boring-math Project
+# Daddy's boring math library.
 
-Daddy's boring math library.
+Python package of modules of a mathematical nature.
 
-* Python package of modules of a mathematical nature
 * Project name suggested by my then 13 year old daughter Mary
 * See [grscheller.boring-math][1] project on PyPI
 * See [Detailed API documentation][2] on gh-pages
