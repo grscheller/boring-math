@@ -15,8 +15,9 @@
 """Pythagorean triple iterator class.
 
 * Pythagorean triple are three integers a, b, c where a**2 + b**2 = c**2
-* such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
-* geometrically `a, b, c` represent the sides of a right triangle
+* such a triple is primitive when a, b, c > 0 and gcd(a, b, c) = 1
+* geometrically a, b, c represent the sides of a right triangle
+
 """
 
 from __future__ import annotations
@@ -55,7 +56,7 @@ class Pythag3():
         if max is None:                                            # there are no more triples
             b_cap = b_final                                        # beyond this value for side b
         else:
-            cap = 4 if max < 5 else max 
+            cap = 4 if max < 5 else max
             if cap < a_cap + 2:
                 a_cap = cap - 2
             b_cap = lambda a: min(b_final(a), iSqrt(cap**2 - a**2))
@@ -67,8 +68,9 @@ class Pythag3():
     def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -> Iterator[tuple[int, int, int]]:
         """Returns an iterator of all possible primitive Pythagorean triples.
 
-        * `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`
+        * (a, b, c) where a_start <= a <= a_max and 0 < a < b < c < max
         * if max not given, return all theoretically possible Pythagorean triples
+
         """
         a_init = 3 if a_start < 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)

@@ -38,14 +38,14 @@ hljs.highlightAll();
 <span>def <span class="ident">comb</span></span>(<span>n: int, m: int, targetTop: int = 700, targetBot: int = 5) ‑> int</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Implements <code>C(n,m)</code>, the number of <code>n</code> items taken <code>m</code> at a time.</p>
+<div class="desc"><p>Implements C(n,m), the number of n items taken m at a time.</p>
 <ul>
 <li>geared to works efficiently for Python's arbitrary length integers</li>
 <li>default parameters geared to large values of n and m</li>
 <li>the defaults work reasonably well for smaller (human size) values</li>
 <li>for inner loops with smaller values, use targetTop = targetBot = 1</li>
 <li>or just use math.comb(n, m) instead</li>
-<li>raises <code>ValueError</code> if <code>n &lt; 0</code> or <code>m &lt; 0</code></li>
+<li>raises ValueError if n &lt; 0 or m &lt; 0</li>
 </ul></div>
 </dd>
 <dt id="grscheller.boring_math.integer_math.coprime"><code class="name flex">
@@ -54,7 +54,7 @@ hljs.highlightAll();
 <dd>
 <div class="desc"><p>Makes 2 integers coprime by dividing out their common factors.</p>
 <ul>
-<li>returns <code>(0, 0)</code> when <code>n = m = 0</code></li>
+<li>returns (0, 0) when n = m = 0</li>
 <li>returned coprimed values retain their original signs</li>
 </ul></div>
 </dd>
@@ -70,11 +70,11 @@ hljs.highlightAll();
 <dd>
 <div class="desc"><p>Uses Euclidean algorithm to compute the gcd of two integers.</p>
 <ul>
-<li>takes two integers, returns <code>gcd &gt; 0</code></li>
-<li>note that mathematically the gcd of <code>0</code> and <code>0</code> does not exist</li>
-<li><code>gcd(0, 0) = 1</code> a better choice than <code>math.gcd(0, 0) = 0</code></li>
-<li><code>gcd(0, 0) = 1</code> eliminates <code><a title="grscheller.boring_math.integer_math.lcm" href="#grscheller.boring_math.integer_math.lcm">lcm()</a></code> &amp; <code><a title="grscheller.boring_math.integer_math.coprime" href="#grscheller.boring_math.integer_math.coprime">coprime()</a></code> having to edge case test</li>
-<li><code><a title="grscheller.boring_math.integer_math.gcd" href="#grscheller.boring_math.integer_math.gcd">gcd()</a>(0, 0)</code> returning <code>1</code> instead of <code>0</code> more easily mathematically justified</li>
+<li>takes two integers, returns gcd &gt; 0</li>
+<li>note that mathematically the gcd of 0 and 0 does not exist</li>
+<li>gcd(0, 0) = 1 a better choice than math.gcd(0, 0) = 0</li>
+<li>gcd(0, 0) = 1 eliminates lcm &amp; coprime having to edge case test</li>
+<li>gcd(0, 0) returning 1 instead of 0 more easily mathematically justified</li>
 </ul></div>
 </dd>
 <dt id="grscheller.boring_math.integer_math.iSqrt"><code class="name flex">
@@ -83,8 +83,8 @@ hljs.highlightAll();
 <dd>
 <div class="desc"><p>Integer square root of a non-negative integer.</p>
 <ul>
-<li>return the unique <code>m</code> such that <code>m*m &lt;= n &lt; (m+1)*(m+1)</code></li>
-<li>raises: ValueError if <code>n &lt; 0</code></li>
+<li>return the unique m such that m<em>m &lt;= n &lt; (m+1)</em>(m+1)</li>
+<li>raises: ValueError if n &lt; 0</li>
 </ul></div>
 </dd>
 <dt id="grscheller.boring_math.integer_math.isSqr"><code class="name flex">
@@ -99,8 +99,8 @@ hljs.highlightAll();
 <dd>
 <div class="desc"><p>Finds the least common multiple (lcm) of two integers.</p>
 <ul>
-<li>takes two integers <code>m</code> and <code>n</code></li>
-<li>returns <code>lcm(m, n) &gt; 0</code></li>
+<li>takes two integers m and n</li>
+<li>returns lcm(m, n) &gt; 0</li>
 </ul></div>
 </dd>
 <dt id="grscheller.boring_math.integer_math.primes"><code class="name flex">

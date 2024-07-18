@@ -38,7 +38,7 @@ Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
 Documentation = "https://grscheller.github.io/boring-math/"
 
 [tool.flit.sdist]
-exclude = ["docs/*", ".github/*", ".gitignore"]
+exclude = ["dist", "docs", ".gitignore", ".mypy_cauche"]
 
 [tool.pylsp-mypy]
 live-mode = true

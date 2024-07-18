@@ -28,8 +28,8 @@ hljs.highlightAll();
 <p>Pythagorean triple iterator class.</p>
 <ul>
 <li>Pythagorean triple are three integers a, b, c where a<strong>2 + b</strong>2 = c**2</li>
-<li>such a triple is primitive when <code>a, b, c &gt; 0</code> and <code>gcd(a, b, c) = 1</code></li>
-<li>geometrically <code>a, b, c</code> represent the sides of a right triangle</li>
+<li>such a triple is primitive when a, b, c &gt; 0 and gcd(a, b, c) = 1</li>
+<li>geometrically a, b, c represent the sides of a right triangle</li>
 </ul>
 </section>
 <section>
@@ -80,7 +80,7 @@ hljs.highlightAll();
         if max is None:                                            # there are no more triples
             b_cap = b_final                                        # beyond this value for side b
         else:
-            cap = 4 if max &lt; 5 else max 
+            cap = 4 if max &lt; 5 else max
             if cap &lt; a_cap + 2:
                 a_cap = cap - 2
             b_cap = lambda a: min(b_final(a), iSqrt(cap**2 - a**2))
@@ -92,8 +92,9 @@ hljs.highlightAll();
     def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -&gt; Iterator[tuple[int, int, int]]:
         &#34;&#34;&#34;Returns an iterator of all possible primitive Pythagorean triples.
 
-        * `(a, b, c)` where `a_start &lt;= a &lt;= a_max` and `0 &lt; a &lt; b &lt; c &lt; max`
+        * (a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max
         * if max not given, return all theoretically possible Pythagorean triples
+
         &#34;&#34;&#34;
         a_init = 3 if a_start &lt; 3 else a_start
         a_cap, b_cap, c_cap = self.cap_sides(a_max, max)
@@ -130,7 +131,7 @@ hljs.highlightAll();
 <dd>
 <div class="desc"><p>Returns an iterator of all possible primitive Pythagorean triples.</p>
 <ul>
-<li><code>(a, b, c)</code> where <code>a_start &lt;= a &lt;= a_max</code> and <code>0 &lt; a &lt; b &lt; c &lt; max</code></li>
+<li>(a, b, c) where a_start &lt;= a &lt;= a_max and 0 &lt; a &lt; b &lt; c &lt; max</li>
 <li>if max not given, return all theoretically possible Pythagorean triples</li>
 </ul></div>
 </dd>
