@@ -8,8 +8,8 @@ Python package of modules of a mathematical nature.
 * See [Source code][3] on GitHub
 
 Here are the [modules](#library-modules) and
-[executables](#cli-applications) which make up the PyPI
-grscheller.boring_math package.
+[executables](#cli-applications) which make up the
+grscheller.boring-math PyPI project.
 
 ## Library Modules
 
