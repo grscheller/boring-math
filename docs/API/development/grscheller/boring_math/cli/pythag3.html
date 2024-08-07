@@ -90,11 +90,11 @@ grscheller<wbr>.<a href="./../../boring_math.html">boring_math</a><wbr>.<a href=
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="k">def</span> <span class="nf">pythag3_cli</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints tuples of primitive Pythagorean triples.</span>
 </span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>
-</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="sd">    * Pythagorean triple are 3 integers a, b, c where a**2 + b**2 = c**2</span>
-</span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a><span class="sd">    * such a triple is primitive when a, b, c &gt; 0 and gcd(a, b, c) = 1</span>
-</span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a><span class="sd">    * geometrically a, b, c represent the sides of a right triangle</span>
+</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="sd">    * Pythagorean triple are 3 integers `a, b, c` where `a**2 + b**2 = c**2`</span>
+</span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a><span class="sd">    * such a triple is primitive when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`</span>
+</span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a><span class="sd">    * geometrically `a, b, c` represent the sides of a right triangle</span>
 </span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>
-</span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a><span class="sd">    Usage: pythag3 [m [n [max]]]</span>
+</span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a><span class="sd">    Usage: `pythag3 [m [n [max]]]`</span>
 </span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>
 </span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a><span class="sd">    | # of args |     | Prints all possible triples `(a, b, c)` satisfying  |</span>
 </span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a><span class="sd">    |:---------:| --- |:--------------------------------------------------- |</span>
@@ -108,20 +108,30 @@ grscheller<wbr>.<a href="./../../boring_math.html">boring_math</a><wbr>.<a href=
 </span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>    <span class="n">args</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 </span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>                                          <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
-</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>                                            <span class="nb">max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>                                          <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">a_max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>
-</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a>    <span class="c1"># Print out Pythagorean Triples</span>
-</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">pythagTriples</span><span class="p">:</span>
-</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>        <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span>
+</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a>            <span class="nb">max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a>        <span class="p">)</span>
+</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a>        <span class="p">)</span>
+</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a>        <span class="p">)</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos">67</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+</span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a>        <span class="p">)</span>
+</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>
+</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a>    <span class="c1"># Print out Pythagorean Triples</span>
+</span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a>    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">pythagTriples</span><span class="p">:</span>
+</span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a>        <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -140,11 +150,11 @@ grscheller<wbr>.<a href="./../../boring_math.html">boring_math</a><wbr>.<a href=
             <div class="pdoc-code codehilite"><pre><span></span><span id="pythag3_cli-31"><a href="#pythag3_cli-31"><span class="linenos">31</span></a><span class="k">def</span> <span class="nf">pythag3_cli</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="pythag3_cli-32"><a href="#pythag3_cli-32"><span class="linenos">32</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Prints tuples of primitive Pythagorean triples.</span>
 </span><span id="pythag3_cli-33"><a href="#pythag3_cli-33"><span class="linenos">33</span></a>
-</span><span id="pythag3_cli-34"><a href="#pythag3_cli-34"><span class="linenos">34</span></a><span class="sd">    * Pythagorean triple are 3 integers a, b, c where a**2 + b**2 = c**2</span>
-</span><span id="pythag3_cli-35"><a href="#pythag3_cli-35"><span class="linenos">35</span></a><span class="sd">    * such a triple is primitive when a, b, c &gt; 0 and gcd(a, b, c) = 1</span>
-</span><span id="pythag3_cli-36"><a href="#pythag3_cli-36"><span class="linenos">36</span></a><span class="sd">    * geometrically a, b, c represent the sides of a right triangle</span>
+</span><span id="pythag3_cli-34"><a href="#pythag3_cli-34"><span class="linenos">34</span></a><span class="sd">    * Pythagorean triple are 3 integers `a, b, c` where `a**2 + b**2 = c**2`</span>
+</span><span id="pythag3_cli-35"><a href="#pythag3_cli-35"><span class="linenos">35</span></a><span class="sd">    * such a triple is primitive when `a, b, c &gt; 0` and `gcd(a, b, c) = 1`</span>
+</span><span id="pythag3_cli-36"><a href="#pythag3_cli-36"><span class="linenos">36</span></a><span class="sd">    * geometrically `a, b, c` represent the sides of a right triangle</span>
 </span><span id="pythag3_cli-37"><a href="#pythag3_cli-37"><span class="linenos">37</span></a>
-</span><span id="pythag3_cli-38"><a href="#pythag3_cli-38"><span class="linenos">38</span></a><span class="sd">    Usage: pythag3 [m [n [max]]]</span>
+</span><span id="pythag3_cli-38"><a href="#pythag3_cli-38"><span class="linenos">38</span></a><span class="sd">    Usage: `pythag3 [m [n [max]]]`</span>
 </span><span id="pythag3_cli-39"><a href="#pythag3_cli-39"><span class="linenos">39</span></a>
 </span><span id="pythag3_cli-40"><a href="#pythag3_cli-40"><span class="linenos">40</span></a><span class="sd">    | # of args |     | Prints all possible triples `(a, b, c)` satisfying  |</span>
 </span><span id="pythag3_cli-41"><a href="#pythag3_cli-41"><span class="linenos">41</span></a><span class="sd">    |:---------:| --- |:--------------------------------------------------- |</span>
@@ -158,32 +168,42 @@ grscheller<wbr>.<a href="./../../boring_math.html">boring_math</a><wbr>.<a href=
 </span><span id="pythag3_cli-49"><a href="#pythag3_cli-49"><span class="linenos">49</span></a>    <span class="n">args</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 </span><span id="pythag3_cli-50"><a href="#pythag3_cli-50"><span class="linenos">50</span></a>
 </span><span id="pythag3_cli-51"><a href="#pythag3_cli-51"><span class="linenos">51</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-</span><span id="pythag3_cli-52"><a href="#pythag3_cli-52"><span class="linenos">52</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-</span><span id="pythag3_cli-53"><a href="#pythag3_cli-53"><span class="linenos">53</span></a>                                          <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
-</span><span id="pythag3_cli-54"><a href="#pythag3_cli-54"><span class="linenos">54</span></a>                                            <span class="nb">max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-</span><span id="pythag3_cli-55"><a href="#pythag3_cli-55"><span class="linenos">55</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-</span><span id="pythag3_cli-56"><a href="#pythag3_cli-56"><span class="linenos">56</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-</span><span id="pythag3_cli-57"><a href="#pythag3_cli-57"><span class="linenos">57</span></a>                                          <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</span><span id="pythag3_cli-58"><a href="#pythag3_cli-58"><span class="linenos">58</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="pythag3_cli-59"><a href="#pythag3_cli-59"><span class="linenos">59</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</span><span id="pythag3_cli-60"><a href="#pythag3_cli-60"><span class="linenos">60</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="pythag3_cli-61"><a href="#pythag3_cli-61"><span class="linenos">61</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span><span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">a_max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</span><span id="pythag3_cli-62"><a href="#pythag3_cli-62"><span class="linenos">62</span></a>
-</span><span id="pythag3_cli-63"><a href="#pythag3_cli-63"><span class="linenos">63</span></a>    <span class="c1"># Print out Pythagorean Triples</span>
-</span><span id="pythag3_cli-64"><a href="#pythag3_cli-64"><span class="linenos">64</span></a>    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">pythagTriples</span><span class="p">:</span>
-</span><span id="pythag3_cli-65"><a href="#pythag3_cli-65"><span class="linenos">65</span></a>        <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span>
+</span><span id="pythag3_cli-52"><a href="#pythag3_cli-52"><span class="linenos">52</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="pythag3_cli-53"><a href="#pythag3_cli-53"><span class="linenos">53</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="pythag3_cli-54"><a href="#pythag3_cli-54"><span class="linenos">54</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+</span><span id="pythag3_cli-55"><a href="#pythag3_cli-55"><span class="linenos">55</span></a>            <span class="nb">max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="pythag3_cli-56"><a href="#pythag3_cli-56"><span class="linenos">56</span></a>        <span class="p">)</span>
+</span><span id="pythag3_cli-57"><a href="#pythag3_cli-57"><span class="linenos">57</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="pythag3_cli-58"><a href="#pythag3_cli-58"><span class="linenos">58</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="pythag3_cli-59"><a href="#pythag3_cli-59"><span class="linenos">59</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="pythag3_cli-60"><a href="#pythag3_cli-60"><span class="linenos">60</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="pythag3_cli-61"><a href="#pythag3_cli-61"><span class="linenos">61</span></a>        <span class="p">)</span>
+</span><span id="pythag3_cli-62"><a href="#pythag3_cli-62"><span class="linenos">62</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="pythag3_cli-63"><a href="#pythag3_cli-63"><span class="linenos">63</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="pythag3_cli-64"><a href="#pythag3_cli-64"><span class="linenos">64</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+</span><span id="pythag3_cli-65"><a href="#pythag3_cli-65"><span class="linenos">65</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="pythag3_cli-66"><a href="#pythag3_cli-66"><span class="linenos">66</span></a>        <span class="p">)</span>
+</span><span id="pythag3_cli-67"><a href="#pythag3_cli-67"><span class="linenos">67</span></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="pythag3_cli-68"><a href="#pythag3_cli-68"><span class="linenos">68</span></a>        <span class="n">pythagTriples</span> <span class="o">=</span> <span class="n">pythag3</span><span class="o">.</span><span class="n">triples</span><span class="p">(</span>
+</span><span id="pythag3_cli-69"><a href="#pythag3_cli-69"><span class="linenos">69</span></a>            <span class="n">a_start</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+</span><span id="pythag3_cli-70"><a href="#pythag3_cli-70"><span class="linenos">70</span></a>            <span class="n">a_max</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="pythag3_cli-71"><a href="#pythag3_cli-71"><span class="linenos">71</span></a>        <span class="p">)</span>
+</span><span id="pythag3_cli-72"><a href="#pythag3_cli-72"><span class="linenos">72</span></a>
+</span><span id="pythag3_cli-73"><a href="#pythag3_cli-73"><span class="linenos">73</span></a>    <span class="c1"># Print out Pythagorean Triples</span>
+</span><span id="pythag3_cli-74"><a href="#pythag3_cli-74"><span class="linenos">74</span></a>    <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">pythagTriples</span><span class="p">:</span>
+</span><span id="pythag3_cli-75"><a href="#pythag3_cli-75"><span class="linenos">75</span></a>        <span class="nb">print</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span>
 </span></pre></div>
 
 
             <div class="docstring"><p>Prints tuples of primitive Pythagorean triples.</p>
 
 <ul>
-<li>Pythagorean triple are 3 integers a, b, c where a<strong>2 + b</strong>2 = c**2</li>
-<li>such a triple is primitive when a, b, c &gt; 0 and gcd(a, b, c) = 1</li>
-<li>geometrically a, b, c represent the sides of a right triangle</li>
+<li>Pythagorean triple are 3 integers <code>a, b, c</code> where <code>a**2 + b**2 = c**2</code></li>
+<li>such a triple is primitive when <code>a, b, c &gt; 0</code> and <code>gcd(a, b, c) = 1</code></li>
+<li>geometrically <code>a, b, c</code> represent the sides of a right triangle</li>
 </ul>
 
-<p>Usage: pythag3 [m [n [max]]]</p>
+<p>Usage: <code>pythag3 [m [n [max]]]</code></p>
 
 <table>
 <thead>

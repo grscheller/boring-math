@@ -30,11 +30,11 @@ from grscheller.boring_math.pythag3 import Pythag3
 def pythag3_cli() -> None:
     """Prints tuples of primitive Pythagorean triples.
 
-    * Pythagorean triple are 3 integers a, b, c where a**2 + b**2 = c**2
-    * such a triple is primitive when a, b, c > 0 and gcd(a, b, c) = 1
-    * geometrically a, b, c represent the sides of a right triangle
+    * Pythagorean triple are 3 integers `a, b, c` where `a**2 + b**2 = c**2`
+    * such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
+    * geometrically `a, b, c` represent the sides of a right triangle
 
-    Usage: pythag3 [m [n [max]]]
+    Usage: `pythag3 [m [n [max]]]`
 
     | # of args |     | Prints all possible triples `(a, b, c)` satisfying  |
     |:---------:| --- |:--------------------------------------------------- |
@@ -48,16 +48,26 @@ def pythag3_cli() -> None:
     args = sys.argv[1:]
 
     if len(args) > 2:
-        pythagTriples = pythag3.triples(a_start = int(args[0]),
-                                          a_max = int(args[1]),
-                                            max = int(args[2]))
+        pythagTriples = pythag3.triples(
+            a_start = int(args[0]),
+            a_max = int(args[1]),
+            max = int(args[2])
+        )
     elif len(args) == 2:
-        pythagTriples = pythag3.triples(a_start = int(args[0]),
-                                          a_max = int(args[1]))
+        pythagTriples = pythag3.triples(
+            a_start = int(args[0]),
+            a_max = int(args[1])
+        )
     elif len(args) == 1:
-        pythagTriples = pythag3.triples(a_start = 3, a_max = int(args[0]))
+        pythagTriples = pythag3.triples(
+            a_start = 3,
+            a_max = int(args[0])
+        )
     else:
-        pythagTriples = pythag3.triples(a_start = 3, a_max = 100)
+        pythagTriples = pythag3.triples(
+            a_start = 3,
+            a_max = 100
+        )
 
     # Print out Pythagorean Triples
     for triple in pythagTriples:

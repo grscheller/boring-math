@@ -62,5 +62,5 @@ def ackermann_list_cli() -> None:
         print("Error: ackermann.py takes 2 arguments", file=sys.stderr)
         sys.exit(1)
 
-    # Compute value
+    # Compute and display value
     print(ackermann_list(m, n))
