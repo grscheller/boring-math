@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Pythagorean triple iterator class.
+"""
+### Pythagorean triple iterator class.
 
-* Pythagorean triple are three integers a, b, c where a**2 + b**2 = c**2
-* such a triple is primitive when a, b, c > 0 and gcd(a, b, c) = 1
-* geometrically a, b, c represent the sides of a right triangle
+* Pythagorean triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
+* such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
+* geometrically `a, b, c` represent the sides of a right triangle
 
 """
 
@@ -68,8 +69,8 @@ class Pythag3():
     def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -> Iterator[tuple[int, int, int]]:
         """Returns an iterator of all possible primitive Pythagorean triples.
 
-        * (a, b, c) where a_start <= a <= a_max and 0 < a < b < c < max
-        * if max not given, return all theoretically possible Pythagorean triples
+        * `(a, b, c)` where `a_start <= a <= a_max and 0 < a < b < c < max`
+        * if `max` not given, return all theoretically possible triples
 
         """
         a_init = 3 if a_start < 3 else a_start

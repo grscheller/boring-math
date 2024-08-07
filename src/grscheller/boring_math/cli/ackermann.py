@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for CLI scripts to evaluate Ackermann's function.
+"""
+### Programs to evaluate Ackermann's function
 
-The version of Ackermann's function being used is defined recursively by
+The version of the Ackermann's function being used is defined recursively by
 
 ```
    ackermann(0,n) = n+1
@@ -23,6 +24,8 @@ The version of Ackermann's function being used is defined recursively by
 ```
 Ackermann's function is an example of a computable but not primitively
 recursive function.
+
+* program **ackermann_list** uses a Python List to implement recursion
 """
 
 from __future__ import annotations

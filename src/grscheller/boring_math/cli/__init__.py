@@ -12,8 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry points for automatically generated CLI scripts.
+"""
+## Entry points for automatically generated CLI scripts.
 
-CGI scripts are automatically generated in an OS independent way by the package build
-backend based on the `[project.scripts]` section of the project's `pyproject.toml` file.
+CGI scripts are automatically generated in an OS independent way by the package
+build backend. This is configured by the `[project.scripts]` section in the
+project's pyproject.toml file.
+
+### Ackermann's Function
+
+Ackermann's function is an example of a computable function that is not
+primitively recursive.
+
+* program **Ackermann_list** uses a Python list to implement the recursion
+
+### Pythagorean Triples
+
+* program **pythag3** outputs lists of Pythagorean triples in increasing order
 """

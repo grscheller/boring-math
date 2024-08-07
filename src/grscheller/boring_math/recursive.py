@@ -12,7 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Recursive function module.
+"""
+## Recursive function module.
+
+### Ackermann's function
 
 * function ackermann_list: eval Ackermann's function simulating recursion with a list
 """
@@ -35,9 +38,12 @@ def ackermann_list(m: int, n:int) -> int:
     Ackermann's function is an example of a function that is computable
     but not primitively recursive. It quickly becomes computationally
     intractable for relatively small values of m.
+
+    This implementation models the recursion with a Python list instead of the
+    Python function call stack. It then evaluates the innermost ackermann
+    function first. To naively use the Python call stack would result in this
+    function not being stack safe.
     """
-    # Model a function stack with a list, then
-    # evaluate innermost ackermann function first.
     acker = [m, n]
 
     while len(acker) > 1:

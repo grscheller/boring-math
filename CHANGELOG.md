@@ -4,20 +4,24 @@ PyPI grscheller.boring-math project.
 
 ## Semantic versioning
 
-* first digit:
+* first digit
   * major event, epoch, or paradigm shift
-* second digit:
+* second digit
   * breaking API changes
   * major changes
-* third digit:
+* third digit
   * API additions
   * bug fixes
   * minor changes
   * significant documentation updates
-* forth digit (development environment only):
-  * not to be taken too seriously
+* forth digit (development environment only)
 
 ## Releases and other important milestones
+
+### Version 0.4.2.0 - Commit date 2024-08-07
+
+* updated to use grscheller.circular-array 3.4.0
+* now using pdoc instead of pdoc3 for documentation
 
 ### Version 0.4.0 - PyPI release date 2024-07-12
 

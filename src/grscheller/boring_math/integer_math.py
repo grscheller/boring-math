@@ -135,8 +135,8 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
         m = n - m
 
     # Prepare data structures
-    tops: CA[int, None] = CA(*range(n - m + 1, n + 1), s=None)
-    bots: CA[int, None] = CA(*range(1, m+1), s=None)
+    tops: CA[int] = CA(*range(n - m + 1, n + 1))
+    bots: CA[int] = CA(*range(1, m+1))
 
     # Compacting data structures makes algorithm work better for larger values
     size = len(tops)

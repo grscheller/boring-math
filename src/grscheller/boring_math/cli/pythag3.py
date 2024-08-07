@@ -12,8 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Entry point for the pythag3 cli script."""
+"""
+### Program pythag3
 
+Outputs lists of Pythagorean Triples.
+"""
 from __future__ import annotations
 
 __all__ = ['pythag3_cli']
