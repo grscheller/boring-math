@@ -2,7 +2,7 @@
 
 PyPI grscheller.boring-math project.
 
-## Semantic versioning
+#### Semantic versioning
 
 * first digit
   * major event, epoch, or paradigm shift
@@ -15,6 +15,8 @@ PyPI grscheller.boring-math project.
   * minor changes
   * significant documentation updates
 * forth digit (development environment only)
+  * commit count of "non-trivial" changes/regressions
+  * third digit now plays the role of the second
 
 ## Releases and other important milestones
 
