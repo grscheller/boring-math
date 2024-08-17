@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Libraries of a mathematical nature with example executables."""
+"""
+### Mathematical Libraries
 
-__version__ = "0.4.2.1"
+Libraries of a mathematical nature with example executables.
+"""
+__version__ = "0.4.3"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"

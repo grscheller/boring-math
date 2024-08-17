@@ -13,9 +13,13 @@
 # limitations under the License.
 
 """
-## Recursive function module.
+### Recursive function module.
 
-### Ackermann's function
+#### Ackermann's function
+
+Ackermann's function is an example of a function that is computable
+but not primitively recursive. It quickly becomes computationally
+intractable for relatively small values of m.
 
 * function ackermann_list: eval Ackermann's function simulating recursion with a list
 """
@@ -27,17 +31,16 @@ from __future__ import annotations
 __all__ = ['ackermann_list']
 
 def ackermann_list(m: int, n:int) -> int:
-    """Ackermann function is defined recursively by
+    """
+    #### Ackermann's Function
+
+    Ackermann function is defined recursively by
 
     ```
        ackermann(0,n) = n+1
        ackermann(m,0) = ackermann(m-1,1)
        ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
     ```
-
-    Ackermann's function is an example of a function that is computable
-    but not primitively recursive. It quickly becomes computationally
-    intractable for relatively small values of m.
 
     This implementation models the recursion with a Python list instead of the
     Python function call stack. It then evaluates the innermost ackermann

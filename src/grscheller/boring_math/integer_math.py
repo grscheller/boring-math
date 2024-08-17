@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Library of functions and classes of an integer pure math nature."""
+"""
+#### Functions of a pure math integer nature
 
+"""
 from __future__ import annotations
 
 from typing import Iterator

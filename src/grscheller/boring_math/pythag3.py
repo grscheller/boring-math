@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-### Pythagorean triple iterator class.
+### Pythagorean Triples
 
 * Pythagorean triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
 * such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
@@ -29,7 +29,11 @@ from .integer_math import gcd, iSqrt
 __all__ = ['Pythag3']
 
 class Pythag3():
-    """Class supporting the generation of primitive Pythagorean triples."""
+    """
+    #### Pythagorean Triple Iterator Class
+
+    Class supporting the generation of primitive Pythagorean triples.
+    """
     def __init__(self, last_square: int=500):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
         if last_h < 5:
