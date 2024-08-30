@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
+r"""
 ### Pythagorean Triples
 
-* Pythagorean triple are three integers `a, b, c` where `a**2 + b**2 = c**2`
-* such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
-* geometrically `a, b, c` represent the sides of a right triangle
+* Pythagorean triples are three integers $\ a,\ b,\ c\ $ where $\ a^2+b^2=c^2$
+* such a triple is primitive when $\ a,\ b,\ c \gt 0\ $ and $\ gcd(a,\ b,\ c) = 1$
+* geometrically $\ a,\ b,\ c\ $ represent the sides of a right triangle
 
 """
 
@@ -74,7 +74,7 @@ class Pythag3():
         """Returns an iterator of all possible primitive Pythagorean triples.
 
         * `(a, b, c)` where `a_start <= a <= a_max and 0 < a < b < c < max`
-        * if `max` not given, return all theoretically possible triples
+        * if `max` is not given, return all theoretically possible triples
 
         """
         a_init = 3 if a_start < 3 else a_start

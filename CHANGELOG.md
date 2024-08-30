@@ -20,17 +20,19 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.3.1 - PyPI release date 2024-08-17
+
+* MathJax expressions used to render non-code mathematical expressions
+  * pdoc accepts MathJax expressions with --math option
+    * `$ pdoc --math -o . grscheller.boring_math`
+
 ### Version 0.4.3 - PyPI release date 2024-08-17
 
 * updated to use grscheller.circular-array 3.4.1
-  * this version of CA compares first with identity before equality
+  * this version of CA compares first with identity before trying equality
     * like Python builtins do
-  * replaced github markdown with std markdown
-
-### Version 0.4.2.0 - Commit date 2024-08-07
-
-* updated to use grscheller.circular-array 3.4.0
 * now using pdoc instead of pdoc3 for documentation
+* replaced github markdown with std markdown
 
 ### Version 0.4.0 - PyPI release date 2024-07-12
 

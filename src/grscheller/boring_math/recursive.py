@@ -31,16 +31,14 @@ from __future__ import annotations
 __all__ = ['ackermann_list']
 
 def ackermann_list(m: int, n:int) -> int:
-    """
+    r"""
     #### Ackermann's Function
 
     Ackermann function is defined recursively by
 
-    ```
-       ackermann(0,n) = n+1
-       ackermann(m,0) = ackermann(m-1,1)
-       ackermann(m,n) = ackermann(m-1, ackermann(m, n-1)) for n,m > 0
-    ```
+    * $ackermann(0,\ n)=n+1 \ \ \ \ \forall n\ge 0$
+    * $ackermann(m,\ 0)=ackermann(m-1,\ 1) \ \ \ \ \forall m\gt 0$
+    * $ackermann(m,\ n)=ackermann(m-1,\ ackermann(m,\ n-1)) \ \ \ \ \forall m\gt 0, \ \ \forall n\gt 0$
 
     This implementation models the recursion with a Python list instead of the
     Python function call stack. It then evaluates the innermost ackermann
