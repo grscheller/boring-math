@@ -6,7 +6,7 @@ mathematical expressions.
 
 ```bash
    $ cd API/development/
-   $ pdoc --math -o . grscheller.boring_math
+   $ pdoc -o . grscheller.boring_math
 
 ```
 The pdoc PyPI package, not pdoc3, generates boring-math's detailed HTML
