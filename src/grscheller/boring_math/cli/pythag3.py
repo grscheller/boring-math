@@ -28,11 +28,11 @@ import sys
 from grscheller.boring_math.pythag3 import Pythag3
 
 def pythag3_cli() -> None:
-    """Prints tuples of primitive Pythagorean triples.
+    r"""Prints tuples of primitive Pythagorean triples.
 
-    * Pythagorean triple are 3 integers `a, b, c` where `a**2 + b**2 = c**2`
-    * such a triple is primitive when `a, b, c > 0` and `gcd(a, b, c) = 1`
-    * geometrically `a, b, c` represent the sides of a right triangle
+    * Pythagorean triples are three integers $\ a,\ b,\ c\ $ where $\ a^2+b^2=c^2$
+    * such a triple is primitive when $\ a,b,c \gt 0\ $ and $\ gcd(a,\ b,\ c) = 1$
+    * geometrically $\ a,\ b,\ c\ $ represent the sides of a right triangle
 
     Usage: `pythag3 [m [n [max]]]`
 

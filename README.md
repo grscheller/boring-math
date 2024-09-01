@@ -58,8 +58,8 @@ grscheller.boring-math PyPI project.
     * such that `a**2 + b**2 = c**2` 
     * `a, b, c` represent integer sides of a right triangle
     * a *Pythagorean* triple is primitive if gcd of `a, b, c` is `1`
-  * Iterator finds all primitive Pythagorean Triples such that
-    * `0 < a_start <= a < b < c <= max` where `a <= a_max`
+  * Iterator finds all primitive Pythagorean Triples 
+    * where `0 < a_start <= a < b < c <= max` where `a <= a_max`
     * if `max = 0` find all theoretically possible triples with `a <= a_max`
 
 ---
@@ -67,7 +67,7 @@ grscheller.boring-math PyPI project.
 #### Recursive Function Module
 
 * Ackermann's Function
-  * Function **ackermann(m: int, n: int) -> int**
+  * Function **ackermann_list(m: int, n: int) -> int**
     * an example of a total computable function that is not primitive recursive
     * becomes numerically intractable after m=4
     * see CLI section below for mathematical definition
@@ -107,13 +107,13 @@ with positive integer sides.
 
 * CLI script **pythag3**
   * A Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
-    * `a**2 + b**2 = c**2` where `a,b,c > 0` and `gcd(a,b,c) = 1`
+    * `a³ + b³ = c³` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
   * Usage: `pythag3 [m [n [max]]`
-    * 3 arguments print all triples with m <= a <= n and a < b < c <= max
-    * 2 arguments print all triples with m <= a <= n
-    * 1 argument prints all triples with a <= m
-    * 0 arguments print all triples with 3 <= a <= 100
+    * 3 args print all triples with `m <= a <= n` and `a < b < c <= max`
+    * 2 args print all triples with `m <= a <= n`
+    * 1 arg prints all triples with `a <= m`
+    * 0 args print all triples with `3 <= a <= 100`
 
 ---
 
