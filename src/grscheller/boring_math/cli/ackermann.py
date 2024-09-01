@@ -39,7 +39,8 @@ import sys
 from grscheller.boring_math.recursive import ackermann_list
 
 def ackermann_list_cli() -> None:
-    """Evaluate Ackermann's function simulating recursion with a Python list.
+    """
+    #### Evaluate Ackermann's function simulating recursion with a Python list
 
     Usage: ackermann_list m n
 

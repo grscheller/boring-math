@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-#### Functions of a pure math integer nature
+### Functions of a pure math integer nature
 
 """
 from __future__ import annotations
@@ -26,14 +26,14 @@ __all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonac
 # Number Theory mathematical Functions.
 
 def gcd(m: int, n: int) -> int:
-    """Uses Euclidean algorithm to compute the gcd of two integers.
+    """
+    #### Uses Euclidean algorithm to compute the gcd of two integers.
 
     * takes two integers, returns gcd > 0
     * note that mathematically the gcd of 0 and 0 does not exist
-    * gcd(0, 0) = 1 a better choice than math.gcd(0, 0) = 0
-    * gcd(0, 0) = 1 eliminates lcm & coprime having to edge case test
-    * gcd(0, 0) returning 1 instead of 0 more easily mathematically justified
-
+    * taking `gcd(0, 0) = 1` is a better choice than `math.gcd(0, 0) = 0`
+      * eliminates lcm & coprime having to edge case test
+      * also `gcd(0, 0)` returning 1 instead of 0 more mathematically justified
     """
     if 0 == m == n:
         return 1
@@ -44,32 +44,32 @@ def gcd(m: int, n: int) -> int:
     return m
 
 def lcm(m: int, n: int) -> int:
-    """Finds the least common multiple (lcm) of two integers.
+    """
+    #### Finds the least common multiple (lcm) of two integers.
 
-    * takes two integers m and n
-    * returns lcm(m, n) > 0
-
+    * takes two integers `m` and `n`
+    * returns `lcm(m, n) > 0`
     """
     m //= gcd(m, n)
     return abs(m*n)
 
 def coprime(m: int, n: int) -> tuple[int, int]:
-    """Makes 2 integers coprime by dividing out their common factors.
+    """
+    #### Makes 2 integers coprime by dividing out their common factors.
 
-    * returns (0, 0) when n = m = 0
+    * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
-
     """
     coPrime = lambda mm, nn, common: (mm//common, nn//common)
     common = gcd(m, n)
     return m//common, n//common
 
 def iSqrt(n: int) -> int:
-    """Integer square root of a non-negative integer.
+    """
+    #### Integer square root of a non-negative integer.
 
-    * return the unique m such that m*m <= n < (m+1)*(m+1)
-    * raises: ValueError if n < 0
-
+    * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
+    * raises: ValueError if `n < 0`
     """
     if n < 0:
         msg = 'iSqrt(n): n must be non-negative'
@@ -82,7 +82,9 @@ def iSqrt(n: int) -> int:
     return high
 
 def isSqr(n: int) -> bool:
-    """Returns true if integer argument is a perfect square"""
+    """
+    #### Returns true if integer argument is a perfect square
+    """
     return False if n < 0 else n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator[int]:
@@ -114,7 +116,8 @@ def primes(start: int=2, end_before: int=100) -> Iterator[int]:
 # Combinatorics
 
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
-    """Implements C(n,m), the number of n items taken m at a time.
+    """
+    #### Implements C(n,m), the number of n items taken m at a time.
 
     * geared to works efficiently for Python's arbitrary length integers
     * default parameters geared to large values of n and m
@@ -169,7 +172,11 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 # Fibonacci Iterator
 
 def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
-    """Returns iterator to Fibonacci sequence beginning fib0, fib1, ..."""
+    """
+    #### Returns iterator to Fibonacci sequence
+
+    * beginning fib0, fib1, ...
+    """
     while True:
         yield fib0
         fib0, fib1 = fib1, fib0+fib1

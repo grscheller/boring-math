@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-r"""
+"""
 ### Recursive function module.
 
 #### Ackermann's function
@@ -23,9 +23,9 @@ intractable for relatively small values of m.
 
     Ackermann function is defined recursively by
 
-    * $ackermann(0,\ n)=n+1 \ \ \ \ \forall n\ge 0$
-    * $ackermann(m,\ 0)=ackermann(m-1,\ 1) \ \ \ \ \forall m\gt 0$
-    * $ackermann(m,\ n)=ackermann(m-1,\ ackermann(m,\ n-1)) \ \ \ \ \forall m\gt 0, \ \ \forall n\gt 0$
+    * ackermann(0,n)=n+1                                    for n >= 0
+    * ackermann(m,0)=ackermann(m-1,1)                       for m >= 0
+    * ackermann(m,n)=ackermann(m-1, ackermann(m,n-1))       for m,n > 0
 
 """
 

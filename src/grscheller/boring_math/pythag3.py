@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-r"""
+"""
 ### Pythagorean Triples
 
-* Pythagorean triples are three integers $\ a,\ b,\ c\ $ where $\ a^2+b^2=c^2$
-* such a triple is primitive when $\ a,b,c \gt 0\ $ and $\ gcd(a,\ b,\ c) = 1$
-* geometrically $\ a,\ b,\ c\ $ represent the sides of a right triangle
+* Pythagorean triples are three integers `a, b, c`  where `a² + b² = c²`
+* such a triple is primitive when `a,b,c > 0` and `gcd(a, b, c) = 1`
+* geometrically `a, b, c` represent the sides of a right triangle
 
 """
 
@@ -54,7 +54,9 @@ class Pythag3():
 
     @staticmethod
     def _cap_sides(a_max: int, max: Optional[int]=None) -> tuple[int, Callable[[int], int], int]:
-        """Returns a tuple of capped max values for sides a,b,c"""
+        """
+        #### Returns a tuple of capped max values for sides a,b,c
+        """
         a_cap = 2 if a_max < 3 else a_max
 
         b_final: Callable[[int], int] = lambda a: (a**2 - 1) // 2  # theoretically, given side a
@@ -71,11 +73,11 @@ class Pythag3():
         return a_cap, b_cap, c_cap
 
     def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -> Iterator[tuple[int, int, int]]:
-        """Returns an iterator of all possible primitive Pythagorean triples.
+        """
+        #### Returns an iterator of all possible primitive Pythagorean triples.
 
         * tuple `(a, b, c)` where `a_start <= a <= a_max and 0 < a < b < c < max`
         * if `max` is not given, return all theoretically possible triples
-
         """
         a_init = 3 if a_start < 3 else a_start
         a_cap, b_cap, c_cap = self._cap_sides(a_max, max)
