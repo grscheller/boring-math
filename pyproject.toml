@@ -26,7 +26,8 @@ keywords = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest >=7.4"]
+tests = ["pytest >=8.3.2"]
+docs = ["pdoc >=14.6.0"]
 
 [project.scripts]
 pythag3 = "grscheller.boring_math.cli.pythag3:pythag3_cli"
