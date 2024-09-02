@@ -88,7 +88,9 @@ def isSqr(n: int) -> bool:
     return False if n < 0 else n == iSqrt(n)**2
 
 def primes(start: int=2, end_before: int=100) -> Iterator[int]:
-    """Return a prime number iterator using the Sieve of Eratosthenes algorithm."""
+    """
+    #### Return a prime number iterator using the Sieve of Eratosthenes algorithm
+    """
     if start >= end_before or end_before < 3:
         return (x for x in (0,) if x > 0)
     if start < 2:
@@ -173,7 +175,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
 
 def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
     """
-    #### Returns iterator to Fibonacci sequence
+    #### Returns an iterator to a Fibonacci sequence
 
     * beginning fib0, fib1, ...
     """

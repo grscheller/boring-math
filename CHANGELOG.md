@@ -20,6 +20,12 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.4 - PyPI release date 2024-09-01
+
+* removed MathJax expressions
+  * not worth the increased maintenance
+  * can get almost the same results using `expresions` and unicode
+
 ### Version 0.4.3.1 - PyPI release date 2024-08-17
 
 * MathJax expressions used to render non-code mathematical expressions

@@ -17,12 +17,7 @@
 
 Libraries of a mathematical nature with example executables.
 """
-__version__ = "0.4.3.4"
+__version__ = "0.4.4"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"
-
-from .integer_math import gcd, lcm, coprime, iSqrt, isSqr, primes
-from .integer_math import comb, fibonacci
-from .pythag3 import Pythag3
-from .recursive import ackermann_list
