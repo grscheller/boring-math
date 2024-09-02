@@ -15,9 +15,9 @@ Here are the [modules](#library-modules) and
 [executables](#cli-applications) which make up the
 grscheller.boring-math PyPI project.
 
-### Library Modules
+## Library Modules
 
-#### Integer Math Module
+### Integer Math Module
 
 * Number Theory
   * Function **gcd**(int, int) -> int
@@ -49,7 +49,7 @@ grscheller.boring-math PyPI project.
 
 ---
 
-#### Pythagorean Triple Module
+### Pythagorean Triple Module
 
 * Pythagorean Triple Class
   * Method **Pythag3.triples**(a_start: int, a_max: int, max: Optional[int]) -> Iterator[int]
@@ -64,7 +64,7 @@ grscheller.boring-math PyPI project.
 
 ---
 
-#### Recursive Function Module
+### Recursive Function Module
 
 * Ackermann's Function
   * Function **ackermann_list**(m: int, n: int) -> int
@@ -74,12 +74,12 @@ grscheller.boring-math PyPI project.
 
 ---
 
-### CLI Applications
+## CLI Applications
 
 Implemented in an OS and package build tool independent way via the
 project.scripts section of pyproject.toml.
 
-#### Ackermann's function CLI scripts
+### Ackermann's function CLI scripts
 
 Ackermann, a student of Hilbert, discovered early examples of totally
 computable functions that are not primitively recursive.
@@ -93,28 +93,30 @@ recursively defined for `m,n >= 0` by
    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))
 ```
 
-* CLI program **ackermann_list**
-  * Given two non-negative integers, evaluates Ackermann's function
-  * Implements the recursion via a Python array
-  * **Usage:** `ackerman_list m n`
+#### CLI program **ackermann_list**
+
+* Given two non-negative integers, evaluates Ackermann's function
+* Implements the recursion via a Python array
+* **Usage:** `ackerman_list m n`
 
 ---
 
-#### Pythagorean triple CLI script
+### Pythagorean triple CLI script
 
 Geometrically, a *Pythagorean* triangle is a right triangle with
 positive integer sides.
 
-* CLI program **pythag3**
-  * Generates primitive Pythagorean triples
+#### CLI program **pythag3**
+
+* Generates primitive Pythagorean triples
   * A primitive Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a³ + b³ = c³` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
-  * **Usage:** `pythag3 [m [n [max]]`
-    * 3 args print all triples with `m <= a <= n` and `a < b < c <= max`
-    * 2 args print all triples with `m <= a <= n`
-    * 1 arg prints all triples with `a <= m`
-    * 0 args print all triples with `3 <= a <= 100`
+* **Usage:** `pythag3 [m [n [max]]`
+  * 3 args print all triples with `m <= a <= n` and `a < b < c <= max`
+  * 2 args print all triples with `m <= a <= n`
+  * 1 arg prints all triples with `a <= m`
+  * 0 args print all triples with `3 <= a <= 100`
 
 ---
 
