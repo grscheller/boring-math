@@ -20,31 +20,31 @@ grscheller.boring-math PyPI project.
 #### Integer Math Module
 
 * Number Theory
-  * Function **gcd(**int, int**) ->** int
+  * Function **gcd**(int, int) -> int
     * greatest common divisor of two integers
     * always returns a non-negative number greater than 0
-  * Function **lcm(**int, int**) ->** int
+  * Function **lcm**(int, int) -> int
     * least common multiple of two integers
     * always returns a non-negative number greater than 0
-  * Function **coprime(**int, int**) -> tuple(**int, int**)**
+  * Function **coprime**(int, int) -> tuple(int, int)
     * make 2 integers coprime by dividing out gcd
     * preserves signs of original numbers
-  * Function **iSqrt(**int**) ->** int
+  * Function **iSqrt**(int) -> int
     * integer square root
-    * same as **math.isqrt**
-  * Function **isSqr(**int**) ->** bool
+    * same as math.isqrt
+  * Function **isSqr**(int) -> bool
     * returns true if integer argument is a perfect square
-  * Function **primes(**`start`: int, `end_before`: int**) -> Iterator[**int**]**
+  * Function **primes**(start: int, end_before: int) -> Iterator[int]
     * uses *Sieve of Eratosthenes* algorithm
 * Combinatorics
-  * Function **comb(**`n`: int, `m`: int**) ->** int
-    * returns number of combinations of `n` items taken `m` at a time
+  * Function **comb**(n: int, m: int) -> int
+    * returns number of combinations of n items taken m at a time
     * pure integer implementation of math.comb
 * Fibonacci Sequences
-  * Function **fibonacci(**`f0`: int=`0`, `f1`: int=`1`**) -> Iterator[**int**]**
-    * returns a *Fibonacci* sequence iterator
-    * `f(n) = f(n-1) + f(n-2)`
-    * `f(0) = f0` and `f(1) = f1`
+  * Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator[int]
+    * returns a *Fibonacci* sequence iterator where
+      * `f(n) = f(n-1) + f(n-2)`
+      * `f(0) = f0` and `f(1) = f1`
     * defaults to `0, 1, 1, 2, 3, 5, 8, 13, 21, ...`
 
 ---
@@ -52,8 +52,7 @@ grscheller.boring-math PyPI project.
 #### Pythagorean Triple Module
 
 * Pythagorean Triple Class
-  * Method **Pythag3.triples(**`a_start`: int, `a_max`: int, `max`:
-    **Optional[**int]**) -> Iterator[**int**]**
+  * Method **Pythag3.triples**(a_start: int, a_max: int, max: Optional[int]) -> Iterator[int]
     * Returns an iterator of tuples of primitive *Pythagorean* triples
   * A Pythagorean triple is a tuple in positive integers (a, b, c)
     * such that `a**2 + b**2 = c**2` 
@@ -68,7 +67,7 @@ grscheller.boring-math PyPI project.
 #### Recursive Function Module
 
 * Ackermann's Function
-  * Function **ackermann_list(**`m`: int, `n`: int**) ->** int
+  * Function **ackermann_list**(m: int, n: int) -> int
     * an example of a total computable function that is not primitive recursive
     * becomes numerically intractable after `m=4`
     * see CLI section below for mathematical definition
@@ -94,10 +93,10 @@ recursively defined for `m,n >= 0` by
    ackermann(m,n) = ackermann(m-1, ackermann(m, n-1))
 ```
 
-* CLI program **ackerman_list**
+* CLI program **ackermann_list**
   * Given two non-negative integers, evaluates Ackermann's function
   * Implements the recursion via a Python array
-  * Usage: `ackerman_list m n`
+  * **Usage:** `ackerman_list m n`
 
 ---
 
@@ -111,7 +110,7 @@ positive integer sides.
   * A primitive Pythagorean triple is a 3-tuple of integers `(a, b, c)` such that
     * `a³ + b³ = c³` where `a,b,c > 0` and `gcd(a,b,c) = 1`
   * The integers `a, b, c` represent the sides of a right triangle
-  * Usage: `pythag3 [m [n [max]]`
+  * **Usage:** `pythag3 [m [n [max]]`
     * 3 args print all triples with `m <= a <= n` and `a < b < c <= max`
     * 2 args print all triples with `m <= a <= n`
     * 1 arg prints all triples with `a <= m`
