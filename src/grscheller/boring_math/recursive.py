@@ -23,17 +23,30 @@ intractable for relatively small values of m.
 
     Ackermann function is defined recursively by
 
-    * ackermann(0,n)=n+1                                    for n >= 0
-    * ackermann(m,0)=ackermann(m-1,1)                       for m >= 0
-    * ackermann(m,n)=ackermann(m-1, ackermann(m,n-1))       for m,n > 0
+    * ackermann(0,n)=n+1                                 for n >= 0
+    * ackermann(m,0)=ackermann(m-1,1)                    for m >= 0
+    * ackermann(m,n)=ackermann(m-1, ackermann(m,n-1))    for m,n > 0
 
+#### Fibonacci sequence
+
+The Fibonacci sequence is usually taught in grade school as the
+first recursive function that is not either an arithmetic or geometric
+sequence.
+
+    Fibonacci's sequence is traditionally defined as
+
+    * f₁ = 1
+    * f₂ = 1
+    * fₙ₊₂ = fₙ₊₁ + fₙ
+
+Actually, a Fibonacci extends can extend in both directions:
+    ..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...
 """
-
-# Computable but not primitively recursive functions
-
 from __future__ import annotations
 
-__all__ = ['ackermann_list']
+from typing import Iterator, Optional
+
+__all__ = ['ackermann_list', 'fibonacci']
 
 def ackermann_list(m: int, n:int) -> int:
     """
@@ -60,3 +73,27 @@ def ackermann_list(m: int, n:int) -> int:
             acker[-1] = mm
             acker.append(nn-1)
     return acker[0]
+
+def fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
+    """
+    #### Fibonacci iterator
+
+    * Returns an iterator to a Fibonacci sequence
+      * beginning fib0, fib1, fib0+fib1, ...
+      * yields: 0, 1, 1. 2, 3, 5, 8, 13, ...
+    """
+    while True:
+        yield fib0
+        fib0, fib1 = fib1, fib0+fib1
+
+def rev_fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
+    """
+    #### Reverse Fibonacci iterator
+
+    * Returns iterator iterating over the Fibonacci sequence in reverse order
+      * beginning fib1, fib0, fib1-fib0, ...
+      * yields: 1, -1, 2, -3, 5, -8, 13, ...
+    """
+    while True:
+        fib0, fib1 = fib1, fib0-fib1
+        yield fib0

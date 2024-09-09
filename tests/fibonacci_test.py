@@ -12,16 +12,52 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import fibonacci
+from grscheller.boring_math.recursive import fibonacci, rev_fibonacci
 
 class Test_fibonacci:
     def test_fib(self) -> None:
-        someFibs = []
-        fib0 = 0
-        fib1 = 1
-        fibs = fibonacci(fib0, fib1)
+        someFibs: list[int] = []
+        fibs = fibonacci()
         fib = next(fibs)
         while(fib < 60):
             someFibs.append(fib)
             fib = next(fibs)
-        assert someFibs == [0,1,1,2,3,5,8,13,21,34,55]
+        assert someFibs == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+        someFibs = []
+        fib0 = 1
+        fib1 = 1
+        fibs = fibonacci(fib0, fib1)
+        fib = next(fibs)
+        while(fib < 90):
+            someFibs.append(fib)
+            fib = next(fibs)
+        assert someFibs == [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+        someFibs = []
+        fib0 = 1
+        fib1 = 1
+        fibs = rev_fibonacci(fib0, fib1)
+        for n in range(10):
+            fib = next(fibs)
+            someFibs.append(fib)
+        assert someFibs == [1, 0, 1, -1, 2, -3, 5, -8, 13, -21]
+
+        someFibs = []
+        fibs = rev_fibonacci()
+        for n in range(10):
+            fib = next(fibs)
+            someFibs.append(fib)
+        assert someFibs == [1, -1, 2, -3, 5, -8, 13, -21, 34, -55]
+
+        someFibs = []
+        fib0 = -55
+        fib1 = 34
+        fibs = fibonacci(fib0, fib1)
+        fib = next(fibs)
+        while(fib < 90):
+            someFibs.append(fib)
+            fib = next(fibs)
+        assert someFibs == [-55, 34, -21, 13, -8, 5, -3,  2, -1,  1,  0,
+                              1,  1,   2,  3,  5, 8, 13, 21, 34, 55, 89]
+

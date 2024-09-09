@@ -26,8 +26,7 @@ __all__ = ['gcd', 'lcm',
            'coprime', 'iSqrt', 'isSqr',
            'legendre_symbol', 'jacobi_symbol',
            'primes', 'primes_capped', 'primes_wilson',
-           'comb',
-           'fibonacci']
+           'comb']
 
 # Number Theory mathematical Functions.
 
@@ -259,15 +258,3 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     ans = tops.foldL(lambda x, y: x * y, initial=1)
     assert ans is not None
     return ans
-
-# Fibonacci Iterator
-
-def fibonacci(fib0: int, fib1: int) -> Iterator[int]:
-    """
-    #### Returns an iterator to a Fibonacci sequence
-
-    * beginning fib0, fib1, ...
-    """
-    while True:
-        yield fib0
-        fib0, fib1 = fib1, fib0+fib1
