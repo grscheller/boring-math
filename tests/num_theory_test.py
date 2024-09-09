@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes
+from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes, primes_wilson
 
 class Test_simple_ones:
     def test_gcd(self)-> None:
@@ -46,9 +46,40 @@ class Test_simple_ones:
         assert coprime(2*3*4*5, 3*4*5*11) == (2, 11)
 
     def test_primes(self) -> None:
+        assert len(list(primes(10, 5))) == 0
+        assert len(list(primes(11, 5))) == 0
+        assert len(list(primes(end=11))) == 5
+        assert len(list(primes(end=12))) == 5
+        assert len(list(primes(start=5, end=11))) == 3
+        assert len(list(primes(start=4, end=12))) == 3
+
+        cnt = 0
+        primeList: list[int] = []
+        for kk in primes_wilson(36):
+            cnt += 1
+            if cnt > 5:
+                assert False
+            primeList.append(kk)
+            if kk >= 53:
+                break
+        assert primeList == [37, 41, 43, 47, 53]
+
+        cnt = 0
+        primeList = []
+        for kk in primes(36):
+            cnt += 1
+            if cnt > 5:
+                assert False
+            primeList.append(kk)
+            if kk >= 53:
+                break
+        assert primeList == [37, 41, 43, 47, 53]
+
         generated = list(primes(10, 50))
         assert generated == [11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
         generated = list(primes(10, 8))
         assert generated == []
         generated = list(primes(0, 3))
-        assert generated == [2]
+        assert generated == [2, 3]
+        generated = list(primes(-5, 4))
+        assert generated == [2, 3]

@@ -18,10 +18,14 @@
 """
 from __future__ import annotations
 
-from typing import Iterator
+from typing import Iterator, Optional
 from grscheller.circular_array.ca import CA
 
-__all__ = ['gcd', 'lcm', 'coprime', 'iSqrt', 'isSqr', 'primes', 'comb', 'fibonacci']
+__all__ = ['gcd', 'lcm',
+           'coprime', 'iSqrt', 'isSqr',
+           'primes', 'primes_capped', 'primes_wilson',
+           'comb',
+           'fibonacci']
 
 # Number Theory mathematical Functions.
 
@@ -60,7 +64,6 @@ def coprime(m: int, n: int) -> tuple[int, int]:
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
     """
-    coPrime = lambda mm, nn, common: (mm//common, nn//common)
     common = gcd(m, n)
     return m//common, n//common
 
@@ -87,33 +90,41 @@ def isSqr(n: int) -> bool:
     """
     return False if n < 0 else n == iSqrt(n)**2
 
-def primes(start: int=2, end_before: int=100) -> Iterator[int]:
+def primes_wilson(start: int=2) -> Iterator[int]:
     """
-    #### Return a prime number iterator using the Sieve of Eratosthenes algorithm
+    #### Return a prime number iterator using Wilson's Theorem
+
+    ##### Wilson's Theorem
+
+    For all `n>1`, `n` is prime if and only if `(n-1)! % n = -1`
     """
-    if start >= end_before or end_before < 3:
-        return (x for x in (0,) if x > 0)
     if start < 2:
-        start = 2
+        n = 2
+        fact = 1
+    else:
+        n = start
+        fact = CA(*range(2, n)).foldL(lambda j, k: j*k, initial=1)
+    while(True):
+        if fact % n == n-1:
+            yield n
+        fact *= n
+        n += 1
 
-    sieve = [x for x in range(3, end_before, 2) if x % 3 != 0]
-    stop = int(end_before**(0.5)) + 1
-    front = -1
-    for prime in sieve:
-        front += 1
-        if prime > stop:
+def primes_capped(start: int, end: int) -> Iterator[int]:
+    for ii in primes_wilson(start):
+        if ii < end:
+            yield ii
+        elif ii == end:
+            yield ii
             break
-        for pot_prime in sieve[-1:front:-1]:
-            if pot_prime % prime == 0:
-                sieve.remove(pot_prime)
+        else:
+            break
 
-    if start <= 3 < end_before:  # We missed [2, 3] but
-        sieve.insert(0, 3)       # saved about 60% for
-    if start <= 2 < end_before:  # the initial storage
-        sieve.insert(0, 2)       # space.
-
-    # return sieve after trimming unwanted values
-    return (x for x in sieve if x >= start)
+def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
+    if end is None:
+        return primes_wilson(start)
+    else:
+        return primes_capped(start, end)
 
 # Combinatorics
 
@@ -129,7 +140,7 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     * raises ValueError if n < 0 or m < 0
 
     """
-    # edge cases, justifying below type: ignore statements
+    # edge cases
     if n < 0 or m < 0:
         raise ValueError('for C(n, m) n and m must be a non-negative ints')
     if n == m or m == 0:
@@ -149,25 +160,25 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     size = len(tops)
     while size > targetTop:
         size -= 1
-        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())  # type: ignore
+        top, bot = coprime(tops.popL() * tops.popL(), bots.popL() * bots.popL())
         tops.pushR(top)
         bots.pushR(bot)
 
     while size > targetBot:
         size -= 1
-        bots.pushR(bots.popL() * bots.popL())  # type: ignore
+        bots.pushR(bots.popL() * bots.popL())
 
     # Cancel all factors in denominator before multiplying the remaining factors
     # in the numerator.
     for bot in bots:
         for ii in range(len(tops)):
-            top, bot = coprime(tops.popL(), bot)  # type: ignore
+            top, bot = coprime(tops.popL(), bot)
             if top > 1:
                 tops.pushR(top)
             if bot == 1:
                 break
 
-    ans = tops.foldL(lambda x, y: x * y)   # need to tweak CA
+    ans = tops.foldL(lambda x, y: x * y, initial=1)
     assert ans is not None
     return ans
 
