@@ -34,8 +34,12 @@ grscheller.boring-math PyPI project.
     * same as math.isqrt
   * Function **isSqr**(int) -> bool
     * returns true if integer argument is a perfect square
-  * Function **primes**(start: int, end_before: int) -> Iterator[int]
-    * uses *Sieve of Eratosthenes* algorithm
+  * Function **primes**(start: int, end: int) -> Iterator[int]
+    * now using *Wilson's Theorem*
+  * Function **legendre_symbol**(a: int, p: int) -> int
+    * where `p > 2` is a prime number
+  * Function **jacobi_symbol**(a: int, n: int) -> int
+    * where `n > 0`
 * Combinatorics
   * Function **comb**(n: int, m: int) -> int
     * returns number of combinations of n items taken m at a time

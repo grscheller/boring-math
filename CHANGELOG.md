@@ -20,6 +20,15 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.4.5 - commit date 2024-09-08
+
+* preparing to add more composite number tests
+  * primality tests based on Wilson's theorem
+    * become too slow when calculation starts using BigInts
+  * added number theory symbols functions
+    * legendre\_symbol(a, p)
+    * jacobi\_symbol(a, n)
+
 ### Version 0.4.4.4 - commit date 2024-09-08
 
 * re-implemented function primes

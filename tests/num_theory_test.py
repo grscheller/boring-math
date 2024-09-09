@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from grscheller.boring_math.integer_math import gcd, lcm, coprime, primes, primes_wilson
+from grscheller.boring_math.integer_math import gcd, lcm, coprime
+from grscheller.boring_math.integer_math import is_prime, primes, primes_wilson
+from grscheller.boring_math.integer_math import legendre_symbol, jacobi_symbol
 
 class Test_simple_ones:
     def test_gcd(self)-> None:
@@ -83,3 +85,44 @@ class Test_simple_ones:
         assert generated == [2, 3]
         generated = list(primes(-5, 4))
         assert generated == [2, 3]
+
+    def test_is_prime(self) -> None:
+        assert not is_prime(0)
+        assert not is_prime(1)
+        assert is_prime(2)
+        assert is_prime(3)
+        assert not is_prime(4)
+        assert is_prime(5)
+        assert not is_prime(6)
+        assert is_prime(7)
+        assert not is_prime(100)
+        assert is_prime(101)
+        assert not is_prime(111)
+        assert not is_prime(11111)
+
+    def test_symbols(self) -> None:
+        legendre3 = [0, 1, -1, 0, 1, -1, 0, 1, -1]
+        for ii in range(0, 9):
+            assert legendre_symbol(ii, 3) == jacobi_symbol(ii, 3) == legendre3[ii]
+
+        legendre5 = [0, 1, -1, -1, 1, 0, 1, -1, -1, 1]
+        for ii in range(0, 10):
+            assert legendre_symbol(ii, 5) == jacobi_symbol(ii, 5) == legendre5[ii]
+
+        legendre127 = [0, 1, 1, -1, 1, -1, -1, -1,  1,  1, -1, 1, -1,  1, -1,
+                       1, 1, 1,  1, 1, -1,  1,  1, -1, -1,  1, 1, -1, -1, -1, 1]
+        for ii in range(0, 31):
+            assert legendre_symbol(ii, 127) == jacobi_symbol(ii, 127) == legendre127[ii]
+
+        jacobi1 = [1] * 100
+        for ii in range(0, 100):
+            assert jacobi_symbol(ii, 1) == jacobi1[ii] == 1
+
+        jacobi7 =[0, 1, 1, -1, 1, -1, -1, 0, 1, 1, -1, 1, -1, -1]
+        for ii in range(0, 14):
+            assert jacobi_symbol(ii, 7) == jacobi7[ii]
+
+        jacobi15 = [0, 1, 1, 0, 1, 0, 0, -1, 1, 0, 0, -1, 0, -1, -1,
+                    0, 1, 1, 0, 1, 0, 0, -1, 1, 0, 0, -1, 0, -1, -1]
+        for ii in range(0, 30):
+            assert jacobi_symbol(ii, 15) == jacobi15[ii]
