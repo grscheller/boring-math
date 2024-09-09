@@ -37,13 +37,13 @@ sequence.
 
     Fibonacci's sequence is traditionally defined as
 
-    * `f₁ = 1`
-    * `f₂ = 1`
-    * `fₙ₊₂ = fₙ₊₁ + fₙ`
+    * f₁ = 1
+    * f₂ = 1
+    * fₙ₊₂ = fₙ₊₁ + fₙ
 
-    Actually, a Fibonacci extends can extend in both directions
+    Actually, a Fibonacci extends can extend in both directions.
 
-    * `..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...`
+    * ..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...
 """
 from __future__ import annotations
 
@@ -81,9 +81,9 @@ def fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
     """
     #### Fibonacci iterator
 
-    * Returns an iterator to a Fibonacci sequence
-      * beginning `fib0, fib1, fib0+fib1, ...`
-      * yields `0, 1, 1. 2, 3, 5, 8, 13, ...``
+    * returns an iterator to a Fibonacci sequence
+      * beginning fib0, fib1, fib0+fib1, ...
+      * yields 0, 1, 1. 2, 3, 5, 8, 13, ...
     """
     while True:
         yield fib0
@@ -94,8 +94,8 @@ def rev_fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
     #### Reverse Fibonacci iterator
 
     * Returns iterator iterating over the Fibonacci sequence in reverse order
-      * beginning `fib1, fib0, fib1-fib0, ...`
-      * yields `1, -1, 2, -3, 5, -8, 13, ...``
+      * beginning fib1, fib0, fib1-fib0, ...
+      * yields 1, -1, 2, -3, 5, -8, 13, ...
     """
     while True:
         fib0, fib1 = fib1, fib0-fib1

@@ -44,12 +44,6 @@ grscheller.boring-math PyPI project.
   * Function **comb**(n: int, m: int) -> int
     * returns number of combinations of n items taken m at a time
     * pure integer implementation of math.comb
-* Fibonacci Sequences
-  * Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator[int]
-    * returns a *Fibonacci* sequence iterator where
-      * `f(n) = f(n-1) + f(n-2)`
-      * `f(0) = f0` and `f(1) = f1`
-    * defaults to `0, 1, 1, 2, 3, 5, 8, 13, 21, ...`
 
 ---
 
@@ -59,10 +53,10 @@ grscheller.boring-math PyPI project.
   * Method **Pythag3.triples**(a_start: int, a_max: int, max: Optional[int]) -> Iterator[int]
     * Returns an iterator of tuples of primitive *Pythagorean* triples
   * A Pythagorean triple is a tuple in positive integers (a, b, c)
-    * such that `a**2 + b**2 = c**2` 
+    * such that `a² + b² = c²`
     * `a, b, c` represent integer sides of a right triangle
     * a *Pythagorean* triple is primitive if gcd of `a, b, c` is `1`
-  * Iterator finds all primitive Pythagorean Triples 
+  * Iterator finds all primitive Pythagorean Triples
     * where `0 < a_start <= a < b < c <= max` where `a <= a_max`
     * if `max = 0` find all theoretically possible triples with `a <= a_max`
 
@@ -76,6 +70,12 @@ grscheller.boring-math PyPI project.
     * becomes numerically intractable after `m=4`
     * see CLI section below for mathematical definition
 
+* Fibonacci Sequences
+  * Function **fibonacci**(f0: int=0, f1: int=1) -> Iterator[int]
+    * returns a *Fibonacci* sequence iterator where
+      * `f(n) = f(n-1) + f(n-2)`
+      * `f(0) = f0` and `f(1) = f1`
+    * defaults to `0, 1, 1, 2, 3, 5, 8, 13, 21, ...`
 ---
 
 ## CLI Applications

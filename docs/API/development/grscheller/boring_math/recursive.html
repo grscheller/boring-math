@@ -80,13 +80,13 @@ sequence.</p>
 
 <pre><code>Fibonacci's sequence is traditionally defined as
 
-* `f₁ = 1`
-* `f₂ = 1`
-* `fₙ₊₂ = fₙ₊₁ + fₙ`
+* f₁ = 1
+* f₂ = 1
+* fₙ₊₂ = fₙ₊₁ + fₙ
 
-Actually, a Fibonacci extends can extend in both directions
+Actually, a Fibonacci extends can extend in both directions.
 
-* `..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...`
+* ..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...
 </code></pre>
 </div>
 
@@ -133,13 +133,13 @@ Actually, a Fibonacci extends can extend in both directions
 </span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a>
 </span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a><span class="sd">    Fibonacci&#39;s sequence is traditionally defined as</span>
 </span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>
-</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a><span class="sd">    * `f₁ = 1`</span>
-</span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a><span class="sd">    * `f₂ = 1`</span>
-</span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="sd">    * `fₙ₊₂ = fₙ₊₁ + fₙ`</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a><span class="sd">    * f₁ = 1</span>
+</span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a><span class="sd">    * f₂ = 1</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="sd">    * fₙ₊₂ = fₙ₊₁ + fₙ</span>
 </span><span id="L-43"><a href="#L-43"><span class="linenos"> 43</span></a>
-</span><span id="L-44"><a href="#L-44"><span class="linenos"> 44</span></a><span class="sd">    Actually, a Fibonacci extends can extend in both directions</span>
+</span><span id="L-44"><a href="#L-44"><span class="linenos"> 44</span></a><span class="sd">    Actually, a Fibonacci extends can extend in both directions.</span>
 </span><span id="L-45"><a href="#L-45"><span class="linenos"> 45</span></a>
-</span><span id="L-46"><a href="#L-46"><span class="linenos"> 46</span></a><span class="sd">    * `..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...`</span>
+</span><span id="L-46"><a href="#L-46"><span class="linenos"> 46</span></a><span class="sd">    * ..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos"> 47</span></a><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-48"><a href="#L-48"><span class="linenos"> 48</span></a><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
 </span><span id="L-49"><a href="#L-49"><span class="linenos"> 49</span></a>
@@ -177,9 +177,9 @@ Actually, a Fibonacci extends can extend in both directions
 </span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a><span class="sd">    #### Fibonacci iterator</span>
 </span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>
-</span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a><span class="sd">    * Returns an iterator to a Fibonacci sequence</span>
-</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="sd">      * beginning `fib0, fib1, fib0+fib1, ...`</span>
-</span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a><span class="sd">      * yields `0, 1, 1. 2, 3, 5, 8, 13, ...``</span>
+</span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a><span class="sd">    * returns an iterator to a Fibonacci sequence</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="sd">      * beginning fib0, fib1, fib0+fib1, ...</span>
+</span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a><span class="sd">      * yields 0, 1, 1. 2, 3, 5, 8, 13, ...</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>        <span class="k">yield</span> <span class="n">fib0</span>
@@ -190,8 +190,8 @@ Actually, a Fibonacci extends can extend in both directions
 </span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a><span class="sd">    #### Reverse Fibonacci iterator</span>
 </span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a>
 </span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">    * Returns iterator iterating over the Fibonacci sequence in reverse order</span>
-</span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">      * beginning `fib1, fib0, fib1-fib0, ...`</span>
-</span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a><span class="sd">      * yields `1, -1, 2, -3, 5, -8, 13, ...``</span>
+</span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">      * beginning fib1, fib0, fib1-fib0, ...</span>
+</span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a><span class="sd">      * yields 1, -1, 2, -3, 5, -8, 13, ...</span>
 </span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>        <span class="n">fib0</span><span class="p">,</span> <span class="n">fib1</span> <span class="o">=</span> <span class="n">fib1</span><span class="p">,</span> <span class="n">fib0</span><span class="o">-</span><span class="n">fib1</span>
@@ -268,9 +268,9 @@ function not being stack safe.</p>
 </span><span id="fibonacci-82"><a href="#fibonacci-82"><span class="linenos">82</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="fibonacci-83"><a href="#fibonacci-83"><span class="linenos">83</span></a><span class="sd">    #### Fibonacci iterator</span>
 </span><span id="fibonacci-84"><a href="#fibonacci-84"><span class="linenos">84</span></a>
-</span><span id="fibonacci-85"><a href="#fibonacci-85"><span class="linenos">85</span></a><span class="sd">    * Returns an iterator to a Fibonacci sequence</span>
-</span><span id="fibonacci-86"><a href="#fibonacci-86"><span class="linenos">86</span></a><span class="sd">      * beginning `fib0, fib1, fib0+fib1, ...`</span>
-</span><span id="fibonacci-87"><a href="#fibonacci-87"><span class="linenos">87</span></a><span class="sd">      * yields `0, 1, 1. 2, 3, 5, 8, 13, ...``</span>
+</span><span id="fibonacci-85"><a href="#fibonacci-85"><span class="linenos">85</span></a><span class="sd">    * returns an iterator to a Fibonacci sequence</span>
+</span><span id="fibonacci-86"><a href="#fibonacci-86"><span class="linenos">86</span></a><span class="sd">      * beginning fib0, fib1, fib0+fib1, ...</span>
+</span><span id="fibonacci-87"><a href="#fibonacci-87"><span class="linenos">87</span></a><span class="sd">      * yields 0, 1, 1. 2, 3, 5, 8, 13, ...</span>
 </span><span id="fibonacci-88"><a href="#fibonacci-88"><span class="linenos">88</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="fibonacci-89"><a href="#fibonacci-89"><span class="linenos">89</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="fibonacci-90"><a href="#fibonacci-90"><span class="linenos">90</span></a>        <span class="k">yield</span> <span class="n">fib0</span>
@@ -281,10 +281,10 @@ function not being stack safe.</p>
             <div class="docstring"><h4 id="fibonacci-iterator">Fibonacci iterator</h4>
 
 <ul>
-<li>Returns an iterator to a Fibonacci sequence
+<li>returns an iterator to a Fibonacci sequence
 <ul>
-<li>beginning <code>fib0, fib1, fib0+fib1, ...</code></li>
-<li>yields `0, 1, 1. 2, 3, 5, 8, 13, ...``</li>
+<li>beginning fib0, fib1, fib0+fib1, ...</li>
+<li>yields 0, 1, 1. 2, 3, 5, 8, 13, ...</li>
 </ul></li>
 </ul>
 </div>
@@ -307,8 +307,8 @@ function not being stack safe.</p>
 </span><span id="rev_fibonacci-95"><a href="#rev_fibonacci-95"><span class="linenos"> 95</span></a><span class="sd">    #### Reverse Fibonacci iterator</span>
 </span><span id="rev_fibonacci-96"><a href="#rev_fibonacci-96"><span class="linenos"> 96</span></a>
 </span><span id="rev_fibonacci-97"><a href="#rev_fibonacci-97"><span class="linenos"> 97</span></a><span class="sd">    * Returns iterator iterating over the Fibonacci sequence in reverse order</span>
-</span><span id="rev_fibonacci-98"><a href="#rev_fibonacci-98"><span class="linenos"> 98</span></a><span class="sd">      * beginning `fib1, fib0, fib1-fib0, ...`</span>
-</span><span id="rev_fibonacci-99"><a href="#rev_fibonacci-99"><span class="linenos"> 99</span></a><span class="sd">      * yields `1, -1, 2, -3, 5, -8, 13, ...``</span>
+</span><span id="rev_fibonacci-98"><a href="#rev_fibonacci-98"><span class="linenos"> 98</span></a><span class="sd">      * beginning fib1, fib0, fib1-fib0, ...</span>
+</span><span id="rev_fibonacci-99"><a href="#rev_fibonacci-99"><span class="linenos"> 99</span></a><span class="sd">      * yields 1, -1, 2, -3, 5, -8, 13, ...</span>
 </span><span id="rev_fibonacci-100"><a href="#rev_fibonacci-100"><span class="linenos">100</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="rev_fibonacci-101"><a href="#rev_fibonacci-101"><span class="linenos">101</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="rev_fibonacci-102"><a href="#rev_fibonacci-102"><span class="linenos">102</span></a>        <span class="n">fib0</span><span class="p">,</span> <span class="n">fib1</span> <span class="o">=</span> <span class="n">fib1</span><span class="p">,</span> <span class="n">fib0</span><span class="o">-</span><span class="n">fib1</span>
@@ -321,8 +321,8 @@ function not being stack safe.</p>
 <ul>
 <li>Returns iterator iterating over the Fibonacci sequence in reverse order
 <ul>
-<li>beginning <code>fib1, fib0, fib1-fib0, ...</code></li>
-<li>yields `1, -1, 2, -3, 5, -8, 13, ...``</li>
+<li>beginning fib1, fib0, fib1-fib0, ...</li>
+<li>yields 1, -1, 2, -3, 5, -8, 13, ...</li>
 </ul></li>
 </ul>
 </div>
