@@ -144,7 +144,7 @@ def primes_wilson(start: int=2) -> Iterator[int]:
 
     ##### Wilson's Theorem
 
-    `∀n>1`, `n` is prime if and only if `(n-1)! % n = -1`
+    `∀(n>1)`, `n` is prime if and only if `(n-1)! % n = -1`
     """
     if start < 2:
         n = 2
@@ -192,14 +192,13 @@ def is_prime(candidate: int) -> bool:
 
     ##### Wilson's Theorem
 
-    `∀n>1`, `n` is prime if and only if `(n-1)! % n = -1`
+    `∀(n>1)`, `n` is prime if and only if `(n-1)! % n = -1`
     """
     n = abs(candidate)
     if n < 2:
         return False
     if n < _test_factors or gcd(n, _test_factors) == 1:
         return foldL(range(2, n), lambda j, k: j*k, 1) % n == n-1
-      # return CA(*range(2, n)).foldL(lambda j, k: j*k, initial=1) % n == n-1
     else:
         return False
 
@@ -207,14 +206,15 @@ def is_prime(candidate: int) -> bool:
 
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
     """
-    #### Implements C(n,m), the number of n items taken m at a time.
+    #### Implements `C(n,m)`
 
+    * the number of `n` items taken `m` at a time.
     * geared to works efficiently for Python's arbitrary length integers
-    * default parameters geared to large values of n and m
+    * default parameters geared to large values of `n` and `m`
     * the defaults work reasonably well for smaller (human size) values
-    * for inner loops with smaller values, use targetTop = targetBot = 1
-    * or just use math.comb(n, m) instead
-    * raises ValueError if n < 0 or m < 0
+    * for inner loops with smaller values, use `targetTop = targetBot = 1`
+    * or just use `math.comb(n, m)` instead
+    * raises ValueError if `n < 0` or `m < 0`
 
     """
     # edge cases
