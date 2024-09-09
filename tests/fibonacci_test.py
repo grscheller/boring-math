@@ -51,9 +51,14 @@ class Test_fibonacci:
         assert someFibs == [1, -1, 2, -3, 5, -8, 13, -21, 34, -55]
 
         someFibs = []
-        fib0 = -55
-        fib1 = 34
-        fibs = fibonacci(fib0, fib1)
+        fibs = rev_fibonacci(5, 3)
+        for _ in range(12):
+            fib = next(fibs)
+            someFibs.append(fib)
+        assert someFibs == [3, 2, 1, 1, 0, 1, -1, 2, -3, 5, -8, 13]
+
+        someFibs = []
+        fibs = fibonacci(-55, 34)
         fib = next(fibs)
         while(fib < 90):
             someFibs.append(fib)
