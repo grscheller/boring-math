@@ -32,13 +32,14 @@ __all__ = ['gcd', 'lcm',
 
 def gcd(m: int, n: int) -> int:
     """
-    #### Uses Euclidean algorithm to compute the gcd of two integers.
+    Uses Euclidean algorithm to compute the gcd of two integers.
 
     * takes two integers, returns gcd > 0
     * note that mathematically the gcd of 0 and 0 does not exist
     * taking `gcd(0, 0) = 1` is a better choice than `math.gcd(0, 0) = 0`
       * eliminates lcm & coprime having to edge case test
       * also `gcd(0, 0)` returning 1 instead of 0 more mathematically justified
+
     """
     if 0 == m == n:
         return 1
@@ -49,30 +50,33 @@ def gcd(m: int, n: int) -> int:
 
 def lcm(m: int, n: int) -> int:
     """
-    #### Finds the least common multiple (lcm) of two integers.
+    Finds the least common multiple (lcm) of two integers.
 
     * takes two integers `m` and `n`
     * returns `lcm(m, n) > 0`
+
     """
     m //= gcd(m, n)
     return abs(m*n)
 
 def coprime(m: int, n: int) -> tuple[int, int]:
     """
-    #### Makes 2 integers coprime by dividing out their common factors.
+    Makes 2 integers coprime by dividing out their common factors.
 
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
+
     """
     common = gcd(m, n)
     return m//common, n//common
 
 def iSqrt(n: int) -> int:
     """
-    #### Integer square root of a non-negative integer.
+    Integer square root of a non-negative integer.
 
     * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
     * raises: ValueError if `n < 0`
+
     """
     if n < 0:
         msg = 'iSqrt(n): n must be non-negative'
@@ -86,13 +90,14 @@ def iSqrt(n: int) -> int:
 
 def isSqr(n: int) -> bool:
     """
-    #### Returns true if integer argument is a perfect square
+    Returns true if integer argument is a perfect square
+
     """
     return False if n < 0 else n == iSqrt(n)**2
 
 def legendre_symbol(a: int, p: int) -> int:
     """
-    #### Calculate the Legendre Symbol `(a/p)`
+    Calculate the Legendre Symbol `(a/p)`
 
     Where `(a/p)` is only defined for p an odd prime,
     also `(a/p)` is periodic in `a` with period `p`.
@@ -112,7 +117,7 @@ def legendre_symbol(a: int, p: int) -> int:
 
 def jacobi_symbol(a: int, n: int) -> int:
     """
-    #### Calculate the Jacobi Symbol (a/n) 
+    Calculate the Jacobi Symbol (a/n) 
 
     See https://en.wikipedia.org/wiki/Jacobi_symbol
     """
@@ -138,13 +143,14 @@ def jacobi_symbol(a: int, n: int) -> int:
 
 def primes_wilson(start: int=2) -> Iterator[int]:
     """
-    #### Return a prime number iterator using Wilson's Theorem
+    Return a prime number iterator using Wilson's Theorem.
 
     Iterator starts at `start` and is infinite.
 
-    ##### Wilson's Theorem
+    ###### Wilson's Theorem
 
     `∀(n>1)`, `n` is prime if and only if `(n-1)! % n = -1`
+
     """
     if start < 2:
         n = 2
@@ -160,7 +166,8 @@ def primes_wilson(start: int=2) -> Iterator[int]:
 
 def primes_capped(start: int, end: int) -> Iterator[int]:
     """
-    #### Returns all primes `p` where `start <= p <= end`
+    Returns all primes `p` where `start <= p <= end`
+
     """
     for ii in primes_wilson(start):
         if ii < end:
@@ -173,9 +180,10 @@ def primes_capped(start: int, end: int) -> Iterator[int]:
 
 def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
     """
-    #### Returns all primes `p` where `start <= p <= end`
+    Returns all primes `p` where `start <= p <= end`
 
-    If end is not given, returned iterator is infinite.
+    * If end is not given, returned iterator is infinite.
+
     """
     if end is None:
         return primes_wilson(start)
@@ -186,13 +194,8 @@ _test_factors = 2*3*5*7*11*13
 
 def is_prime(candidate: int) -> bool:
     """
-    #### Returns true if argument is a prime number
+    Returns true if argument is a prime number, uses Wilson's Theorem.
 
-    Uses Wilson's Theorem.
-
-    ##### Wilson's Theorem
-
-    `∀(n>1)`, `n` is prime if and only if `(n-1)! % n = -1`
     """
     n = abs(candidate)
     if n < 2:

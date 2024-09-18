@@ -32,7 +32,8 @@ class Pythag3():
     """
     #### Pythagorean Triple Iterator Class
 
-    Class supporting the generation of primitive Pythagorean triples.
+    Supports the generation of primitive Pythagorean triples.
+
     """
     def __init__(self, last_square: int=500):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
@@ -44,7 +45,10 @@ class Pythag3():
         self.last_h = last_h
 
     def _extend_squares(self, last_to_square: int) -> None:
-        """Extend the self.squares perfect square lookup table."""
+        """
+        Extend the self.squares perfect square lookup table.
+
+        """
         last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
         if last_h > self.last_h:
             # Extend perfect square lookup dictionary
@@ -55,7 +59,7 @@ class Pythag3():
     @staticmethod
     def _cap_sides(a_max: int, max: Optional[int]=None) -> tuple[int, Callable[[int], int], int]:
         """
-        #### Returns a tuple of capped max values for sides a,b,c
+        Returns a tuple of capped max values for sides a,b,c
         """
         a_cap = 2 if a_max < 3 else a_max
 
@@ -74,10 +78,11 @@ class Pythag3():
 
     def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -> Iterator[tuple[int, int, int]]:
         """
-        #### Returns an iterator of all possible primitive Pythagorean triples.
+        Returns an iterator of all possible primitive Pythagorean triples.
 
         * tuple `(a, b, c)` where `a_start <= a <= a_max and 0 < a < b < c < max`
         * if `max` is not given, return all theoretically possible triples
+
         """
         a_init = 3 if a_start < 3 else a_start
         a_cap, b_cap, c_cap = self._cap_sides(a_max, max)

@@ -23,12 +23,12 @@ Modules of a mathematical nature with example executables.
 
 Programming examples of the above modules
 
-* programming examples `grscheller.boring_math.cli.ackermann`
-* programming examples `grscheller.boring_math.cli.pythag3`
+* Ackermann: `grscheller.boring_math.cli.ackermann`
+* Pythagorean Triples: `grscheller.boring_math.cli.pythag3`
 
 
 """
-__version__ = "0.4.4.8"
+__version__ = "0.4.4.9"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"

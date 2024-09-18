@@ -21,11 +21,11 @@ Ackermann's function is an example of a function that is computable
 but not primitively recursive. It quickly becomes computationally
 intractable for relatively small values of m.
 
-    Ackermann function is defined recursively by
+Ackermann function is defined recursively by
 
-    * ackermann(0,n)=n+1                                 for n >= 0
-    * ackermann(m,0)=ackermann(m-1,1)                    for m >= 0
-    * ackermann(m,n)=ackermann(m-1, ackermann(m,n-1))    for m,n > 0
+* ackermann(0,n)=n+1                                 for n >= 0
+* ackermann(m,0)=ackermann(m-1,1)                    for m >= 0
+* ackermann(m,n)=ackermann(m-1, ackermann(m,n-1))    for m,n > 0
 
 ---
 
@@ -44,6 +44,7 @@ sequence.
     Actually, a Fibonacci extends can extend in both directions.
 
     * ..., 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 6, 13, ...
+
 """
 from __future__ import annotations
 

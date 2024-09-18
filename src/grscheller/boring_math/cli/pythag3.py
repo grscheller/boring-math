@@ -13,9 +13,10 @@
 # limitations under the License.
 
 """
-### Program pythag3
+### Programs to generate Pythagorean Triples
 
-Outputs lists of Pythagorean Triples.
+* program **pythag3**  outputs lists of primitive triples
+
 """
 from __future__ import annotations
 
