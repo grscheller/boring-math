@@ -26,7 +26,10 @@ primitively recursive.
 
 * program **Ackermann_list** uses a Python list to implement the recursion
 
+---
+
 ### Pythagorean Triples
 
 * program **pythag3** outputs lists of Pythagorean triples in increasing order
+
 """

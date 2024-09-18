@@ -15,9 +15,20 @@
 """
 ### Mathematical Libraries
 
-Libraries of a mathematical nature with example executables.
+Modules of a mathematical nature with example executables.
+
+* module `grscheller.boring_math.integer_math`
+* module `grscheller.boring_math.pythag3`
+* module `grscheller.boring_math.recursive`
+
+Programming examples of the above modules
+
+* programming examples `grscheller.boring_math.cli.ackermann`
+* programming examples `grscheller.boring_math.cli.pythag3`
+
+
 """
-__version__ = "0.4.4.7"
+__version__ = "0.4.4.8"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"

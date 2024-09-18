@@ -26,8 +26,8 @@ Ackermann's function is an example of a computable but not primitively
 recursive function.
 
 * program **ackermann_list** uses a Python List to implement recursion
-"""
 
+"""
 from __future__ import annotations
 
 __all__ = ['ackermann_list_cli']
@@ -40,7 +40,7 @@ from grscheller.boring_math.recursive import ackermann_list
 
 def ackermann_list_cli() -> None:
     """
-    #### Evaluate Ackermann's function simulating recursion with a Python list
+    Evaluate Ackermann's function simulating recursion with a Python list.
 
     Usage: ackermann_list m n
 
