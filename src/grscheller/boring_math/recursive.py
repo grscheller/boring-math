@@ -54,7 +54,7 @@ __all__ = ['ackermann_list', 'fibonacci', 'rev_fibonacci']
 
 def ackermann_list(m: int, n:int) -> int:
     """
-    #### Ackermann's Function
+    Ackermann's Function.
 
     * evaluate Ackermann's function simulating recursion with a list
 
@@ -62,6 +62,7 @@ def ackermann_list(m: int, n:int) -> int:
     Python function call stack. It then evaluates the innermost ackermann
     function first. To naively use the Python call stack would result in this
     function not being stack safe.
+
     """
     acker = [m, n]
 
@@ -80,11 +81,12 @@ def ackermann_list(m: int, n:int) -> int:
 
 def fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
     """
-    #### Fibonacci iterator
+    Fibonacci iterator
 
     * returns an iterator to a Fibonacci sequence
       * beginning fib0, fib1, fib0+fib1, ...
       * yields 0, 1, 1. 2, 3, 5, 8, 13, ...
+
     """
     while True:
         yield fib0
@@ -92,12 +94,13 @@ def fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
 
 def rev_fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
     """
-    #### Reverse Fibonacci iterator
+    Reverse Fibonacci iterator
 
     * Returns iterator iterating over the Fibonacci sequence in reverse order
       * beginning fib1, fib0, fib1-fib0, ...
       * yields 1, -1, 2, -3, 5, -8, 13, ...
+
     """
     while True:
         fib0, fib1 = fib1, fib0-fib1
-        yield fib0
+    yield fib0

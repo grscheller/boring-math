@@ -120,6 +120,7 @@ def jacobi_symbol(a: int, n: int) -> int:
     Calculate the Jacobi Symbol (a/n) 
 
     See https://en.wikipedia.org/wiki/Jacobi_symbol
+
     """
     assert n > 0 and n % 2 == 1
 
