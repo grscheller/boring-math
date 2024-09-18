@@ -103,4 +103,4 @@ def rev_fibonacci(fib0: int=0, fib1: int=1) -> Iterator[int]:
     """
     while True:
         fib0, fib1 = fib1, fib0-fib1
-    yield fib0
+        yield fib0
