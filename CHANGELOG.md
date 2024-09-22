@@ -16,7 +16,6 @@ PyPI grscheller.boring-math project.
   * significant documentation updates
 * forth digit (development environment only)
   * commit count of "non-trivial" changes/regressions
-  * third digit now plays the role of the second
 
 ## Releases and other important milestones
 
@@ -24,10 +23,10 @@ PyPI grscheller.boring-math project.
 
 * preparing to add more composite number tests
   * primality tests based on Wilson's theorem
-    * become too slow when calculation starts using BigInts
+    * becomes too slow when calculation starts using BigInts
   * added number theory symbols functions
-    * legendre\_symbol(a, p)
-    * jacobi\_symbol(a, n)
+    * implemented: `legendre_symbol(a, p)`
+    * implemented: `jacobi_symbol(a, n)`
 
 ### Version 0.4.4.4 - commit date 2024-09-08
 
@@ -83,11 +82,11 @@ PyPI grscheller.boring-math project.
 
 * renamed integer_math.mkCoprime to integer_math.coprime
   * did it now before PyPI v0.3.0
-* realized pdoc uses Markdown as its preferred mrkup language
+* realized pdoc uses Markdown as its preferred markup language
   * some differences
     * incorporates some GitHub Markdown additions
     * will format google-style & numpydoc style comments
-    * lists are one dimensional, not higherarchical
+    * lists are one dimensional, not hierarchical
 
 ### Version 0.2.1.0 - commit date 2024-02-27
 
@@ -103,7 +102,7 @@ PyPI grscheller.boring-math project.
 * added two new functions to the integer_math module
   * iSqrt() finds the int square root of an int
     * does same thing as math.isqrt()
-  * isSqr() return true if integer argurment is a perfect square
+  * isSqr() return true if integer argument is a perfect square
 * changed integer_math pythag3() function into a class method
   * pythag3() -> Pythag3.triples() 
   * preliminary steps
@@ -115,21 +114,21 @@ PyPI grscheller.boring-math project.
 * Forgot to update pyproject.toml dependencies
   * dependencies = ["grscheller.circular-array >= 0.1.1, < 1.1"]
 
-### Veresion 0.1.2 - PyPI release date 2024-01-30
+### Version 0.1.2 - PyPI release date 2024-01-30
 
 * now needs CircularArray v0.1.2
   * integer_math comb uses new foldL method of CircularArray
-  * CircularArray was split out of grscheller.satastructures
+  * CircularArray was split out of grscheller.datastructures
 * test suite written
 
-### Veresion 0.1.1 - PyPI release date 2024-01-20
+### Version 0.1.1 - PyPI release date 2024-01-20
 
 * fixed some negative value edge cases
   * lcm(0,0) now gives 0 instead of a divide by zero exception
     * some authors leave lcm(0, 0) as undefined
     * lcm(0, 0) = 0 does make sense
       * since a*0 = 0 for all a >= 0
-      * 0 is the smallest non-negative interger a such that a*0 = 0
+      * 0 is the smallest non-negative integer a such that a*0 = 0
       * most math theorems remain true for this case
 * README.md improvements
 
@@ -150,12 +149,12 @@ PyPI grscheller.boring-math project.
 
 * working on pyproject.toml infrastructure for PyPI releases
 * will use Flit as the packaging/publishing tool
-* replaced bin/ scripts with boring_math.integer_math_cli entry pts
+* replaced bin/ scripts with `boring_math.integer_math_cli` entry-points
 
 ### Version 0.0.4 - commit date 2024-01-10
 
 * first coding changes in years!
-* configured gh-pages
+* gh-pages configured
 
 ### Version 0.0.0.3 - commit date 2023-12-06
 
