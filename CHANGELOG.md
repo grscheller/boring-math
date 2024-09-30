@@ -19,6 +19,12 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.4.10 - commit date 2024-09-30
+
+* caught missing dependency in pyproject.toml
+  * grscheller.fp >= 0.4.0, < 0.5"
+  * version 0.4.0 is for the next fp PyPI release
+
 ### Version 0.4.4.5 - commit date 2024-09-08
 
 * preparing to add more composite number tests

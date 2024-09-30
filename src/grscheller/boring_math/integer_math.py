@@ -21,6 +21,7 @@ from __future__ import annotations
 from typing import Iterator, Optional
 from grscheller.circular_array.ca import CA
 from grscheller.fp.iterables import foldL
+from grscheller.fp.woException import MB
 
 __all__ = ['gcd', 'lcm',
            'coprime', 'iSqrt', 'isSqr',
@@ -202,7 +203,7 @@ def is_prime(candidate: int) -> bool:
     if n < 2:
         return False
     if n < _test_factors or gcd(n, _test_factors) == 1:
-        return foldL(range(2, n), lambda j, k: j*k, 1) % n == n-1
+        return foldL(range(2, n), lambda j, k: j*k, 1).get() % n == n-1
     else:
         return False
 

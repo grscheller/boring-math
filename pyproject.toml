@@ -23,7 +23,10 @@ classifiers = [
     "Programming Language :: Python :: 3.14",
     "Typing :: Typed"
 ]
-dependencies = ["grscheller.circular-array >= 3.6.0, < 3.7"]
+dependencies = [
+    "grscheller.circular-array >= 3.6.0, < 3.7",
+    "grscheller.fp >= 0.4.0, < 0.5"
+]
 dynamic = ["version", "description"]
 keywords = [
     "math", "mathematics",
