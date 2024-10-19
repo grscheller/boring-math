@@ -20,11 +20,6 @@
 """
 from __future__ import annotations
 
-__all__ = ['pythag3_cli']
-__author__ = "Geoffrey R. Scheller"
-__copyright__ = "Copyright (c) 2023-2024 Geoffrey R. Scheller"
-__license__ = "Apache License 2.0"
-
 import sys
 from grscheller.boring_math.pythag3 import Pythag3
 

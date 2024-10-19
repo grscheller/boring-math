@@ -19,6 +19,13 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.5 - PyPI release date 2024-10-18
+
+* updated to use grscheller.fp v1.0.0
+* pytest infrastructure improvements
+* updated pyproject.toml
+  * was lagging behind other grscheller namespace packages
+
 ### Version 0.4.4.10 - commit date 2024-09-30
 
 * caught missing dependency in pyproject.toml

@@ -21,7 +21,6 @@ from __future__ import annotations
 from typing import Iterator, Optional
 from grscheller.circular_array.ca import CA
 from grscheller.fp.iterables import foldL
-from grscheller.fp.woException import MB
 
 __all__ = ['gcd', 'lcm',
            'coprime', 'iSqrt', 'isSqr',
