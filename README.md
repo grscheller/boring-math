@@ -140,5 +140,5 @@ positive integer sides.
 
 [1]: https://pypi.org/project/grscheller.boring-math/
 [2]: https://github.com/grscheller/boring-math/
-[3]: https://grscheller.github.io/boring-math/
+[3]: https://grscheller.github.io/grscheller-pypi-namespace-docs/boring-math/
 [4]: https://mathworld.wolfram.com/AckermannFunction.html
