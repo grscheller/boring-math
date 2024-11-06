@@ -15,20 +15,19 @@
 """
 ### Mathematical Libraries
 
-Modules of a mathematical nature with example executables.
+#### Modules of a mathematical nature with example executables.
 
-* module `grscheller.boring_math.integer_math`
-* module `grscheller.boring_math.pythag3`
-* module `grscheller.boring_math.recursive`
+* module **grscheller.boring_math.integer_math:** number theoretic library
+* module **grscheller.boring_math.pythag3:** Pythagoreqan triple library
+* module **grscheller.boring_math.recursive:** recursive function theory
 
-Programming examples of the above modules
+#### Example cli applications using above modules
 
-* Ackermann: `grscheller.boring_math.cli.ackermann`
-* Pythagorean Triples: `grscheller.boring_math.cli.pythag3`
-
+* Ackermann function: `grscheller.boring_math.cli.ackermann`
+* Pythagorean triples: `grscheller.boring_math.cli.pythag3`
 
 """
-__version__ = "0.4.6"
+__version__ = "0.4.6.1"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"

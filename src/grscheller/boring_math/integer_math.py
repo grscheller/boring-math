@@ -13,13 +13,13 @@
 # limitations under the License.
 
 """
-### Functions of a pure math integer nature
+### Number theory library
 
 """
 from __future__ import annotations
 
 from typing import Iterator, Optional
-from grscheller.circular_array.ca import CA
+from grscheller.circular_array.ca import ca, CA
 from grscheller.fp.iterables import foldL
 
 __all__ = ['gcd', 'lcm',
@@ -31,8 +31,7 @@ __all__ = ['gcd', 'lcm',
 # Number Theory mathematical Functions.
 
 def gcd(m: int, n: int) -> int:
-    """
-    Uses Euclidean algorithm to compute the gcd of two integers.
+    """Uses Euclidean algorithm to compute the gcd of two integers.
 
     * takes two integers, returns gcd > 0
     * note that mathematically the gcd of 0 and 0 does not exist
@@ -49,8 +48,7 @@ def gcd(m: int, n: int) -> int:
     return m
 
 def lcm(m: int, n: int) -> int:
-    """
-    Finds the least common multiple (lcm) of two integers.
+    """Finds the least common multiple (lcm) of two integers.
 
     * takes two integers `m` and `n`
     * returns `lcm(m, n) > 0`
@@ -60,8 +58,7 @@ def lcm(m: int, n: int) -> int:
     return abs(m*n)
 
 def coprime(m: int, n: int) -> tuple[int, int]:
-    """
-    Makes 2 integers coprime by dividing out their common factors.
+    """Makes 2 integers coprime by dividing out their common factors.
 
     * returns `(0, 0)` when `n = m = 0`
     * returned coprimed values retain their original signs
@@ -71,8 +68,7 @@ def coprime(m: int, n: int) -> tuple[int, int]:
     return m//common, n//common
 
 def iSqrt(n: int) -> int:
-    """
-    Integer square root of a non-negative integer.
+    """Integer square root of a non-negative integer.
 
     * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
     * raises: ValueError if `n < 0`
@@ -89,18 +85,14 @@ def iSqrt(n: int) -> int:
     return high
 
 def isSqr(n: int) -> bool:
-    """
-    Returns true if integer argument is a perfect square
-
-    """
+    """Returns true if integer argument is a perfect square."""
     return False if n < 0 else n == iSqrt(n)**2
 
 def legendre_symbol(a: int, p: int) -> int:
-    """
-    Calculate the Legendre Symbol `(a/p)`
+    """ Calculate the Legendre Symbol `(a/p)`
 
-    Where `(a/p)` is only defined for p an odd prime,
-    also `(a/p)` is periodic in `a` with period `p`.
+    * where `(a/p)` is only defined for p an odd prime,
+    * also `(a/p)` is periodic in `a` with period `p`.
 
     See https://en.wikipedia.org/wiki/Legendre_symbol
     """
@@ -116,11 +108,9 @@ def legendre_symbol(a: int, p: int) -> int:
         return -1
 
 def jacobi_symbol(a: int, n: int) -> int:
-    """
-    Calculate the Jacobi Symbol (a/n) 
+    """Calculate the Jacobi Symbol `(a/n)`.
 
     See https://en.wikipedia.org/wiki/Jacobi_symbol
-
     """
     assert n > 0 and n % 2 == 1
 
@@ -143,15 +133,13 @@ def jacobi_symbol(a: int, n: int) -> int:
         return 0
 
 def primes_wilson(start: int=2) -> Iterator[int]:
-    """
-    Return a prime number iterator using Wilson's Theorem.
+    """Return a prime number iterator using Wilson's Theorem.
 
-    Iterator starts at `start` and is infinite.
+    * iterator starts at `start` and is infinite.
 
-    ###### Wilson's Theorem
+    ##### Wilson's Theorem
 
     `∀(n>1)`, `n` is prime if and only if `(n-1)! % n = -1`
-
     """
     if start < 2:
         n = 2
@@ -166,10 +154,7 @@ def primes_wilson(start: int=2) -> Iterator[int]:
         n += 1
 
 def primes_capped(start: int, end: int) -> Iterator[int]:
-    """
-    Returns all primes `p` where `start <= p <= end`
-
-    """
+    """Returns all primes `p` where `start <= p <= end`."""
     for ii in primes_wilson(start):
         if ii < end:
             yield ii
@@ -180,10 +165,9 @@ def primes_capped(start: int, end: int) -> Iterator[int]:
             break
 
 def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
-    """
-    Returns all primes `p` where `start <= p <= end`
+    """Returns all primes `p` where `start <= p <= end`.
 
-    * If end is not given, returned iterator is infinite.
+    * If `end` is not given, returned iterator is infinite.
 
     """
     if end is None:
@@ -194,10 +178,7 @@ def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
 _test_factors = 2*3*5*7*11*13
 
 def is_prime(candidate: int) -> bool:
-    """
-    Returns true if argument is a prime number, uses Wilson's Theorem.
-
-    """
+    """Returns true if argument is a prime number, uses Wilson's Theorem."""
     n = abs(candidate)
     if n < 2:
         return False
@@ -209,8 +190,7 @@ def is_prime(candidate: int) -> bool:
 # Combinatorics
 
 def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
-    """
-    #### Implements `C(n,m)`
+    """Implementation of the combinatorial `C(n,m)`
 
     * the number of `n` items taken `m` at a time.
     * geared to works efficiently for Python's arbitrary length integers
@@ -234,8 +214,8 @@ def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
         m = n - m
 
     # Prepare data structures
-    tops: CA[int] = CA(*range(n - m + 1, n + 1))
-    bots: CA[int] = CA(*range(1, m+1))
+    tops: ca[int] = ca(range(n - m + 1, n + 1))
+    bots: ca[int] = ca(range(1, m+1))
 
     # Compacting data structures makes algorithm work better for larger values
     size = len(tops)
