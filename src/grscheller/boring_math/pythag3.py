@@ -34,7 +34,7 @@ class Pythag3():
     * supports the generation of primitive Pythagorean triples
 
     """
-    def __init__(self, last_square: int=500):
+    def __init__(self, last_square: int=500, /):
         last_h = last_square if last_square % 2 == 1 else last_square - 1
         if last_h < 5:
             last_h = 5
@@ -43,7 +43,7 @@ class Pythag3():
         self.squares = {h*h: h for h in range(5, last_h + 1, 2)}
         self.last_h = last_h
 
-    def _extend_squares(self, last_to_square: int) -> None:
+    def _extend_squares(self, last_to_square: int, /) -> None:
         """Extend the self.squares perfect square lookup table."""
         last_h = last_to_square if last_to_square % 2 == 1 else last_to_square - 1
         if last_h > self.last_h:
@@ -53,7 +53,7 @@ class Pythag3():
             self.last_h = last_h
 
     @staticmethod
-    def _cap_sides(a_max: int, max: Optional[int]=None) -> tuple[int, Callable[[int], int], int]:
+    def _cap_sides(a_max: int, max: Optional[int]=None, /) -> tuple[int, Callable[[int], int], int]:
         """Returns a tuple of capped max values for sides a,b,c."""
         a_cap = 2 if a_max < 3 else a_max
 
@@ -78,7 +78,7 @@ class Pythag3():
 
         """
         a_init = 3 if a_start < 3 else a_start
-        a_cap, b_cap, c_cap = self._cap_sides(a_max, max)
+        a_cap, b_cap, c_cap = Pythag3._cap_sides(a_max, max)
         self._extend_squares(c_cap)
 
         # Calculate Pythagorean triples

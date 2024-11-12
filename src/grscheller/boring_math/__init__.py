@@ -21,10 +21,14 @@
 * module **grscheller.boring_math.pythag3:** Pythagoreqan triple library
 * module **grscheller.boring_math.recursive:** recursive function theory
 
+---
+
 #### Example cli applications using above modules
 
 * Ackermann function: `grscheller.boring_math.cli.ackermann`
 * Pythagorean triples: `grscheller.boring_math.cli.pythag3`
+
+---
 
 """
 __version__ = "0.4.6.1"

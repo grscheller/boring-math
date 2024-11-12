@@ -30,7 +30,7 @@ __all__ = ['gcd', 'lcm',
 
 # Number Theory mathematical Functions.
 
-def gcd(m: int, n: int) -> int:
+def gcd(m: int, n: int, /) -> int:
     """Uses Euclidean algorithm to compute the gcd of two integers.
 
     * takes two integers, returns gcd > 0
@@ -47,7 +47,7 @@ def gcd(m: int, n: int) -> int:
         m, n = n, m % n
     return m
 
-def lcm(m: int, n: int) -> int:
+def lcm(m: int, n: int, /) -> int:
     """Finds the least common multiple (lcm) of two integers.
 
     * takes two integers `m` and `n`
@@ -57,7 +57,7 @@ def lcm(m: int, n: int) -> int:
     m //= gcd(m, n)
     return abs(m*n)
 
-def coprime(m: int, n: int) -> tuple[int, int]:
+def coprime(m: int, n: int, /) -> tuple[int, int]:
     """Makes 2 integers coprime by dividing out their common factors.
 
     * returns `(0, 0)` when `n = m = 0`
@@ -67,7 +67,7 @@ def coprime(m: int, n: int) -> tuple[int, int]:
     common = gcd(m, n)
     return m//common, n//common
 
-def iSqrt(n: int) -> int:
+def iSqrt(n: int, /) -> int:
     """Integer square root of a non-negative integer.
 
     * return the unique `m` such that `m*m <= n < (m+1)*(m+1)`
@@ -84,7 +84,7 @@ def iSqrt(n: int) -> int:
         low = n // high
     return high
 
-def isSqr(n: int) -> bool:
+def isSqr(n: int, /) -> bool:
     """Returns true if integer argument is a perfect square."""
     return False if n < 0 else n == iSqrt(n)**2
 
@@ -177,7 +177,7 @@ def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
 
 _test_factors = 2*3*5*7*11*13
 
-def is_prime(candidate: int) -> bool:
+def is_prime(candidate: int, /) -> bool:
     """Returns true if argument is a prime number, uses Wilson's Theorem."""
     n = abs(candidate)
     if n < 2:
@@ -189,7 +189,7 @@ def is_prime(candidate: int) -> bool:
 
 # Combinatorics
 
-def comb(n: int, m: int, targetTop: int=700, targetBot: int=5) -> int:
+def comb(n: int, m: int, /, targetTop: int=700, targetBot: int=5) -> int:
     """Implementation of the combinatorial `C(n,m)`
 
     * the number of `n` items taken `m` at a time.

@@ -19,4 +19,9 @@ CGI scripts are automatically generated in an OS independent way by the package
 build backend. This is configured by the `[project.scripts]` section in the
 project's pyproject.toml file.
 
+#### Example applications
+
+* Ackermann function: `grscheller.boring_math.cli.ackermann`
+* Pythagorean triples: `grscheller.boring_math.cli.pythag3`
+
 """
