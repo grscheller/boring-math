@@ -18,7 +18,7 @@
 """
 from __future__ import annotations
 
-from typing import Iterator, Optional
+from collections.abc import Iterator
 from grscheller.circular_array.ca import ca, CA
 from grscheller.fp.iterables import foldL
 
@@ -164,7 +164,7 @@ def primes_capped(start: int, end: int) -> Iterator[int]:
         else:
             break
 
-def primes(start: int=2, end: Optional[int]=None) -> Iterator[int]:
+def primes(start: int=2, end: int|None=None) -> Iterator[int]:
     """Returns all primes `p` where `start <= p <= end`.
 
     * If `end` is not given, returned iterator is infinite.

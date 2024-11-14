@@ -23,7 +23,7 @@
 
 from __future__ import annotations
 
-from typing import Callable, Iterator, Optional, Tuple
+from collections.abc import Callable, Iterator
 from .integer_math import gcd, iSqrt
 
 __all__ = ['Pythag3']
@@ -53,7 +53,7 @@ class Pythag3():
             self.last_h = last_h
 
     @staticmethod
-    def _cap_sides(a_max: int, max: Optional[int]=None, /) -> tuple[int, Callable[[int], int], int]:
+    def _cap_sides(a_max: int, max: int|None=None, /) -> tuple[int, Callable[[int], int], int]:
         """Returns a tuple of capped max values for sides a,b,c."""
         a_cap = 2 if a_max < 3 else a_max
 
@@ -70,7 +70,7 @@ class Pythag3():
 
         return a_cap, b_cap, c_cap
 
-    def triples(self, a_start: int=3, a_max: int=3, max: Optional[int]=None) -> Iterator[tuple[int, int, int]]:
+    def triples(self, a_start: int=3, a_max: int=3, max: int|None=None) -> Iterator[tuple[int, int, int]]:
         """Returns an iterator of all possible primitive Pythagorean triples.
 
         * tuple `(a, b, c)` where `a_start <= a <= a_max` and `0 < a < b < c < max`

@@ -50,7 +50,7 @@ sequence.
 """
 from __future__ import annotations
 
-from typing import Iterator, Optional
+from collections.abc import Iterator
 
 __all__ = ['ackermann_list', 'fibonacci', 'rev_fibonacci']
 
