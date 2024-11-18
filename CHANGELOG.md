@@ -11,6 +11,11 @@ PyPI grscheller.boring-math project.
 
 ## Releases and other important milestones
 
+### Version 0.4.7 - PyPI release date 2024-11-18
+
+* Some minor additions
+* consistency changes across all grscheller namespace PyPI repos
+
 ### Version 0.4.6 - PyPI release date 2024-10-20
 
 * removed docs from repo

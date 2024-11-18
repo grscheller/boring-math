@@ -31,7 +31,7 @@
 ---
 
 """
-__version__ = "0.4.6.1"
+__version__ = "0.4.7"
 __author__ = "Geoffrey R. Scheller"
 __copyright__ = "Copyright (c) 2016-2024 Geoffrey R. Scheller"
 __license__ = "Apache License 2.0"
