@@ -17,16 +17,16 @@
 
 #### Modules of a mathematical nature with example executables.
 
-* module **grscheller.boring_math.integer_math:** number theoretic library
-* module **grscheller.boring_math.pythag3:** Pythagoreqan triple library
-* module **grscheller.boring_math.recursive:** recursive function theory
+* module grscheller.boring_math.integer_math: number theoretic library
+* module grscheller.boring_math.pythag3: Pythagorean triple library
+* module grscheller.boring_math.recursive: recursive function theory
 
 ---
 
 #### Example cli applications using above modules
 
-* Ackermann function: `grscheller.boring_math.cli.ackermann`
-* Pythagorean triples: `grscheller.boring_math.cli.pythag3`
+* Ackermann function: grscheller.boring_math.cli.ackermann
+* Pythagorean triples: grscheller.boring_math.cli.pythag3
 
 ---
 

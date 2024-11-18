@@ -197,7 +197,7 @@ def comb(n: int, m: int, /, targetTop: int=700, targetBot: int=5) -> int:
     * default parameters geared to large values of `n` and `m`
     * the defaults work reasonably well for smaller (human size) values
     * for inner loops with smaller values, use `targetTop = targetBot = 1`
-    * or just use `math.comb(n, m)` instead
+      * or just use `math.comb(n, m)` instead
     * raises ValueError if `n < 0` or `m < 0`
 
     """
