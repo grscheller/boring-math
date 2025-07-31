@@ -15,7 +15,7 @@ Important Milestones
 2025-07-30 - changing namespace to boring-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The boring-math name is not claimed on PyPI. I will set up a stub project
+The boring-math name is not claimed on PyPI. I set up a stub project
 under that name like I did with pythonic-fp. I will also move the
 recursive-functions project to it. The other 3 will have to wait until
 I deploy the next parallel release of my pythonic-fp PyPI projects.

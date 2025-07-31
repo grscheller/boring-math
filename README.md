@@ -1,7 +1,7 @@
 # Boring Math Library
 
 Collection of Python PyPI projects of a mathematical nature. All under
-the `bm` namespace. The purpose of this collection is to host and
+the `boring-math` namespace. The purpose of this collection is to host and
 provide infrastructure for my Python mathematical hobby projects.
 
 - **integer-math** - number theory and combinatorics
