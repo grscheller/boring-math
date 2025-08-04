@@ -43,7 +43,7 @@ exclude = [
 ]
 
 [tool.flit.module]
-name = "pythonic_fp.special_functions"
+name = "boring_math.special_functions"
 
 [tool.mypy]
 enable_incomplete_feature = ["NewGenericSyntax"]
