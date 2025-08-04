@@ -24,6 +24,24 @@ namespace (pythonic-fp) projects. I will keep the information I maintain
 in README files to a minimum and driver Sphinx based documentation based
 on the content of docstrings. 
 
+Here is what got installed when I downloaded boring-math namespace packages.
+
+.. code-block:: consolw
+
+    $ pip list | grep boring
+    boring-math                           1.1.3
+    boring-math-integer-math              1.0.2
+    boring-math-probability-distributions 0.8.0
+    boring-math-pythagorean-triples       0.8.2
+    boring-math-recursive-functions       0.8.0
+
+    $ pip list | grep pythonic
+    pythonic-fp                           1.1.0
+    pythonic-fp-circulararray             5.3.1
+    pythonic-fp-fptools                   5.0.0
+    pythonic-fp-iterables                 5.0.0
+    pythonic-fp-singletons                1.0.0
+
 2025-08-04 - PyPI releases boring-math & boring-math-integer-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,6 +72,7 @@ Latest PyPI Releases for
 - bm.recursive-functions v0.6.1
 
 Also got rid of links to the old grscheller.bm documentation.
+
 
 2025-07-13 - pythonic-fp migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
