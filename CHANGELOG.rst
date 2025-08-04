@@ -12,6 +12,14 @@ Mary.
 Important Milestones
 --------------------
 
+2025-08-04 - PyPI releases boring-math & boring-math-integer-math
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Released boring-math v1.1.2 & boring-math-integer-math v0.8.1. Using these
+two to iron out the release process. Still need to bootstrap Sphinx
+documentation. As I correct problems with these, I update the rest of
+the boring math repos.
+
 2025-07-30 - changing namespace to boring-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
