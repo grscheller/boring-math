@@ -16,6 +16,12 @@ The name was suggested by my then 13 year old daughter Mary.
 | Pythagorean Triples | [boring-math-pythagorean-triples][103] | [gh][203] | [gh_pages][303] | boring_math.pythagorean_triples |
 | Recursive Functions | [boring-math-recursive-functions][104] | [gh][204] | [gh_pages][304] | boring_math.recursive_functions |
 
+These are fun little math projects which I enjoy doing. They have many
+loose threads. They are as much to learn Python as they are to to play
+with math.
+
+The entire Boring Math effort has a reStructuredText [CHANGELOG][10] file.
+
 ## Namespace Projects
 
 ### Boring Math Library: boring-math
@@ -25,7 +31,10 @@ the project name `boring-math` on PyPI. The second is to host the python
 package `boring-math.special_functions`. The third is to host the Sphinx
 based documentation on GH-Pages for all the boring-math namespace projects.
 
-The `special_functions` package will be written in pure Python.
+The `special_functions` package is to see how performant I can make
+pure Python without NumPy or C extensions. I suspect as Python becomes
+"multi-GIL" and JIT compiling, pure Python code will become much more
+performant. Its own Markdown [CHANGELOG](11) file.
 
 ______________________________________________________________________
 
@@ -56,8 +65,8 @@ ______________________________________________________________________
 Exploring different ways to efficiently implement recursive functions
 in Python.
 
-______________________________________________________________________
-
+[10]: https://github.com/grscheller/boring-math/blob/main/CHANGELOG.rst
+[11]: https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md
 [100]: https://pypi.org/project/boring-math/
 [101]: https://pypi.org/project/boring-math-integer-math/
 [102]: https://pypi.org/project/boring-math-probability-distributions/

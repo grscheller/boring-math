@@ -12,6 +12,18 @@ Mary.
 Important Milestones
 --------------------
 
+2025-08-04 - PyPI Boring Math release v1.1.3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I created a separate CHANGELOG for the ``boring_math.special_functions``
+package. It is in Markdown format. The entire Boring Math effort and
+the special functions package will share the same version number.
+
+I am adopting what I did for for my Pythonic Functional Programming
+namespace (pythonic-fp) projects. I will keep the information I maintain
+in README files to a minimum and driver Sphinx based documentation based
+on the content of docstrings. 
+
 2025-08-04 - PyPI releases boring-math & boring-math-integer-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,8 +64,8 @@ completed, I plan to archive my PyPI and GitHub dtools namespace repos.
 2025-04-22 - Renamed repo
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This project is a collection of PyPI namespace projects all under the bm
-namespace name. Did not realize at the time that the bm name was already
+This project is a collection of PyPI namespace projects all under the ``bm``
+namespace name. Did not realize at the time that the ``bm`` name was already
 taken on PyPI.
 
 - renamed `grscheller/boring-math-docs` GitHub repo to `grscheller/bm-docs` 
