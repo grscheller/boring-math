@@ -10,15 +10,8 @@ requires-python = ">=3.12"
 license = { file = "LICENSE" }
 authors = [{ name = "Geoffrey R. Scheller", email = "geoffrey@scheller.com" }]
 keywords = [
-  "math",
   "mathmatics",
-  "combinatorics",
-  "integer",
-  "probability",
-  "distributions",
-  "Pythagorean",
-  "triples",
-  "recursive",
+  "special functions",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -40,14 +33,13 @@ test = [
 
 [project.urls]
 Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.rst"
-Documentation = "https://grscheller.github.io/special-functions/development/build/html/releases.html"
+Documentation = "https://grscheller.github.io/boring-math/special-functions/build/html/releases.html"
 Homepage = "https://github.com/grscheller/boring-math/blob/main/README.md"
 Source = "https://github.com/grscheller/boring-math"
 
 [tool.flit.sdist]
 exclude = [
   "docs/",
-  "CHANGELOG.rst",
 ]
 
 [tool.flit.module]
