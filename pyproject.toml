@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "boring-math"
-version = "1.1.0"
+version = "1.1.1"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { file = "LICENSE" }
@@ -40,6 +40,7 @@ Source = "https://github.com/grscheller/boring-math"
 [tool.flit.sdist]
 exclude = [
   "docs/",
+  "IDEAS.md",
 ]
 
 [tool.flit.module]
