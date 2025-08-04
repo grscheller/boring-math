@@ -34,7 +34,7 @@ based documentation on GH-Pages for all the boring-math namespace projects.
 The `special_functions` package is to see how performant I can make
 pure Python without NumPy or C extensions. I suspect as Python becomes
 "multi-GIL" and JIT compiling, pure Python code will become much more
-performant. Its own Markdown [CHANGELOG](11) file.
+performant. Its own Markdown [CHANGELOG][11] file.
 
 ______________________________________________________________________
 
