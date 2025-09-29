@@ -1,16 +1,32 @@
 CHANGELOG
-+++++++++
+=========
 
 Daddy's boring math library
 ---------------------------
 
 Mathematical hobby projects. Done under the PyPI boring-math namespace.
 
-The name of this library was suggested by my then 13 year old daughter
-Mary.
+The name of this library was suggested by my then 13 year old daughter Mary.
 
 Important Milestones
 --------------------
+
+2025-09-29 - Redoing infrastructure
+
+Redoing entire project's infrastructure along the lines of ``pythonic-fp``.
+
+- update code
+
+  - no code changes needed for updated version of Pythonic FP
+  - removed all ``from __future__ import annotation`` from the code
+
+    - made the necessary typing changes to accomplish this
+    - should not require a bump in major version
+
+- created a Sphinx based homepage for the overall Boring Math effort
+
+  - still need to update to Sphinx the individual Boring Math PyPI projects
+  - still need to plumb in the old pdoc documentation
 
 2025-08-04 - PyPI Boring Math release v1.1.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,7 +42,7 @@ on the content of docstrings.
 
 Here is what got installed when I downloaded boring-math namespace packages.
 
-.. code-block:: consolw
+.. code-block:: console
 
     $ pip list | grep boring
     boring-math                           1.1.3
@@ -87,10 +103,10 @@ This project is a collection of PyPI namespace projects all under the ``bm``
 namespace name. Did not realize at the time that the ``bm`` name was already
 taken on PyPI.
 
-- renamed `grscheller/boring-math-docs` GitHub repo to `grscheller/bm-docs` 
+- renamed ``grscheller/boring-math-docs`` GitHub repo to ``grscheller/bm-docs`` 
 - created this CHANGELOG.md file
 - is not associated with
 
-  - either the `https://pypi.org/project/bm` PyPI project
-  - or the `https://github.com/cym13/bookmark` GitHub repo
+  - either the ``https://pypi.org/project/bm`` PyPI project
+  - or the ``https://github.com/cym13/bookmark`` GitHub repo
 
