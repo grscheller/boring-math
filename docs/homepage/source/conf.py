@@ -20,6 +20,7 @@ release = '2.0.0'
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.graphviz',
 ]
 
 autodoc_member_order = 'bysource'
