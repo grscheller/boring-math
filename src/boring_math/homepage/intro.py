@@ -2,7 +2,7 @@
 Daddy's Boring Math Library
 ===========================
 
-Collection of maintainers mathematical hobby projects.
+Collection of the maintainer's mathematical hobby projects.
 
 The overall project's name is **Boring Math** and consists of PyPI
 projects with PyPI and GitHub names beginning *boring-math*. All
