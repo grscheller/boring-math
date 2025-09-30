@@ -34,14 +34,13 @@ License, Version 2.0. See the LICENSE file for details.
 [103]: https://pypi.org/project/boring-math-pythagorean-triples/
 [104]: https://pypi.org/project/boring-math-recursive-functions/
 [105]: https://pypi.org/project/boring-math-special-functions/
-[200]: https://github.com/grscheller/boring-math
 [201]: https://github.com/grscheller/boring-math-integer-math
 [202]: https://github.com/grscheller/boring-math-probability-distributions
 [203]: https://github.com/grscheller/boring-math-pythagorean-triples
 [204]: https://github.com/grscheller/boring-math-recursive-functions
 [205]: https://github.com/grscheller/boring-math-special-functions
-[300]: https://grscheller.github.io/boring-math/special-functions/development/build/html
 [301]: https://grscheller.github.io/boring-math/integer-math/development/build/html
 [302]: https://grscheller.github.io/boring-math/probability-distributions/development/build/html
 [303]: https://grscheller.github.io/boring-math/pythagorean-triples/development/build/html
+[304]: https://grscheller.github.io/boring-math/recursive-functions/development/build/html
 [305]: https://grscheller.github.io/boring-math/special-functions/development/build/html
