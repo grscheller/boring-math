@@ -5,7 +5,7 @@ Daddy's Boring Math Library
 Collection of maintainers mathematical hobby projects.
 
 The overall project's name is **Boring Math** and consists of PyPI
-projects with PyPI and GitHub names beginning boring-math. All
+projects with PyPI and GitHub names beginning *boring-math*. All
 projects are installed under the Python ``boring_math`` namespace.
 
 The name "Daddy's Boring Math Library" was suggested by my then
