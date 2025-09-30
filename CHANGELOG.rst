@@ -28,6 +28,11 @@ Redoing entire project's infrastructure along the lines of ``pythonic-fp``.
   - still need to update to Sphinx the individual Boring Math PyPI projects
   - still need to plumb in the old pdoc documentation
 
+- both Boring Math and Pythonic FP use .github/workflows/static.yml
+
+  - both configured to use GitHub Actions
+  - quite a bit of thrashing to get things straightened out
+
 2025-08-04 - PyPI Boring Math release v1.1.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
