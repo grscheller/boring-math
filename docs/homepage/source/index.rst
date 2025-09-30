@@ -1,7 +1,7 @@
 Boring Math
 ===========
 
-**Daddy's Boring Math Libraries.**
+**Daddy's Boring Math Library.**
 
 `PyPI projects <https://pypi.org/project/boring-math/>`_
 and their associated
