@@ -1,14 +1,12 @@
 # Daddy's Boring Math Library
 
-Collection of Python PyPI projects of a mathematical nature. The purpose
-of this collection is to host and provide infrastructure for the
-maintainer's Python mathematical hobby projects.
+Collection of Python PyPI projects of a mathematical nature. It's
+purpose is to host and provide infrastructure for the maintainer's
+Python mathematical hobby projects.
 
 The overall project's name is **Boring Math** and consists of PyPI
-projects with PyPI and GitHub names beginning `boring-math`. All
-projects are all under the `boring_math` Python namespace.
-
-The project's name was suggested by my then 13 year old daughter Mary.
+projects with PyPI and GitHub names beginning "boring-math". All
+projects are all under the "boring_math" Python namespace.
 
 For more information visit the project's
 [homepage](https://grscheller.github.io/boring-math/).
