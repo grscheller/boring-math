@@ -3,7 +3,7 @@ Boring Math
 
 **Daddy's Boring Math Libraries.**
 
-PyPI projects under the PyPI namespace
+PyPI projects under the Python boring_math namespace
 `boring-math <https://pypi.org/project/boring-math/>`_.
 GitHub and PyPI repos located
 `here <https://github.com/grscheller/boring-math/blob/main/README.md>`_.
