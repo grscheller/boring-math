@@ -1,7 +1,7 @@
 # Daddy's Boring Math Library
 
-Collection of Python PyPI projects of a mathematical nature. It's
-purpose is to host and provide infrastructure for the maintainer's
+Collection of Python PyPI projects of a mathematical nature.
+It's purpose is to host and provide infrastructure for my
 Python mathematical hobby projects.
 
 The overall project's name is **Boring Math** and consists of PyPI
@@ -22,8 +22,8 @@ For more information visit the project's
 | Special Functions | [boring-math-special-functions][105] | [gh][205] | [gh_pages][305] | boring_math.special_functions |
 
 These are fun little math projects which I enjoy doing. They have many
-loose threads. They are as much to learn Python as they are to to play
-with math.
+loose threads. They are as much for me to learn Python as they are for
+me to play with math.
 
 ## Copyright and License
 
