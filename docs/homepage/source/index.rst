@@ -1,12 +1,12 @@
 Boring Math
 ===========
 
-**Daddy's Boring Math Libraries.**
+**Daddy's Boring Math Library.**
 
-PyPI projects under the Python boring_math namespace
-`boring-math <https://pypi.org/project/boring-math/>`_.
-GitHub and PyPI repos located
-`here <https://github.com/grscheller/boring-math/blob/main/README.md>`_.
+`PyPI projects <https://pypi.org/project/boring-math/>`_
+and their associated
+`GitHub and PyPI repos <https://github.com/grscheller/boring-math/blob/main/README.md>`_
+all under the boring_math Python namespace.
 
 .. toctree::
     :caption: Boring Math
