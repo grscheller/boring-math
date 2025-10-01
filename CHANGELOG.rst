@@ -11,7 +11,14 @@ The name of this library was suggested by my then 13 year old daughter Mary.
 Important Milestones
 --------------------
 
+2025-10-01 - Initial Sphinx migration for projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- migrated integer-math
+
+
 2025-09-29 - Redoing infrastructure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Redoing entire project's infrastructure along the lines of ``pythonic-fp``.
 
