@@ -1,12 +1,12 @@
-boring-math-integer-math
-========================
+boring-math-probability-distributions
+=====================================
 
-**Integer based mathematics.**
+**probability distributions.**
 
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
-`boring-math-integer-math <https://pypi.org/project/boring-math-integer-math/>`_
+`boring-math-probability-distributions <https://pypi.org/project/boring-math-probability-distributions/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
@@ -27,4 +27,4 @@ PyPI projects.
 .. toctree::
    :caption: Documentation
 
-   integer_math/index
+   probability_distributions/index

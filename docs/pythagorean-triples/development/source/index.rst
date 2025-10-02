@@ -1,12 +1,12 @@
-boring-math-integer-math
-========================
+boring-math-pythagorean-triples
+===============================
 
-**Integer based mathematics.**
+**Pythagorean triples.**
 
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
-`boring-math-integer-math <https://pypi.org/project/boring-math-integer-math/>`_
+`boring-math-pythagorean-triples <https://pypi.org/project/boring-math-pythagorean-triples/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
@@ -27,4 +27,4 @@ PyPI projects.
 .. toctree::
    :caption: Documentation
 
-   integer_math/index
+   pythagorean_triples/index

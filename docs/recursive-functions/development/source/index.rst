@@ -1,12 +1,12 @@
-boring-math-integer-math
-========================
+boring-math-recursive-functions
+===============================
 
-**Integer based mathematics.**
+**Recursive functions.**
 
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
-`boring-math-integer-math <https://pypi.org/project/boring-math-integer-math/>`_
+`boring-math-recursive-functions <https://pypi.org/project/boring-math-recursive-functions/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
@@ -27,4 +27,4 @@ PyPI projects.
 .. toctree::
    :caption: Documentation
 
-   integer_math/index
+   recursive_functions/index
