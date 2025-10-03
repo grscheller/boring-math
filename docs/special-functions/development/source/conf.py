@@ -10,10 +10,10 @@
 # when generating the docs for an actual, not proposed, release.
 #
 
-project = 'Boring Math - Integer Math'
+project = 'Boring Math - Special Functions'
 copyright = '2023-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '1.1.0' 
+release = '0.1.0' 
 release_string = 'Proposed PyPI'
 # release_string = 'PyPI'
 
