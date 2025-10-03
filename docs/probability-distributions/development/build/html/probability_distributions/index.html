@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>boring_math.integer_math &#8212; Boring Math - Probability Distributions 0.9.0 documentation</title>
+    <title>boring_math.probability_distributions &#8212; Boring Math - Probability Distributions 0.9.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css?v=9b2032db" />
     <script src="../_static/documentation_options.js?v=39bb1c6d"></script>
@@ -15,7 +15,7 @@
     <script src="../_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="number_theory" href="number_theory.html" />
+    <link rel="next" title="datasets" href="datasets.html" />
     <link rel="prev" title="Changelog" href="../changelog.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
@@ -130,9 +130,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">boring_math.integer_math</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html">number_theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html">combinatorics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">boring_math.probability_distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html">datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribution.html">distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions/index.html">boring_math.probability_distributions.distributions</a></li>
 </ul>
 </li>
 </ul>
@@ -146,48 +147,95 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="boring-math-integer-math">
-<h1>boring_math.integer_math<a class="headerlink" href="#boring-math-integer-math" title="Link to this heading">¶</a></h1>
+  <section id="boring-math-probability-distributions">
+<h1>boring_math.probability_distributions<a class="headerlink" href="#boring-math-probability-distributions" title="Link to this heading">¶</a></h1>
+<p><strong>Visualize probability distributions</strong></p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="number_theory.html">number_theory</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.coprime"><code class="docutils literal notranslate"><span class="pre">coprime()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.gcd"><code class="docutils literal notranslate"><span class="pre">gcd()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.iSqrt"><code class="docutils literal notranslate"><span class="pre">iSqrt()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.isSqr"><code class="docutils literal notranslate"><span class="pre">isSqr()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.is_prime"><code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.jacobi_symbol"><code class="docutils literal notranslate"><span class="pre">jacobi_symbol()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.lcm"><code class="docutils literal notranslate"><span class="pre">lcm()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.legendre_symbol"><code class="docutils literal notranslate"><span class="pre">legendre_symbol()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes"><code class="docutils literal notranslate"><span class="pre">primes()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes_capped"><code class="docutils literal notranslate"><span class="pre">primes_capped()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes_wilson"><code class="docutils literal notranslate"><span class="pre">primes_wilson()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html#boring_math.probability_distributions.datasets.DataSet"><code class="docutils literal notranslate"><span class="pre">DataSet</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html#boring_math.probability_distributions.datasets.DataSet.read_data_from_file"><code class="docutils literal notranslate"><span class="pre">DataSet.read_data_from_file()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="combinatorics.html">combinatorics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html#boring_math.integer_math.combinatorics.comb"><code class="docutils literal notranslate"><span class="pre">comb()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html#boring_math.integer_math.combinatorics.perm"><code class="docutils literal notranslate"><span class="pre">perm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html#boring_math.probability_distributions.datasets.DataSets"><code class="docutils literal notranslate"><span class="pre">DataSets</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distribution.html">distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="distribution.html#boring_math.probability_distributions.distribution.ContDist"><code class="docutils literal notranslate"><span class="pre">ContDist</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="distribution.html#boring_math.probability_distributions.distribution.ContDist.cdf"><code class="docutils literal notranslate"><span class="pre">ContDist.cdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="distribution.html#boring_math.probability_distributions.distribution.ContDist.pdf"><code class="docutils literal notranslate"><span class="pre">ContDist.pdf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="distribution.html#boring_math.probability_distributions.distribution.DiscreteDist"><code class="docutils literal notranslate"><span class="pre">DiscreteDist</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distributions/index.html">boring_math.probability_distributions.distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="distributions/normal.html">normal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="distributions/normal.html#boring_math.probability_distributions.distributions.normal.Normal"><code class="docutils literal notranslate"><span class="pre">Normal</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="distributions/normal.html#boring_math.probability_distributions.distributions.normal.Normal.cdf"><code class="docutils literal notranslate"><span class="pre">Normal.cdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/normal.html#boring_math.probability_distributions.distributions.normal.Normal.pdf"><code class="docutils literal notranslate"><span class="pre">Normal.pdf()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="distributions/uniform.html">uniform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="distributions/uniform.html#boring_math.probability_distributions.distributions.uniform.Uniform"><code class="docutils literal notranslate"><span class="pre">Uniform</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="distributions/uniform.html#boring_math.probability_distributions.distributions.uniform.Uniform.cdf"><code class="docutils literal notranslate"><span class="pre">Uniform.cdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/uniform.html#boring_math.probability_distributions.distributions.uniform.Uniform.pdf"><code class="docutils literal notranslate"><span class="pre">Uniform.pdf()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="distributions/binomial.html">binomial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="distributions/binomial.html#binomial-distribution">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial"><code class="docutils literal notranslate"><span class="pre">Binomial</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.calculate_mean"><code class="docutils literal notranslate"><span class="pre">Binomial.calculate_mean()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.calculate_stdev"><code class="docutils literal notranslate"><span class="pre">Binomial.calculate_stdev()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.cdf"><code class="docutils literal notranslate"><span class="pre">Binomial.cdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.pdf"><code class="docutils literal notranslate"><span class="pre">Binomial.pdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.plot_bar_data"><code class="docutils literal notranslate"><span class="pre">Binomial.plot_bar_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.plot_bar_pdf"><code class="docutils literal notranslate"><span class="pre">Binomial.plot_bar_pdf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="distributions/binomial.html#boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset"><code class="docutils literal notranslate"><span class="pre">Binomial.replace_stats_from_dataset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="distributions/index.html#continuous-distributions">Continuous Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions/index.html#discrete-distributions">Discrete Distributions</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<section id="integer-mathematics">
-<h2>Integer Mathematics<a class="headerlink" href="#integer-mathematics" title="Link to this heading">¶</a></h2>
-<p>Modules of an integer math nature.</p>
+<p>Visualize probability distributions</p>
+<p>Distributions can be compared to either sample or population data. Package
+originally derived from a Udacity exercise.</p>
 <ul class="simple">
-<li><p>module boring_math.integer_math.number_theory</p>
+<li><p>Class Dataset</p>
 <ul>
-<li><p>number theoretic library</p></li>
-</ul>
-</li>
-<li><p>module boring_math.integer_math.combinatorics</p>
+<li><p>boring_math.probability_distributions.dataset</p>
 <ul>
-<li><p>combinatorics library</p></li>
+<li><p>contains either sample or population data</p></li>
+<li><p>generates sample/population statistics</p></li>
 </ul>
 </li>
 </ul>
-</section>
+</li>
+<li><p>Abstract Class Distribution</p>
+<ul>
+<li><p>boring_math.probability_distributions.distribution</p>
+<ul>
+<li><p>represents a probability distribution</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Concrete Distributions</p>
+<ul>
+<li><p>bm.probability_distributions.distributions</p></li>
+</ul>
+</li>
+</ul>
 </section>
 
 
@@ -195,23 +243,6 @@
           </div>
         </div>
       </div>
-    
-        <div id="show_right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
-        </div>
-
-        <div id="right_sidebar">
-            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
-            <div class="page_toc">
-                <ul>
-<li><a class="reference internal" href="#">boring_math.integer_math</a><ul>
-<li><a class="reference internal" href="#integer-mathematics">Integer Mathematics</a></li>
-</ul>
-</li>
-</ul>
-
-            </div>
-        </div>
     
 
       <div class="clearer"></div>
@@ -227,7 +258,7 @@
 
             <div class="right">
                 
-                    <a href="number_theory.html"><span>number_theory</span><span class="icon">&gt;</span></a>
+                    <a href="datasets.html"><span>datasets</span><span class="icon">&gt;</span></a>
                 
             </div>
         </div>

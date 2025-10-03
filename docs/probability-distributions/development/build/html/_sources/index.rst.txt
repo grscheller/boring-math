@@ -1,8 +1,6 @@
 boring-math-probability-distributions
 =====================================
 
-**probability distributions.**
-
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
@@ -10,6 +8,10 @@ Project
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+.. automodule:: boring_math.integer_math
+   :synopsis:
+   :noindex:
 
 .. toctree::
    :caption: Overview
