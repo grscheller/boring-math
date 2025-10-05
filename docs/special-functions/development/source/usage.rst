@@ -15,8 +15,8 @@ Importing the modules
 
 .. code:: python
 
-    from boring_math.integer_math.special_functions.abstract import const, id
+    from boring_math.special_functions.abstract import const, id
 
-    from boring_math.integer_math.special_functions.float import exp, sine, cosine
+    from boring_math.special_functions.float import exp, sine, cosine
 
-    from boring_math.integer_math.special_functions.complex import exp, sine, cosine
+    from boring_math.special_functions.complex import exp, sine, cosine

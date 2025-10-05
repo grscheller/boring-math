@@ -13,16 +13,21 @@ Install the project into your Python environment:
 Importing the modules
 ---------------------
 
-Import the classes from the module.
+Import classes representing a data set or collection of data sets.
 
 .. code:: python
 
-    from boring_math.probability_distributions import DataSet, DataSets
+    from boring_math.probability_distributions.datasets import DataSet, DataSets
 
-Import each class from its modules.
+Import classes representing continuous distributions.
+
+.. code:: python
+
+    from boring_math.probability_distributions.distributions.normal import Normal
+    from boring_math.probability_distributions.distributions.uniform import Uniform
+
+Import classes representing discrete distributions.
 
 .. code:: python
 
     from boring_math.probability_distributions.distributions.binomial import Binomial
-    from boring_math.probability_distributions.distributions.normal import Normal
-    from boring_math.probability_distributions.distributions.uniform import Uniform

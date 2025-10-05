@@ -17,7 +17,7 @@ Import the class.
 
 .. code:: python
 
-    from boring_math.integer_math.boring-math-pythagorean-triples.pythag3 import Pythag3
+    from boring_math.pythagorean_triples.pythag3 import Pythag3
 
 
 Executing the applications

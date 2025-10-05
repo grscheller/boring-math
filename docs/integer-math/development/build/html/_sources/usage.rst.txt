@@ -26,4 +26,3 @@ Import the functions from the ``combinatorics`` module.
 .. code:: python
 
     from boring_math.integer_math.combinatorics import comb, perm
-

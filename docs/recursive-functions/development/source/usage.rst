@@ -14,11 +14,12 @@ Importing the modules
 ---------------------
 
 Import the functions from either or both the ``number_theory`` or ``combinatorics``
-modules.
 
 .. code:: python
 
-    from boring_math.integer_math.recursive_functions import ackermann
+    from boring_math.recursive_functions.examples import ackermann_list
+    from boring_math.recursive_functions.examples import fibonacci_generator
+    from boring_math.recursive_functions.examples import rev_fibonacci_generator
 
 Executing the applications
 --------------------------
