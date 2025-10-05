@@ -1,13 +1,11 @@
-boring_math.integer_math
-========================
+boring_math.pythagorean_triples
+===============================
+
+.. automodule:: boring_math.pythagorean_triples
+   :synopsis:
 
 .. toctree::
     :caption: Modules
-    :maxdepth: 4
 
-    number_theory
-    combinatorics
-
-.. automodule:: boring_math.integer_math
-   :synopsis:
-   :noindex:
+    pythag3
+    cli/index

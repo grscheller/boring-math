@@ -11,7 +11,7 @@
 #
 
 project = 'Boring Math - Pythagorean Triples'
-copyright = '2023-2025, Geoffrey R. Scheller'
+copyright = '2016-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
 release = '0.9.0' 
 release_string = 'Proposed PyPI'

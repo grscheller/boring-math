@@ -1,13 +1,5 @@
-boring_math.integer_math
-========================
+boring_math.special_functions
+=============================
 
-.. toctree::
-    :caption: Modules
-    :maxdepth: 4
-
-    number_theory
-    combinatorics
-
-.. automodule:: boring_math.integer_math
+.. automodule:: boring_math.special_functions
    :synopsis:
-   :noindex:

@@ -1,13 +1,11 @@
-boring_math.integer_math
-========================
+boring-math-recursive-functions
+===============================
+
+.. automodule:: boring_math.recursive_functions
+   :synopsis:
 
 .. toctree::
     :caption: Modules
-    :maxdepth: 4
 
-    number_theory
-    combinatorics
-
-.. automodule:: boring_math.integer_math
-   :synopsis:
-   :noindex:
+    examples
+    cli/index

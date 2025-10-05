@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>boring_math.integer_math &#8212; Boring Math - Recursive Functions 0.9.0 documentation</title>
+    <title>boring-math-recursive-functions &#8212; Boring Math - Recursive Functions 0.9.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css?v=9b2032db" />
     <script src="../_static/documentation_options.js?v=39bb1c6d"></script>
@@ -15,7 +15,7 @@
     <script src="../_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="number_theory" href="number_theory.html" />
+    <link rel="next" title="recursive_functions.examples" href="examples.html" />
     <link rel="prev" title="Changelog" href="../changelog.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
@@ -130,9 +130,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">boring_math.integer_math</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html">number_theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html">combinatorics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">boring-math-recursive-functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html">recursive_functions.examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html">recursive_functions.cli</a></li>
 </ul>
 </li>
 </ul>
@@ -146,48 +146,75 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="boring-math-integer-math">
-<h1>boring_math.integer_math<a class="headerlink" href="#boring-math-integer-math" title="Link to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Modules</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="number_theory.html">number_theory</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.coprime"><code class="docutils literal notranslate"><span class="pre">coprime()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.gcd"><code class="docutils literal notranslate"><span class="pre">gcd()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.iSqrt"><code class="docutils literal notranslate"><span class="pre">iSqrt()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.isSqr"><code class="docutils literal notranslate"><span class="pre">isSqr()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.is_prime"><code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.jacobi_symbol"><code class="docutils literal notranslate"><span class="pre">jacobi_symbol()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.lcm"><code class="docutils literal notranslate"><span class="pre">lcm()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.legendre_symbol"><code class="docutils literal notranslate"><span class="pre">legendre_symbol()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes"><code class="docutils literal notranslate"><span class="pre">primes()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes_capped"><code class="docutils literal notranslate"><span class="pre">primes_capped()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html#boring_math.integer_math.number_theory.primes_wilson"><code class="docutils literal notranslate"><span class="pre">primes_wilson()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="combinatorics.html">combinatorics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html#boring_math.integer_math.combinatorics.comb"><code class="docutils literal notranslate"><span class="pre">comb()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="combinatorics.html#boring_math.integer_math.combinatorics.perm"><code class="docutils literal notranslate"><span class="pre">perm()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</div>
-<section id="integer-mathematics">
-<h2>Integer Mathematics<a class="headerlink" href="#integer-mathematics" title="Link to this heading">¶</a></h2>
-<p>Modules of an integer math nature.</p>
+  <section id="module-boring_math.recursive_functions">
+<span id="boring-math-recursive-functions"></span><h1>boring-math-recursive-functions<a class="headerlink" href="#module-boring_math.recursive_functions" title="Link to this heading">¶</a></h1>
+<section id="recursive-functions-package">
+<h2>Recursive Functions Package<a class="headerlink" href="#recursive-functions-package" title="Link to this heading">¶</a></h2>
+<p>Package to explore efficient ways to implement recursive functions.</p>
+<section id="example-recursive-functions">
+<h3>Example recursive functions<a class="headerlink" href="#example-recursive-functions" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>module boring_math.integer_math.number_theory</p>
+<li><p>module: boring_math.recursive_functions.examples</p>
 <ul>
-<li><p>number theoretic library</p></li>
+<li><p>Ackermann’s function</p>
+<ul>
+<li><p>with list</p>
+<ul>
+<li><p>function: boring_math.recursive_functions.examples.ackermann_list</p></li>
 </ul>
 </li>
-<li><p>module boring_math.integer_math.combinatorics</p>
+</ul>
+</li>
+<li><p>Fibonacci sequences</p>
 <ul>
-<li><p>combinatorics library</p></li>
+<li><p>with generators</p>
+<ul>
+<li><p>function: boring_math.recursive_functions.examples.fibonacci_generator</p></li>
+<li><p>function: boring_math.recursive_functions.examples.rev_fibonacci_generator</p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </section>
+<section id="cli-program-entry-points">
+<h3>CLI program entry points<a class="headerlink" href="#cli-program-entry-points" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>package: boring_math.recursive_functions.cli</p>
+<ul>
+<li><p>module: boring_math.recursive_functions.cli.ackermann</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">recursive_functions.examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#examples-of-recursive-functions">Examples of recursive functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#ackermann-function">Ackermann function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples.html#fibonacci-sequences">Fibonacci sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#boring_math.recursive_functions.examples.ackermann_list"><code class="docutils literal notranslate"><span class="pre">ackermann_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#boring_math.recursive_functions.examples.fibonacci_generator"><code class="docutils literal notranslate"><span class="pre">fibonacci_generator()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#boring_math.recursive_functions.examples.rev_fibonacci_generator"><code class="docutils literal notranslate"><span class="pre">rev_fibonacci_generator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">recursive_functions.cli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#entry-points-for-automatically-generated-cli-scripts">Entry points for automatically generated CLI scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#example-applications">Example applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/ackermann_cli.html">ackermann.cli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli/ackermann_cli.html#boring_math.recursive_functions.cli.ackermann_cli.ackermann"><code class="docutils literal notranslate"><span class="pre">ackermann()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 
 
@@ -204,8 +231,12 @@
             <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
             <div class="page_toc">
                 <ul>
-<li><a class="reference internal" href="#">boring_math.integer_math</a><ul>
-<li><a class="reference internal" href="#integer-mathematics">Integer Mathematics</a></li>
+<li><a class="reference internal" href="#">boring-math-recursive-functions</a><ul>
+<li><a class="reference internal" href="#recursive-functions-package">Recursive Functions Package</a><ul>
+<li><a class="reference internal" href="#example-recursive-functions">Example recursive functions</a></li>
+<li><a class="reference internal" href="#cli-program-entry-points">CLI program entry points</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -227,7 +258,7 @@
 
             <div class="right">
                 
-                    <a href="number_theory.html"><span>number_theory</span><span class="icon">&gt;</span></a>
+                    <a href="examples.html"><span>recursive_functions.examples</span><span class="icon">&gt;</span></a>
                 
             </div>
         </div>

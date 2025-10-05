@@ -13,8 +13,8 @@ Install the project into your Python environment:
 Importing the modules
 ---------------------
 
-
 .. code:: python
 
+    from boring_math.integer_math.special_functions import exp
     from boring_math.integer_math.special_functions import sine
 

@@ -5,17 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>combinatorics &#8212; Boring Math - Special Functions 0.1.0 documentation</title>
+    <title>pythag3 &#8212; Boring Math - Pythagorean Triples 0.9.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css?v=9b2032db" />
-    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/documentation_options.js?v=39bb1c6d"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <script src="../_static/js/petite-vue.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="number_theory" href="number_theory.html" /> 
+    <link rel="next" title="pythagorean_triples.cli" href="cli/index.html" />
+    <link rel="prev" title="boring_math.pythagorean_triples" href="index.html" /> 
   </head><body data-dark_mode_code_blocks="true">
 
 <div id="top_nav">
@@ -29,7 +30,7 @@
         <p id="toggle_sidebar">
             <a href="#" title="Toggle sidebar">|||</a>
         </p>
-        <h1><a href="../index.html" title="Go to homepage">Boring Math - Special Functions 0.1.0 documentation</a></h1>
+        <h1><a href="../index.html" title="Go to homepage">Boring Math - Pythagorean Triples 0.9.0 documentation</a></h1>
 
         <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
     <template v-if="mode == 'light'">
@@ -119,7 +120,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">boring-math-special-functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">boring-math-pythagorean-triples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
@@ -129,9 +130,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">boring_math.integer_math</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="number_theory.html">number_theory</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">combinatorics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">boring_math.pythagorean_triples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pythag3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html">pythagorean_triples.cli</a></li>
 </ul>
 </li>
 </ul>
@@ -145,62 +146,47 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="module-boring_math.integer_math.combinatorics">
-<span id="combinatorics"></span><h1>combinatorics<a class="headerlink" href="#module-boring_math.integer_math.combinatorics" title="Link to this heading">¶</a></h1>
-<p>Combinatorics Library</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="boring_math.integer_math.combinatorics.comb">
-<span class="sig-prename descclassname"><span class="pre">boring_math.integer_math.combinatorics.</span></span><span class="sig-name descname"><span class="pre">comb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_top</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">700</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.integer_math.combinatorics.comb" title="Link to this definition">¶</a></dt>
-<dd><p>C(n,m) - choose m from n.</p>
-<ul class="simple">
-<li><p>number of ways <code class="docutils literal notranslate"><span class="pre">m</span></code> items can be taken from <code class="docutils literal notranslate"><span class="pre">n</span></code> items.</p></li>
-<li><p>geared to works efficiently for Python’s arbitrary length integers</p>
-<ul>
-<li><p>slower but comparable to math.comb</p></li>
-</ul>
-</li>
-<li><p>default parameters geared to large values of <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">m</span></code></p></li>
-<li><p>the defaults work reasonably well for smaller (human size) values</p></li>
-<li><p>for inner loops with smaller values,</p>
-<ul>
-<li><p>use <code class="docutils literal notranslate"><span class="pre">target_top</span> <span class="pre">=</span> <span class="pre">target_bot</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
-<li><p>or just use <code class="docutils literal notranslate"><span class="pre">math.comb(n,</span> <span class="pre">m)</span></code> instead</p></li>
-</ul>
-</li>
-</ul>
+  <section id="module-boring_math.pythagorean_triples.pythag3">
+<span id="pythag3"></span><h1>pythag3<a class="headerlink" href="#module-boring_math.pythagorean_triples.pythag3" title="Link to this heading">¶</a></h1>
+<p>Pythagorean triples</p>
+<p>Pythagorean triples are three integers <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span></code>  where <code class="docutils literal notranslate"><span class="pre">a²</span> <span class="pre">+</span> <span class="pre">b²</span> <span class="pre">=</span> <span class="pre">c²</span></code>.
+Such a triple is primitive when <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">gcd(a,</span> <span class="pre">b,</span> <span class="pre">c)</span> <span class="pre">=</span> <span class="pre">1</span></code>.
+Geometrically, <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span></code> represent the sides of a right triangle.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.pythagorean_triples.pythag3.</span></span><span class="sig-name descname"><span class="pre">Pythag3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_square</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3" title="Link to this definition">¶</a></dt>
+<dd><p>Pythagorean triple iteration class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares">
+<span class="sig-name descname"><span class="pre">extend_squares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_to_square</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares" title="Link to this definition">¶</a></dt>
+<dd><p>Extend the self.squares perfect square lookup table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3.triples">
+<span class="sig-name descname"><span class="pre">triples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abc_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3.triples" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an iterator of all possible primitive Pythagorean triples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Returned Iterator iterates in tuples <code class="docutils literal notranslate"><span class="pre">(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> in dictionary order.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">abc_max</span></code> not given, returns all theoretically possible
+triples with <code class="docutils literal notranslate"><span class="pre">a_start</span> <span class="pre">&lt;=</span> <span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">a_max</span></code>.</p>
+<p>Never returns an infinite iterator.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n</strong> – total number of distinct items to choose from</p></li>
-<li><p><strong>m</strong> – number of items to choose</p></li>
+<li><p><strong>a_start</strong> – Starting value for the smallest side <cite>a</cite>.</p></li>
+<li><p><strong>a_max</strong> – Maximum value for the smallest side <cite>a</cite>.</p></li>
+<li><p><strong>abc_max</strong> – Maximum value for any side.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>number of ways to choose <code class="docutils literal notranslate"><span class="pre">m</span></code> items from <code class="docutils literal notranslate"><span class="pre">n</span></code> items</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – if either <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">0</span></code></p>
+<dd class="field-even"><p>Iterator of Tuples <code class="docutils literal notranslate"><span class="pre">(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> with <code class="docutils literal notranslate"><span class="pre">a_start</span> <span class="pre">&lt;=</span> <span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">a_max</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">&lt;=</span> <span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span> <span class="pre">&lt;</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">abc_max</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="boring_math.integer_math.combinatorics.perm">
-<span class="sig-prename descclassname"><span class="pre">boring_math.integer_math.combinatorics.</span></span><span class="sig-name descname"><span class="pre">perm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.integer_math.combinatorics.perm" title="Link to this definition">¶</a></dt>
-<dd><p>Permutations P(n,m) - number of m orderings taken from n items.</p>
-<ul class="simple">
-<li><p>about 5 times slower than the math.perm C code</p>
-<ul>
-<li><p>keeping around for PyPy 3.12+ or Python going JIT</p></li>
-<li><p>currently the PyPy team is working on 3.11</p></li>
-</ul>
-</li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – if <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">0</span></code></p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>
@@ -219,9 +205,12 @@
             <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
             <div class="page_toc">
                 <ul>
-<li><a class="reference internal" href="#">combinatorics</a><ul>
-<li><a class="reference internal" href="#boring_math.integer_math.combinatorics.comb"><code class="docutils literal notranslate"><span class="pre">comb()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.integer_math.combinatorics.perm"><code class="docutils literal notranslate"><span class="pre">perm()</span></code></a></li>
+<li><a class="reference internal" href="#">pythag3</a><ul>
+<li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3"><code class="docutils literal notranslate"><span class="pre">Pythag3</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares"><code class="docutils literal notranslate"><span class="pre">Pythag3.extend_squares()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3.triples"><code class="docutils literal notranslate"><span class="pre">Pythag3.triples()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -236,12 +225,14 @@
         <div class="button_nav">
             <div class="left">
                 
-                <a href="number_theory.html">
-                    <span class="icon">&lt;</span><span>number_theory</span></a>
+                <a href="index.html">
+                    <span class="icon">&lt;</span><span>boring_math.pythagorean_triples</span></a>
                 
             </div>
 
             <div class="right">
+                
+                    <a href="cli/index.html"><span>pythagorean_triples.cli</span><span class="icon">&gt;</span></a>
                 
             </div>
         </div>
@@ -249,7 +240,7 @@
 
 
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2023-2025, Geoffrey R. Scheller.
+    &#169; Copyright 2016-2025, Geoffrey R. Scheller.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
 

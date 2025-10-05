@@ -1,8 +1,6 @@
 boring-math-integer-math
 ========================
 
-**Integer based mathematics.**
-
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
@@ -10,6 +8,8 @@ Project
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+**Integer based mathematics.**
 
 .. toctree::
    :caption: Overview
