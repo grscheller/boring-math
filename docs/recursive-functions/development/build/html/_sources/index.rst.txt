@@ -18,13 +18,13 @@ PyPI projects.
    self
 
 .. toctree::
-   :caption: Getting Started
+   :caption: User Documentation
 
    usage
    releases
    changelog
 
 .. toctree::
-   :caption: Documentation
+   :caption: API Documentation
 
    recursive_functions/index

@@ -122,13 +122,13 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">boring-math-recursive-functions</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">boring-math-recursive-functions</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">recursive_functions.examples</a></li>
@@ -148,75 +148,74 @@
             
   <section id="module-boring_math.recursive_functions.examples">
 <span id="recursive-functions-examples"></span><h1>recursive_functions.examples<a class="headerlink" href="#module-boring_math.recursive_functions.examples" title="Link to this heading">¶</a></h1>
-<section id="examples-of-recursive-functions">
-<h2>Examples of recursive functions<a class="headerlink" href="#examples-of-recursive-functions" title="Link to this heading">¶</a></h2>
-<p>Examples implementations for various recursive functions.</p>
-<section id="ackermann-function">
-<h3>Ackermann function<a class="headerlink" href="#ackermann-function" title="Link to this heading">¶</a></h3>
-<p>Ackermann’s function is an example of a function that is computable
-but not primitively recursive. It quickly becomes computationally
-intractable for relatively small values of m.</p>
-<p>Ackermann function is defined recursively by</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ackermann(0,n)=n+1</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">for</span> <span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ackermann(m,0)=ackermann(m-1,1)</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">for</span> <span class="pre">m</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ackermann(m,n)=ackermann(m-1,</span> <span class="pre">ackermann(m,n-1))</span>&#160; <span class="pre">for</span> <span class="pre">m,n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p></li>
-</ul>
-</section>
-<section id="fibonacci-sequences">
-<h3>Fibonacci sequences<a class="headerlink" href="#fibonacci-sequences" title="Link to this heading">¶</a></h3>
-<p>The Fibonacci sequence is usually taught in grade school as the
-first recursive function that is not either an arithmetic or geometric
-sequence.</p>
-<blockquote>
-<div><p>The Fibonacci sequence is traditionally defined as</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">f₁</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f₂</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fₙ₊₂</span> <span class="pre">=</span> <span class="pre">fₙ₊₁</span> <span class="pre">+</span> <span class="pre">fₙ</span></code></p></li>
-</ul>
-<p>Actually, a Fibonacci extends can extend in both directions.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">...,</span> <span class="pre">13,</span> <span class="pre">-8,</span> <span class="pre">5,</span> <span class="pre">-3,</span> <span class="pre">2,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p></li>
-</ul>
-</div></blockquote>
-</section>
+<section id="id1">
+<h2>Recursive functions examples<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>Example implementations for various recursive functions.</p>
 </section>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.recursive_functions.examples.ackermann_list">
 <span class="sig-prename descclassname"><span class="pre">boring_math.recursive_functions.examples.</span></span><span class="sig-name descname"><span class="pre">ackermann_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.recursive_functions.examples.ackermann_list" title="Link to this definition">¶</a></dt>
 <dd><p>Ackermann’s Function.</p>
-<p>Evaluate Ackermann’s function simulating recursion with a list.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This implementation models the recursion with a Python list instead of Python’s
-“call stack”. It then evaluates the innermost ackermann function first. To
-naively use call stack recursion would result in the loss of stack safety.</p>
+<p>This implementation models the recursion with a Python list
+instead of Python’s “call stack”. It then evaluates the
+innermost ackermann function first. To naively use call stack
+recursion would result in the loss of stack safety.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – First argument to Ackermann’s function.</p></li>
+<li><p><strong>n</strong> – Second argument to Ackermann’s function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A very hard to calculate useless value.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.recursive_functions.examples.fibonacci_generator">
 <span class="sig-prename descclassname"><span class="pre">boring_math.recursive_functions.examples.</span></span><span class="sig-name descname"><span class="pre">fibonacci_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fib0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fib1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.recursive_functions.examples.fibonacci_generator" title="Link to this definition">¶</a></dt>
-<dd><p>Fibonacci iterator.</p>
-<p>Generate a Fibonacci sequence instead of recursively evaluating it.</p>
-<ul class="simple">
-<li><p>returns an iterator to a Fibonacci sequence
-- beginning <code class="docutils literal notranslate"><span class="pre">fib0,</span> <span class="pre">fib1,</span> <span class="pre">fib0+fib1,</span> <span class="pre">...</span></code>
-- default yields <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1.</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p></li>
+<dd><p>Generate a Fibonacci sequence instead of recursively evaluating it.</p>
+<blockquote>
+<div><p>Beginning: <code class="docutils literal notranslate"><span class="pre">fib0,</span> <span class="pre">fib1,</span> <span class="pre">fib0+fib1,</span> <span class="pre">...</span></code></p>
+<p>Defaults yield: <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1.</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fib0</strong> – Zeroth element of sequence.</p></li>
+<li><p><strong>fib1</strong> – Next element of sequence.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Iterator iterating over a Fibonacci sequence.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.recursive_functions.examples.rev_fibonacci_generator">
 <span class="sig-prename descclassname"><span class="pre">boring_math.recursive_functions.examples.</span></span><span class="sig-name descname"><span class="pre">rev_fibonacci_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fib0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fib1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.recursive_functions.examples.rev_fibonacci_generator" title="Link to this definition">¶</a></dt>
-<dd><p>Reverse Fibonacci iterator.</p>
-<p>Generate a reverse Fibonacci sequence instead of recursively evaluating it.</p>
-<ul class="simple">
-<li><p>Returns iterator iterating over the Fibonacci sequence in reverse order
-- beginning <code class="docutils literal notranslate"><span class="pre">fib1,</span> <span class="pre">fib0,</span> <span class="pre">fib1-fib0,</span> <span class="pre">...</span></code>
-- default yields <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">-1,</span> <span class="pre">2,</span> <span class="pre">-3,</span> <span class="pre">5,</span> <span class="pre">-8,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p></li>
+<dd><p>Generate a reverse Fibonacci sequence instead of recursively evaluating it.</p>
+<blockquote>
+<div><p>Beginning <code class="docutils literal notranslate"><span class="pre">fib1,</span> <span class="pre">fib0,</span> <span class="pre">fib1-fib0,</span> <span class="pre">...</span></code></p>
+<p>Defaults yield: <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">-1,</span> <span class="pre">2,</span> <span class="pre">-3,</span> <span class="pre">5,</span> <span class="pre">-8,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fib0</strong> – Zeroth element of sequence.</p></li>
+<li><p><strong>fib1</strong> – Next element of sequence.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Iterator iterating over a Fibonacci sequence in reverse order.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -236,11 +235,7 @@ naively use call stack recursion would result in the loss of stack safety.</p>
             <div class="page_toc">
                 <ul>
 <li><a class="reference internal" href="#">recursive_functions.examples</a><ul>
-<li><a class="reference internal" href="#examples-of-recursive-functions">Examples of recursive functions</a><ul>
-<li><a class="reference internal" href="#ackermann-function">Ackermann function</a></li>
-<li><a class="reference internal" href="#fibonacci-sequences">Fibonacci sequences</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#id1">Recursive functions examples</a></li>
 <li><a class="reference internal" href="#boring_math.recursive_functions.examples.ackermann_list"><code class="docutils literal notranslate"><span class="pre">ackermann_list()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.recursive_functions.examples.fibonacci_generator"><code class="docutils literal notranslate"><span class="pre">fibonacci_generator()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.recursive_functions.examples.rev_fibonacci_generator"><code class="docutils literal notranslate"><span class="pre">rev_fibonacci_generator()</span></code></a></li>

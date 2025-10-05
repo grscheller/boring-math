@@ -11,11 +11,22 @@ The name of this library was suggested by my then 13 year old daughter Mary.
 Important Milestones
 --------------------
 
-2025-10-01 - Initial Sphinx migration for projects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-10-04 - Finished initial Sphinx migration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- migrated integer-math
+Things are good enough content-wise until I do some real work.
 
+TODO:
+
+- finish Boring Math homepage
+- find another Sphinx dark theme
+
+  - Piccolo theme does not make tables, code blocks, and separators stand out too well
+  - heard good things about the Furo theme
+
+    - simple, uncluttered design without a lot of built-in components.
+    - maximum readability for your content.
+    - ability to easily customize colors and fonts using modern CSS variables. 
 
 2025-09-29 - Redoing infrastructure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

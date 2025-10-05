@@ -1,8 +1,6 @@
 boring_math.probability_distributions
 =====================================
 
-**Visualize probability distributions**
-
 .. toctree::
     :caption: Modules
 
@@ -12,4 +10,3 @@ boring_math.probability_distributions
 
 .. automodule:: boring_math.probability_distributions
    :synopsis:
-   :noindex:

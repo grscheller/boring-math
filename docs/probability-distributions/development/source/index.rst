@@ -1,6 +1,8 @@
 boring-math-probability-distributions
 =====================================
 
+**Visualize probability distributions**
+
 |RELEASE_STRING| |VERSION_RELEASED| release.
 
 Project
@@ -9,10 +11,6 @@ one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
 
-.. automodule:: boring_math.integer_math
-   :synopsis:
-   :noindex:
-
 .. toctree::
    :caption: Overview
    :hidden:
@@ -20,13 +18,13 @@ PyPI projects.
    self
 
 .. toctree::
-   :caption: Getting Started
+   :caption: User Documentation
 
    usage
    releases
    changelog
 
 .. toctree::
-   :caption: Documentation
+   :caption: API Documentation
 
    probability_distributions/index
