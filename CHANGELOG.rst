@@ -11,6 +11,12 @@ The name of this library was suggested by my then 13 year old daughter Mary.
 Important Milestones
 --------------------
 
+2025-10-05 - Converted from Piccolo to Furo Theme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Furo a bit old school, but very readable. Some tweaking will be needed.
+
+
 2025-10-04 - Finished initial Sphinx migration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
