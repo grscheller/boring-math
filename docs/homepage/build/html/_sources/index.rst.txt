@@ -1,12 +1,11 @@
 Boring Math
 ===========
 
-**Daddy's Boring Math Library.**
+All of the PyPI `Boring Math <https://pypi.org/project/boring-math/>`_
+projects implement top level packages in the ``boring_math`` namespace.
 
-`PyPI projects <https://pypi.org/project/boring-math/>`_
-and their associated
-`GitHub and PyPI repos <https://github.com/grscheller/boring-math/blob/main/README.md>`_
-all under the boring_math Python namespace.
+.. automodule:: boring_math.homepage.intro
+    :synopsis:
 
 .. toctree::
     :caption: Boring Math
@@ -19,11 +18,18 @@ all under the boring_math Python namespace.
     :caption: Overview
     :maxdepth: 1
 
-    purpose
     development
-    top_level_releases
-    consistent_versions
+    purpose
 
-.. automodule:: boring_math.homepage.intro
-    :synopsis:
-    :noindex:
+.. toctree::
+    :caption: Documentation
+    :maxdepth: 1
+
+    docs
+
+.. toctree::
+    :caption: Releases
+    :maxdepth: 1
+
+    top_level_releases
+    consistent_release_sets
