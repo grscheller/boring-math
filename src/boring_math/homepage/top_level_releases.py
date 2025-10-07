@@ -1,16 +1,12 @@
 """
-+---------------------------------------+---------------------------------------+---------+------------+
-| PyPI Project                          | Python Module                         | version | date       |
-+=======================================+=======================================+=========+============+
-| boring-math-integer-math              | boring_math.integer_math              | 1.1.0   | TBD        |
-+---------------------------------------+---------------------------------------+---------+------------+
-| boring-math-probability-distributions | boring_math.probability_distributions | 0.9.0   | TBD        |
-+---------------------------------------+---------------------------------------+---------+------------+
-| boring-math-pythagorean-triples       | boring_math.pythagorean_triples       | 0.9.0   | TBD        |
-+---------------------------------------+---------------------------------------+---------+------------+
-| boring-math-recursive-functions       | boring_math.recursive_functions       | 0.9.0   | TBD        |
-+---------------------------------------+---------------------------------------+---------+------------+
-| boring-math-special-functions         | boring_math.special_functions         | 0.1.0   | TBD        |
-+---------------------------------------+---------------------------------------+---------+------------+
+======================================== ======================================= ========= =============
+ PyPI and GitHub Name                    Python Module                           Version   Date Released
+======================================== ======================================= ========= =============
+ boring-math-integer-math                boring_math.integer_math                1.1.0     2025-10-TBD
+ boring-math-probability-distributions   boring_math.probability_distributions   0.9.0     2025-10-TBD
+ boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.9.0     2025-10-TBD
+ boring-math-recursive-functions         boring_math.recursive_functions         0.9.0     2025-10-TBD
+ boring-math-special-functions           boring_math.special_functions           0.1.0     2025-10-TBD
+======================================== ======================================= ========= =============
 
 """
