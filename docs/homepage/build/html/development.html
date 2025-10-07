@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Purpose boring-math" href="purpose.html"><link rel="prev" title="Boring Math" href="index.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="PyPI boring-math" href="purpose.html"><link rel="prev" title="Boring Math" href="index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>Development - Boring Math 2.0.0 documentation</title>
@@ -198,7 +198,7 @@
 <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="purpose.html">Purpose boring-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purpose.html">PyPI boring-math</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -206,8 +206,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="top_level_releases.html">Top level PyPI releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="consistent_release_sets.html">Consistent Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="top_level_releases.html">Top Level Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatible_versions.html">Compatible Versions</a></li>
 </ul>
 
 </div>
@@ -248,43 +248,8 @@
         <article role="main" id="furo-main-content">
           <section id="development">
 <h1>Development<a class="headerlink" href="#development" title="Link to this heading">¶</a></h1>
-<section id="module-dependencies">
-<h2>Module dependencies<a class="headerlink" href="#module-dependencies" title="Link to this heading">¶</a></h2>
-<p>Arrows point from modules to their dependencies.</p>
-<section id="internal-dependencies">
-<h3>Internal dependencies<a class="headerlink" href="#internal-dependencies" title="Link to this heading">¶</a></h3>
-<div class="graphviz"><img src="_images/graphviz-d0ed07967bee4589cf3339016929ccde6bb839b4.png" alt="digraph Modules {
-    bgcolor=&quot;#957fb8&quot;;
-    node [style=filled, fillcolor=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
-    edge [color=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
-    &quot;integer_math.combinatorics&quot; -&gt; &quot;integer_math.number_theory&quot;;
-    pythagorean_triples -&gt; &quot;integer_math.number_theory&quot;;
-}" class="graphviz" /></div>
-</section>
-<section id="external-dependencies">
-<h3>External dependencies<a class="headerlink" href="#external-dependencies" title="Link to this heading">¶</a></h3>
-<div class="graphviz"><img src="_images/graphviz-8be11d491620b4abfa8fd39471c2205377c6f6cd.png" alt="digraph Modules {
-    bgcolor=&quot;#957fb8&quot;;
-    node [style=filled, fillcolor=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
-    edge [color=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
-    integer_math -&gt; &quot;collections.abc&quot;;
-    integer_math -&gt; typing;
-    integer_math -&gt; &quot;pythonic_fp.circulararray&quot;;
-    integer_math -&gt; &quot;pythonic_fp.iterables&quot;;
-    probability_distributions -&gt; abc;
-    probability_distributions -&gt; &quot;collections.abc&quot;;
-    probability_distributions -&gt; math;
-    probability_distributions -&gt; typing;
-    probability_distributions -&gt; &quot;mathplotlib.pyplot&quot;;
-    probability_distributions -&gt; &quot;pythonic_fp.fptools&quot;;
-    pythagorean_triples -&gt; &quot;collections.abc&quot;;
-    pythagorean_triples -&gt; sys;
-    recursive_functions -&gt; &quot;collections.abc&quot;;
-}" class="graphviz" /></div>
-</section>
-</section>
 <section id="semantic-versioning">
-<h2>Semantic versioning<a class="headerlink" href="#semantic-versioning" title="Link to this heading">¶</a></h2>
+<h2>Semantic Versioning<a class="headerlink" href="#semantic-versioning" title="Link to this heading">¶</a></h2>
 <p>Maintainer has adopted strict 3 digit
 <a class="reference external" href="https://semver.org">semantic versioning</a>
 and does not use
@@ -295,10 +260,27 @@ access to the latest features.</p>
 concerned with stability. These are also posted in the project’s CHANGELOG.</p>
 </section>
 <section id="changelog">
-<h2>CHANGELOG<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h2>
+<h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h2>
 <p>Pythonic FP overarching
 <a class="reference external" href="https://github.com/grscheller/boring-math/blob/main/CHANGELOG.rst">CHANGELOG</a>.</p>
 <p>Each individual <em>Boring Math</em> project has its own CHANGELOG too.</p>
+</section>
+<section id="module-dependencies">
+<h2>Module Dependencies<a class="headerlink" href="#module-dependencies" title="Link to this heading">¶</a></h2>
+<p>All non-typing related dependencies. Arrows point from modules to their dependencies.</p>
+<div class="graphviz"><img src="_images/graphviz-af60d69d256b86b81e34d9429b5b19e49de2083e.png" alt="digraph Modules {
+    bgcolor=&quot;#957fb8&quot;;
+    node [style=filled, fillcolor=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
+    edge [color=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
+    integer_math -&gt; &quot;pythonic_fp.circulararray&quot;;
+    integer_math -&gt; &quot;pythonic_fp.iterables&quot;;
+    probability_distributions -&gt; math;
+    probability_distributions -&gt; &quot;mathplotlib.pyplot&quot;;
+    probability_distributions -&gt; &quot;pythonic_fp.fptools&quot;;
+    pythagorean_triples -&gt; sys;
+    pythagorean_triples -&gt; integer_math;
+    recursive_functions -&gt; sys;
+}" class="graphviz" /></div>
 </section>
 </section>
 
@@ -312,7 +294,7 @@ concerned with stability. These are also posted in the project’s CHANGELOG.</p
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Purpose boring-math</div>
+                <div class="title">PyPI boring-math</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -358,13 +340,9 @@ concerned with stability. These are also posted in the project’s CHANGELOG.</p
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Development</a><ul>
-<li><a class="reference internal" href="#module-dependencies">Module dependencies</a><ul>
-<li><a class="reference internal" href="#internal-dependencies">Internal dependencies</a></li>
-<li><a class="reference internal" href="#external-dependencies">External dependencies</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#semantic-versioning">Semantic versioning</a></li>
-<li><a class="reference internal" href="#changelog">CHANGELOG</a></li>
+<li><a class="reference internal" href="#semantic-versioning">Semantic Versioning</a></li>
+<li><a class="reference internal" href="#changelog">Changelog</a></li>
+<li><a class="reference internal" href="#module-dependencies">Module Dependencies</a></li>
 </ul>
 </li>
 </ul>

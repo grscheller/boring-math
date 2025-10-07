@@ -1,5 +1,5 @@
-Purpose boring-math
-===================
+PyPI boring-math
+================
 
 .. automodule:: boring_math.homepage
     :synopsis:

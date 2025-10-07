@@ -1,9 +1,6 @@
 Boring Math
 ===========
 
-All of the PyPI `Boring Math <https://pypi.org/project/boring-math/>`_
-projects are top level packages in the ``boring_math`` namespace.
-
 .. automodule:: boring_math.homepage.intro
     :synopsis:
 
@@ -15,7 +12,7 @@ projects are top level packages in the ``boring_math`` namespace.
 
 .. toctree::
     :caption: Overview
-    :maxdepth: 1
+    :maxdepth: 2
 
     development
     purpose
@@ -27,7 +24,7 @@ projects are top level packages in the ``boring_math`` namespace.
 
 .. toctree::
     :caption: Releases
-    :maxdepth: 1
+    :maxdepth: 2
 
     top_level_releases
-    consistent_release_sets
+    compatible_versions

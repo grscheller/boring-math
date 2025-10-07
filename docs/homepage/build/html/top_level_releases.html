@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Consistent Versions" href="consistent_release_sets.html"><link rel="prev" title="Pythonic FP docs" href="docs.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Compatible Versions" href="compatible_versions.html"><link rel="prev" title="Pythonic FP docs" href="docs.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>Top level PyPI releases - Boring Math 2.0.0 documentation</title>
+        <title>Top Level Releases - Boring Math 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -198,7 +198,7 @@
 <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="purpose.html">Purpose boring-math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purpose.html">PyPI boring-math</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -206,8 +206,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Top level PyPI releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="consistent_release_sets.html">Consistent Versions</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Top Level Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatible_versions.html">Compatible Versions</a></li>
 </ul>
 
 </div>
@@ -241,13 +241,16 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="top-level-pypi-releases">
-<h1>Top level PyPI releases<a class="headerlink" href="#top-level-pypi-releases" title="Link to this heading">¶</a></h1>
+          <section id="top-level-releases">
+<h1>Top Level Releases<a class="headerlink" href="#top-level-releases" title="Link to this heading">¶</a></h1>
+<section id="boring-math">
+<h2>Boring Math<a class="headerlink" href="#boring-math" title="Link to this heading">¶</a></h2>
+<p>These are the most resent <em>Boring Math</em> project PyPI releases.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -258,7 +261,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>boring-math-integer-math</p></td>
+<tr class="row-even"><td><p>boring-math-integer-math <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 <td><p>boring_math.integer_math</p></td>
 <td><p>1.1.0</p></td>
 <td><p>2025-10-TBD</p></td>
@@ -286,6 +289,43 @@
 </tbody>
 </table>
 </div>
+<section id="remarks">
+<h3>Remarks<a class="headerlink" href="#remarks" title="Link to this heading">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Maintainer will try to keep these top level releases consistent
+with each other as much as possible, but makes no guarantees.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When a package needs updated dependencies, the package
+will be upgraded first before any of its dependencies.
+This will prevent pip from installing the package until
+all its dependencies are in place.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When a package needs updating in a way that is not
+consistent with packages that depend on it, the packages
+dependent on it will be upgraded first.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the development environment, packages and their
+dependencies are usually developed in parallel along
+with their test suites.</p>
+</div>
+<p><strong>Footnotes</strong></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Maintainer soon plans to break up boring-math-integer-math
+into two PyPI projects, <code class="docutils literal notranslate"><span class="pre">boring-math-number-theory</span></code> and 
+<code class="docutils literal notranslate"><span class="pre">boring-math-combinatorics</span></code>.</p>
+</aside>
+</aside>
+</section>
+</section>
 </section>
 
         </article>
@@ -293,12 +333,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="consistent_release_sets.html">
+          <a class="next-page" href="compatible_versions.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Consistent Versions</div>
+                <div class="title">Compatible Versions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -331,8 +371,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Top Level Releases</a><ul>
+<li><a class="reference internal" href="#boring-math">Boring Math</a><ul>
+<li><a class="reference internal" href="#remarks">Remarks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

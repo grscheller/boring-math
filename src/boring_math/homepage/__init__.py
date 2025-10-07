@@ -1,28 +1,21 @@
 """
-The boring-math PyPI project is the central component of my
+The boring-math PyPI project is a central component of my
 *Boring Math* hobby projects. It has several purposes.
 
 - claims the boring-math name on PyPI for the overall effort
-- hosts the effort's homepage on *GitHub Pages*
-- hosts detailed Sphinx documentation for each *Boring Math* project
-- contains the ``boring_math.homepage`` module
+- hosts on *GitHub Pages*
 
-  - which is used in the construction of the homepage
-  - keeps important information available and modifiable
+  - the *Boring Math* homepage
+  - Sphinx API documentation for each *Boring Math* project
 
-    - outside of Sphinx boilerplate
-
-- provides locations for effort's overall CHANGELOG and README files
-
-  - the README.md file provides
-
-    - the boring-math PyPI description giving an overview of *Boring Math*
-    - provide links to the individual projects on PyPI and their GitHub repos
+- PyPI project itself for the ``boring_math.homepage`` module
+- provides locations for overarching CHANGELOG and README files
 
   - each *Boring Math* project has its on CHANGELOG and README files
 
 There is no need to install boring-math itself, but does not hurt
 anything if it is installed.
+
 """
 
 __author__ = 'Geoffrey R. Scheller'
