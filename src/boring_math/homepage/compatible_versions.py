@@ -8,8 +8,8 @@ Known Boring Math compatible versions
 ========================= ===================================== =======
 Name                      PyPI Project                          Version
 ========================= ===================================== =======
-Combinatorics             boring-math-combinatorics             1.1.0  
-Number Theory             boring-math-number-theory             1.1.0  
+Combinatorics             boring-math-combinatorics             2.0.0  
+Number Theory             boring-math-number-theory             2.0.0  
 Probability Distributions boring-math-probability-distributions 0.9.0  
 Pythagorean Triples       boring-math-pythagorean-triples       0.9.0  
 Recursive Functions       boring-math-recursive-functions       0.9.0  
