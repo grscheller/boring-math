@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Compatible Versions" href="compatible_versions.html"><link rel="prev" title="Pythonic FP docs" href="docs.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Compatible Versions" href="compatible_versions.html"><link rel="prev" title="Pythonic FP project docs" href="docs.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>Top Level Releases - Boring Math 2.0.0 documentation</title>
@@ -19,18 +19,21 @@
   body {
     --color-code-background: #f2f2f2;
   --color-code-foreground: #1e1e1e;
+  --color-link--visited: var(--color-link);
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
       }
     }
@@ -202,7 +205,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul class="current">
@@ -246,8 +249,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="top-level-releases">
-<h1>Top Level Releases<a class="headerlink" href="#top-level-releases" title="Link to this heading">¶</a></h1>
+          <section id="module-boring_math.homepage.top_level_releases">
+<span id="top-level-releases"></span><h1>Top Level Releases<a class="headerlink" href="#module-boring_math.homepage.top_level_releases" title="Link to this heading">¶</a></h1>
 <section id="boring-math">
 <h2>Boring Math<a class="headerlink" href="#boring-math" title="Link to this heading">¶</a></h2>
 <p>These are the most resent <em>Boring Math</em> project PyPI releases.</p>
@@ -294,20 +297,17 @@
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Maintainer will try to keep these top level releases consistent
-with each other as much as possible, but makes no guarantees.</p>
+with each other as much as possible.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>When a package needs updated dependencies, the package
-will be upgraded first before any of its dependencies.
-This will prevent pip from installing the package until
-all its dependencies are in place.</p>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+will be deployed to PyPI first before any of the dependencies.
+This will prevent pip from installing the version of the package
+until all its dependencies are in place.</p>
 <p>When a package needs updating in a way that is not
 consistent with packages that depend on it, the packages
-dependent on it will be upgraded first.</p>
+dependent on it will be deployed to PyPI first.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -315,12 +315,13 @@ dependent on it will be upgraded first.</p>
 dependencies are usually developed in parallel along
 with their test suites.</p>
 </div>
+<hr class="docutils" />
 <p><strong>Footnotes</strong></p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Maintainer soon plans to break up boring-math-integer-math
-into two PyPI projects, <code class="docutils literal notranslate"><span class="pre">boring-math-number-theory</span></code> and 
+into two PyPI projects, <code class="docutils literal notranslate"><span class="pre">boring-math-number-theory</span></code> and
 <code class="docutils literal notranslate"><span class="pre">boring-math-combinatorics</span></code>.</p>
 </aside>
 </aside>
@@ -349,7 +350,7 @@ into two PyPI projects, <code class="docutils literal notranslate"><span class="
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Pythonic FP docs</div>
+                <div class="title">Pythonic FP project docs</div>
                 
               </div>
             </a>

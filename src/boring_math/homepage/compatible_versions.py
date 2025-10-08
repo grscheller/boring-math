@@ -1,10 +1,6 @@
 """
-Boring Math compatible versions
-===============================
-
-**Known compatible versions.**
-
-----
+Known Boring Math compatible versions
+=====================================
 
 2025-10-TBD - 2.0.0
 -------------------

@@ -19,18 +19,21 @@
   body {
     --color-code-background: #f2f2f2;
   --color-code-foreground: #1e1e1e;
+  --color-link--visited: var(--color-link);
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
       }
     }
@@ -202,7 +205,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul>
@@ -275,7 +278,7 @@ package in the <code class="docutils literal notranslate"><span class="pre">bori
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -286,7 +289,7 @@ package in the <code class="docutils literal notranslate"><span class="pre">bori
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="compatible_versions.html">Compatible Versions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="compatible_versions.html#boring-math-compatible-versions">Boring Math compatible versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compatible_versions.html#known-boring-math-compatible-versions">Known Boring Math compatible versions</a></li>
 </ul>
 </li>
 </ul>

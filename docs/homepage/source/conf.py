@@ -32,5 +32,13 @@ exclude_patterns: list[str] = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_theme_options = {
+    "light_css_variables": {
+        "color-link--visited": "var(--color-link)",
+    },
+    "dark_css_variables": {
+        "color-link--visited": "var(--color-link)",
+    },
+}
 html_theme = 'furo'
 html_static_path = ['_static']

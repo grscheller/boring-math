@@ -19,18 +19,21 @@
   body {
     --color-code-background: #f2f2f2;
   --color-code-foreground: #1e1e1e;
+  --color-link--visited: var(--color-link);
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
       }
     }
@@ -202,7 +205,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul>
@@ -246,8 +249,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="development">
-<h1>Development<a class="headerlink" href="#development" title="Link to this heading">¶</a></h1>
+          <section id="module-boring_math.homepage.development">
+<span id="development"></span><h1>Development<a class="headerlink" href="#module-boring_math.homepage.development" title="Link to this heading">¶</a></h1>
 <section id="semantic-versioning">
 <h2>Semantic Versioning<a class="headerlink" href="#semantic-versioning" title="Link to this heading">¶</a></h2>
 <p>Maintainer has adopted strict 3 digit

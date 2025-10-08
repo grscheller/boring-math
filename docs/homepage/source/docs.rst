@@ -1,5 +1,5 @@
-Pythonic FP docs
-================
+Pythonic FP project docs
+========================
 
 - `boring_math-integer-math <https://grscheller.github.io/boring-math/integer-math/development/build/html/>`_
 - `boring-math-probability-distributions <https://grscheller.github.io/boring-math/probability-distributions/development/build/html/>`_ 

@@ -19,18 +19,21 @@
   body {
     --color-code-background: #f2f2f2;
   --color-code-foreground: #1e1e1e;
+  --color-link--visited: var(--color-link);
   
   }
   @media not print {
     body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
         --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
+  --color-link--visited: var(--color-link);
   
       }
     }
@@ -202,7 +205,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul class="current">
@@ -248,10 +251,8 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.homepage.compatible_versions">
 <span id="compatible-versions"></span><h1>Compatible Versions<a class="headerlink" href="#module-boring_math.homepage.compatible_versions" title="Link to this heading">¶</a></h1>
-<section id="boring-math-compatible-versions">
-<h2>Boring Math compatible versions<a class="headerlink" href="#boring-math-compatible-versions" title="Link to this heading">¶</a></h2>
-<p><strong>Known compatible versions.</strong></p>
-<hr class="docutils" />
+<section id="known-boring-math-compatible-versions">
+<h2>Known Boring Math compatible versions<a class="headerlink" href="#known-boring-math-compatible-versions" title="Link to this heading">¶</a></h2>
 <section id="tbd-2-0-0">
 <h3>2025-10-TBD - 2.0.0<a class="headerlink" href="#tbd-2-0-0" title="Link to this heading">¶</a></h3>
 <div class="table-wrapper docutils container">
@@ -374,7 +375,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Compatible Versions</a><ul>
-<li><a class="reference internal" href="#boring-math-compatible-versions">Boring Math compatible versions</a><ul>
+<li><a class="reference internal" href="#known-boring-math-compatible-versions">Known Boring Math compatible versions</a><ul>
 <li><a class="reference internal" href="#tbd-2-0-0">2025-10-TBD - 2.0.0</a></li>
 <li><a class="reference internal" href="#id1">2025-08-04 - 1.1.3</a></li>
 </ul>
