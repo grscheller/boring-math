@@ -1,9 +1,7 @@
 boring-math-integer-math
 ========================
 
-**Integer based mathematics.**
-
-|RELEASE_STRING| |VERSION_RELEASED| release.
+**Integer based mathematics:** |RELEASE_STRING| |VERSION_RELEASED| release
 
 Project
 `boring-math-integer-math <https://pypi.org/project/boring-math-integer-math/>`_

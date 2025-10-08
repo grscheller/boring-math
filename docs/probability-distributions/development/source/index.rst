@@ -1,9 +1,7 @@
 boring-math-probability-distributions
 =====================================
 
-**Visualize probability distributions**
-
-|RELEASE_STRING| |VERSION_RELEASED| release.
+**Visualize probability distributions:** |RELEASE_STRING| |VERSION_RELEASED| release
 
 Project
 `boring-math-probability-distributions <https://pypi.org/project/boring-math-probability-distributions/>`_

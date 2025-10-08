@@ -1,9 +1,7 @@
 boring-math-special-functions
 =============================
 
-**Special functions in mathematics.**
-
-|RELEASE_STRING| |VERSION_RELEASED| release.
+**Special functions in mathematics:** |RELEASE_STRING| |VERSION_RELEASED| release
 
 Project
 `boring-math-special-functions <https://pypi.org/project/boring-math-special-functions/>`_

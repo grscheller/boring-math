@@ -1,9 +1,7 @@
 boring-math-pythagorean-triples
 ===============================
 
-**Pythagorean triples.**
-
-|RELEASE_STRING| |VERSION_RELEASED| release.
+**Pythagorean triples:** |RELEASE_STRING| |VERSION_RELEASED| release
 
 Project
 `boring-math-pythagorean-triples <https://pypi.org/project/boring-math-pythagorean-triples/>`_
