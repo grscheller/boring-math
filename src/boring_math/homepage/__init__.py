@@ -1,20 +1,25 @@
 """
-The boring-math PyPI project is a central component of my
-*Boring Math* hobby projects. It has several purposes.
+Purpose boring-math PyPI Project
+================================
 
+The boring-math PyPI project is a central component of my
+Boring Math hobby projects. It has several purposes.
+
+- it is the PyPI project for the ``boring_math.homepage`` module
 - claims the boring-math name on PyPI for the overall effort
 - hosts on *GitHub Pages*
 
-  - the *Boring Math* homepage
-  - Sphinx API documentation for each *Boring Math* project
+  - the Boring Math homepage
+  - Sphinx API documentation for each Boring Math project
 
-- PyPI project itself for the ``boring_math.homepage`` module
 - provides locations for overarching CHANGELOG and README files
 
-  - each *Boring Math* project has its on CHANGELOG and README files
+  - each Boring Math project has its on CHANGELOG and README files
 
-There is no need to install boring-math itself, but does not hurt
-anything if it is installed.
+.. tip::
+
+    There is no need to install boring-math itself, but does not hurt
+    anything if it is installed.
 
 """
 
