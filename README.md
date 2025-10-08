@@ -5,7 +5,7 @@ It's purpose is to host and provide infrastructure for my
 Python mathematical hobby projects.
 
 The overall project's name is **Boring Math** and consists of PyPI
-projects with PyPI and GitHub names beginning *boring-math*. All
+projects with PyPI and GitHub names beginning "boring-math-". All
 projects are all under the `boring_math` Python namespace.
 
 For more information visit the project's
