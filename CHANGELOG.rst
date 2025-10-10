@@ -11,11 +11,19 @@ The name of this library was suggested by my then 13 year old daughter Mary.
 Important Milestones
 --------------------
 
-2025-10-09 - PyPI Boring Math release v1.1.4
+2025-10-09 - PyPI Boring Math release 1.2.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- released boring-math-combinatorics v2.0.0
-- released boring-math-number-theory v2.0.0
+Updated for boring-math-pythagorean-triples 1.8.3
+
+In retrospect, last version bump boring-math should
+have been 1.2.0 and not the 1.1.4 version.
+      
+2025-10-09 - PyPI Boring Math release 1.1.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- released boring-math-combinatorics 2.0.0
+- released boring-math-number-theory 2.0.0
 
 2025-10-09 - Split up boring-math-integer-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,7 +80,7 @@ Redoing entire project's infrastructure along the lines of ``pythonic-fp``.
   - both configured to use GitHub Actions
   - quite a bit of thrashing to get things straightened out
 
-2025-08-04 - PyPI Boring Math release v1.1.3
+2025-08-04 - PyPI Boring Math release 1.1.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I created a separate CHANGELOG for the ``boring_math.special_functions``
@@ -105,7 +113,7 @@ Here is what got installed when I downloaded boring-math namespace packages.
 2025-08-04 - PyPI releases boring-math & boring-math-integer-math
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Released boring-math v1.1.2 & boring-math-integer-math v0.8.1. Using these
+Released boring-math 1.1.2 & boring-math-integer-math 0.8.1. Using these
 two to iron out the release process. Still need to bootstrap Sphinx
 documentation. As I correct problems with these, I update the rest of
 the boring math repos.
@@ -126,10 +134,10 @@ repos have been archived.
 
 Latest PyPI Releases for
 
-- bm.integer-math v0.7.1
-- bm.probability-distributions v0.7.1
-- bm.pythagorean-triples v0.6.1
-- bm.recursive-functions v0.6.1
+- bm.integer-math 0.7.1
+- bm.probability-distributions 0.7.1
+- bm.pythagorean-triples 0.6.1
+- bm.recursive-functions 0.6.1
 
 Also got rid of links to the old grscheller.bm documentation.
 
