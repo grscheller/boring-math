@@ -1,7 +1,13 @@
 boring-math-integer-math
 ========================
 
+DEPRECATED!!!
+-------------
+
 **Integer based mathematics:** |RELEASE_STRING| |VERSION_RELEASED| release
+
+**DEPRECATED:** Development moved to the boring-math-combinatorics and
+boring-math-number-theory PyPI projects.
 
 Project
 `boring-math-integer-math <https://pypi.org/project/boring-math-integer-math/>`_

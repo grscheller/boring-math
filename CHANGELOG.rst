@@ -11,6 +11,21 @@ The name of this library was suggested by my then 13 year old daughter Mary.
 Important Milestones
 --------------------
 
+2025-10-09 - PyPI Boring Math release v1.1.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- released boring-math-combinatorics v2.0.0
+- released boring-math-number-theory v2.0.0
+
+2025-10-09 - Split up boring-math-integer-math
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Deprecating boring-math-integer-math, split it into 2 PyPI projects.
+
+- boring-math-combinatorics
+- boring-math-number-theory
+
+
 2025-10-05 - Converted from Piccolo to Furo Theme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
