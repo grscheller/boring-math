@@ -1,6 +1,6 @@
 """
-Daddy's Boring Math Library
-===========================
+Daddy's Boring Math Projects
+============================
 
 A collection of the my mathematical hobby projects.
 

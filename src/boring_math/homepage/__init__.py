@@ -2,8 +2,8 @@
 Purpose boring-math PyPI Project
 ================================
 
-The boring-math PyPI project is a central component of my
-Boring Math hobby projects.
+The `boring-math PyPI project <https://pypi.org/project/boring-math/>`_ 
+is a central component of my Boring Math hobby projects.
 
 - It is the PyPI project for the ``boring_math.homepage`` module.
 - Claims the boring-math name on PyPI for the overall effort.

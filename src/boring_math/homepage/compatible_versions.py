@@ -1,5 +1,5 @@
 """
-Known Boring Math compatible versions with consistent
+Known Boring Math compatible versions their consistent
 Pythonic FP dependencies.
 
 Coordinated releases
