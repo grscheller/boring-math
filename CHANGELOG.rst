@@ -12,14 +12,20 @@ Release based versioning
 ------------------------
 
 Unlike the PyPI projects that make up Boring Math, which use strict semantic versioning,
-the overall version number is based on consistent relative release.
+the overall version number is based on consistent relative release. The release string
+changes when
 
-- **MAJOR** versions aer for consistent coordinated releases of Boring Math PyPI projects
-- **MINOR** versions are used when an API change is made in a Boring Math PyPI project
-- **PATCH** versions are for when homepage or project docs improved, also for minor code improvements
+- **MAJOR:** a consistent, coordinated release of Boring Math PyPI projects happens
+- **MINOR:** breaking API changes are made to a Boring Math PyPI project
+- **PATCH:** minor code improvements and homepage updates are made
 
 Important Milestones
 --------------------
+
+2025-10-12 - PyPI Boring Math release 2.0.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Minor homepage consistency changes with Pythonic FP.
 
 2025-10-11 - PyPI Boring Math release 2.0.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -25,14 +25,10 @@ Remarks
 
 .. important::
 
-    When a package needs updated dependencies, the package
-    will be deployed to PyPI first before any of the dependencies.
+    When a package needs updated dependencies, the package will be
+    deployed to PyPI first before any of its internal dependencies.
     This will prevent pip from installing the version of the package
     until all its dependencies are in place.
-
-    When a package needs updating in a way that is not
-    consistent with packages that depend on it, the packages
-    dependent on it will be deployed to PyPI first.
 
 .. note::
 
