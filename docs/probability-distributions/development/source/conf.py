@@ -13,9 +13,9 @@
 project = 'Boring Math - Probability Distributions'
 copyright = '2023-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.9.0' 
-release_string = 'Proposed PyPI'
-# release_string = 'PyPI'
+release = '0.8.1' 
+# release_string = 'Proposed PyPI'
+release_string = 'PyPI'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

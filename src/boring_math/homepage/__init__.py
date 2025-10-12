@@ -5,16 +5,16 @@ Purpose boring-math PyPI Project
 The boring-math PyPI project is a central component of my
 Boring Math hobby projects.
 
-- it is the PyPI project for the ``boring_math.homepage`` module
-- claims the boring-math name on PyPI for the overall effort
-- hosts on *GitHub Pages*
+- It is the PyPI project for the ``boring_math.homepage`` module.
+- Claims the boring-math name on PyPI for the overall effort.
+- Hosts on *GitHub Pages*
 
-  - the Boring Math homepage
-  - Sphinx API & usage documentation for each Boring Math project
+  - The Boring Math homepage.
+  - Sphinx API & usage documentation for each Boring Math project.
 
-- provides locations for overarching CHANGELOG and README files
+- Provides locations for overarching CHANGELOG and README files.
 
-  - each Boring Math project has its on CHANGELOG and README files
+  - Each Boring Math project has its own CHANGELOG and README files.
 
 .. tip::
 

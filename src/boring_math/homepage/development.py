@@ -42,6 +42,7 @@ All non-typing related dependencies. Arrows point from modules to their dependen
         pythagorean_triples -> sys;
         pythagorean_triples -> number_theory;
         recursive_functions -> sys;
+        recursive_functions -> "pythonic_fp.iterables";
     }
 
 """

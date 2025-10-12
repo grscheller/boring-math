@@ -1,10 +1,12 @@
-boring-math-recursive-functions
-===============================
+recursive_functions
+===================
 
 .. toctree::
     :caption: Modules
+    :maxdepth: 2
 
-    examples
+    ackermann
+    fibonacci
     cli/index
 
 Overview

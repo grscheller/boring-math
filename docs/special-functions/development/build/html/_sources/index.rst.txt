@@ -3,6 +3,8 @@ boring-math-special-functions
 
 **Special functions in mathematics:** |RELEASE_STRING| |VERSION_RELEASED| release
 
+**Stub Project - Not yet implemented!**
+
 Project
 `boring-math-special-functions <https://pypi.org/project/boring-math-special-functions/>`_
 one of the

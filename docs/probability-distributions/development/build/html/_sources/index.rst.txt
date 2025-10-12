@@ -10,19 +10,20 @@ one of the
 PyPI projects.
 
 .. toctree::
-   :caption: Overview
-   :hidden:
+    :caption: Overview
+    :hidden:
 
-   self
-
-.. toctree::
-   :caption: User Documentation
-
-   usage
-   releases
-   changelog
+    self
 
 .. toctree::
-   :caption: API Documentation
+    :caption: User Documentation
 
-   probability_distributions/index
+    usage
+    releases
+    changelog
+
+.. toctree::
+    :caption: API Documentation
+    :maxdepth: 2
+
+    probability_distributions/index

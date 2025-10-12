@@ -8,8 +8,39 @@ Mathematical hobby projects. Done under the PyPI boring-math namespace.
 
 The name of this library was suggested by my then 13 year old daughter Mary.
 
+Release based versioning
+------------------------
+
+Unlike the PyPI projects that make up Boring Math, which use strict semantic versioning,
+the overall version number is based on consistent relative release.
+
+- **MAJOR** versions aer for consistent coordinated releases of Boring Math PyPI projects
+- **MINOR** versions are used when an API change is made in a Boring Math PyPI project
+- **PATCH** versions are for when homepage or project docs improved, also for minor code improvements
+
 Important Milestones
 --------------------
+
+2025-10-11 - PyPI Boring Math release 2.0.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Decided to make this a consistent coordinated release anyway. I want to
+get the documentation in a more or less final structural form so that I
+can concentrate on further software development.
+
+Updated for boring-math-recursive-functions (API changes - minor bump)
+First release boring-math-special-functions (still empty shell - patch bump)
+
+========================================  =========
+ PyPI and GitHub Name                     Version  
+========================================  =========
+ boring-math-combinatorics                2.0.0
+ boring-math-number-theory                2.0.0
+ boring-math-probability-distributions    0.8.1
+ boring-math-pythagorean-triples          0.8.3
+ boring-math-recursive-functions          1.0.0
+ boring-math-special-functions            0.1.0
+========================================  =========
 
 2025-10-09 - PyPI Boring Math release 1.2.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

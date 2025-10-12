@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="prev" title="Top Level Releases" href="top_level_releases.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>Compatible Versions - Boring Math 1.2.1 documentation</title>
+        <title>Compatible Versions - Boring Math 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -165,7 +165,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Boring Math 1.2.1 documentation</div></a>
+      <a href="index.html"><div class="brand">Boring Math 2.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  <span class="sidebar-brand-text">Boring Math 1.2.1 documentation</span>
+  <span class="sidebar-brand-text">Boring Math 2.0.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -202,7 +202,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Pythonic FP project docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Boring Math project docs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Releases</span></p>
 <ul class="current">
@@ -248,10 +248,12 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.homepage.compatible_versions">
 <span id="compatible-versions"></span><h1>Compatible Versions<a class="headerlink" href="#module-boring_math.homepage.compatible_versions" title="Link to this heading">¶</a></h1>
-<section id="known-boring-math-compatible-versions">
-<h2>Known Boring Math compatible versions<a class="headerlink" href="#known-boring-math-compatible-versions" title="Link to this heading">¶</a></h2>
-<section id="tbd-2-0-0">
-<h3>2025-10-TBD - 2.0.0<a class="headerlink" href="#tbd-2-0-0" title="Link to this heading">¶</a></h3>
+<p>Known Boring Math compatible versions with consistent
+Pythonic FP dependencies.</p>
+<section id="coordinated-releases">
+<h2>Coordinated releases<a class="headerlink" href="#coordinated-releases" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>2025-10-11 - 2.0.0<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -271,15 +273,15 @@
 </tr>
 <tr class="row-even"><td><p>Probability Distributions</p></td>
 <td><p>boring-math-probability-distributions</p></td>
-<td><p>0.9.0</p></td>
+<td><p>0.8.1</p></td>
 </tr>
 <tr class="row-odd"><td><p>Pythagorean Triples</p></td>
 <td><p>boring-math-pythagorean-triples</p></td>
-<td><p>0.9.0</p></td>
+<td><p>0.8.3</p></td>
 </tr>
 <tr class="row-even"><td><p>Recursive Functions</p></td>
 <td><p>boring-math-recursive-functions</p></td>
-<td><p>0.9.0</p></td>
+<td><p>1.0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p>Special Functions</p></td>
 <td><p>boring-math-special-functions</p></td>
@@ -288,10 +290,20 @@
 </tbody>
 </table>
 </div>
+<p>The Pythonic FP external dependencies these brought in on 2025-10-11 were</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>pythonic
+<span class="go">pythonic-fp-booleans                  2.0.0</span>
+<span class="go">pythonic-fp-circulararray             6.0.0</span>
+<span class="go">pythonic-fp-fptools                   5.1.2</span>
+<span class="go">pythonic-fp-gadgets                   3.1.0</span>
+<span class="go">pythonic-fp-iterables                 5.1.2</span>
+</pre></div>
+</div>
+<p>For which all current applicable Boring Math tests passed.</p>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h3>2025-08-04 - 1.1.3<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<section id="id2">
+<h3>2025-08-04 - 1.1.3<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -320,6 +332,16 @@
 </tbody>
 </table>
 </div>
+<p>The Pythonic FP external dependencies these brought in on 2025-11-10 were</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>pythonic
+<span class="go">pythonic-fp-booleans                  2.0.0</span>
+<span class="go">pythonic-fp-circulararray             6.0.0</span>
+<span class="go">pythonic-fp-fptools                   5.1.2</span>
+<span class="go">pythonic-fp-gadgets                   3.1.0</span>
+<span class="go">pythonic-fp-iterables                 5.1.2</span>
+</pre></div>
+</div>
+<p>For which all current applicable Boring Math tests passed.</p>
 </section>
 </section>
 </section>
@@ -372,9 +394,9 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Compatible Versions</a><ul>
-<li><a class="reference internal" href="#known-boring-math-compatible-versions">Known Boring Math compatible versions</a><ul>
-<li><a class="reference internal" href="#tbd-2-0-0">2025-10-TBD - 2.0.0</a></li>
-<li><a class="reference internal" href="#id1">2025-08-04 - 1.1.3</a></li>
+<li><a class="reference internal" href="#coordinated-releases">Coordinated releases</a><ul>
+<li><a class="reference internal" href="#id1">2025-10-11 - 2.0.0</a></li>
+<li><a class="reference internal" href="#id2">2025-08-04 - 1.1.3</a></li>
 </ul>
 </li>
 </ul>
@@ -388,7 +410,7 @@
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=ca842793"></script>
+</div><script src="_static/documentation_options.js?v=51b770b3"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

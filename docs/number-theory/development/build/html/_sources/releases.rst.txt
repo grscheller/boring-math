@@ -8,5 +8,5 @@ PyPI releases
 +================================================================================================+==============+=========================================+
 | `development <https://grscheller.github.io/boring-math/integer-math/development/build/html/>`_ | TBD          |                                         |
 +------------------------------------------------------------------------------------------------+--------------+-----------------------------------------+
-| `v2.0.0 <https://grscheller.github.io/boring-math/integer-math/v2.0.0/build/html/>`_           | TBD          | Split off from boring-math-integer-math |
+| `v2.0.0 <https://grscheller.github.io/boring-math/integer-math/v2.0.0/build/html/>`_           | 2025-10-09   | Split off from boring-math-integer-math |
 +------------------------------------------------------------------------------------------------+--------------+-----------------------------------------+
