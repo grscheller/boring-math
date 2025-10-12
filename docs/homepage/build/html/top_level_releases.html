@@ -308,13 +308,10 @@ with each other as much as possible.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>When a package needs updated dependencies, the package
-will be deployed to PyPI first before any of the dependencies.
+<p>When a package needs updated dependencies, the package will be
+deployed to PyPI first before any of its internal dependencies.
 This will prevent pip from installing the version of the package
 until all its dependencies are in place.</p>
-<p>When a package needs updating in a way that is not
-consistent with packages that depend on it, the packages
-dependent on it will be deployed to PyPI first.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
