@@ -13,9 +13,9 @@
 project = 'Boring Math - Special Functions'
 copyright = '2023-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.1.0' 
-# release_string = 'Proposed PyPI'
-release_string = 'PyPI'
+release = '0.2.0' 
+release_string = 'Proposed PyPI'
+# release_string = 'PyPI'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

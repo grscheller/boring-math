@@ -13,9 +13,9 @@
 project = 'Boring Math - Combinatorics'
 copyright = '2023-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '2.0.0' 
-# release_string = 'Proposed PyPI'
-release_string = 'PyPI'
+release = '2.0.1' 
+release_string = 'Proposed PyPI'
+# release_string = 'PyPI'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

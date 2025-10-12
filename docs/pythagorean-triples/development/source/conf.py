@@ -13,9 +13,9 @@
 project = 'Boring Math - Pythagorean Triples'
 copyright = '2016-2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.8.3' 
-# release_string = 'Proposed PyPI'
-release_string = 'PyPI'
+release = '0.8.4' 
+release_string = 'Proposed PyPI'
+# release_string = 'PyPI'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
