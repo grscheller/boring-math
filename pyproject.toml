@@ -7,7 +7,7 @@ license = { file = "LICENSE" }
 authors = [{ name = "Geoffrey R. Scheller", email = "geoffrey@scheller.com" }]
 keywords = [
   "mathematics",
-  "special functions",
+  "hobby",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -21,8 +21,8 @@ dependencies = []
 dynamic = ["description"]
 
 [project.urls]
-Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.rst"
-Homepage = "https://grscheller.github.io/boring-math/homepage/build/html/"
+Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
+Homepage = "https://grscheller.github.io/boring-math"
 Source = "https://github.com/grscheller/boring-math"
 
 [build-system]

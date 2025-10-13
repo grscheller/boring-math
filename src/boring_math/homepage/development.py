@@ -13,9 +13,9 @@ Changelog
 =========
 
 Pythonic FP overarching
-`CHANGELOG <https://github.com/grscheller/boring-math/blob/main/CHANGELOG.rst>`_.
+`CHANGELOG <https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md>`_.
 
-Each individual *Boring Math* project has its own CHANGELOG too.
+Each individual Boring Math project has its own CHANGELOG too.
 
 Module Dependencies
 ===================
