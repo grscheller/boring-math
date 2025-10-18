@@ -7,6 +7,7 @@ These are the most resent *Boring Math* project PyPI releases.
 ======================================== ======================================= ========= =============
  PyPI and GitHub Name                    Python Module                           Version   Date Released
 ======================================== ======================================= ========= =============
+ boring-math-abstract-algebra            boring_math.abstract_algebra            0.1.0     TBD
  boring-math-combinatorics               boring_math.combinatorics               2.0.0     2025-10-09
  boring-math-integer-math [#]_           boring_math.integer_math                1.2.0     2025-10-09
  boring-math-number-theory               boring_math.number_theory               2.0.0     2025-10-09

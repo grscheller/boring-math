@@ -1,4 +1,5 @@
 """
+- `boring-math-abstract-algebra <https://grscheller.github.io/boring-math/abstract-algebra/development/build/html/>`_
 - `boring-math-combinatorics <https://grscheller.github.io/boring-math/combinatorics/development/build/html/>`_
 - `boring-math-number-theory <https://grscheller.github.io/boring-math/number-theory/development/build/html/>`_
 - `boring-math-probability-distributions <https://grscheller.github.io/boring-math/probability-distributions/development/build/html/>`_ 

@@ -16,7 +16,12 @@ changes when
 
 ## Important Milestones
 
-### ### 2025-10-12 - PyPI Boring Math release 2.0.1
+### 2025-10-18 - Update
+
+Plumbed in boring-math-abstract-algebra docs and integrated into
+homepage.
+
+### 2025-10-12 - PyPI Boring Math release 2.0.1
 
 Minor homepage consistency changes with Pythonic FP.
 
