@@ -17,11 +17,8 @@ Import classes needed to define your own algebras.
 
 .. code:: python
 
-    from boring_math.abstract_algebra.protocols import elements, orderings
-
-Import classes of concrete representations of continuous algebras.
-
-.. code:: python
-
-    from boring_math.abstract_algebra.fields.complex_numbers import C_2x2M, C_2Tuples. C_complex
+    from boring_math.abstract_algebra.magma import Magma
+    from boring_math.abstract_algebra.semigroup import Semigroup
+    from boring_math.abstract_algebra.monoid import Monoid
+    from boring_math.abstract_algebra.group import Group
 
