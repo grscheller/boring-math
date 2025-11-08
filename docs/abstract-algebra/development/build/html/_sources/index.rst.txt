@@ -1,13 +1,17 @@
 boring-math-abstract-algebra
 ============================
 
-**Abstract Algebra:** |RELEASE_STRING| |VERSION_RELEASED| release
-
 Project
 `boring-math-abstract-algebra <https://pypi.org/project/boring-math-abstract-algebra/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+|RELEASE_STRING| |VERSION_RELEASED| release.
+
+.. automodule:: boring_math.abstract_algebra
+    :synopsis:
+    :no-index:
 
 .. toctree::
     :caption: Overview

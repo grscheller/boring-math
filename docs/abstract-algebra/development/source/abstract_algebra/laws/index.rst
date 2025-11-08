@@ -1,5 +1,5 @@
-abstract_algebra.laws
-=====================
+laws
+====
 
 .. toctree::
     :caption: laws

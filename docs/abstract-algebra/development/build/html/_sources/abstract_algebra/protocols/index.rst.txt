@@ -1,5 +1,5 @@
-abstract_algebra.protocols
-==========================
+protocols
+=========
 
 .. toctree::
     :caption: protocols

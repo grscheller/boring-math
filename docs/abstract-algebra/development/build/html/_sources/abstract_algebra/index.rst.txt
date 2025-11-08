@@ -1,5 +1,5 @@
-boring_math.abstract_algebra
-============================
+Package modules
+===============
 
 .. toctree::
     :caption: Modules
@@ -7,6 +7,3 @@ boring_math.abstract_algebra
     algebras/index
     laws/index
     protocols/index
-
-.. automodule:: boring_math.abstract_algebra
-   :synopsis:
