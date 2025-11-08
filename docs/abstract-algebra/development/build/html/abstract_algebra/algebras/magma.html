@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="protocols.orderings" href="orderings.html"><link rel="prev" title="abstract_algebra.protocols" href="index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="algebras.semigroup" href="semigroup.html"><link rel="prev" title="abstract_algebra.algebras" href="index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>protocols.elements - Boring Math - Abstract Algebra 0.1.0 documentation</title>
+        <title>algebras.magmas - Boring Math - Abstract Algebra 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -207,9 +207,19 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">boring_math.abstract_algebra</a><input aria-label="Toggle navigation of boring_math.abstract_algebra" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">abstract_algebra.protocols</a><input aria-label="Toggle navigation of abstract_algebra.protocols" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">protocols.elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orderings.html">protocols.orderings</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">abstract_algebra.algebras</a><input aria-label="Toggle navigation of abstract_algebra.algebras" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">algebras.magmas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="semigroup.html">algebras.semigroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="monoid.html">algebras.monoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group.html">algebras.group</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../laws/index.html">abstract_algebra.laws</a><input aria-label="Toggle navigation of abstract_algebra.laws" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../laws/group.html">laws.group</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../protocols/index.html">abstract_algebra.protocols</a><input aria-label="Toggle navigation of abstract_algebra.protocols" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../protocols/orderings.html">protocols.orderings</a></li>
 </ul>
 </li>
 </ul>
@@ -234,7 +244,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/abstract_algebra/protocols/elements.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/abstract_algebra/algebras/magma.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -252,53 +262,41 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.abstract_algebra.protocols.elements">
-<span id="protocols-elements"></span><h1>protocols.elements<a class="headerlink" href="#module-boring_math.abstract_algebra.protocols.elements" title="Link to this heading">¶</a></h1>
-<p><strong>Protocols for elements of algebraic structures.</strong></p>
+          <section id="module-boring_math.abstract_algebra.algebras.magma">
+<span id="algebras-magmas"></span><h1>algebras.magmas<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.magma" title="Link to this heading">¶</a></h1>
+<p><strong>Magma</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The actual Python datastructures are wrapped in an <code class="docutils literal notranslate"><span class="pre">Element</span></code>. Protocols are
-used to gear elements to the various types of algebraic systems they can belong.
-Elements are designed to be shared between multiple algebraic structures, like
-a group and another group isomorphic to one of its subgroups.</p>
-<p>Python suffers from a disease introduced by Fortran. Built-in arithmetic operators
-act in a contravariant way while the types themselves are invariant. An <code class="docutils literal notranslate"><span class="pre">int</span></code>
-added to a <code class="docutils literal notranslate"><span class="pre">float</span></code> returns a <code class="docutils literal notranslate"><span class="pre">float</span></code>. The type system sees the <code class="docutils literal notranslate"><span class="pre">int.__add__</span></code>
-method as returning an <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">|</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">complex</span></code>. This presents various typing
-problems and why an underlying data structure is wrapped in an <code class="docutils literal notranslate"><span class="pre">Element</span></code>.</p>
+<p>Mathematically a Magma is a set <strong>M</strong> along with a binary
+multiplicative operation <strong>mult: M X M -&gt; M</strong> on that set.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Python <code class="docutils literal notranslate"><span class="pre">dict</span></code> is invariant. It is used to represents
+the underlying <strong>set</strong> of elements of the <strong>magma</strong>. Python
+typing does not allow it to be declared a Mapping because
+the <code class="docutils literal notranslate"><span class="pre">dict.setdefault</span></code> method is not part of Mapping.</p>
+<p>Since elements are added to the <code class="docutils literal notranslate"><span class="pre">dict</span></code> in a completely
+deterministic “natural” way and are never changed or deleted
+once added, and elements are never returned to client code
+without adding them to the <code class="docutils literal notranslate"><span class="pre">dict</span></code>, the maintainer feels
+the use of <code class="docutils literal notranslate"><span class="pre">cast</span></code> in this module’s code is justified.</p>
 </div>
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.protocols.elements.AbelianGroupElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.protocols.elements.</span></span><span class="sig-name descname"><span class="pre">AbelianGroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.protocols.elements.AbelianGroupElement" title="Link to this definition">¶</a></dt>
-<dd><p>Protocol for an additive (commutative) group element.</p>
-<p>Contract: Initializer must associate the unique additive identity.</p>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.Magma">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.magma.</span></span><span class="sig-name descname"><span class="pre">Magma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.Magma" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.Magma.Element">
+<span class="sig-name descname"><span class="pre">Element</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.Magma.Element" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement" title="boring_math.abstract_algebra.algebras.magma.MagmaElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">MagmaElement</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.protocols.elements.AbelianSemiGroupElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.protocols.elements.</span></span><span class="sig-name descname"><span class="pre">AbelianSemiGroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.protocols.elements.AbelianSemiGroupElement" title="Link to this definition">¶</a></dt>
-<dd><p>A set with a commutative, associative binary operator.</p>
-<p>Contract: Addition must be associative and commutative.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.protocols.elements.Element">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.protocols.elements.</span></span><span class="sig-name descname"><span class="pre">Element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.protocols.elements.Element" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.magma.</span></span><span class="sig-name descname"><span class="pre">MagmaElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma" title="boring_math.abstract_algebra.algebras.magma.Magma"><span class="pre">Magma</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.protocols.elements.GroupElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.protocols.elements.</span></span><span class="sig-name descname"><span class="pre">GroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.protocols.elements.GroupElement" title="Link to this definition">¶</a></dt>
-<dd><p>Protocol for a multiplicative group element.</p>
-<p>Contract: Initializer must associate the correct unique multiplicative identity.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.protocols.elements.SemiGroupElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.protocols.elements.</span></span><span class="sig-name descname"><span class="pre">SemiGroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">P</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.protocols.elements.SemiGroupElement" title="Link to this definition">¶</a></dt>
-<dd><p>An element of a set with a associative binary operator.</p>
-<p>Contract: Multiplication must be associative.</p>
-</dd></dl>
 
 </section>
 
@@ -307,12 +305,12 @@ problems and why an underlying data structure is wrapped in an <code class="docu
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="orderings.html">
+          <a class="next-page" href="semigroup.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">protocols.orderings</div>
+                <div class="title">algebras.semigroup</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -323,7 +321,7 @@ problems and why an underlying data structure is wrapped in an <code class="docu
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">abstract_algebra.protocols</div>
+                <div class="title">abstract_algebra.algebras</div>
                 
               </div>
             </a>
@@ -357,12 +355,12 @@ problems and why an underlying data structure is wrapped in an <code class="docu
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">protocols.elements</a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.protocols.elements.AbelianGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.protocols.elements.AbelianSemiGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianSemiGroupElement</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.protocols.elements.Element"><code class="docutils literal notranslate"><span class="pre">Element</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.protocols.elements.GroupElement"><code class="docutils literal notranslate"><span class="pre">GroupElement</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.protocols.elements.SemiGroupElement"><code class="docutils literal notranslate"><span class="pre">SemiGroupElement</span></code></a></li>
+<li><a class="reference internal" href="#">algebras.magmas</a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma"><code class="docutils literal notranslate"><span class="pre">Magma</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma.Element"><code class="docutils literal notranslate"><span class="pre">Magma.Element</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement"><code class="docutils literal notranslate"><span class="pre">MagmaElement</span></code></a></li>
 </ul>
 </li>
 </ul>

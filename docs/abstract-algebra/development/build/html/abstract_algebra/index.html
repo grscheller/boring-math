@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="abstract_algebra.protocols" href="protocols/index.html"><link rel="prev" title="Changelog" href="../changelog.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="abstract_algebra.algebras" href="algebras/index.html"><link rel="prev" title="Changelog" href="../changelog.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>boring_math.abstract_algebra - Boring Math - Abstract Algebra 0.1.0 documentation</title>
@@ -207,8 +207,18 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">boring_math.abstract_algebra</a><input aria-label="Toggle navigation of boring_math.abstract_algebra" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="protocols/index.html">abstract_algebra.protocols</a><input aria-label="Toggle navigation of abstract_algebra.protocols" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html">protocols.elements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="algebras/index.html">abstract_algebra.algebras</a><input aria-label="Toggle navigation of abstract_algebra.algebras" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="algebras/magma.html">algebras.magmas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/semigroup.html">algebras.semigroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/monoid.html">algebras.monoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/group.html">algebras.group</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="laws/index.html">abstract_algebra.laws</a><input aria-label="Toggle navigation of abstract_algebra.laws" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="laws/group.html">laws.group</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="protocols/index.html">abstract_algebra.protocols</a><input aria-label="Toggle navigation of abstract_algebra.protocols" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="protocols/orderings.html">protocols.orderings</a></li>
 </ul>
 </li>
@@ -257,15 +267,46 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">abstract_algebra.protocols</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="protocols/elements.html">protocols.elements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html#boring_math.abstract_algebra.protocols.elements.AbelianGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html#boring_math.abstract_algebra.protocols.elements.AbelianSemiGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianSemiGroupElement</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html#boring_math.abstract_algebra.protocols.elements.Element"><code class="docutils literal notranslate"><span class="pre">Element</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html#boring_math.abstract_algebra.protocols.elements.GroupElement"><code class="docutils literal notranslate"><span class="pre">GroupElement</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="protocols/elements.html#boring_math.abstract_algebra.protocols.elements.SemiGroupElement"><code class="docutils literal notranslate"><span class="pre">SemiGroupElement</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="algebras/index.html">abstract_algebra.algebras</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="algebras/magma.html">algebras.magmas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algebras/magma.html#boring_math.abstract_algebra.algebras.magma.Magma"><code class="docutils literal notranslate"><span class="pre">Magma</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algebras/magma.html#boring_math.abstract_algebra.algebras.magma.Magma.Element"><code class="docutils literal notranslate"><span class="pre">Magma.Element</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/magma.html#boring_math.abstract_algebra.algebras.magma.MagmaElement"><code class="docutils literal notranslate"><span class="pre">MagmaElement</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="algebras/semigroup.html">algebras.semigroup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algebras/semigroup.html#boring_math.abstract_algebra.algebras.semigroup.Semigroup"><code class="docutils literal notranslate"><span class="pre">Semigroup</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algebras/semigroup.html#boring_math.abstract_algebra.algebras.semigroup.Semigroup.Element"><code class="docutils literal notranslate"><span class="pre">Semigroup.Element</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/semigroup.html#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><code class="docutils literal notranslate"><span class="pre">SemigroupElement</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="algebras/monoid.html">algebras.monoid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algebras/monoid.html#boring_math.abstract_algebra.algebras.monoid.Monoid"><code class="docutils literal notranslate"><span class="pre">Monoid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algebras/monoid.html#boring_math.abstract_algebra.algebras.monoid.Monoid.Element"><code class="docutils literal notranslate"><span class="pre">Monoid.Element</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/monoid.html#boring_math.abstract_algebra.algebras.monoid.MonoidElement"><code class="docutils literal notranslate"><span class="pre">MonoidElement</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="algebras/group.html">algebras.group</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="algebras/group.html#boring_math.abstract_algebra.algebras.group.Monoid"><code class="docutils literal notranslate"><span class="pre">Monoid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="algebras/group.html#boring_math.abstract_algebra.algebras.group.Monoid.Element"><code class="docutils literal notranslate"><span class="pre">Monoid.Element</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algebras/group.html#boring_math.abstract_algebra.algebras.group.MonoidElement"><code class="docutils literal notranslate"><span class="pre">MonoidElement</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="laws/index.html">abstract_algebra.laws</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="laws/group.html">laws.group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">abstract_algebra.protocols</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="protocols/orderings.html">protocols.orderings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="protocols/orderings.html#boring_math.abstract_algebra.protocols.orderings.PartialOrder"><code class="docutils literal notranslate"><span class="pre">PartialOrder</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="protocols/orderings.html#boring_math.abstract_algebra.protocols.orderings.TotalOrder"><code class="docutils literal notranslate"><span class="pre">TotalOrder</span></code></a></li>
@@ -276,6 +317,22 @@
 </ul>
 </div>
 <p id="module-boring_math.abstract_algebra"><strong>Abstract Algebra Library.</strong></p>
+<p>A library designed to construct concrete representations for abstract
+algebra systems.</p>
+<ul class="simple">
+<li><p>The term “algebra” will be used loosely to mean either,</p>
+<ul>
+<li><p>An abstract system unique up to isomorphism.</p></li>
+<li><p>Or a concrete representation of such.</p></li>
+</ul>
+</li>
+<li><p>Each element of the algebra has an internal representation.</p>
+<ul>
+<li><p>Each element knows the concrete representation of the algebra to which it belongs.</p></li>
+<li><p>Operations and properties are defined on the algebras themselves.</p></li>
+</ul>
+</li>
+</ul>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -284,8 +341,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code></p></td>
-<td><p>Protocols for types of abstract algebra structures</p></td>
+<tr class="row-even"><td><p>algebras</p></td>
+<td><p>Collections of elements with associated operations and relationships.</p></td>
+</tr>
+<tr class="row-odd"><td><p>laws</p></td>
+<td><p>Assertions for algebras.</p></td>
+</tr>
+<tr class="row-even"><td><p>protocols</p></td>
+<td><p>Protocols for algebras.</p></td>
 </tr>
 </tbody>
 </table>
@@ -297,12 +360,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="protocols/index.html">
+          <a class="next-page" href="algebras/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">abstract_algebra.protocols</div>
+                <div class="title">abstract_algebra.algebras</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
