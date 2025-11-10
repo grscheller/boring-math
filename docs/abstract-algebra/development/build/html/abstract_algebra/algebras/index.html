@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="magma" href="magma.html"><link rel="prev" title="Package modules" href="../index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="baseset" href="baseset.html"><link rel="prev" title="Package modules" href="../index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>algebras - Boring Math - Abstract Algebra 0.1.0 documentation</title>
@@ -208,6 +208,7 @@
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Package modules</a><input aria-label="Toggle navigation of Package modules" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">algebras</a><input aria-label="Toggle navigation of algebras" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magma.html">magma</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
@@ -264,17 +265,13 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.abstract_algebra.algebras">
 <span id="algebras"></span><h1>algebras<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras" title="Link to this heading">¶</a></h1>
-<p><strong>Infrastructure for concrete representations of abstract algebras.</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-concrete-representations-of-abstract-algebras admonition">
+<p class="admonition-title">Concrete representations of abstract algebras</p>
 <p>Mathematically speaking, an <strong>Algebra</strong> is a <strong>set</strong> with a collection
 of closed n-ary operators. Usually 1 or 2 binary operations, 0 to 2
 (partial) functions for inverses, and nullary functions for designated
 elements.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>elements:</strong></p>
+<p><strong>Element:</strong></p>
 <ul class="simple">
 <li><p>Elements know the concrete algebra to which they belong.</p></li>
 <li><p>Each element wraps a hashable immutable representation, called a <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
@@ -284,9 +281,9 @@ elements.</p>
 </ul>
 </li>
 </ul>
-<p><strong>algebras:</strong></p>
+<p><strong>Algebra:</strong></p>
 <ul class="simple">
-<li><p>Contain a dict of their potential elements.</p>
+<li><p>Contains a dict of potential elements.</p>
 <ul>
 <li><p>Can be used with potentially infinite or continuous algebras.</p></li>
 <li><p>The dict is “quasi-immutable”.</p>
@@ -296,7 +293,7 @@ elements.</p>
 </li>
 </ul>
 </li>
-<li><p>Contain user defined functions and attributes.</p>
+<li><p>Contain user defined functions and attributes to implement the algebra.</p>
 <ul>
 <li><p>Functions take <code class="docutils literal notranslate"><span class="pre">ref</span></code> parameters and return <code class="docutils literal notranslate"><span class="pre">ref</span></code> values.</p></li>
 <li><p>Attributes are <code class="docutils literal notranslate"><span class="pre">ref</span></code> valued.</p></li>
@@ -315,10 +312,70 @@ elements.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">algebras</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="magma.html">magma</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semigroup.html">semigroup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="monoid.html">monoid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group.html">group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baseset.html">baseset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement"><code class="docutils literal notranslate"><span class="pre">BaseElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__call__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__eq__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement.__weakref__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__weakref__</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet"><code class="docutils literal notranslate"><span class="pre">BaseSet</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__call__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__eq__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.__weakref__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__weakref__</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.has"><code class="docutils literal notranslate"><span class="pre">BaseSet.has()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="magma.html">magma</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.Magma"><code class="docutils literal notranslate"><span class="pre">Magma</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.Magma.__init__"><code class="docutils literal notranslate"><span class="pre">Magma.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.MagmaElement"><code class="docutils literal notranslate"><span class="pre">MagmaElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.MagmaElement.__init__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.MagmaElement.__mul__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__mul__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="magma.html#boring_math.abstract_algebra.algebras.magma.MagmaElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__rmul__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="semigroup.html">semigroup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="semigroup.html#boring_math.abstract_algebra.algebras.semigroup.Semigroup"><code class="docutils literal notranslate"><span class="pre">Semigroup</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="semigroup.html#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="semigroup.html#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><code class="docutils literal notranslate"><span class="pre">SemigroupElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="semigroup.html#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="monoid.html">monoid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monoid.html#boring_math.abstract_algebra.algebras.monoid.Monoid"><code class="docutils literal notranslate"><span class="pre">Monoid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="monoid.html#boring_math.abstract_algebra.algebras.monoid.Monoid.__init__"><code class="docutils literal notranslate"><span class="pre">Monoid.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="monoid.html#boring_math.abstract_algebra.algebras.monoid.MonoidElement"><code class="docutils literal notranslate"><span class="pre">MonoidElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="monoid.html#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="group.html">group</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.Monoid"><code class="docutils literal notranslate"><span class="pre">Monoid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.Monoid.__init__"><code class="docutils literal notranslate"><span class="pre">Monoid.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.MonoidElement"><code class="docutils literal notranslate"><span class="pre">MonoidElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.MonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -328,12 +385,12 @@ elements.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="magma.html">
+          <a class="next-page" href="baseset.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">magma</div>
+                <div class="title">baseset</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

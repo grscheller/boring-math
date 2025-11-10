@@ -5,8 +5,8 @@ algebras
 
 .. toctree::
     :caption: algebras
-    :maxdepth: 1
 
+    baseset
     magma
     semigroup
     monoid
