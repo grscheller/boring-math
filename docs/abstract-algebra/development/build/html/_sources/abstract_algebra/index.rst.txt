@@ -8,5 +8,6 @@ Package modules
     :maxdepth: 2
 
     algebras/index
+    actions/index
     laws/index
     protocols/index

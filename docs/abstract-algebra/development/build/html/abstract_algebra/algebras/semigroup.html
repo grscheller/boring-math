@@ -213,16 +213,21 @@
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative_monoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian_group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../laws/index.html">laws</a><input aria-label="Toggle navigation of laws" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../laws/group.html">laws.group</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../actions/group.html">group actions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../protocols/index.html">protocols</a><input aria-label="Toggle navigation of protocols" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../laws/index.html">laws</a><input aria-label="Toggle navigation of laws" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../laws/group.html">group laws</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../protocols/index.html">protocols</a><input aria-label="Toggle navigation of protocols" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../protocols/orderings.html">protocols.orderings</a></li>
 </ul>
 </li>
@@ -330,7 +335,7 @@ binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
 <dd><p>Multiply two elements of the same concrete semigroup together.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -383,10 +388,10 @@ the same as repeated multiplication.</p>
 <dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
+<dd class="field-even"><p>NotImplemented, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When left side does not know how to multiply the semigroup element.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When multiplying on left by an int.</p>
 </dd>
 </dl>
 </dd></dl>

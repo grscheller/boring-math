@@ -14,3 +14,4 @@ algebras
     commutative_monoid
     group
     abelian_group
+    ring

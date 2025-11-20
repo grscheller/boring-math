@@ -1,4 +1,4 @@
-commutative_monoid
+commutative monoid
 ==================
 
 .. automodule:: boring_math.abstract_algebra.algebras.commutative_monoid

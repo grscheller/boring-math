@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="group" href="group.html"><link rel="prev" title="monoid" href="monoid.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>commutative_monoid - Boring Math - Abstract Algebra 0.1.0 documentation</title>
+        <title>commutative monoid - Boring Math - Abstract Algebra 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -213,16 +213,21 @@
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">commutative_monoid</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian_group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../laws/index.html">laws</a><input aria-label="Toggle navigation of laws" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../laws/group.html">laws.group</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../actions/group.html">group actions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../protocols/index.html">protocols</a><input aria-label="Toggle navigation of protocols" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../laws/index.html">laws</a><input aria-label="Toggle navigation of laws" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../laws/group.html">group laws</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../protocols/index.html">protocols</a><input aria-label="Toggle navigation of protocols" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../protocols/orderings.html">protocols.orderings</a></li>
 </ul>
 </li>
@@ -267,7 +272,7 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.abstract_algebra.algebras.commutative_monoid">
-<span id="commutative-monoid"></span><h1>commutative_monoid<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_monoid" title="Link to this heading">¶</a></h1>
+<span id="commutative-monoid"></span><h1>commutative monoid<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_monoid" title="Link to this heading">¶</a></h1>
 <div class="admonition-commutative-monoid admonition">
 <p class="admonition-title">Commutative Monoid</p>
 <p>Mathematically a commutative Monoid is a Semigroup <strong>M</strong> along with
@@ -288,8 +293,8 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>add</strong> – Commutative and associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on representations.</p></li>
-<li><p><strong>one</strong> – Representation for additive identity.</p></li>
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -316,8 +321,8 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>add</strong> – Commutative and associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on representations.</p></li>
-<li><p><strong>one</strong> – Representation for additive identity.</p></li>
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -355,11 +360,17 @@ do not have to totally depend on their typing tooling.</p>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete groups.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete algebras.</p></li>
 <li><p><strong>ValueError</strong> – If algebra fails to have an additive identity element.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
 </dd></dl>
 
 </dd></dl>
@@ -421,7 +432,7 @@ do not have to totally depend on their typing tooling.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">commutative_monoid</a><ul>
+<li><a class="reference internal" href="#">commutative monoid</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__init__()</span></code></a></li>
@@ -430,6 +441,7 @@ do not have to totally depend on their typing tooling.</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__str__()</span></code></a></li>
 </ul>
 </li>
 </ul>
