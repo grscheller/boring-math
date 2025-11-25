@@ -33,13 +33,21 @@ All non-typing related dependencies. Arrows point from modules to their dependen
         combinatorics -> number_theory;
         number_theory -> "pythonic_fp.circulararray";
         number_theory -> "pythonic_fp.iterables";
-        probability_distributions -> math;
-        probability_distributions -> "mathplotlib.pyplot";
-        probability_distributions -> "pythonic_fp.fptools";
         pythagorean_triples -> sys;
         pythagorean_triples -> number_theory;
         recursive_functions -> sys;
         recursive_functions -> "pythonic_fp.iterables";
+    }
+
+.. graphviz::
+
+    digraph Modules {
+        bgcolor="#957fb8";
+        node [style=filled, fillcolor="#181616", fontcolor="#dcd7ba"];
+        edge [color="#181616", fontcolor="#dcd7ba"];
+        probability_distributions -> math;
+        probability_distributions -> "mathplotlib.pyplot";
+        probability_distributions -> "pythonic_fp.fptools";
     }
 
 """
