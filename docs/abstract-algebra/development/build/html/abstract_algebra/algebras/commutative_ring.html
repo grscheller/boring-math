@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="semigroup" href="semigroup.html"><link rel="prev" title="baseset" href="baseset.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="ring" href="ring.html"><link rel="prev" title="abelian group" href="abelian_group.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>magma - Boring Math - Abstract Algebra 0.1.0 documentation</title>
+        <title>commutative_ring - Boring Math - Abstract Algebra 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -208,14 +208,14 @@
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Package modules</a><input aria-label="Toggle navigation of Package modules" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">algebras</a><input aria-label="Toggle navigation of algebras" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">magma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset (Abstract)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">commutative_semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">commutative_ring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html">field</a></li>
 </ul>
@@ -254,7 +254,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/abstract_algebra/algebras/magma.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/abstract_algebra/algebras/commutative_ring.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -272,118 +272,85 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.abstract_algebra.algebras.magma">
-<span id="magma"></span><h1>magma<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.magma" title="Link to this heading">¶</a></h1>
-<div class="admonition-magma admonition">
-<p class="admonition-title">Magma</p>
-<p>Mathematically a Magma is a set <strong>M</strong> along with a binary
-multiplicative operation <strong>mult: M X M -&gt; M</strong> on that set.</p>
-</div>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>No assumptions are made whether or not the magma multiplication
-is associative. Python’s <code class="docutils literal notranslate"><span class="pre">*</span></code> operator is used for Magma
-multiplication.</p>
+          <section id="module-boring_math.abstract_algebra.algebras.commutative_ring">
+<span id="commutative-ring"></span><h1>commutative_ring<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_ring" title="Link to this heading">¶</a></h1>
+<div class="admonition-commutative-ring admonition">
+<p class="admonition-title">Commutative Ring</p>
+<p>Mathematically a Commutative Ring is a Ring whose
+multiplication is commutative.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Contract:</strong> Magma initializer parameters must have</p>
+<p><strong>Contract:</strong> Ring initializer parameters must have</p>
 <ul class="simple">
-<li><p><strong>mult</strong> closed on reps</p></li>
+<li><p><strong>add</strong> closed, commutative and associative on reps</p></li>
+<li><p><strong>mult</strong> closed, commutative and associative on reps</p></li>
+<li><p><strong>one</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep*one</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">one*rep</span></code></p></li>
+<li><p><strong>zero</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep+zero</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">zero+rep</span></code></p></li>
+<li><p><strong>negate</strong> maps <code class="docutils literal notranslate"><span class="pre">rep</span> <span class="pre">-&gt;</span> <span class="pre">-rep</span></code>, <code class="docutils literal notranslate"><span class="pre">rep</span> <span class="pre">+</span> <span class="pre">negate(rep)</span> <span class="pre">==</span> <span class="pre">zero</span></code></p></li>
+<li><p><strong>zero</strong> <code class="docutils literal notranslate"><span class="pre">!=</span></code> <strong>one</strong></p></li>
 </ul>
 </div>
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.Magma">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.magma.</span></span><span class="sig-name descname"><span class="pre">Magma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Magma.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.Magma" title="Link to this definition">¶</a></dt>
-<dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.Magma.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement" title="boring_math.abstract_algebra.algebras.magma.MagmaElement"><span class="pre">MagmaElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.Magma.__call__" title="Link to this definition">¶</a></dt>
-<dd><p>Add the unique element to the magma with a given rep.</p>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_ring.</span></span><span class="sig-name descname"><span class="pre">CommutativeRing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeRing.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>negate</strong> – Function mapping element representation to the
+representation of corresponding negated element.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement" title="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement"><span class="pre">CommutativeRingElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Add the unique element to the ring with a given rep.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The element with that representation.</p>
+<dd class="field-even"><p>The unique element with that representation.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.Magma.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Magma.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.Magma.__init__" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeRing.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>negate</strong> – Function mapping element representation to the
+representation of corresponding negated element.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.magma.</span></span><span class="sig-name descname"><span class="pre">MagmaElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma" title="boring_math.abstract_algebra.algebras.magma.Magma"><span class="pre">Magma</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_ring.</span></span><span class="sig-name descname"><span class="pre">CommutativeRingElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing" title="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing"><span class="pre">CommutativeRing</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma" title="boring_math.abstract_algebra.algebras.magma.Magma"><span class="pre">Magma</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__init__" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing" title="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing"><span class="pre">CommutativeRing</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Multiply two elements of the same concrete magma together.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Have added some runtime type checking so that developers
-do not have to totally depend on their typing tooling.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same magma.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">other</span></code>.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different algebras.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement.__pow__">
-<span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__pow__" title="Link to this definition">¶</a></dt>
-<dd><p>Raising magma element to a positive int power is the same as repeated multiplication.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – Multiply magma element to itself n &gt; 0 times.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product of the magma element n times.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ValueError</strong> – When n &lt;= 0.</p></li>
-<li><p><strong>ValueError</strong> – If for some reason a mult method was not defined on the magma.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.magma.MagmaElement.__rmul__">
-<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__rmul__" title="Link to this definition">¶</a></dt>
-<dd><p>For when left operand has no knowledge of the right operand.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When left operand does not know how to multiply the magma element.</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
 </dd></dl>
 
 </dd></dl>
@@ -395,23 +362,23 @@ do not have to totally depend on their typing tooling.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="semigroup.html">
+          <a class="next-page" href="ring.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">semigroup</div>
+                <div class="title">ring</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="baseset.html">
+          <a class="prev-page" href="abelian_group.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">baseset</div>
+                <div class="title">abelian group</div>
                 
               </div>
             </a>
@@ -445,17 +412,15 @@ do not have to totally depend on their typing tooling.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">magma</a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma"><code class="docutils literal notranslate"><span class="pre">Magma</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma.__call__"><code class="docutils literal notranslate"><span class="pre">Magma.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.Magma.__init__"><code class="docutils literal notranslate"><span class="pre">Magma.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#">commutative_ring</a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing"><code class="docutils literal notranslate"><span class="pre">CommutativeRing</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__init__()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement"><code class="docutils literal notranslate"><span class="pre">MagmaElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__init__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__mul__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__mul__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__pow__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__pow__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.magma.MagmaElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">MagmaElement.__rmul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__str__()</span></code></a></li>
 </ul>
 </li>
 </ul>

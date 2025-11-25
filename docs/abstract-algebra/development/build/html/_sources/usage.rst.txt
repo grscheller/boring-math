@@ -17,10 +17,15 @@ Import classes needed to define your own algebras.
 
 .. code:: python
 
-    from boring_math.abstract_algebra.magma import Magma
     from boring_math.abstract_algebra.semigroup import Semigroup
     from boring_math.abstract_algebra.monoid import Monoid
     from boring_math.abstract_algebra.group import Group
+    from boring_math.abstract_algebra.commutative_semigroup import CommutativeSemigroup
+    from boring_math.abstract_algebra.commutative_monoid import CommutativeMonoid
+    from boring_math.abstract_algebra.abelian_group import AbelianGroup
+    from boring_math.abstract_algebra.ring import Ring
+    from boring_math.abstract_algebra.commutative_ring import CommutativeRing
+    from boring_math.abstract_algebra.field import Field
 
 Algebra class hierarchy
 -----------------------
@@ -36,9 +41,9 @@ Arrows point from super class to sub classes.
         CommutativeMonoid -> AbelianGroup;
         CommutativeSemigroup -> CommutativeMonoid;
         BaseSet -> CommutativeSemigroup;
-        Ring -> Field;
+        Ring -> CommutativeRing;
+        CommutativeRing -> Field;
         Monoid -> Group;
-        BaseSet -> Magma;
         Semigroup -> Monoid;
         AbelianGroup -> Ring;
         BaseSet -> Semigroup;

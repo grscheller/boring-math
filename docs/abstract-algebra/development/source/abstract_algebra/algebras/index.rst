@@ -7,12 +7,12 @@ algebras
     :caption: algebras
 
     baseset
-    magma
     semigroup
     commutative_semigroup
     monoid
     commutative_monoid
     group
     abelian_group
+    commutative_ring
     ring
     field
