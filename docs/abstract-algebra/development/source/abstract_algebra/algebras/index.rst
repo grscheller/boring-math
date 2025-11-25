@@ -15,3 +15,4 @@ algebras
     group
     abelian_group
     ring
+    field

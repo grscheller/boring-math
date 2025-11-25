@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="actions" href="../actions/index.html"><link rel="prev" title="abelian group" href="abelian_group.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="field" href="field.html"><link rel="prev" title="abelian group" href="abelian_group.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>ring - Boring Math - Abstract Algebra 0.1.0 documentation</title>
@@ -211,12 +211,13 @@
 <li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magma.html">magma</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">semigroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">commutative_semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">ring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html">field</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -287,14 +288,15 @@ of just one unique element.</p>
 <ul class="simple">
 <li><p><strong>add</strong> closed, commutative and associative on reps</p></li>
 <li><p><strong>mult</strong> closed and associative on reps</p></li>
-<li><p><strong>zero</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep+zero</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">zero+rep</span></code></p></li>
 <li><p><strong>one</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep*one</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">one*rep</span></code></p></li>
+<li><p><strong>zero</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep+zero</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">zero+rep</span></code></p></li>
+<li><p><strong>negate</strong> maps <code class="docutils literal notranslate"><span class="pre">rep</span> <span class="pre">-&gt;</span> <span class="pre">-rep</span></code>, <code class="docutils literal notranslate"><span class="pre">rep</span> <span class="pre">+</span> <span class="pre">negate(rep)</span> <span class="pre">==</span> <span class="pre">zero</span></code></p></li>
 <li><p><strong>zero</strong> <code class="docutils literal notranslate"><span class="pre">!=</span></code> <strong>one</strong></p></li>
 </ul>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.ring.</span></span><span class="sig-name descname"><span class="pre">Ring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.ring.</span></span><span class="sig-name descname"><span class="pre">Ring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Ring.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -323,7 +325,7 @@ representation of corresponding negated element.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Ring.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.__init__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -351,20 +353,23 @@ representation of corresponding negated element.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__mul__">
 <span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>TODO: Fix docstring!</p>
-<p>Multiplying ring element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> is the
-same as repeated addition.</p>
+<dd><p>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
+<ul class="simple">
+<li><p>Multiplying element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> is repeated addition.</p></li>
+<li><p>Algebra mult if <code class="docutils literal notranslate"><span class="pre">other</span></code> is a member of the same concrete algebra.</p></li>
+<li><p>Otherwise return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> (for a right action)</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – Add abelian group element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
+<dd class="field-odd"><p><strong>other</strong> – Add element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sum of the group element n times.</p>
+<dd class="field-even"><p>The sum of the element n times.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – if given an element instead of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
-<li><p><strong>ValueError</strong> – If add method was not defined on the group.</p></li>
+<li><p><strong>ValueError</strong> – if given an element instead of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
+<li><p><strong>ValueError</strong> – If add method was not defined on the algebra.</p></li>
 </ul>
 </dd>
 </dl>
@@ -373,24 +378,19 @@ same as repeated addition.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__pow__">
 <span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__pow__" title="Link to this definition">¶</a></dt>
-<dd><p>Raise the group element to power to the power of <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Have added some runtime type checking so that developers
-do not have to totally depend on their typing tooling.</p>
-</div>
+<dd><p>Raise element to power to the <code class="docutils literal notranslate"><span class="pre">int</span></code> power of <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>n</strong> – The <code class="docutils literal notranslate"><span class="pre">int</span></code> power to raise the element to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The element (or its inverse) raised to an <code class="docutils literal notranslate"><span class="pre">int</span></code> power.</p>
+<dd class="field-even"><p>The element  raised to a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> power.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete algebras.</p></li>
-<li><p><strong>ValueError</strong> – If algebra fails to have an identity element.</p></li>
+<li><p><strong>ValueError</strong> – If algebra is not multiplicative.</p></li>
+<li><p><strong>ValueError</strong> – If algebra does not have a multiplicative identity element.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -400,17 +400,11 @@ do not have to totally depend on their typing tooling.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__rmul__">
 <span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__rmul__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of multiplication does not know how to multiply right side.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When left side does not know how to multiply the semigroup element.</p>
-</dd>
-</dl>
+<ul class="simple">
+<li><p>Multiplying element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> is repeated addition.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">other</span></code> not member of same concrete algebra or left mult would of worked.</p></li>
+<li><p>Otherwise return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> (for a left action)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -428,12 +422,12 @@ do not have to totally depend on their typing tooling.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../actions/index.html">
+          <a class="next-page" href="field.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">actions</div>
+                <div class="title">field</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

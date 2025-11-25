@@ -211,12 +211,13 @@
 <li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magma.html">magma</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">semigroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">commutative_semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html">field</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -373,7 +374,7 @@ elements.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="commutative_semigroup.html">semigroup</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="commutative_semigroup.html">commutative_semigroup</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="commutative_semigroup.html#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__call__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__init__()</span></code></a></li>
@@ -425,7 +426,6 @@ elements.</p>
 <li class="toctree-l2"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.GroupElement"><code class="docutils literal notranslate"><span class="pre">GroupElement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.GroupElement.__init__"><code class="docutils literal notranslate"><span class="pre">GroupElement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.GroupElement.__pow__"><code class="docutils literal notranslate"><span class="pre">GroupElement.__pow__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="group.html#boring_math.abstract_algebra.algebras.group.GroupElement.invert"><code class="docutils literal notranslate"><span class="pre">GroupElement.invert()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -439,7 +439,7 @@ elements.</p>
 <li class="toctree-l2"><a class="reference internal" href="abelian_group.html#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__init__"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__mul__"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement.__mul__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="abelian_group.html#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.negate"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement.negate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="abelian_group.html#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__neg__"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement.__neg__()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -456,6 +456,22 @@ elements.</p>
 <li class="toctree-l3"><a class="reference internal" href="ring.html#boring_math.abstract_algebra.algebras.ring.RingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">RingElement.__pow__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html#boring_math.abstract_algebra.algebras.ring.RingElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__rmul__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html#boring_math.abstract_algebra.algebras.ring.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="field.html">field</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Ring"><code class="docutils literal notranslate"><span class="pre">Ring</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Ring.__call__"><code class="docutils literal notranslate"><span class="pre">Ring.__call__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Ring.__init__"><code class="docutils literal notranslate"><span class="pre">Ring.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement"><code class="docutils literal notranslate"><span class="pre">RingElement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement.__init__"><code class="docutils literal notranslate"><span class="pre">RingElement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement.__mul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__mul__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">RingElement.__pow__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__rmul__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 </ul>
 </li>
 </ul>

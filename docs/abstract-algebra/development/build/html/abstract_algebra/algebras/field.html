@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="group" href="group.html"><link rel="prev" title="monoid" href="monoid.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="actions" href="../actions/index.html"><link rel="prev" title="ring" href="ring.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>commutative monoid - Boring Math - Abstract Algebra 0.1.0 documentation</title>
+        <title>field - Boring Math - Abstract Algebra 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -213,11 +213,11 @@
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_semigroup.html">commutative_semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">commutative monoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html">field</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">field</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -254,7 +254,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/abstract_algebra/algebras/commutative_monoid.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/abstract_algebra/algebras/field.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -272,40 +272,48 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.abstract_algebra.algebras.commutative_monoid">
-<span id="commutative-monoid"></span><h1>commutative monoid<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_monoid" title="Link to this heading">¶</a></h1>
-<div class="admonition-commutative-monoid admonition">
-<p class="admonition-title">Commutative Monoid</p>
-<p>Mathematically a commutative Monoid is a Semigroup <strong>M</strong> along with
-an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</p>
-<p>When such an identity element u exists, it is necessarily unique.</p>
+          <section id="module-boring_math.abstract_algebra.algebras.field">
+<span id="field"></span><h1>field<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.field" title="Link to this heading">¶</a></h1>
+<div class="admonition-field admonition">
+<p class="admonition-title">Field</p>
+<p>Mathematically a Field is a Commutative Ring all whose non-zero elements
+have multiplicative inverses.</p>
+<p>By convention <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">!=</span> <span class="pre">zero</span></code>, otherwise the algebra consists
+of just one unique element.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Contract:</strong> Commutative Monoid initializer parameters must have</p>
+<p><strong>Contract:</strong> Field initializer parameters must have</p>
 <ul class="simple">
-<li><p><strong>add</strong> closed commutative and associative on reps</p></li>
+<li><p><strong>add</strong> closed, commutative and associative on reps</p></li>
+<li><p><strong>mult</strong> closed, commutative and associative on reps</p></li>
+<li><p><strong>one</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep*one</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">one*rep</span></code></p></li>
 <li><p><strong>zero</strong> an identity on reps, <code class="docutils literal notranslate"><span class="pre">rep+zero</span> <span class="pre">==</span> <span class="pre">rep</span> <span class="pre">==</span> <span class="pre">zero+rep</span></code></p></li>
+<li><p><strong>inv</strong> is the mult inverse function on all non-zero reps</p></li>
+<li><p><strong>negate</strong> function to negate all proper rep values</p></li>
+<li><p><strong>invert</strong> function to invert all proper rep values</p></li>
+<li><p><strong>zero</strong> <code class="docutils literal notranslate"><span class="pre">!=</span></code> <strong>one</strong> (by convention)</p></li>
 </ul>
 </div>
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_monoid.</span></span><span class="sig-name descname"><span class="pre">CommutativeMonoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeMonoid.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.Ring">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.field.</span></span><span class="sig-name descname"><span class="pre">Ring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Ring.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.Ring" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
 <li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>negate</strong> – Function mapping element representation to the
+representation of corresponding negated element.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A commutative monoid algebra.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><span class="pre">CommutativeMonoidElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__" title="Link to this definition">¶</a></dt>
-<dd><p>Add the unique element to the monoid with a given rep.</p>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.Ring.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ring.html#boring_math.abstract_algebra.algebras.ring.RingElement" title="boring_math.abstract_algebra.algebras.ring.RingElement"><span class="pre">RingElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.Ring.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Add the unique element to the ring with a given rep.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
@@ -317,17 +325,18 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeMonoid.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.Ring.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">one:</span> <span class="pre">H,</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Ring.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.Ring.__init__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
 <li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>negate</strong> – Function mapping element representation to the
+representation of corresponding negated element.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A commutative monoid algebra.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -335,37 +344,73 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_monoid.</span></span><span class="sig-name descname"><span class="pre">CommutativeMonoidElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><span class="pre">CommutativeMonoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.field.</span></span><span class="sig-name descname"><span class="pre">RingElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Ring" title="boring_math.abstract_algebra.algebras.field.Ring"><span class="pre">Ring</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><span class="pre">CommutativeMonoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Ring" title="boring_math.abstract_algebra.algebras.field.Ring"><span class="pre">Ring</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Repeatedly add a commutative monoid element <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> times.</p>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement.__mul__">
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
+<ul class="simple">
+<li><p>Multiplying element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> is repeated addition.</p></li>
+<li><p>Algebra mult if <code class="docutils literal notranslate"><span class="pre">other</span></code> is a member of the same concrete algebra.</p></li>
+<li><p>Otherwise return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> (for a right action)</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – The number of times to add the element to itself.</p>
+<dd class="field-odd"><p><strong>other</strong> – Add element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The element added to its additive identity <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
+<dd class="field-even"><p>The sum of the element n times.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete algebras.</p></li>
-<li><p><strong>ValueError</strong> – If algebra fails to have an additive identity element.</p></li>
+<li><p><strong>ValueError</strong> – if given an element instead of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
+<li><p><strong>ValueError</strong> – If add method was not defined on the algebra.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement.__pow__">
+<span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement.__pow__" title="Link to this definition">¶</a></dt>
+<dd><p>Raise element to power to the <code class="docutils literal notranslate"><span class="pre">int</span></code> power of <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> – The <code class="docutils literal notranslate"><span class="pre">int</span></code> power to raise the element to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The element  raised to a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> power.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If algebra is not multiplicative.</p></li>
+<li><p><strong>ValueError</strong> – If algebra does not have a multiplicative identity element.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement.__rmul__">
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement.__rmul__" title="Link to this definition">¶</a></dt>
+<dd><p>When left side of multiplication does not know how to multiply right side.</p>
+<ul class="simple">
+<li><p>Multiplying element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> is repeated addition.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">other</span></code> not member of same concrete algebra or left mult would of worked.</p></li>
+<li><p>Otherwise return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> (for a left action)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.RingElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.RingElement.__str__" title="Link to this definition">¶</a></dt>
 <dd><p>Return str(self).</p>
 </dd></dl>
 
@@ -378,23 +423,23 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="group.html">
+          <a class="next-page" href="../actions/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">group</div>
+                <div class="title">actions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="monoid.html">
+          <a class="prev-page" href="ring.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">monoid</div>
+                <div class="title">ring</div>
                 
               </div>
             </a>
@@ -428,16 +473,18 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">commutative monoid</a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#">field</a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Ring"><code class="docutils literal notranslate"><span class="pre">Ring</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Ring.__call__"><code class="docutils literal notranslate"><span class="pre">Ring.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Ring.__init__"><code class="docutils literal notranslate"><span class="pre">Ring.__init__()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement"><code class="docutils literal notranslate"><span class="pre">RingElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement.__init__"><code class="docutils literal notranslate"><span class="pre">RingElement.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement.__mul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__mul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">RingElement.__pow__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__rmul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 </ul>
 </li>
 </ul>

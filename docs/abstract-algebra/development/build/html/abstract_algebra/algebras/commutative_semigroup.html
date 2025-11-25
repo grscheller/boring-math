@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="monoid" href="monoid.html"><link rel="prev" title="semigroup" href="semigroup.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>semigroup - Boring Math - Abstract Algebra 0.1.0 documentation</title>
+        <title>commutative_semigroup - Boring Math - Abstract Algebra 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -211,12 +211,13 @@
 <li class="toctree-l3"><a class="reference internal" href="baseset.html">baseset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="magma.html">magma</a></li>
 <li class="toctree-l3"><a class="reference internal" href="semigroup.html">semigroup</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">semigroup</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">commutative_semigroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="monoid.html">monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commutative_monoid.html">commutative monoid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="group.html">group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="abelian_group.html">abelian group</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ring.html">ring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="field.html">field</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../actions/index.html">actions</a><input aria-label="Toggle navigation of actions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -272,7 +273,7 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.abstract_algebra.algebras.commutative_semigroup">
-<span id="semigroup"></span><h1>semigroup<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_semigroup" title="Link to this heading">¶</a></h1>
+<span id="commutative-semigroup"></span><h1>commutative_semigroup<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.commutative_semigroup" title="Link to this heading">¶</a></h1>
 <div class="admonition-additive-semigroup admonition">
 <p class="admonition-title">Additive Semigroup</p>
 <p>Mathematically an Additive Semigroup is a set <strong>S</strong> along with an
@@ -287,7 +288,7 @@ associative binary operation <strong>add: S X S -&gt; S</strong>.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_semigroup.</span></span><span class="sig-name descname"><span class="pre">CommutativeSemigroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_semigroup.</span></span><span class="sig-name descname"><span class="pre">CommutativeSemigroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeSemigroup.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement" title="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement"><span class="pre">CommutativeSemigroupElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__call__" title="Link to this definition">¶</a></dt>
@@ -304,7 +305,7 @@ associative binary operation <strong>add: S X S -&gt; S</strong>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeSemigroup.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -316,11 +317,6 @@ associative binary operation <strong>add: S X S -&gt; S</strong>.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__">
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete additive semigroup together.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Have added some runtime type checking so that developers
-do not have to totally depend on their typing tooling.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – Another element within the same additive semigroup or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
@@ -439,7 +435,7 @@ the same as repeated addition.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">semigroup</a><ul>
+<li><a class="reference internal" href="#">commutative_semigroup</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__init__()</span></code></a></li>
