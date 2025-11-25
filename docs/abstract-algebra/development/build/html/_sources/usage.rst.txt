@@ -22,3 +22,24 @@ Import classes needed to define your own algebras.
     from boring_math.abstract_algebra.monoid import Monoid
     from boring_math.abstract_algebra.group import Group
 
+Algebra class hierarchy
+-----------------------
+
+Arrows point from super class to sub classes.
+
+.. graphviz::
+
+    digraph Modules {
+        bgcolor="#957fb8";
+        node [style=filled, fillcolor="#181616", fontcolor="#dcd7ba"];
+        edge [color="#181616", fontcolor="#dcd7ba"];
+        CommutativeMonoid -> AbelianGroup;
+        CommutativeSemigroup -> CommutativeMonoid;
+        BaseSet -> CommutativeSemigroup;
+        Ring -> Field;
+        Monoid -> Group;
+        BaseSet -> Magma;
+        Semigroup -> Monoid;
+        AbelianGroup -> Ring;
+        BaseSet -> Semigroup;
+    }

@@ -291,6 +291,24 @@
 </pre></div>
 </div>
 </section>
+<section id="algebra-class-hierarchy">
+<h2>Algebra class hierarchy<a class="headerlink" href="#algebra-class-hierarchy" title="Link to this heading">¶</a></h2>
+<p>Arrows point from super class to sub classes.</p>
+<div class="graphviz"><img src="_images/graphviz-eef72d50d0ca64cd33ca9391e18c6756d5bd1a95.png" alt="digraph Modules {
+    bgcolor=&quot;#957fb8&quot;;
+    node [style=filled, fillcolor=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
+    edge [color=&quot;#181616&quot;, fontcolor=&quot;#dcd7ba&quot;];
+    CommutativeMonoid -&gt; AbelianGroup;
+    CommutativeSemigroup -&gt; CommutativeMonoid;
+    BaseSet -&gt; CommutativeSemigroup;
+    Ring -&gt; Field;
+    Monoid -&gt; Group;
+    BaseSet -&gt; Magma;
+    Semigroup -&gt; Monoid;
+    AbelianGroup -&gt; Ring;
+    BaseSet -&gt; Semigroup;
+}" class="graphviz" /></div>
+</section>
 </section>
 
         </article>
@@ -351,6 +369,7 @@
 <li><a class="reference internal" href="#">Usage</a><ul>
 <li><a class="reference internal" href="#how-to-installing-the-package">How to installing the package</a></li>
 <li><a class="reference internal" href="#importing-the-modules">Importing the modules</a></li>
+<li><a class="reference internal" href="#algebra-class-hierarchy">Algebra class hierarchy</a></li>
 </ul>
 </li>
 </ul>
