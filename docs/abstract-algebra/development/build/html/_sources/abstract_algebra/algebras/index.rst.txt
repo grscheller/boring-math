@@ -8,11 +8,11 @@ algebras
 
     baseset
     semigroup
-    commutative_semigroup
     monoid
-    commutative_monoid
     group
+    commutative_semigroup
+    commutative_monoid
     abelian_group
-    commutative_ring
     ring
+    commutative_ring
     field

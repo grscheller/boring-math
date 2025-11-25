@@ -30,7 +30,7 @@ Import classes needed to define your own algebras.
 Algebra class hierarchy
 -----------------------
 
-Arrows point from super class to sub classes.
+Arrows point from super class to sub classes. Class BaseSet is abstract.
 
 .. graphviz::
 
