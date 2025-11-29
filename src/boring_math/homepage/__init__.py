@@ -10,7 +10,7 @@ is a central component of my Boring Math hobby projects.
 - Hosts on *GitHub Pages*
 
   - The Boring Math homepage.
-  - Sphinx API & usage documentation for each Boring Math project.
+  - Sphinx API & documentation for each Boring Math project.
 
 - Provides locations for overarching CHANGELOG and README files.
 
@@ -18,7 +18,7 @@ is a central component of my Boring Math hobby projects.
 
 .. tip::
 
-    There is no need to install boring-math itself, but does not hurt
+    There is no reason to install boring-math itself, but does not hurt
     anything if it is installed.
 
 """
