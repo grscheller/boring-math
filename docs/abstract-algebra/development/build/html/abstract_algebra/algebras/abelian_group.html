@@ -306,20 +306,6 @@ representation of corresponding negated element.</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement" title="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement"><span class="pre">AbelianGroupElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__" title="Link to this definition">¶</a></dt>
-<dd><p>Add the unique element to the abelian group with a given rep.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The unique element with that representation.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">negate:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">AbelianGroup.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__init__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -330,6 +316,20 @@ representation of corresponding negated element.</p></li>
 <li><p><strong>negate</strong> – Function mapping element representation to the
 representation of corresponding negated element.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement" title="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement"><span class="pre">AbelianGroupElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Add the unique element to the abelian group with a given rep.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The unique element with that representation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -440,8 +440,8 @@ is the same as repeated addition.</p>
             <ul>
 <li><a class="reference internal" href="#">abelian group</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup"><code class="docutils literal notranslate"><span class="pre">AbelianGroup</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__"><code class="docutils literal notranslate"><span class="pre">AbelianGroup.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__init__"><code class="docutils literal notranslate"><span class="pre">AbelianGroup.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__call__"><code class="docutils literal notranslate"><span class="pre">AbelianGroup.__call__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement"><code class="docutils literal notranslate"><span class="pre">AbelianGroupElement</span></code></a><ul>

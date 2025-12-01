@@ -303,20 +303,6 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><span class="pre">CommutativeMonoidElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__" title="Link to this definition">¶</a></dt>
-<dd><p>Add the unique element to the monoid with a given rep.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The unique element with that representation.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">add:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">zero:</span> <span class="pre">H,</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">CommutativeMonoid.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -332,6 +318,20 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><span class="pre">CommutativeMonoidElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Add the unique element to the monoid with a given rep.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to add if not already present.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The unique element with that representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -341,6 +341,12 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><span class="pre">CommutativeMonoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__">
@@ -361,12 +367,6 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
 </ul>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><p>Return str(self).</p>
 </dd></dl>
 
 </dd></dl>
@@ -430,14 +430,14 @@ an identity element u, that is (∃u ∈ M) =&gt; (∀m ∈ M)(u+m = m+u = m).</
             <ul>
 <li><a class="reference internal" href="#">commutative monoid</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
 </ul>
 </li>
 </ul>

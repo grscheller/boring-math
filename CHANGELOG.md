@@ -11,10 +11,14 @@ the overall version number is based on consistent relative release. The release 
 changes when
 
 - **MAJOR:** a consistent, coordinated release of Boring Math PyPI projects happens
-- **MINOR:** breaking API changes are made to a Boring Math PyPI project
+- **MINOR:** breaking API changes are made to a Boring Math PyPI project or a new project is add
 - **PATCH:** minor code improvements and homepage updates are made
 
 ## Important Milestones
+
+### 2025-12-01 - PYPI Boring Math Release 2.1.0
+
+Initial released project boring-math-abstract-algebra 0.1.0 to PyPI.
 
 ### 2025-10-18 - Update
 

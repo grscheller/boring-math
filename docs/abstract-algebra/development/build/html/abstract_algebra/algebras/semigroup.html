@@ -298,6 +298,19 @@ binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Semigroup.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mult</strong> – Associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on representations.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A semigroup algebra.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement" title="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><span class="pre">SemigroupElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__" title="Link to this definition">¶</a></dt>
 <dd><p>Add the unique element to the semigroup with a given rep.</p>
@@ -307,19 +320,6 @@ binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The unique element with that representation.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mult:</span> <span class="pre">~collections.abc.Callable[[H,</span> <span class="pre">H],</span> <span class="pre">H],</span> <span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">Semigroup.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mult</strong> – Associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on representations.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A semigroup algebra.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -355,6 +355,23 @@ binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__">
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__" title="Link to this definition">¶</a></dt>
+<dd><p>When left side of multiplication does not know how to multiply right side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>NotImplemented, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TypeError</strong> – When multiplying on left by an int.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__">
 <span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__" title="Link to this definition">¶</a></dt>
 <dd><p>Raising semigroup element to a positive <code class="docutils literal notranslate"><span class="pre">int</span></code> power is
@@ -371,23 +388,6 @@ the same as repeated multiplication.</p>
 <li><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</p></li>
 <li><p><strong>ValueError</strong> – If for some reason a mult method was not defined on the semigroup.</p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__">
-<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__" title="Link to this definition">¶</a></dt>
-<dd><p>When left side of multiplication does not know how to multiply right side.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>NotImplemented, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When multiplying on left by an int.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -453,15 +453,15 @@ the same as repeated multiplication.</p>
             <ul>
 <li><a class="reference internal" href="#">semigroup</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup"><code class="docutils literal notranslate"><span class="pre">Semigroup</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__call__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><code class="docutils literal notranslate"><span class="pre">SemigroupElement</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__mul__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__pow__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__rmul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__pow__()</span></code></a></li>
 </ul>
 </li>
 </ul>
