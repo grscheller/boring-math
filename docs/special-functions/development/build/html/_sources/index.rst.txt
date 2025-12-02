@@ -12,19 +12,19 @@ one of the
 PyPI projects.
 
 .. toctree::
-   :caption: Overview
-   :hidden:
+    :caption: Overview
+    :hidden:
 
-   self
-
-.. toctree::
-   :caption: User Documentation
-
-   usage
-   releases
-   changelog
+    self
 
 .. toctree::
-   :caption: API Documentation
+    :caption: User Documentation
 
-   special_functions/index
+    usage
+    releases
+    changelog
+
+.. toctree::
+    :caption: API Documentation
+
+    special_functions/index

@@ -13,4 +13,4 @@ boring_math.probability_distributions.distributions
     binomial
 
 .. automodule:: boring_math.probability_distributions.distributions
-   :synopsis:
+    :synopsis:

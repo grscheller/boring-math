@@ -1,5 +1,5 @@
 cli
-===
+---
 
 .. toctree::
     :caption: Modules
@@ -8,7 +8,7 @@ cli
     fibonacci_cli
 
 Installed Apps
----------------
+~~~~~~~~~~~~~~~
 
 .. automodule:: boring_math.recursive_functions.cli
     :synopsis:

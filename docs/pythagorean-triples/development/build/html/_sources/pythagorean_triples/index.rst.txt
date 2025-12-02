@@ -11,4 +11,4 @@ Overview
 --------
 
 .. automodule:: boring_math.pythagorean_triples
-   :synopsis:
+    :synopsis:

@@ -10,19 +10,19 @@ one of the
 PyPI projects.
 
 .. toctree::
-   :caption: Overview
-   :hidden:
+    :caption: Overview
+    :hidden:
 
-   self
-
-.. toctree::
-   :caption: User Documentation
-
-   usage
-   releases
-   changelog
+    self
 
 .. toctree::
-   :caption: API Documentation
+    :caption: User Documentation
 
-   pythagorean_triples/index
+    usage
+    releases
+    changelog
+
+.. toctree::
+    :caption: API Documentation
+
+    pythagorean_triples/index

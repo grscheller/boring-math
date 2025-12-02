@@ -4,18 +4,18 @@ Boring Math
 
 These are the most resent *Boring Math* project PyPI releases.
 
-======================================== ======================================= ========= =============
- PyPI and GitHub Name                    Python Module                           Version   Date Released
-======================================== ======================================= ========= =============
- boring-math-abstract-algebra            boring_math.abstract_algebra            0.1.0     TBD
- boring-math-combinatorics               boring_math.combinatorics               2.0.0     2025-10-09
- boring-math-integer-math [#]_           boring_math.integer_math                1.2.0     2025-10-09
- boring-math-number-theory               boring_math.number_theory               2.0.0     2025-10-09
- boring-math-probability-distributions   boring_math.probability_distributions   0.8.1     2025-10-11
- boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.8.3     2025-10-09
- boring-math-recursive-functions         boring_math.recursive_functions         1.0.0     2025-10-11
- boring-math-special-functions           boring_math.special_functions           0.1.0     2025-10-11
-======================================== ======================================= ========= =============
+======================================== ======================================= ======= =============
+ PyPI and GitHub Name                    Python Module                           Version Date Released
+======================================== ======================================= ======= =============
+ boring-math-abstract-algebra            boring_math.abstract_algebra            0.1.0   2025-12-01
+ boring-math-combinatorics               boring_math.combinatorics               2.0.0   2025-10-09
+ boring-math-integer-math [#]_           boring_math.integer_math                1.2.0   2025-10-09
+ boring-math-number-theory               boring_math.number_theory               2.0.0   2025-10-09
+ boring-math-probability-distributions   boring_math.probability_distributions   0.8.1   2025-10-11
+ boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.8.3   2025-10-09
+ boring-math-recursive-functions         boring_math.recursive_functions         1.0.0   2025-10-11
+ boring-math-special-functions           boring_math.special_functions           0.1.0   2025-10-11
+======================================== ======================================= ======= =============
 
 Remarks
 -------

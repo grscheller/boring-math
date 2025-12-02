@@ -13,4 +13,4 @@ Overview
 --------
 
 .. automodule:: boring_math.recursive_functions
-   :synopsis:
+    :synopsis:

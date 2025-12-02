@@ -16,7 +16,7 @@ changes when
 
 ## Important Milestones
 
-### 2025-12-01 - PYPI Boring Math Release 2.1.0
+### 2025-12-01 - PYPI Boring Math Release 0.1.0
 
 Initial released project boring-math-abstract-algebra 0.1.0 to PyPI.
 
