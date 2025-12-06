@@ -20,6 +20,10 @@ changes when
 
 Initial released project boring-math-abstract-algebra 0.1.0 to PyPI.
 
+### 2025-12-05 - Update
+
+Began work on boring-math-abstract-algebra tentative PyPI 1.1.0 version.
+
 ### 2025-10-18 - Update
 
 Plumbed in boring-math-abstract-algebra docs and integrated into

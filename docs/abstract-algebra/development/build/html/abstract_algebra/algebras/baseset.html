@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="semigroup" href="semigroup.html"><link rel="prev" title="algebras" href="index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>baseset (Abstract) - Boring Math - Abstract Algebra 1.0.0 documentation</title>
+        <title>baseset (Abstract) - Boring Math - Abstract Algebra 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -165,7 +165,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">Boring Math - Abstract Algebra 1.0.0 documentation</div></a>
+      <a href="../../index.html"><div class="brand">Boring Math - Abstract Algebra 1.1.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
-  <span class="sidebar-brand-text">Boring Math - Abstract Algebra 1.0.0 documentation</span>
+  <span class="sidebar-brand-text">Boring Math - Abstract Algebra 1.1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -283,40 +283,43 @@
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.baseset.</span></span><span class="sig-name descname"><span class="pre">BaseSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">BaseSet.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.baseset.</span></span><span class="sig-name descname"><span class="pre">BaseSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">narrow:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">BaseSet.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">process:</span> <span class="pre">~collections.abc.Callable[[H],</span> <span class="pre">H]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">BaseSet.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init__" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__">
 <em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement" title="boring_math.abstract_algebra.algebras.baseset.BaseElement"><span class="pre">BaseElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__" title="Link to this definition">¶</a></dt>
-<dd><p>Call self as a function.</p>
+<dd><p>Add the unique element in the algebra with a given rep.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__eq__" title="Link to this definition">¶</a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>API subject to change. Might want to make this
-some sort of comparison.</p>
-</div>
+<dd><p>Compare if two algebras are the same concrete algebra.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – Object being compared to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">is</span> <span class="pre">other</span></code> if other same type of algebra, otherwise NotImplemented.</p>
+<dd class="field-even"><p>True only if other is same concrete algebra, False if
+a different concrete algebra, otherwise NotImplemented.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__weakref__" title="Link to this definition">¶</a></dt>
-<dd><p>list of weak references to the object</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Parameterizes a generic class.</p>
+<p>At least, parameterizing a generic class is the <em>main</em> thing this
+method does. For example, for some generic class <cite>Foo</cite>, this is called
+when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
+<p>However, note that this method is also called when defining generic
+classes in the first place with <cite>class Foo[T]: …</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__" title="Link to this definition">¶</a></dt>
+<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 </dd></dl>
@@ -325,16 +328,27 @@ some sort of comparison.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.baseset.</span></span><span class="sig-name descname"><span class="pre">BaseElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet" title="boring_math.abstract_algebra.algebras.baseset.BaseSet"><span class="pre">BaseSet</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet" title="boring_math.abstract_algebra.algebras.baseset.BaseSet"><span class="pre">BaseSet</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init__" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__">
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = AlgebraElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A trade off is being made in favor of efficiency over
+encapsulation. An actual reference to the wrapped <code class="docutils literal notranslate"><span class="pre">rep</span></code>
+is returned to eliminate the overhead of a copy.</p>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The representation wrapped by the element.</p>
+<dd class="field-odd"><p>The narrowed representation wrapped within the element.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -342,13 +356,39 @@ some sort of comparison.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__eq__" title="Link to this definition">¶</a></dt>
-<dd><p>Return self==value.</p>
+<dd><p>Compares if two elements, not necessarily in the same concrete
+algebra, contain the same representations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any sort of difference in rep narrowing is not taken into
+consideration.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if both are elements and the reps compare as equal
+and are of the same invariant type.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__weakref__" title="Link to this definition">¶</a></dt>
-<dd><p>list of weak references to the object</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Parameterizes a generic class.</p>
+<p>At least, parameterizing a generic class is the <em>main</em> thing this
+method does. For example, for some generic class <cite>Foo</cite>, this is called
+when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
+<p>However, note that this method is also called when defining generic
+classes in the first place with <cite>class Foo[T]: …</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__" title="Link to this definition">¶</a></dt>
+<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 </dd></dl>
@@ -360,9 +400,17 @@ some sort of comparison.</p>
 supports read-only access to dict-like objects which can be extended
 in a “natural” deterministic way.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init__" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Represent a PEP 585 generic type</p>
+<p>E.g. for t = list[int], t.__origin__ is list and t.__args__ is (int,).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__" title="Link to this definition">¶</a></dt>
+<dd><p>Function to initialize subclasses.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__subclasshook__">
@@ -372,12 +420,6 @@ in a “natural” deterministic way.</p>
 It should return True, False or NotImplemented.  If it returns
 NotImplemented, the normal algorithm is used.  Otherwise, it
 overrides the normal algorithm (and the outcome is cached).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__weakref__" title="Link to this definition">¶</a></dt>
-<dd><p>list of weak references to the object</p>
 </dd></dl>
 
 </dd></dl>
@@ -441,23 +483,24 @@ overrides the normal algorithm (and the outcome is cached).</p>
             <ul>
 <li><a class="reference internal" href="#">baseset (Abstract)</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet"><code class="docutils literal notranslate"><span class="pre">BaseSet</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__weakref__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__weakref__</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__class_getitem__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement"><code class="docutils literal notranslate"><span class="pre">BaseElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__weakref__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__weakref__</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__class_getitem__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping"><code class="docutils literal notranslate"><span class="pre">NaturalMapping</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__class_getitem__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__init_subclass__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__subclasshook__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__subclasshook__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__weakref__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__weakref__</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -471,7 +514,7 @@ overrides the normal algorithm (and the outcome is cached).</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=8d563738"></script>
+</div><script src="../../_static/documentation_options.js?v=fc837d61"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=46bd48cc"></script>

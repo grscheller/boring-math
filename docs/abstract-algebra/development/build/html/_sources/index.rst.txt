@@ -28,6 +28,5 @@ PyPI projects.
 
 .. toctree::
     :caption: API Documentation
-    :maxdepth: 2
 
     abstract_algebra/index

@@ -2,10 +2,11 @@ Package modules
 ===============
 
 .. automodule:: boring_math.abstract_algebra
+    :members:
 
 .. toctree::
     :caption: Modules
-    :maxdepth: 2
+    :maxdepth: 1
 
     algebras/index
     actions/index
