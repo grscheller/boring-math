@@ -305,39 +305,12 @@ a different concrete algebra, otherwise NotImplemented.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.baseset.</span></span><span class="sig-name descname"><span class="pre">BaseElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet" title="boring_math.abstract_algebra.algebras.baseset.BaseSet"><span class="pre">BaseSet</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__">
-<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = AlgebraElement&lt;rep&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__" title="Link to this definition">¶</a></dt>
 <dd><div class="admonition warning">
@@ -374,23 +347,6 @@ and are of the same invariant type.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
@@ -399,29 +355,6 @@ classes in the first place with <cite>class Foo[T]: …</cite>.</p>
 <dd><p>Similar to the collections/abc.Mapping protocol, NaturalMapping
 supports read-only access to dict-like objects which can be extended
 in a “natural” deterministic way.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Represent a PEP 585 generic type</p>
-<p>E.g. for t = list[int], t.__origin__ is list and t.__args__ is (int,).</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__subclasshook__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__subclasshook__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__subclasshook__" title="Link to this definition">¶</a></dt>
-<dd><p>Abstract classes can override this to customize issubclass().</p>
-<p>This is invoked early on by abc.ABCMeta.__subclasscheck__().
-It should return True, False or NotImplemented.  If it returns
-NotImplemented, the normal algorithm is used.  Otherwise, it
-overrides the normal algorithm (and the outcome is cached).</p>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -485,24 +418,14 @@ overrides the normal algorithm (and the outcome is cached).</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet"><code class="docutils literal notranslate"><span class="pre">BaseSet</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__class_getitem__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseSet.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement"><code class="docutils literal notranslate"><span class="pre">BaseElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__str__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__call__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__eq__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__class_getitem__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.BaseElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">BaseElement.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping"><code class="docutils literal notranslate"><span class="pre">NaturalMapping</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__class_getitem__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__init_subclass__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping.__subclasshook__"><code class="docutils literal notranslate"><span class="pre">NaturalMapping.__subclasshook__()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.baseset.NaturalMapping"><code class="docutils literal notranslate"><span class="pre">NaturalMapping</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -1,8 +1,12 @@
 algebras
 ========
 
-.. automodule:: boring_math.abstract_algebra.algebras
-    :members:
+.. Comment .. autosummary::
+.. Comment     :toctree: _autosummary
+.. Comment     :recursive:
+.. Comment 
+.. Comment .. automodule:: boring_math.abstract_algebra.algebras
+.. Comment     :members:
 
 .. toctree::
     :caption: algebras

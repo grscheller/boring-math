@@ -313,17 +313,6 @@ choosing an element from a coset of a group.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
@@ -338,28 +327,12 @@ a different concrete algebra, otherwise NotImplemented.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.semigroup.</span></span><span class="sig-name descname"><span class="pre">SemigroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup" title="boring_math.abstract_algebra.algebras.semigroup.Semigroup"><span class="pre">Semigroup</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = SemigroupElement&lt;rep&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__">
 <span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
 <dd><p>Multiply two elements of the same concrete semigroup together.</p>
@@ -418,6 +391,16 @@ the same as repeated multiplication.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = SemigroupElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__call__" title="Link to this definition">¶</a></dt>
 <dd><div class="admonition warning">
@@ -431,17 +414,6 @@ is returned to eliminate the overhead of a copy.</p>
 <dd class="field-odd"><p>The narrowed representation wrapped within the element.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -463,12 +435,6 @@ consideration.</p>
 and are of the same invariant type.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 </dd></dl>
@@ -533,20 +499,16 @@ and are of the same invariant type.</p>
 <li><a class="reference internal" href="#">semigroup</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup"><code class="docutils literal notranslate"><span class="pre">Semigroup</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><code class="docutils literal notranslate"><span class="pre">SemigroupElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__rmul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__pow__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__call__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__eq__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 </ul>

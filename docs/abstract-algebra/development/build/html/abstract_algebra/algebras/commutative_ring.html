@@ -323,17 +323,6 @@ choosing an element from a coset of a group.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
@@ -346,12 +335,6 @@ classes in the first place with <cite>class Foo[T]: …</cite>.</p>
 a different concrete algebra, otherwise NotImplemented.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 </dd></dl>
@@ -406,17 +389,6 @@ is returned to eliminate the overhead of a copy.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compares if two elements, not necessarily in the same concrete
@@ -435,12 +407,6 @@ consideration.</p>
 and are of the same invariant type.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -593,18 +559,14 @@ and are of the same invariant type.</p>
 <li><a class="reference internal" href="#">commutative_ring</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing"><code class="docutils literal notranslate"><span class="pre">CommutativeRing</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__add__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__init_subclass__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__neg__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__neg__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement.__pow__()</span></code></a></li>

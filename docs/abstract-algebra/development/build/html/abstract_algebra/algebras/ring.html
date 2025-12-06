@@ -326,17 +326,6 @@ choosing an element from a coset of a group.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
@@ -351,28 +340,12 @@ a different concrete algebra, otherwise NotImplemented.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.ring.</span></span><span class="sig-name descname"><span class="pre">RingElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring" title="boring_math.abstract_algebra.algebras.ring.Ring"><span class="pre">Ring</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = RingElement&lt;rep&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__mul__">
 <span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__mul__" title="Link to this definition">¶</a></dt>
 <dd><p>Multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
@@ -430,6 +403,16 @@ a different concrete algebra, otherwise NotImplemented.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = RingElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__add__">
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete additive semigroup together.</p>
@@ -466,17 +449,6 @@ is returned to eliminate the overhead of a copy.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__class_getitem__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__class_getitem__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__class_getitem__" title="Link to this definition">¶</a></dt>
-<dd><p>Parameterizes a generic class.</p>
-<p>At least, parameterizing a generic class is the <em>main</em> thing this
-method does. For example, for some generic class <cite>Foo</cite>, this is called
-when we do <cite>Foo[int]</cite> - there, with <cite>cls=Foo</cite> and <cite>params=int</cite>.</p>
-<p>However, note that this method is also called when defining generic
-classes in the first place with <cite>class Foo[T]: …</cite>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compares if two elements, not necessarily in the same concrete
@@ -495,12 +467,6 @@ consideration.</p>
 and are of the same invariant type.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__init_subclass__">
-<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__init_subclass__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__init_subclass__" title="Link to this definition">¶</a></dt>
-<dd><p>Function to initialize subclasses.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -596,21 +562,17 @@ and are of the same invariant type.</p>
 <li><a class="reference internal" href="#">ring</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring"><code class="docutils literal notranslate"><span class="pre">Ring</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__call__"><code class="docutils literal notranslate"><span class="pre">Ring.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">Ring.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__eq__"><code class="docutils literal notranslate"><span class="pre">Ring.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">Ring.__init_subclass__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement"><code class="docutils literal notranslate"><span class="pre">RingElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__mul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__rmul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">RingElement.__pow__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__add__"><code class="docutils literal notranslate"><span class="pre">RingElement.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__call__"><code class="docutils literal notranslate"><span class="pre">RingElement.__call__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">RingElement.__class_getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__eq__"><code class="docutils literal notranslate"><span class="pre">RingElement.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">RingElement.__init_subclass__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__neg__"><code class="docutils literal notranslate"><span class="pre">RingElement.__neg__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__radd__"><code class="docutils literal notranslate"><span class="pre">RingElement.__radd__()</span></code></a></li>
 </ul>
