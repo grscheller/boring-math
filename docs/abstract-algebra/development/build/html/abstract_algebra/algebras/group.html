@@ -324,15 +324,14 @@ choosing an element from a coset of a group.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.group.Group.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.Group.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.Group.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object being compared to.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object being compared to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True only if other is same concrete algebra, False if
-a different concrete algebra, otherwise NotImplemented.</p>
+<dd class="field-even"><p>True only if <code class="docutils literal notranslate"><span class="pre">right</span></code> is the same concrete algebra. False otherwise.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -345,13 +344,13 @@ a different concrete algebra, otherwise NotImplemented.</p>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.group.GroupElement.__pow__">
 <span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__pow__" title="Link to this definition">¶</a></dt>
-<dd><p>Raise the group element to the power of <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<dd><p>Raise the element to the power of <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>n</strong> – The <code class="docutils literal notranslate"><span class="pre">int</span></code> power to raise the element to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The element (or its inverse) raised to an <code class="docutils literal notranslate"><span class="pre">int</span></code> power.</p>
+<dd class="field-even"><p>The element (or its inverse) raised to the integer``n`` power.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -391,9 +390,10 @@ is returned to eliminate the overhead of a copy.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.group.GroupElement.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compares if two elements, not necessarily in the same concrete
-algebra, contain the same representations.</p>
+algebra, contain equal representations of the same hashable
+type.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Any sort of difference in rep narrowing is not taken into
@@ -412,34 +412,33 @@ and are of the same invariant type.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.group.GroupElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Multiply two elements of the same concrete semigroup together.</p>
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Multiply two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same semigroup.</p>
+<dd class="field-odd"><p><strong>right</strong> – An element within the same concrete algebra or a right action.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">other</span></code>.</p>
+<dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">right</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code>.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete semigroups.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+different concrete algebras.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.group.GroupElement.__rmul__">
-<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__rmul__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.group.GroupElement.__rmul__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of multiplication does not know how to multiply right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
+<dd class="field-odd"><p><strong>left</strong> – Left side of the multiplication.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>NotImplemented, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
+<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code>
+would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>TypeError</strong> – When multiplying on left by an int.</p>

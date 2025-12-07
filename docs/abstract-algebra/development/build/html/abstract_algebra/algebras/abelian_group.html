@@ -323,15 +323,14 @@ choosing an element from a coset of a group.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroup.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object being compared to.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object being compared to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True only if other is same concrete algebra, False if
-a different concrete algebra, otherwise NotImplemented.</p>
+<dd class="field-even"><p>True only if <code class="docutils literal notranslate"><span class="pre">right</span></code> is the same concrete algebra. False otherwise.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -344,19 +343,19 @@ a different concrete algebra, otherwise NotImplemented.</p>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__mul__">
 <span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Multiplying additive group element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>
+<dd><p>Multiplying an algebra element by an integer <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>
 is the same as repeated addition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – Add abelian group element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
+<dd class="field-odd"><p><strong>n</strong> – Add the element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sum of the group element n times.</p>
+<dd class="field-even"><p>The sum of the group element <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>TypeError</strong> – if given an element instead of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
-<li><p><strong>ValueError</strong> – If add method was not defined on the group.</p></li>
+<li><p><strong>ValueError</strong> – If add method was not defined on the algebra.</p></li>
 </ul>
 </dd>
 </dl>
@@ -365,7 +364,7 @@ is the same as repeated addition.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__neg__">
 <span class="sig-name descname"><span class="pre">__neg__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__neg__" title="Link to this definition">¶</a></dt>
-<dd><p>Negate the abelian group element.</p>
+<dd><p>Negate the element.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The unique additive inverse element to <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
@@ -389,17 +388,18 @@ is the same as repeated addition.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__add__">
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__add__" title="Link to this definition">¶</a></dt>
-<dd><p>Add two elements of the same concrete additive semigroup together.</p>
+<dd><p>Add two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same additive semigroup or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sum <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete additive semigroups.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+different concrete algebras.</p></li>
 <li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
 </ul>
 </dd>
@@ -424,9 +424,10 @@ is returned to eliminate the overhead of a copy.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compares if two elements, not necessarily in the same concrete
-algebra, contain the same representations.</p>
+algebra, contain equal representations of the same hashable
+type.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Any sort of difference in rep narrowing is not taken into
@@ -445,17 +446,19 @@ and are of the same invariant type.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__radd__">
-<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__radd__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.abelian_group.AbelianGroupElement.__radd__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of addition does not know how to add right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – Left side of the addition.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__add__(right)</span></code> would have worked.</p>
+<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__add__(right)</span></code>
+would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When left side does not know how to add the additive semigroup element.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to add
+the left side to itself.</p>
 </dd>
 </dl>
 </dd></dl>

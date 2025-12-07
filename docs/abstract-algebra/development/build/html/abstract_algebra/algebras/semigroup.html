@@ -276,8 +276,8 @@
 <span id="semigroup"></span><h1>semigroup<a class="headerlink" href="#module-boring_math.abstract_algebra.algebras.semigroup" title="Link to this heading">¶</a></h1>
 <div class="admonition-semigroup admonition">
 <p class="admonition-title">Semigroup</p>
-<p>Mathematically a Semigroup is a set <strong>S</strong> along with an associative
-binary operation <strong>mult: S X S -&gt; S</strong>.</p>
+<p>Mathematically a Semigroup is a set <strong>S</strong> along with an
+associative binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -292,7 +292,7 @@ binary operation <strong>mult: S X S -&gt; S</strong>.</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mult</strong> – Associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on representations.</p></li>
+<li><p><strong>mult</strong> – Associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on reps.</p></li>
 <li><p><strong>narrow</strong> – Narrow the rep type, many-to-one function. Like
 choosing an element from a coset of a group.</p></li>
 </ul>
@@ -314,15 +314,14 @@ choosing an element from a coset of a group.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compare if two algebras are the same concrete algebra.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object being compared to.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object being compared to.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True only if other is same concrete algebra, False if
-a different concrete algebra, otherwise NotImplemented.</p>
+<dd class="field-even"><p>True only if <code class="docutils literal notranslate"><span class="pre">right</span></code> is the same concrete algebra. False otherwise.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -334,34 +333,33 @@ a different concrete algebra, otherwise NotImplemented.</p>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.semigroup.</span></span><span class="sig-name descname"><span class="pre">SemigroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup" title="boring_math.abstract_algebra.algebras.semigroup.Semigroup"><span class="pre">Semigroup</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Multiply two elements of the same concrete semigroup together.</p>
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Multiply two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same semigroup.</p>
+<dd class="field-odd"><p><strong>right</strong> – An element within the same concrete algebra or a right action.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">other</span></code>.</p>
+<dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">right</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code>.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but different concrete semigroups.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+different concrete algebras.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__">
-<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of multiplication does not know how to multiply right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Left side of the multiplication.</p>
+<dd class="field-odd"><p><strong>left</strong> – Left side of the multiplication.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>NotImplemented, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code> would have worked.</p>
+<dd class="field-even"><p>Never returns, otherwise <code class="docutils literal notranslate"><span class="pre">left.__mul__(right)</span></code>
+would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>TypeError</strong> – When multiplying on left by an int.</p>
@@ -372,19 +370,19 @@ a different concrete algebra, otherwise NotImplemented.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__">
 <span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__pow__" title="Link to this definition">¶</a></dt>
-<dd><p>Raising semigroup element to a positive <code class="docutils literal notranslate"><span class="pre">int</span></code> power is
-the same as repeated multiplication.</p>
+<dd><p>Raising element to a positive <code class="docutils literal notranslate"><span class="pre">int</span></code> power is the same as
+repeated multiplication.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – Multiply semigroup element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
+<dd class="field-odd"><p><strong>n</strong> – Multiply element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product of the semigroup element n times.</p>
+<dd class="field-even"><p>The product of the element n times.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</p></li>
-<li><p><strong>ValueError</strong> – If for some reason a mult method was not defined on the semigroup.</p></li>
+<li><p><strong>ValueError</strong> – If algebra does not have a mult attribute.</p></li>
 </ul>
 </dd>
 </dl>
@@ -418,9 +416,10 @@ is returned to eliminate the overhead of a copy.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__eq__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__eq__" title="Link to this definition">¶</a></dt>
 <dd><p>Compares if two elements, not necessarily in the same concrete
-algebra, contain the same representations.</p>
+algebra, contain equal representations of the same hashable
+type.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Any sort of difference in rep narrowing is not taken into
