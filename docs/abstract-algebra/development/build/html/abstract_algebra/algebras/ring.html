@@ -339,12 +339,36 @@ choosing an element from a coset of a group.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.Ring.narrow_type">
+<span class="sig-name descname"><span class="pre">narrow_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.Ring.narrow_type" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow the type with the concrete algebra’s narrowing function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to narrow.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The narrowed representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.ring.</span></span><span class="sig-name descname"><span class="pre">RingElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring" title="boring_math.abstract_algebra.algebras.ring.Ring"><span class="pre">Ring</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = RingElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__mul__">
 <span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__mul__" title="Link to this definition">¶</a></dt>
 <dd><p>Left multiplication for <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
@@ -410,22 +434,12 @@ identity element.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = RingElement&lt;rep&gt;</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__add__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sum <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>.</p>
@@ -434,7 +448,8 @@ identity element.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
 different concrete algebras.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
+<li><p><strong>TypeError</strong> – If Addition not defined on the algebra of the elements.</p></li>
+<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> are different types.</p></li>
 </ul>
 </dd>
 </dl>
@@ -469,7 +484,7 @@ consideration.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object to be compared with.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if both are elements and the reps compare as equal
@@ -494,7 +509,7 @@ and are of the same invariant type.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.ring.RingElement.__radd__">
-<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__radd__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__radd__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of addition does not know how to add right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -505,8 +520,8 @@ and are of the same invariant type.</p>
 would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to add
-the left side to itself.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to
+add the left side to itself.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -574,13 +589,14 @@ the left side to itself.</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring"><code class="docutils literal notranslate"><span class="pre">Ring</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__call__"><code class="docutils literal notranslate"><span class="pre">Ring.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.__eq__"><code class="docutils literal notranslate"><span class="pre">Ring.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.Ring.narrow_type"><code class="docutils literal notranslate"><span class="pre">Ring.narrow_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement"><code class="docutils literal notranslate"><span class="pre">RingElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__mul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">RingElement.__rmul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__pow__"><code class="docutils literal notranslate"><span class="pre">RingElement.__pow__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__str__"><code class="docutils literal notranslate"><span class="pre">RingElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__add__"><code class="docutils literal notranslate"><span class="pre">RingElement.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__call__"><code class="docutils literal notranslate"><span class="pre">RingElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.ring.RingElement.__eq__"><code class="docutils literal notranslate"><span class="pre">RingElement.__eq__()</span></code></a></li>

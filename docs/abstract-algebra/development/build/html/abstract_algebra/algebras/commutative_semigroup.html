@@ -326,18 +326,42 @@ choosing an element from a coset of a group.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.narrow_type">
+<span class="sig-name descname"><span class="pre">narrow_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.narrow_type" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow the type with the concrete algebra’s narrowing function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to narrow.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The narrowed representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_semigroup.</span></span><span class="sig-name descname"><span class="pre">CommutativeSemigroupElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup" title="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup"><span class="pre">CommutativeSemigroup</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = CommutativeSemigroupElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sum <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>.</p>
@@ -346,7 +370,8 @@ choosing an element from a coset of a group.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
 different concrete algebras.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
+<li><p><strong>TypeError</strong> – If Addition not defined on the algebra of the elements.</p></li>
+<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> are different types.</p></li>
 </ul>
 </dd>
 </dl>
@@ -354,7 +379,7 @@ different concrete algebras.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__radd__">
-<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__radd__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__radd__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of addition does not know how to add right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -365,41 +390,39 @@ different concrete algebras.</p></li>
 would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to add
-the left side to itself.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to
+add the left side to itself.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Multiplying additive semigroup element by a positive <code class="docutils literal notranslate"><span class="pre">int</span></code> is
-the same as repeated addition.</p>
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Repeatedly add an element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – Add additive semigroup element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
+<dd class="field-odd"><p><strong>n</strong> – Object, usually a positive <code class="docutils literal notranslate"><span class="pre">int</span></code> or action.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sum of the semigroup element n times.</p>
+<dd class="field-even"><p>If <code class="docutils literal notranslate"><span class="pre">n:</span> <span class="pre">int</span></code> then self added to itself n times
+else NotImplemented.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</p></li>
-<li><p><strong>ValueError</strong> – If add method not defined on the algebra.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+different concrete algebras.</p></li>
+<li><p><strong>TypeError</strong> – If algebra fails to have an addition method.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = CommutativeSemigroupElement&lt;rep&gt;</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__rmul__">
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__rmul__" title="Link to this definition">¶</a></dt>
+<dd><p>Repeatedly add an element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -431,7 +454,7 @@ consideration.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object to be compared with.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if both are elements and the reps compare as equal
@@ -503,13 +526,15 @@ and are of the same invariant type.</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroup.narrow_type"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroup.narrow_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__add__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__radd__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__radd__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__mul__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__rmul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeSemigroupElement.__eq__()</span></code></a></li>
 </ul>

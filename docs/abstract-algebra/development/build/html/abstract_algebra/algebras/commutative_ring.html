@@ -293,12 +293,12 @@ multiplication is commutative.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_ring.</span></span><span class="sig-name descname"><span class="pre">CommutativeRing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">narrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_ring.</span></span><span class="sig-name descname"><span class="pre">CommutativeRing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">narrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
 <li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
 <li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
 <li><p><strong>zero</strong> – Representation for additive identity.</p></li>
 <li><p><strong>negate</strong> – Function mapping element representation to the
@@ -336,6 +336,20 @@ choosing an element from a coset of a group.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.narrow_type">
+<span class="sig-name descname"><span class="pre">narrow_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.narrow_type" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow the type with the concrete algebra’s narrowing function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to narrow.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The narrowed representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -353,11 +367,11 @@ choosing an element from a coset of a group.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__add__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sum <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>.</p>
@@ -366,7 +380,8 @@ choosing an element from a coset of a group.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
 different concrete algebras.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
+<li><p><strong>TypeError</strong> – If Addition not defined on the algebra of the elements.</p></li>
+<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> are different types.</p></li>
 </ul>
 </dd>
 </dl>
@@ -401,7 +416,7 @@ consideration.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object to be compared with.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if both are elements and the reps compare as equal
@@ -473,7 +488,7 @@ identity element.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__radd__">
-<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__radd__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement.__radd__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of addition does not know how to add right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -484,8 +499,8 @@ identity element.</p></li>
 would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to add
-the left side to itself.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to
+add the left side to itself.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -571,6 +586,7 @@ on object on right</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing"><code class="docutils literal notranslate"><span class="pre">CommutativeRing</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRing.narrow_type"><code class="docutils literal notranslate"><span class="pre">CommutativeRing.narrow_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement"><code class="docutils literal notranslate"><span class="pre">CommutativeRingElement</span></code></a><ul>

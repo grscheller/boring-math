@@ -329,35 +329,26 @@ choosing an element from a coset of a group.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.narrow_type">
+<span class="sig-name descname"><span class="pre">narrow_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.narrow_type" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow the type with the concrete algebra’s narrowing function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to narrow.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The narrowed representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_monoid.</span></span><span class="sig-name descname"><span class="pre">CommutativeMonoidElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><span class="pre">CommutativeMonoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__" title="Link to this definition">¶</a></dt>
-<dd><p>Repeatedly add a commutative monoid element <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code> times.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>n</strong> – The number of times to add the element to itself.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The element added to its additive identity <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
-<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
-different concrete algebras.</p></li>
-<li><p><strong>ValueError</strong> – If algebra fails to have an additive identity
-element.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
 <span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -368,12 +359,42 @@ element.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__">
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Repeatedly add an element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> – Object, usually a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> or action.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If <code class="docutils literal notranslate"><span class="pre">n:</span> <span class="pre">int</span></code> then self added to itself n times
+else NotImplemented.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.</p></li>
+<li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+different concrete algebras.</p></li>
+<li><p><strong>TypeError</strong> – If algebra fails to have an additive
+identity element or an addition method.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__rmul__">
+<span class="sig-name descname"><span class="pre">__rmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__rmul__" title="Link to this definition">¶</a></dt>
+<dd><p>Repeatedly add an element to itself <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> times.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__add__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__add__" title="Link to this definition">¶</a></dt>
 <dd><p>Add two elements of the same concrete algebra together.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra or an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<dd class="field-odd"><p><strong>other</strong> – Another element within the same algebra.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sum <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>.</p>
@@ -382,7 +403,8 @@ element.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
 different concrete algebras.</p></li>
-<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are different types.</p></li>
+<li><p><strong>TypeError</strong> – If Addition not defined on the algebra of the elements.</p></li>
+<li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> are different types.</p></li>
 </ul>
 </dd>
 </dl>
@@ -417,7 +439,7 @@ consideration.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object to be compared with.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if both are elements and the reps compare as equal
@@ -428,7 +450,7 @@ and are of the same invariant type.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__radd__">
-<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__radd__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__radd__" title="Link to this definition">¶</a></dt>
 <dd><p>When left side of addition does not know how to add right side.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -439,8 +461,8 @@ and are of the same invariant type.</p>
 would have worked.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to add
-the left side to itself.</p>
+<dd class="field-odd"><p><strong>TypeError</strong> – When right side does not know how to
+add the left side to itself.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -508,11 +530,13 @@ the left side to itself.</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.narrow_type"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.narrow_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__rmul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__add__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__eq__()</span></code></a></li>

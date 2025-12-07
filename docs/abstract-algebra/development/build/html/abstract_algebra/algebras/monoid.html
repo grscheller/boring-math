@@ -329,12 +329,36 @@ choosing an element from a coset of a group.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.monoid.Monoid.narrow_type">
+<span class="sig-name descname"><span class="pre">narrow_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">H</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.monoid.Monoid.narrow_type" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow the type with the concrete algebra’s narrowing function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rep</strong> – Representation to narrow.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The narrowed representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.monoid.MonoidElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.monoid.</span></span><span class="sig-name descname"><span class="pre">MonoidElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.Monoid" title="boring_math.abstract_algebra.algebras.monoid.Monoid"><span class="pre">Monoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.monoid.MonoidElement.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__str__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str(self) = MonoidElement&lt;rep&gt;</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.monoid.MonoidElement.__pow__">
 <span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__pow__" title="Link to this definition">¶</a></dt>
 <dd><p>Raise the element to power to the power of <code class="docutils literal notranslate"><span class="pre">n&gt;=0</span></code>.</p>
@@ -353,16 +377,6 @@ integer <code class="docutils literal notranslate"><span class="pre">n</span></c
 but different concrete groups.</p></li>
 <li><p><strong>ValueError</strong> – If algebra fails to have an identity element.</p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.monoid.MonoidElement.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__str__" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str(self) = MonoidElement&lt;rep&gt;</p>
 </dd>
 </dl>
 </dd></dl>
@@ -396,7 +410,7 @@ consideration.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – Object to be compared with.</p>
+<dd class="field-odd"><p><strong>right</strong> – Object to be compared with.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if both are elements and the reps compare as equal
@@ -417,7 +431,7 @@ and are of the same invariant type.</p>
 <dd class="field-even"><p>The product <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">right</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code>.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> are same type but
+<dd class="field-odd"><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> are same type but
 different concrete algebras.</p>
 </dd>
 </dl>
@@ -504,11 +518,12 @@ would have worked.</p>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.Monoid"><code class="docutils literal notranslate"><span class="pre">Monoid</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.Monoid.__call__"><code class="docutils literal notranslate"><span class="pre">Monoid.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.Monoid.__eq__"><code class="docutils literal notranslate"><span class="pre">Monoid.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.Monoid.narrow_type"><code class="docutils literal notranslate"><span class="pre">Monoid.narrow_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement"><code class="docutils literal notranslate"><span class="pre">MonoidElement</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__pow__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__pow__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__pow__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__pow__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__call__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__eq__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__eq__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.monoid.MonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">MonoidElement.__mul__()</span></code></a></li>
