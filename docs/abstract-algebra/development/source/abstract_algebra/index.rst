@@ -1,14 +1,9 @@
-Package modules
-===============
 
-.. automodule:: boring_math.abstract_algebra
-    :members:
+BM Abstract Algebra Project
+===========================
 
-.. toctree::
-    :caption: Modules
-    :maxdepth: 1
+.. autosummary::
+    :toctree: _autosummary
+    :recursive:
 
-    algebras/index
-    actions/index
-    laws/index
-    protocols/index
+    boring_math.abstract_algebra

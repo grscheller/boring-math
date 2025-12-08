@@ -17,8 +17,9 @@ help:
 
 Makefile:
 	mkdir -p $(STATICDIR) $(TEMPLATEDIR)
+	rm -rf build source/abstract_algebra/_autosummary
 
-.PHONY: help Makefile
+.PHONY: help Makefile cleansource
 
 # Catch-all target: route all unknown targets to Sphinx
 %: Makefile

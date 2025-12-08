@@ -27,6 +27,7 @@ extensions = [
 ]
 
 autodoc_member_order = 'bysource'
+autosummary_generate = True
 autoclass_content = 'both'
 
 templates_path = ['_templates']
@@ -50,4 +51,5 @@ rst_epilog = f"""
 .. |VERSION_RELEASED| replace:: version {release}
 
 .. |RELEASE_STRING| replace:: {release_string}
+
 """
