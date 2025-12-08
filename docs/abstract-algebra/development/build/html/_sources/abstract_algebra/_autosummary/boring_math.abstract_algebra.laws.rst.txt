@@ -1,0 +1,13 @@
+boring\_math.abstract\_algebra.laws
+===================================
+
+.. automodule:: boring_math.abstract_algebra.laws
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   group

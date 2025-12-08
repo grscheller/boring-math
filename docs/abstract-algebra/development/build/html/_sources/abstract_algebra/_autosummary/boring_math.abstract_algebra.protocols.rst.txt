@@ -1,0 +1,13 @@
+boring\_math.abstract\_algebra.protocols
+========================================
+
+.. automodule:: boring_math.abstract_algebra.protocols
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   orderings

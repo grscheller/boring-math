@@ -1,0 +1,13 @@
+boring\_math.abstract\_algebra.algebras.abelian\_group
+======================================================
+
+.. automodule:: boring_math.abstract_algebra.algebras.abelian_group
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbelianGroup
+      AbelianGroupElement
+   

@@ -1,0 +1,14 @@
+boring\_math.abstract\_algebra.algebras.baseset
+===============================================
+
+.. automodule:: boring_math.abstract_algebra.algebras.baseset
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BaseElement
+      BaseSet
+      NaturalMapping
+   

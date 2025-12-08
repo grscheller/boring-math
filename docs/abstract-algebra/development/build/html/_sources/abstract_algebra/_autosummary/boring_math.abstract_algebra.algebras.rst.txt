@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.algebras
+=======================================
+
+.. automodule:: boring_math.abstract_algebra.algebras
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   abelian_group
+   baseset
+   commutative_monoid
+   commutative_ring
+   commutative_semigroup
+   field
+   group
+   monoid
+   ring
+   semigroup

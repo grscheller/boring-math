@@ -1,0 +1,13 @@
+boring\_math.abstract\_algebra.algebras.commutative\_semigroup
+==============================================================
+
+.. automodule:: boring_math.abstract_algebra.algebras.commutative_semigroup
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CommutativeSemigroup
+      CommutativeSemigroupElement
+   
