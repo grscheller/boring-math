@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.algebras.baseset.BaseElement
+===========================================================
+
+.. currentmodule:: boring_math.abstract_algebra.algebras.baseset
+
+.. autoclass:: BaseElement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BaseElement.__init__
+   
+   
+
+   
+   
+   

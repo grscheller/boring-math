@@ -1,6 +1,0 @@
-boring\_math.abstract\_algebra.laws.group
-=========================================
-
-.. automodule:: boring_math.abstract_algebra.laws.group
-
-   

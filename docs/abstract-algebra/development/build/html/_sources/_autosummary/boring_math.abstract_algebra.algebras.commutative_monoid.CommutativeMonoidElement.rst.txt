@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.algebras.commutative\_monoid.CommutativeMonoidElement
+====================================================================================
+
+.. currentmodule:: boring_math.abstract_algebra.algebras.commutative_monoid
+
+.. autoclass:: CommutativeMonoidElement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CommutativeMonoidElement.__init__
+   
+   
+
+   
+   
+   

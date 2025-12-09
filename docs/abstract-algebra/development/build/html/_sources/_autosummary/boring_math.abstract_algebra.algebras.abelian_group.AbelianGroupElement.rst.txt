@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.algebras.abelian\_group.AbelianGroupElement
+==========================================================================
+
+.. currentmodule:: boring_math.abstract_algebra.algebras.abelian_group
+
+.. autoclass:: AbelianGroupElement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AbelianGroupElement.__init__
+   
+   
+
+   
+   
+   

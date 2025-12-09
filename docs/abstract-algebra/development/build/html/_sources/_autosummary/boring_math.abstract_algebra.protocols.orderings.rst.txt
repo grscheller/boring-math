@@ -1,0 +1,28 @@
+﻿boring\_math.abstract\_algebra.protocols.orderings
+==================================================
+
+.. automodule:: boring_math.abstract_algebra.protocols.orderings
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+   
+      PartialOrder
+      TotalOrder
+   
+   
+
+   
+   
+   

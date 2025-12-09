@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.protocols.orderings.TotalOrder
+=============================================================
+
+.. currentmodule:: boring_math.abstract_algebra.protocols.orderings
+
+.. autoclass:: TotalOrder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TotalOrder.__init__
+   
+   
+
+   
+   
+   

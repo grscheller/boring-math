@@ -1,0 +1,28 @@
+﻿boring\_math.abstract\_algebra.algebras.commutative\_ring
+=========================================================
+
+.. automodule:: boring_math.abstract_algebra.algebras.commutative_ring
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+   
+      CommutativeRing
+      CommutativeRingElement
+   
+   
+
+   
+   
+   

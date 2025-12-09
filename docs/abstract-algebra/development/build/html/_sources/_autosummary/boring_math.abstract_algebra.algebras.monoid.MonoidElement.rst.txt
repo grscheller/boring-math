@@ -1,0 +1,22 @@
+boring\_math.abstract\_algebra.algebras.monoid.MonoidElement
+============================================================
+
+.. currentmodule:: boring_math.abstract_algebra.algebras.monoid
+
+.. autoclass:: MonoidElement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MonoidElement.__init__
+   
+   
+
+   
+   
+   

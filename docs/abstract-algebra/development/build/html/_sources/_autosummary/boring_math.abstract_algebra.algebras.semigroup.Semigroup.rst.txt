@@ -1,0 +1,23 @@
+boring\_math.abstract\_algebra.algebras.semigroup.Semigroup
+===========================================================
+
+.. currentmodule:: boring_math.abstract_algebra.algebras.semigroup
+
+.. autoclass:: Semigroup
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Semigroup.__init__
+      ~Semigroup.narrow_rep_type
+   
+   
+
+   
+   
+   

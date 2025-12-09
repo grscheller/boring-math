@@ -1,0 +1,20 @@
+﻿boring\_math.abstract\_algebra
+==============================
+
+.. automodule:: boring_math.abstract_algebra
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
