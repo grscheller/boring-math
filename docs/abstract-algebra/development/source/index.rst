@@ -29,4 +29,4 @@ For a proposed PyPI 1.1.0 release.
 .. toctree::
     :caption: API Documentation
 
-    abstract_algebra
+    docs

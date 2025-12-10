@@ -20,13 +20,24 @@ release = '1.1.0'
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
     'sphinx.ext.graphviz',
 ]
-
+autodoc_default_options = {
+    'members': True,
+    'undoc-members': True,
+    'private-members': True,
+    'special-members': True,
+    'inherited-members': True,
+    'show-inheritance': True,
+}
 autodoc_member_order = 'bysource'
-autosummary_generate = True
 autoclass_content = 'both'
+autodoc_class_signature = 'separated'
+autodoc_typehints_format = 'short'
+autodoc_use_type_comments = True
+autodoc_docstring_signature = False
+autodoc_preserve_defaults = True
+autodoc_warningiserror = False
 
 templates_path = ['_templates']
 exclude_patterns: list[str] = []
