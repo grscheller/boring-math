@@ -271,8 +271,8 @@
         <article role="main" id="furo-main-content">
           <section id="algebras">
 <h1>algebras<a class="headerlink" href="#algebras" title="Link to this heading">¶</a></h1>
-<section id="boring-math-abstract-algebra">
-<h2>Boring Math - Abstract Algebra<a class="headerlink" href="#boring-math-abstract-algebra" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h2>Algebras<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <div class="admonition-concrete-representations-of-abstract-algebras admonition">
 <p class="admonition-title">Concrete representations of abstract algebras</p>
 <p>Mathematically speaking, an <strong>Algebra</strong> is a <strong>set</strong> with a collection
@@ -308,45 +308,6 @@ elements.</p>
 <li><p>There is a one-to-one correspondence between <code class="docutils literal notranslate"><span class="pre">rep</span></code> values and elements.</p></li>
 <li><p>Algebra operations act on the elements themselves, not on the reps.</p></li>
 <li><p>Algebras know how to manipulate the representations of their elements.</p></li>
-</ul>
-</div>
-<div class="admonition-laws-for-algebras admonition">
-<p class="admonition-title">Laws for algebras</p>
-<p>Ensure concrete representation of abstract algebras adhere to the
-laws (mathematical truths) of the abstract algebra.</p>
-<ul class="simple">
-<li><p>group laws</p></li>
-</ul>
-</div>
-<div class="admonition-actions-on-algebras admonition">
-<p class="admonition-title">Actions on algebras</p>
-<p>Actions can be performed from either the left or the right leveraging
-the Python multiplication operator <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
-</div>
-<div class="admonition-additional-structure-on-algebras admonition">
-<p class="admonition-title">Additional structure on algebras</p>
-<p>Non-algebraic properties for algebras.</p>
-<p><strong>Orderings</strong></p>
-<ul class="simple">
-<li><p>Partial order</p></li>
-<li><p>Total order</p></li>
-</ul>
-</div>
-<div class="admonition-tools-for-algebras admonition">
-<p class="admonition-title">Tools for algebras</p>
-<p>TODO: Make separate PyPI Boring Math projects?</p>
-<ul class="simple">
-<li><p>groups</p>
-<ul>
-<li><p>Sylow tools</p></li>
-</ul>
-</li>
-<li><p>rings</p></li>
-<li><p>fields</p>
-<ul>
-<li><p>Galois tools</p></li>
-</ul>
-</li>
 </ul>
 </div>
 </section>
@@ -527,30 +488,22 @@ the Python multiplication operator <code class="docutils literal notranslate"><s
 </li>
 <li class="toctree-l1"><a class="reference internal" href="field.html">field</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__init__"><code class="docutils literal notranslate"><span class="pre">Field.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__call__"><code class="docutils literal notranslate"><span class="pre">Field.__call__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">Field.__class_getitem__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__eq__"><code class="docutils literal notranslate"><span class="pre">Field.__eq__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">Field.__init_subclass__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.__weakref__"><code class="docutils literal notranslate"><span class="pre">Field.__weakref__</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.Field.narrow_rep_type"><code class="docutils literal notranslate"><span class="pre">Field.narrow_rep_type()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement"><code class="docutils literal notranslate"><span class="pre">FieldElement</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__init__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__str__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__str__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__pow__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__pow__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__truediv__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__truediv__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__add__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__add__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__call__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__call__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__class_getitem__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__eq__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__eq__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__init_subclass__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__mul__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__mul__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__neg__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__neg__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__radd__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__radd__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__rmul__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__weakref__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__weakref__</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -615,7 +568,7 @@ the Python multiplication operator <code class="docutils literal notranslate"><s
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">algebras</a><ul>
-<li><a class="reference internal" href="#boring-math-abstract-algebra">Boring Math - Abstract Algebra</a></li>
+<li><a class="reference internal" href="#id1">Algebras</a></li>
 </ul>
 </li>
 </ul>

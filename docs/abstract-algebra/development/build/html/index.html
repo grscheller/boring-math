@@ -279,11 +279,31 @@ PyPI projects.</p>
 <p>For a proposed PyPI 1.1.0 release.</p>
 <section id="abstract-algebra-library">
 <h2>Abstract Algebra Library<a class="headerlink" href="#abstract-algebra-library" title="Link to this heading">¶</a></h2>
+<div class="admonition-boring-math-abstract-algebra-library admonition">
+<p class="admonition-title">Boring Math Abstract Algebra Library</p>
 <p>A library designed to construct concrete representations of
-abstract algebraic systems and verify properties about and between
-such systems. The term “algebra” will be used loosely to mean either
-an abstract system unique up to isomorphism, or a concrete
-representation of such a system.</p>
+abstract algebraic systems and verify properties about and
+between such systems. The term “algebra” will be used loosely
+to mean either an abstract system unique up to isomorphism,
+or a concrete representation of such a system.</p>
+</div>
+<div class="admonition-future-directions admonition">
+<p class="admonition-title">Future Directions</p>
+<p>TODO: Make separate PyPI Boring Math projects for</p>
+<ul class="simple">
+<li><p>groups</p>
+<ul>
+<li><p>Sylow tools</p></li>
+</ul>
+</li>
+<li><p>rings</p></li>
+<li><p>fields</p>
+<ul>
+<li><p>Galois tools</p></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -304,7 +324,7 @@ representation of such a system.</p>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="docs/algebras/index.html">algebras</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="docs/algebras/index.html#boring-math-abstract-algebra">Boring Math - Abstract Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/algebras/index.html#id1">Algebras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs/algebras/baseset.html">baseset (Abstract)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="docs/algebras/baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet"><code class="docutils literal notranslate"><span class="pre">BaseSet</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseSet.__call__"><code class="docutils literal notranslate"><span class="pre">BaseSet.__call__()</span></code></a></li>
@@ -479,30 +499,22 @@ representation of such a system.</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="docs/algebras/field.html">field</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__init__"><code class="docutils literal notranslate"><span class="pre">Field.__init__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__call__"><code class="docutils literal notranslate"><span class="pre">Field.__call__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">Field.__class_getitem__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__eq__"><code class="docutils literal notranslate"><span class="pre">Field.__eq__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">Field.__init_subclass__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.__weakref__"><code class="docutils literal notranslate"><span class="pre">Field.__weakref__</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.Field.narrow_rep_type"><code class="docutils literal notranslate"><span class="pre">Field.narrow_rep_type()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement"><code class="docutils literal notranslate"><span class="pre">FieldElement</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__init__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__init__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__str__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__str__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__pow__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__pow__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__truediv__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__truediv__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__add__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__add__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__call__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__call__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__class_getitem__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__class_getitem__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__eq__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__eq__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__init_subclass__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__init_subclass__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__mul__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__mul__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__neg__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__neg__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__radd__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__radd__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__rmul__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="docs/algebras/field.html#boring_math.abstract_algebra.algebras.field.FieldElement.__weakref__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__weakref__</span></code></a></li>
 </ul>
 </li>
 </ul>
