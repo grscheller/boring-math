@@ -1,6 +1,10 @@
 algebras
 ========
 
+.. automodule:: boring_math.abstract_algebra.algebras
+   :synopsis:
+   :no-index:
+
 .. toctree::
     :caption: algebras
 

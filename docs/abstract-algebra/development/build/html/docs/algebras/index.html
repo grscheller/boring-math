@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -264,13 +264,92 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
           <section id="algebras">
 <h1>algebras<a class="headerlink" href="#algebras" title="Link to this heading">¶</a></h1>
+<section id="boring-math-abstract-algebra">
+<h2>Boring Math - Abstract Algebra<a class="headerlink" href="#boring-math-abstract-algebra" title="Link to this heading">¶</a></h2>
+<div class="admonition-concrete-representations-of-abstract-algebras admonition">
+<p class="admonition-title">Concrete representations of abstract algebras</p>
+<p>Mathematically speaking, an <strong>Algebra</strong> is a <strong>set</strong> with a collection
+of closed n-ary operators. Usually 1 or 2 binary operations, 0 to 2
+(partial) functions for inverses, and nullary functions for designated
+elements.</p>
+<p><strong>Element:</strong></p>
+<ul class="simple">
+<li><p>Elements know the concrete algebra to which they belong.</p></li>
+<li><p>Each element wraps a hashable immutable representation, called a <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
+<li><p>Binary operations like * and + can act on elements.</p></li>
+<li><p>Not their representations.</p></li>
+</ul>
+<p><strong>Algebra:</strong></p>
+<ul>
+<li><p>Contains a dict of potential elements.</p></li>
+<li><p>Can be used with potentially infinite or continuous algebras.</p></li>
+<li><p>The dict is “quasi-immutable”.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Elements are added in a “natural” uniquely deterministic way.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Contain user defined functions and attributes to implement the algebra.</p></li>
+<li><p>Functions take <code class="docutils literal notranslate"><span class="pre">ref</span></code> parameters and return <code class="docutils literal notranslate"><span class="pre">ref</span></code> values.</p></li>
+<li><p>Attributes are <code class="docutils literal notranslate"><span class="pre">ref</span></code> valued.</p></li>
+</ul>
+<p>The idea is that</p>
+<ul class="simple">
+<li><p>An element knows the concrete algebra to which it belongs.</p></li>
+<li><p>Each element wraps a hashable representation, called a <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
+<li><p>There is a one-to-one correspondence between <code class="docutils literal notranslate"><span class="pre">rep</span></code> values and elements.</p></li>
+<li><p>Algebra operations act on the elements themselves, not on the reps.</p></li>
+<li><p>Algebras know how to manipulate the representations of their elements.</p></li>
+</ul>
+</div>
+<div class="admonition-laws-for-algebras admonition">
+<p class="admonition-title">Laws for algebras</p>
+<p>Ensure concrete representation of abstract algebras adhere to the
+laws (mathematical truths) of the abstract algebra.</p>
+<ul class="simple">
+<li><p>group laws</p></li>
+</ul>
+</div>
+<div class="admonition-actions-on-algebras admonition">
+<p class="admonition-title">Actions on algebras</p>
+<p>Actions can be performed from either the left or the right leveraging
+the Python multiplication operator <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
+</div>
+<div class="admonition-additional-structure-on-algebras admonition">
+<p class="admonition-title">Additional structure on algebras</p>
+<p>Non-algebraic properties for algebras.</p>
+<p><strong>Orderings</strong></p>
+<ul class="simple">
+<li><p>Partial order</p></li>
+<li><p>Total order</p></li>
+</ul>
+</div>
+<div class="admonition-tools-for-algebras admonition">
+<p class="admonition-title">Tools for algebras</p>
+<p>TODO: Make separate PyPI Boring Math projects?</p>
+<ul class="simple">
+<li><p>groups</p>
+<ul>
+<li><p>Sylow tools</p></li>
+</ul>
+</li>
+<li><p>rings</p></li>
+<li><p>fields</p>
+<ul>
+<li><p>Galois tools</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">algebras</span></p>
 <ul>
@@ -523,8 +602,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">algebras</a><ul>
+<li><a class="reference internal" href="#boring-math-abstract-algebra">Boring Math - Abstract Algebra</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
