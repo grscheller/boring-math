@@ -295,6 +295,20 @@ choosing an element from a coset of a group.</p></li>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">narrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mult</strong> – Associative function <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">X</span> <span class="pre">H</span> <span class="pre">-&gt;</span> <span class="pre">H</span></code> on reps.</p></li>
+<li><p><strong>narrow</strong> – Narrow the rep type, many-to-one function. Like
+choosing an element from a coset of a group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement" title="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><span class="pre">SemigroupElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__" title="Link to this definition">¶</a></dt>
 <dd><p>Add the unique element to the semigroup with a with the given,
@@ -344,6 +358,11 @@ type “narrowing” function.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.semigroup.</span></span><span class="sig-name descname"><span class="pre">SemigroupElement</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="baseset.html#boring_math.abstract_algebra.algebras.baseset.BaseElement" title="boring_math.abstract_algebra.algebras.baseset.BaseElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseElement</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup" title="boring_math.abstract_algebra.algebras.semigroup.Semigroup"><span class="pre">Semigroup</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__">
 <span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__" title="Link to this definition">¶</a></dt>
@@ -510,12 +529,14 @@ and are of the same invariant type.</p>
             <ul>
 <li><a class="reference internal" href="#">semigroup</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup"><code class="docutils literal notranslate"><span class="pre">Semigroup</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__init__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__call__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.__eq__"><code class="docutils literal notranslate"><span class="pre">Semigroup.__eq__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.Semigroup.narrow_rep_type"><code class="docutils literal notranslate"><span class="pre">Semigroup.narrow_rep_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement"><code class="docutils literal notranslate"><span class="pre">SemigroupElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__init__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__str__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__mul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.semigroup.SemigroupElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">SemigroupElement.__rmul__()</span></code></a></li>

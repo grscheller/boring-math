@@ -300,6 +300,21 @@ choosing an element from a coset of a group.</p></li>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">narrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>narrow</strong> – Narrow the rep type, many-to-one function. Like
+choosing an element from a coset of a group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><span class="pre">CommutativeMonoidElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__" title="Link to this definition">¶</a></dt>
 <dd><p>Add the unique element to the commutative monoid with the given,
@@ -349,6 +364,11 @@ type “narrowing” function.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.commutative_monoid.</span></span><span class="sig-name descname"><span class="pre">CommutativeMonoidElement</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="commutative_semigroup.html#boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement" title="boring_math.abstract_algebra.algebras.commutative_semigroup.CommutativeSemigroupElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommutativeSemigroupElement</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid" title="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><span class="pre">CommutativeMonoid</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__">
 <span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__" title="Link to this definition">¶</a></dt>
@@ -529,12 +549,14 @@ add the left side to itself.</p>
             <ul>
 <li><a class="reference internal" href="#">commutative monoid</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__call__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.__eq__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.__eq__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoid.narrow_rep_type"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoid.narrow_rep_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__init__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__str__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__mul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.commutative_monoid.CommutativeMonoidElement.__rmul__"><code class="docutils literal notranslate"><span class="pre">CommutativeMonoidElement.__rmul__()</span></code></a></li>

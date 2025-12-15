@@ -313,6 +313,27 @@ choosing an element from a coset of a group,</p></li>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.Field.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mult</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">one</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">narrow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">H</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.Field.__init__" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mult</strong> – Closed associative function reps.</p></li>
+<li><p><strong>add</strong> – Closed commutative and associative function reps.</p></li>
+<li><p><strong>one</strong> – Representation for multiplicative identity.</p></li>
+<li><p><strong>zero</strong> – Representation for additive identity.</p></li>
+<li><p><strong>negate</strong> – Function mapping element representation to the
+representation of corresponding negated element.</p></li>
+<li><p><strong>invert</strong> – Function mapping non-zero element representations
+to their multiplicative inverses.</p></li>
+<li><p><strong>narrow</strong> – Narrow the rep type, many to one function, like
+choosing an element from a coset of a group,</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.Field.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement" title="boring_math.abstract_algebra.algebras.field.FieldElement"><span class="pre">FieldElement</span></a></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.Field.__call__" title="Link to this definition">¶</a></dt>
 <dd><p>Add the unique element to the field with a with the given,
@@ -362,6 +383,11 @@ type “narrowing” function.</p>
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.FieldElement">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">boring_math.abstract_algebra.algebras.field.</span></span><span class="sig-name descname"><span class="pre">FieldElement</span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.FieldElement" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="commutative_ring.html#boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement" title="boring_math.abstract_algebra.algebras.commutative_ring.CommutativeRingElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommutativeRingElement</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.FieldElement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algebra</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field" title="boring_math.abstract_algebra.algebras.field.Field"><span class="pre">Field</span></a><span class="p"><span class="pre">[</span></span><span class="pre">H</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.abstract_algebra.algebras.field.FieldElement.__str__">
 <span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__str__" title="Link to this definition">¶</a></dt>
@@ -595,12 +621,14 @@ on object on right</p>
             <ul>
 <li><a class="reference internal" href="#">field</a><ul>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field.__init__"><code class="docutils literal notranslate"><span class="pre">Field.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field.__call__"><code class="docutils literal notranslate"><span class="pre">Field.__call__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field.__eq__"><code class="docutils literal notranslate"><span class="pre">Field.__eq__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.Field.narrow_rep_type"><code class="docutils literal notranslate"><span class="pre">Field.narrow_rep_type()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement"><code class="docutils literal notranslate"><span class="pre">FieldElement</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__init__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__str__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__str__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__pow__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__pow__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.abstract_algebra.algebras.field.FieldElement.__truediv__"><code class="docutils literal notranslate"><span class="pre">FieldElement.__truediv__()</span></code></a></li>
