@@ -40,11 +40,11 @@ Arrows point from super class to sub classes. Class BaseSet is abstract.
         edge [color="#181616", fontcolor="#dcd7ba"];
         CommutativeMonoid -> AbelianGroup;
         CommutativeSemigroup -> CommutativeMonoid;
-        BaseSet -> CommutativeSemigroup;
+        "BaseSet (Abstract)" -> CommutativeSemigroup;
         Ring -> CommutativeRing;
         CommutativeRing -> Field;
         Monoid -> Group;
         Semigroup -> Monoid;
         AbelianGroup -> Ring;
-        BaseSet -> Semigroup;
+        "BaseSet (Abstract)" -> Semigroup;
     }

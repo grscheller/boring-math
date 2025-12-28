@@ -5,15 +5,36 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-# 
+#
 # Must match what is in pyproject.toml, also update proposed_release_string accordingly
 # when generating the docs for an actual, not proposed, release.
-#
+
+from typing import Any
+from sphinx.application import Sphinx
+
 
 project = 'Boring Math - Abstract Algebra'
 copyright = '2025, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '1.1.0' 
+release = '1.1.0'
+
+
+def skip_abc_methods(
+    app: Any, what: str, name: str, obj: Any, skip: bool, options: Any
+) -> bool:
+    if name in [
+        '__init_subclass__',
+        '__subclasshook__',
+        '__class_getitem__',
+        '__weakref__',
+    ]:
+        return True  # Skip these members
+    return skip
+
+
+def setup(app: Sphinx) -> None:
+    app.connect('autodoc-skip-member', skip_abc_methods)
+
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -45,11 +66,11 @@ exclude_patterns: list[str] = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme_options = {
-    "light_css_variables": {
-        "color-link--visited": "var(--color-link)",
+    'light_css_variables': {
+        'color-link--visited': 'var(--color-link)',
     },
-    "dark_css_variables": {
-        "color-link--visited": "var(--color-link)",
+    'dark_css_variables': {
+        'color-link--visited': 'var(--color-link)',
     },
 }
 html_theme = 'furo'
