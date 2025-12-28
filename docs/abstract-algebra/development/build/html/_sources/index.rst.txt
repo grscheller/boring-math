@@ -29,7 +29,7 @@ For a proposed PyPI 1.1.0 release.
 .. toctree::
     :caption: API Documentation
 
-    docs/algebras
+    docs/algebras/index
     docs/actions/index
     docs/laws/index
     docs/properties/index

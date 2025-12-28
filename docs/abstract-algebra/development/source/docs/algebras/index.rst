@@ -20,7 +20,15 @@ Abstract Base Classes
 .. autoclass:: boring_math.abstract_algebra.algebras.BaseElement
     :exclude-members: __add__, __mul__, __pow__, __neg__, __sub__, __truediv__
 
-Algebra Classes
----------------
+.. toctree::
+    :caption: algebra modules
 
-.. automodule:: boring_math.abstract_algebra.algebras
+    semigroup
+    monoid
+    group
+    commutative_semigroup
+    commutative_monoid
+    abelian_group
+    ring
+    commutative_ring
+    field
