@@ -11,9 +11,9 @@
 #
 
 project = 'Boring Math'
-copyright = '2016-2025, Geoffrey R. Scheller'
+copyright = '2016-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '2.1.0' 
+release = '3.0.0' 
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

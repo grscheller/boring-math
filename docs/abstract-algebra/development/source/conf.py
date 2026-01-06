@@ -12,11 +12,10 @@
 from typing import Any
 from sphinx.application import Sphinx
 
-
 project = 'Boring Math - Abstract Algebra'
-copyright = '2025, Geoffrey R. Scheller'
+copyright = '2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '1.1.0'
+release = '2.1.0'
 
 
 def skip_abc_methods(

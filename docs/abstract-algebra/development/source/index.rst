@@ -7,7 +7,7 @@ one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
 
-For a proposed PyPI 1.1.0 release.
+**PyPI 1.1.0 release**
 
 .. automodule:: boring_math.abstract_algebra
     :synopsis:
