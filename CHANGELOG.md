@@ -16,16 +16,16 @@ changes when
 
 ## Important Milestones
 
-### 2026-01-04 - PyPI Boring Math 3.0.0 release
+### 2026-02-TBA - PyPI Boring Math 2.2.0 release
 
 Preparing for the boring-math-abstract-algebra PyPI 2.1.0 release,
-decided it was time for Boring Math 3.0.0 and Pythonic FP 4.0.0
-coordinated Released.
+decided it was time for Boring Math 2.2.0 and Pythonic FP 3.4.0
+coordinated Releases.
 
 boring-math-abstract-algebra/src 0.1.0 -> 2.1.0
 boring-math-number-theory/src 2.0.0 -> 2.0.1
 
-### 2025-12-01 - PYPI Boring Math Release 2.1.0
+### 2025-12-02 - PYPI Boring Math Release 2.1.0
 
 Initial released project boring-math-abstract-algebra 0.1.0 to PyPI.
 

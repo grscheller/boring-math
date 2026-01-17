@@ -5,6 +5,21 @@ Pythonic FP dependencies.
 Coordinated releases
 ====================
 
+2026-02-TBA - 2.1.0
+-------------------
+
+========================= ===================================== =======
+Name                      PyPI Project                          Version
+========================= ===================================== =======
+Abstract Algebra          boring-math-abstract-algebra          1.1.0
+Combinatorics             boring-math-combinatorics             2.0.1
+Number Theory             boring-math-number-theory             2.0.1
+Probability Distributions boring-math-probability-distributions 0.8.2
+Pythagorean Triples       boring-math-pythagorean-triples       0.8.4
+Recursive Functions       boring-math-recursive-functions       1.0.1
+Special Functions         boring-math-special-functions         0.1.1
+========================= ===================================== =======
+
 2025-12-02 - 2.0.1
 ------------------
 

@@ -15,7 +15,7 @@ from sphinx.application import Sphinx
 project = 'Boring Math - Abstract Algebra'
 copyright = '2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '2.1.0'
+release = '1.1.0'
 
 
 def skip_abc_methods(
