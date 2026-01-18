@@ -3,6 +3,7 @@ Boring Math
 
 .. automodule:: boring_math.homepage.intro
     :synopsis:
+    :no-index:
 
 .. toctree::
     :caption: Boring Math
