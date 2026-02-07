@@ -1,7 +1,5 @@
 boring-math-special-functions
-=============================
-
-**Special functions in mathematics:** |RELEASE_STRING| |VERSION_RELEASED| release
+-----------------------------
 
 **Stub Project - Not yet implemented!**
 
@@ -10,6 +8,8 @@ Project
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+**Proposed PyPI 0.2.0+ release**
 
 .. toctree::
     :caption: Overview
@@ -27,4 +27,4 @@ PyPI projects.
 .. toctree::
     :caption: API Documentation
 
-    special_functions/index
+    docs.rst

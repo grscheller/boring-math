@@ -17,6 +17,7 @@ help:
 
 Makefile:
 	mkdir -p $(STATICDIR) $(TEMPLATEDIR)
+	rm -rf build source/abstract_algebra/_autosummary
 
 .PHONY: help Makefile
 

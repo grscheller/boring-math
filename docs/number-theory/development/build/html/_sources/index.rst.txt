@@ -1,13 +1,13 @@
 boring-math-number-theory
-=========================
-
-**Number Theory:** |RELEASE_STRING| |VERSION_RELEASED| release
+-------------------------
 
 Project
 `boring-math-number-theory <https://pypi.org/project/boring-math-number-theory/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+**Proposed PyPI 2.0.1+ release**
 
 .. toctree::
     :caption: Overview
@@ -25,4 +25,4 @@ PyPI projects.
 .. toctree::
     :caption: API Documentation
 
-    number_theory
+    docs

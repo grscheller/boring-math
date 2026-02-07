@@ -1,13 +1,16 @@
 boring-math-pythagorean-triples
-===============================
-
-**Pythagorean triples:** |RELEASE_STRING| |VERSION_RELEASED| release
+-------------------------------
 
 Project
 `boring-math-pythagorean-triples <https://pypi.org/project/boring-math-pythagorean-triples/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+**Proposed PyPI 0.8.4+ release**
+
+.. automodule:: boring_math.pythagorean_triples
+    :synopsis:
 
 .. toctree::
     :caption: Overview
@@ -24,5 +27,7 @@ PyPI projects.
 
 .. toctree::
     :caption: API Documentation
+    :maxdepth: 1
 
-    pythagorean_triples/index
+    docs/pythag3
+    docs/cli/index

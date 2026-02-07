@@ -1,20 +1,22 @@
 """
-Purpose boring-math PyPI Project
-================================
+Daddy's Boring Math Projects
+----------------------------
 
-The `boring-math PyPI project <https://pypi.org/project/boring-math/>`_ 
-is a central component of my Boring Math hobby projects.
+.. admonition:: Purpose of the boring-math PyPI Project
 
-- It is the PyPI project for the ``boring_math.homepage`` module.
-- Claims the boring-math name on PyPI for the overall effort.
-- Hosts on *GitHub Pages*
+    The `boring-math PyPI project <https://pypi.org/project/boring-math/>`_ 
+    is a central component of my Boring Math hobby projects.
 
-  - The Boring Math homepage.
-  - Sphinx API & documentation for each Boring Math project.
+    - It is the PyPI project for the ``boring_math.homepage`` module.
+    - Claims the boring-math name on PyPI for the overall effort.
+    - Hosts on *GitHub Pages*
 
-- Provides locations for overarching CHANGELOG and README files.
+    - The Boring Math homepage.
+    - Sphinx API & documentation for each Boring Math project.
 
-  - Each Boring Math project has its own CHANGELOG and README files.
+    - Provides locations for overarching CHANGELOG and README files.
+
+    - Each Boring Math project has its own CHANGELOG and README files.
 
 .. tip::
 

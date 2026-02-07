@@ -1,5 +1,5 @@
 Boring Math
-===========
+-----------
 
 .. automodule:: boring_math.homepage.intro
     :synopsis:

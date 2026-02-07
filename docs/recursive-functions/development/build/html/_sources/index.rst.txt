@@ -1,13 +1,16 @@
 boring-math-recursive-functions
-===============================
-
-**Recursive functions:** |RELEASE_STRING| |VERSION_RELEASED| release
+-------------------------------
 
 Project
 `boring-math-recursive-functions <https://pypi.org/project/boring-math-recursive-functions/>`_
 one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
+
+**Proposed PyPI 1.0.1+ release**
+
+.. automodule:: boring_math.recursive_functions
+    :synopsis:
 
 .. toctree::
     :caption: Overview
@@ -25,4 +28,7 @@ PyPI projects.
 .. toctree::
     :caption: API Documentation
 
-    recursive_functions/index
+    docs/ackermann
+    docs/fibonacci
+    docs/special_functions/index
+    docs/cli/index

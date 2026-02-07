@@ -9,7 +9,6 @@ These are the most resent *Boring Math* project PyPI releases.
 ======================================== ======================================= ======= =============
  boring-math-abstract-algebra            boring_math.abstract_algebra            1.1.0   2026-01-17
  boring-math-combinatorics               boring_math.combinatorics               2.0.0   2025-10-09
- boring-math-integer-math [#]_           boring_math.integer_math                1.2.0   2025-10-09
  boring-math-number-theory               boring_math.number_theory               2.0.0   2025-10-09
  boring-math-probability-distributions   boring_math.probability_distributions   0.8.1   2025-10-11
  boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.8.3   2025-10-09
@@ -36,15 +35,5 @@ Remarks
     In the development environment, packages and their
     dependencies are usually developed in parallel along
     with their test suites.
-
-----
-
-**Footnotes**
-
-.. [#]
-
-    **DEPRECATED:** boring-math-integer-math was broken up
-    into two PyPI projects, ``boring-math-number-theory`` and
-    ``boring-math-combinatorics``.
 
 """
