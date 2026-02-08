@@ -30,5 +30,4 @@ PyPI projects.
 
     docs/ackermann
     docs/fibonacci
-    docs/special_functions/index
     docs/cli/index
