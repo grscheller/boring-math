@@ -1,0 +1,5 @@
+Abstract functions
+------------------
+
+.. note::
+    TODO.

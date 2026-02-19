@@ -1,8 +1,6 @@
 boring-math-special-functions
 -----------------------------
 
-**Stub Project - Not yet implemented!**
-
 Project
 `boring-math-special-functions <https://pypi.org/project/boring-math-special-functions/>`_
 one of the
@@ -27,4 +25,4 @@ PyPI projects.
 .. toctree::
     :caption: API Documentation
 
-    docs.rst
+    docs/index

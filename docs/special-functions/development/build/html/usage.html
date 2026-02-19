@@ -206,7 +206,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">special functions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="docs/index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/abstract.html">Abstract functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/float.html">Real valued (floating point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/complex.html">Complex valued functions</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -258,9 +263,9 @@
 <h2>Importing the modules<a class="headerlink" href="#importing-the-modules" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">boring_math.special_functions.abstract</span><span class="w"> </span><span class="kn">import</span> <span class="n">const</span><span class="p">,</span> <span class="nb">id</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">boring_math.special_functions.float</span><span class="w"> </span><span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sine</span><span class="p">,</span> <span class="n">cosine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">boring_math.special_functions.float</span><span class="w"> </span><span class="kn">import</span> <span class="n">sin0</span><span class="p">,</span> <span class="n">cos0</span><span class="p">,</span> <span class="n">tan0</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">boring_math.special_functions.complex</span><span class="w"> </span><span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sine</span><span class="p">,</span> <span class="n">cosine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">boring_math.special_functions.complex</span><span class="w"> </span><span class="kn">import</span> <span class="n">sin0</span> <span class="n">cos0</span><span class="p">,</span> <span class="n">tan0</span>
 </pre></div>
 </div>
 </section>
