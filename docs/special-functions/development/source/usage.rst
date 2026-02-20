@@ -15,8 +15,6 @@ Importing the modules
 
 .. code:: python
 
-    from boring_math.special_functions.abstract import const, id
+    from boring_math.special_functions.float import sin0, cos0, tan0, exp0
 
-    from boring_math.special_functions.float import sin0, cos0, tan0
-
-    from boring_math.special_functions.complex import sin0 cos0, tan0
+    from boring_math.special_functions.complex import sin0 cos0, tan0, exp0
