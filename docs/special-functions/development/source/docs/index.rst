@@ -4,5 +4,5 @@ Special Functions
 .. toctree::
     :caption: Special Functions
 
-    float
-    complex
+    float0
+    complex0
