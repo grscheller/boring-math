@@ -16,6 +16,10 @@ changes when
 
 ## Important Milestones
 
+### 2026-02-25 - Update
+
+Updated boring-math-special-functions for its 1.0.0 release.
+
 ### 2026-02-TBA - PyPI Boring Math 2.2.0 release
 
 Preparing for the boring-math-abstract-algebra PyPI 2.1.0 release,
