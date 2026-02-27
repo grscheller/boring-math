@@ -19,4 +19,4 @@ Importing the modules
     from boring_math.special_functions.float import exp, sin, cos, tan
 
     from boring_math.special_functions.complex0 import exp0, sin0, cos0, tan0
-    from boring_math.special_functions.complex import exp, sin, cos, tan
+    from boring_math.special_functions.complex import exp, sin, cos, tan, gamma
