@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Complex functions at z = 0" href="complex0.html"><link rel="prev" title="Floating point functions at x=0" href="float0.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="prev" title="Complex trig functions (z = 0)" href="ctrig0.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Floating point functions - Boring Math - Special Functions 2.0.0 documentation</title>
+        <title>Complex trig functions - Boring Math - Special Functions 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -207,10 +207,10 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="float0.html">Floating point functions at x=0</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Floating point functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complex0.html">Complex functions at z = 0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="complex.html">Complex functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trig0.html">Real trig functions (x=0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trig.html">Real trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctrig0.html">Complex trig functions (z = 0)</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Complex trig functions</a></li>
 </ul>
 </li>
 </ul>
@@ -233,7 +233,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/docs/float.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/docs/ctrig.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -246,80 +246,93 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.special_functions.float">
-<span id="floating-point-functions"></span><h1>Floating point functions<a class="headerlink" href="#module-boring_math.special_functions.float" title="Link to this heading">¶</a></h1>
-<p>Floating point special functions.</p>
+          <section id="complex-trig-functions">
+<h1>Complex trig functions<a class="headerlink" href="#complex-trig-functions" title="Link to this heading">¶</a></h1>
+<p>Complex valued special functions.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.special_functions.float.exp">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.float.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.float.exp" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of exp about x = 0.</p>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
+<dd><p>Partially factored Taylor expansion of exp about z = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">20</span></code></p></li>
+<li><p><strong>z</strong> – independent variable</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have n &gt;= 20</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code></p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.special_functions.float.sin">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.float.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.float.sin" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of sine about x = 0.</p>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
+<dd><p>Partially factored Taylor expansion of sine about z = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>z</strong> – independent variable</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of sine(x) centered at x = 0</p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">sine(z)</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.special_functions.float.cos">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.float.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.float.cos" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of cosine about x = 0.</p>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
+<dd><p>Partially factored Taylor expansion of cosine about z = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>z</strong> – independent variable</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of cosine(x) centered at x = 0</p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">cosine(z)</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.special_functions.float.tan">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.float.</span></span><span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.float.tan" title="Link to this definition">¶</a></dt>
-<dd><p>Tangent centered about x = 0.</p>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
+<dd><p>Tangent centered about z = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>z</strong> – independent variable</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>sin0(x)/cos0(x)</p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">tangent(z)</span></code> via <code class="docutils literal notranslate"><span class="pre">sin(z)/cos(z)</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
+<dd><p>Gamma function valid for all complex values of z.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lanczos approximation of Gamma using <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">7</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">9</span></code>
+terms. The values of g and n were chosen to balance accuracy
+with speed. Typically accurate to 13 correct decimal places.</p>
+<p>Code modified from the <a class="reference external" href="https://en.wikipedia.org/wiki/Lanczos_approximation">Wikipedia Lanczos appoximation article</a>.</p>
+</div>
 </dd></dl>
 
 </section>
@@ -329,23 +342,15 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="complex0.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Complex functions at z = 0</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="float0.html">
+          
+          <a class="prev-page" href="ctrig0.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Floating point functions at x=0</div>
+                <div class="title">Complex trig functions (z = 0)</div>
                 
               </div>
             </a>
@@ -367,30 +372,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Floating point functions</a><ul>
-<li><a class="reference internal" href="#boring_math.special_functions.float.exp"><code class="docutils literal notranslate"><span class="pre">exp()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.float.sin"><code class="docutils literal notranslate"><span class="pre">sin()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.float.cos"><code class="docutils literal notranslate"><span class="pre">cos()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.float.tan"><code class="docutils literal notranslate"><span class="pre">tan()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

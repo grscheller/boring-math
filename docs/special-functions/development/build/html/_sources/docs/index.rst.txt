@@ -2,9 +2,13 @@ Special Functions
 -----------------
 
 .. toctree::
-    :caption: Special Functions
+    :caption: Real Trig Functions
 
-    float0
-    float
-    complex0
-    complex
+    trig0
+    trig
+
+.. toctree::
+    :caption: Complex Trig Functions
+
+    ctrig0
+    ctrig
