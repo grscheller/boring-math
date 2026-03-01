@@ -12,3 +12,8 @@ Special Functions
 
     ctrig0
     ctrig
+
+.. toctree::
+    :caption: Gamma Function
+
+    gamma
