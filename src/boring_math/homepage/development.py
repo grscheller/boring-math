@@ -48,6 +48,7 @@ All non-typing related dependencies. Arrows point from modules to their dependen
         probability_distributions -> math;
         probability_distributions -> "mathplotlib.pyplot";
         probability_distributions -> "pythonic_fp.fptools";
+        special_functions -> math;
     }
 
 """
