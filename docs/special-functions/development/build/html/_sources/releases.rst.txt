@@ -8,7 +8,7 @@ PyPI releases
 +=====================================================================================================+==============+===================================+
 | `development <https://grscheller.github.io/boring-math/special-functions/development/build/html/>`_ |              |                                   |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+
-| `v2.0.0 <https://grscheller.github.io/boring-math/special-functions/v2.0.0/build/html/>`_           | TBD          | Added gamma & exponential modules |
+| `v2.0.0 <https://grscheller.github.io/boring-math/special-functions/v2.0.0/build/html/>`_           | 2026-03-02   | Added gamma & exponential modules |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+
 | `v1.0.0 <https://grscheller.github.io/boring-math/special-functions/v1.0.0/build/html/>`_           | 2026-02-25   |                                   |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+

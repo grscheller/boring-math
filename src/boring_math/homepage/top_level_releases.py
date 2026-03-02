@@ -10,10 +10,10 @@ These are the most resent *Boring Math* project PyPI releases.
  boring-math-abstract-algebra            boring_math.abstract_algebra            1.1.0   2026-01-17
  boring-math-combinatorics               boring_math.combinatorics               2.0.0   2025-10-09
  boring-math-number-theory               boring_math.number_theory               2.0.0   2025-10-09
- boring-math-probability-distributions   boring_math.probability_distributions   0.8.1   2025-10-11
+ boring-math-probability-distributions   boring_math.probability_distributions   0.8.1   2025-10-12
  boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.8.3   2025-10-09
- boring-math-recursive-functions         boring_math.recursive_functions         1.0.0   2025-10-11
- boring-math-special-functions           boring_math.special_functions           0.1.0   2025-10-11
+ boring-math-recursive-functions         boring_math.recursive_functions         1.0.0   2025-10-12
+ boring-math-special-functions           boring_math.special_functions           2.0.0   2026-03-02
 ======================================== ======================================= ======= =============
 
 Remarks
