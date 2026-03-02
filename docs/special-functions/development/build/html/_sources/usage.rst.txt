@@ -15,8 +15,11 @@ Importing the modules
 
 .. code:: python
 
-    from boring_math.special_functions.trig0 import exp0, sin0, cos0, tan0
-    from boring_math.special_functions.trig import exp, sin, cos, tan
+    from boring_math.special_functions.expoential import exp0, exp, cexp0, cexp
 
-    from boring_math.special_functions.ctrig0 import exp0, sin0, cos0, tan0
-    from boring_math.special_functions.ctrig import exp, sin, cos, tan, gamma
+    from boring_math.special_functions.trig0 import sin0, cos0, tan0
+    from boring_math.special_functions.ctrig0 import sin0, cos0, tan0
+    from boring_math.special_functions.trig import sin, cos, tan
+    from boring_math.special_functions.ctrig import sin, cos, tan
+
+    from boring_math.special_functions.gamma import gamma, gamma_real
