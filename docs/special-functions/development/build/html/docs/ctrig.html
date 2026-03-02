@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Gamma function" href="gamma.html"><link rel="prev" title="Complex trig functions (z = 0)" href="ctrig0.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Exponential functions" href="exponential.html"><link rel="prev" title="Complex trig functions (z = 0)" href="ctrig0.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Complex trig functions - Boring Math - Special Functions 2.0.0 documentation</title>
@@ -211,6 +211,7 @@
 <li class="toctree-l2"><a class="reference internal" href="trig.html">Real trig functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ctrig0.html">Complex trig functions (z = 0)</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Complex trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exponential.html">Exponential functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamma.html">Gamma function</a></li>
 </ul>
 </li>
@@ -255,23 +256,6 @@
           <section id="complex-trig-functions">
 <h1>Complex trig functions<a class="headerlink" href="#complex-trig-functions" title="Link to this heading">¶</a></h1>
 <p>Complex valued special functions.</p>
-<dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
-<dd><p>Partially factored Taylor expansion of exp about z = 0.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have n &gt;= 20</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span></dt>
@@ -330,12 +314,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gamma.html">
+          <a class="next-page" href="exponential.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Gamma function</div>
+                <div class="title">Exponential functions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

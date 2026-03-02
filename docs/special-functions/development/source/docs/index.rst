@@ -14,6 +14,11 @@ Special Functions
     ctrig
 
 .. toctree::
+    :caption: Exponential Functions
+
+    exponential
+
+.. toctree::
     :caption: Gamma Function
 
     gamma
