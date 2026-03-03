@@ -13,7 +13,7 @@ These are the most resent *Boring Math* project PyPI releases.
  boring-math-probability-distributions   boring_math.probability_distributions   0.8.1   2025-10-12
  boring-math-pythagorean-triples         boring_math.pythagorean_triples         0.8.3   2025-10-09
  boring-math-recursive-functions         boring_math.recursive_functions         1.0.0   2025-10-12
- boring-math-special-functions           boring_math.special_functions           2.0.0   2026-03-02
+ boring-math-special-functions           boring_math.special_functions           3.0.0   2026-03-03
 ======================================== ======================================= ======= =============
 
 Remarks
@@ -25,10 +25,10 @@ Remarks
 
 .. important::
 
-    When a package needs updated dependencies, the package will be
-    deployed to PyPI first before any of its internal dependencies.
-    This will prevent pip from installing the version of the package
-    until all its dependencies are in place.
+    As much as possible, when a package needs updated dependencies,
+    the package will be deployed to PyPI first before any of its
+    internal dependencies. This will prevent pip from installing the
+    version of the package until all its dependencies are in place.
 
 .. note::
 

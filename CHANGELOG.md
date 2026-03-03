@@ -16,11 +16,22 @@ changes when
 
 ## Important Milestones
 
+### 2026-03-03 - Updated docs and homepage.
+
+For boring-math-special-functions release 3.0.0
+
+- better trig function names
+- no longer have to :no-index: trig modules
+
+### 2026-03-02 - Updated docs and homepage.
+
+For boring-math-special-functions release 2.0.0
+
 ### 2026-02-25 - Update
 
 Updated boring-math-special-functions for its 1.0.0 release.
 
-### 2026-02-TBA - PyPI Boring Math 2.2.0 release
+### Proposed PyPI Boring Math 2.2.0 release
 
 Preparing for the boring-math-abstract-algebra PyPI 2.1.0 release,
 decided it was time for Boring Math 2.2.0 and Pythonic FP 3.4.0
