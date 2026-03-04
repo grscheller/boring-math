@@ -19,6 +19,7 @@ Special Functions
     exponential
 
 .. toctree::
-    :caption: Gamma Function
+    :caption: Gamma and Beta Functions
 
     gamma
+    beta

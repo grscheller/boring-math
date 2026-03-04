@@ -7,7 +7,7 @@ one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
 
-**PyPI 3.0.0 release**
+**Proposed PyPI 3.1.0 release**
 
 .. toctree::
     :caption: Overview
