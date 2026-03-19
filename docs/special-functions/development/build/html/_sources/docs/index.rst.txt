@@ -2,24 +2,16 @@ Special Functions
 -----------------
 
 .. toctree::
-    :caption: Real Trig Functions
-
-    trig0
-    trig
-
-.. toctree::
-    :caption: Complex Trig Functions
-
-    ctrig0
-    ctrig
-
-.. toctree::
     :caption: Exponential Functions
 
-    exponential
+    exponential/index
 
 .. toctree::
-    :caption: Gamma Family Functions
+    :caption: Trigonometry Functions
 
-    gamma
-    beta
+    trigonometry/index
+
+.. toctree::
+    :caption: Gamma Related Functions
+
+    gamma_family/index
