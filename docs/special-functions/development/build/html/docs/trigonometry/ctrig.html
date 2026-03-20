@@ -265,16 +265,16 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.special_functions.ctrig">
 <span id="complex-trig-functions"></span><h1>Complex trig functions<a class="headerlink" href="#module-boring_math.special_functions.ctrig" title="Link to this heading">¶</a></h1>
-<p>Complex valued special functions.</p>
+<p>Complex valued trig functions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.ctrig.csin">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">csin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.ctrig.csin" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of sine about z = 0.</p>
+<dd><p>Complex sine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 84</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -286,12 +286,12 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.ctrig.ccos">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">ccos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.ctrig.ccos" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of cosine about z = 0.</p>
+<dd><p>Complex cosine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 84</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -303,12 +303,12 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.ctrig.ctan">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.ctrig.</span></span><span class="sig-name descname"><span class="pre">ctan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.ctrig.ctan" title="Link to this definition">¶</a></dt>
-<dd><p>Tangent centered about z = 0.</p>
+<dd><p>Complex tangent valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 84</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
