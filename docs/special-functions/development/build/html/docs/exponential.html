@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Gamma function" href="gamma.html"><link rel="prev" title="Complex trig functions" href="ctrig.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Exponential functions - Boring Math - Special Functions 3.1.0 documentation</title>
+        <title>Exponential functions - Boring Math - Special Functions 4.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -165,7 +165,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Boring Math - Special Functions 3.1.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">Boring Math - Special Functions 4.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-  <span class="sidebar-brand-text">Boring Math - Special Functions 3.1.0 documentation</span>
+  <span class="sidebar-brand-text">Boring Math - Special Functions 4.0.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -263,17 +263,17 @@
 <dd><p>Partially factored Taylor expansion of exp about <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Best if <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code>.</p>
+<p>Best if <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code>.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code></p></li>
+<li><p><strong>x</strong> – Independent variable.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code> centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<dd class="field-even"><p>Taylor series expansion of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code> centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -285,12 +285,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code></p></li>
+<li><p><strong>x</strong> – Independent variable.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code></p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -301,13 +301,13 @@
 <dd><p>Partially factored Taylor expansion of exp about z = 0.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code>.</p>
+<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code>.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have n &gt;= 22</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -320,17 +320,30 @@
 <dt class="sig sig-object py" id="boring_math.special_functions.exponential.cexp">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.</span></span><span class="sig-name descname"><span class="pre">cexp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.exponential.cexp" title="Link to this definition">¶</a></dt>
 <dd><p>Exponential function good for all complex z.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Complex exp(z) has an essential singularity at infinity,
+so function returns <code class="docutils literal notranslate"><span class="pre">nan</span></code> if given an infinite argument.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have n &gt;= 20</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code></p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code> where inf+infj is used to
+represent a single complex infinity. Returns <code class="docutils literal notranslate"><span class="pre">nan</span></code>
+if given an infinte argument.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="boring_math.special_functions.exponential.infinity">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.</span></span><span class="sig-name descname"><span class="pre">infinity</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(inf+infj)</span></span><a class="headerlink" href="#boring_math.special_functions.exponential.infinity" title="Link to this definition">¶</a></dt>
+<dd><p>Used to represent a single complex infinity.</p>
 </dd></dl>
 
 </section>
@@ -395,6 +408,7 @@
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.exp"><code class="docutils literal notranslate"><span class="pre">exp()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.cexp0"><code class="docutils literal notranslate"><span class="pre">cexp0()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.cexp"><code class="docutils literal notranslate"><span class="pre">cexp()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.exponential.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -406,7 +420,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=dd1205ac"></script>
+</div><script src="../_static/documentation_options.js?v=3304f9e4"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

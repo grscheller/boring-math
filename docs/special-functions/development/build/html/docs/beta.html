@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="prev" title="Gamma function" href="gamma.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Beta function - Boring Math - Special Functions 3.1.0 documentation</title>
+        <title>Beta function - Boring Math - Special Functions 4.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -165,7 +165,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Boring Math - Special Functions 3.1.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">Boring Math - Special Functions 4.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-  <span class="sidebar-brand-text">Boring Math - Special Functions 3.1.0 documentation</span>
+  <span class="sidebar-brand-text">Boring Math - Special Functions 4.0.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -263,18 +263,40 @@
 <dd><p>Beta function valid for all complex values of z.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Initial naive implementation.</p>
+<p>For all u, v ∈ ℂ and m, n ∈ ℕ, we have</p>
+<ul class="simple">
+<li><p>B(u, v) = B(v, u)</p></li>
+<li><p>B(0, v) = Γ(0) = ∞</p></li>
+<li><p>B(m, -n) = ∞ when m &gt; n &gt; 0</p></li>
+<li><p>B(m, -n) = Γ(m) * (Res[Γ, -n]/Res[Γ, m-n]) when m &lt;= n</p>
+<ul>
+<li><p>where ∀(n&gt;=0) Res[Γ(z), z = -n] = (-1)ⁿ/(n!)</p></li>
+</ul>
+</li>
+</ul>
 </div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="boring_math.special_functions.beta.beta_real">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.beta.</span></span><span class="sig-name descname"><span class="pre">beta_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.beta.beta_real" title="Link to this definition">¶</a></dt>
-<dd><p>Beta function valid for all real values of x.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Initial naive implementation.</p>
+<p>Using natural logs for more numerical stability.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – First argument to analytically continued beta function.</p></li>
+<li><p><strong>v</strong> – Second argument to analytically continued beta function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">beta(u,v)</span></code> where <code class="docutils literal notranslate"><span class="pre">inf</span> <span class="pre">+</span> <span class="pre">infj</span></code> is used to
+represent a single complex infinity.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="boring_math.special_functions.beta.infinity">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.beta.</span></span><span class="sig-name descname"><span class="pre">infinity</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(inf+infj)</span></span><a class="headerlink" href="#boring_math.special_functions.beta.infinity" title="Link to this definition">¶</a></dt>
+<dd><p>Used to represent a single complex infinity.</p>
 </dd></dl>
 
 </section>
@@ -328,7 +350,7 @@
             <ul>
 <li><a class="reference internal" href="#">Beta function</a><ul>
 <li><a class="reference internal" href="#boring_math.special_functions.beta.beta"><code class="docutils literal notranslate"><span class="pre">beta()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.beta.beta_real"><code class="docutils literal notranslate"><span class="pre">beta_real()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.beta.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -340,7 +362,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=dd1205ac"></script>
+</div><script src="../_static/documentation_options.js?v=3304f9e4"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

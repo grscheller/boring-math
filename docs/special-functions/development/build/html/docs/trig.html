@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Complex trig functions (z = 0)" href="ctrig0.html"><link rel="prev" title="Real trig functions (x=0)" href="trig0.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Real trig functions - Boring Math - Special Functions 3.1.0 documentation</title>
+        <title>Real trig functions - Boring Math - Special Functions 4.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -165,7 +165,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">Boring Math - Special Functions 3.1.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">Boring Math - Special Functions 4.0.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-  <span class="sidebar-brand-text">Boring Math - Special Functions 3.1.0 documentation</span>
+  <span class="sidebar-brand-text">Boring Math - Special Functions 4.0.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -259,51 +259,42 @@
 <p>Floating point special functions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trig.sin">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.sin" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of sine about x = 0.</p>
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.sin" title="Link to this definition">¶</a></dt>
+<dd><p>Sine centered about θ = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
-</ul>
+<dd class="field-odd"><p><strong>θ</strong> – Angle in radians.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of sine(x) centered at x = 0</p>
+<dd class="field-even"><p>Sine of angle θ.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trig.cos">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.cos" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of cosine about x = 0.</p>
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.cos" title="Link to this definition">¶</a></dt>
+<dd><p>Cosine centered about θ = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
-</ul>
+<dd class="field-odd"><p><strong>θ</strong> – Angle in radians.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of cosine(x) centered at x = 0</p>
+<dd class="field-even"><p>Cosine of angle θ.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trig.tan">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.tan" title="Link to this definition">¶</a></dt>
-<dd><p>Tangent centered about x = 0.</p>
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trig.</span></span><span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trig.tan" title="Link to this definition">¶</a></dt>
+<dd><p>Tangent centered about θ = 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have 2 &lt;= n &lt;= 20</p></li>
-</ul>
+<dd class="field-odd"><p><strong>θ</strong> – Angle in radians.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>sin0(x)/cos0(x)</p>
+<dd class="field-even"><p>Tangent of angle θ.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -380,7 +371,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=dd1205ac"></script>
+</div><script src="../_static/documentation_options.js?v=3304f9e4"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
