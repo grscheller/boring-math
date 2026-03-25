@@ -207,6 +207,7 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Exponential Functions</a><input aria-label="Toggle navigation of Exponential Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Exponential functions</a></li>
 </ul>
@@ -299,7 +300,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code>.</p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">nan</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">nan</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -331,8 +332,10 @@
 <dd><p>Exponential function good for all complex z.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Complex exp(z) has an essential singularity at infinity,
-so function returns <code class="docutils literal notranslate"><span class="pre">nan</span></code> if given an infinite argument.</p>
+<p>Complex exp(z) has an essential singularity at infinity.
+If given an infinite argument, phase information is given
+in the returned possibly infinite value consistent the
+Python stdlib cmath.exp function.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -342,17 +345,12 @@ so function returns <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code> where inf+infj is used to
-represent a single complex infinity. Returns <code class="docutils literal notranslate"><span class="pre">nan</span></code>
-if given an infinte argument.</p>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code> where inf is returned when <code class="docutils literal notranslate"><span class="pre">re(z)</span> <span class="pre">=</span> <span class="pre">inf</span></code>.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">z</span></code> is infinite but <code class="docutils literal notranslate"><span class="pre">re(z)</span></code> is not.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="boring_math.special_functions.exponential.infinity">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.</span></span><span class="sig-name descname"><span class="pre">infinity</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(inf+infj)</span></span><a class="headerlink" href="#boring_math.special_functions.exponential.infinity" title="Link to this definition">¶</a></dt>
-<dd><p>Used to represent a single complex infinity.</p>
 </dd></dl>
 
 </section>
@@ -417,7 +415,6 @@ if given an infinte argument.</p>
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.exp"><code class="docutils literal notranslate"><span class="pre">exp()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.cexp0"><code class="docutils literal notranslate"><span class="pre">cexp0()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.special_functions.exponential.cexp"><code class="docutils literal notranslate"><span class="pre">cexp()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.exponential.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
 </ul>
 </li>
 </ul>

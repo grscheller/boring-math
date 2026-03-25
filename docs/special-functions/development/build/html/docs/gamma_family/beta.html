@@ -207,6 +207,7 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential Functions</a><input aria-label="Toggle navigation of Exponential Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
@@ -286,7 +287,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Using natural logs for more numerical stability.</p>
+<p>Using natural logs in calculation for more numerical stability.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -296,16 +297,10 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">beta(u,v)</span></code> where <code class="docutils literal notranslate"><span class="pre">inf</span> <span class="pre">+</span> <span class="pre">infj</span></code> is used to
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">beta(u,v)</span></code> where <code class="docutils literal notranslate"><span class="pre">inf+infj</span></code> is returned to
 represent a single complex infinity.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py data">
-<dt class="sig sig-object py" id="boring_math.special_functions.beta.infinity">
-<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.beta.</span></span><span class="sig-name descname"><span class="pre">infinity</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(inf+infj)</span></span><a class="headerlink" href="#boring_math.special_functions.beta.infinity" title="Link to this definition">¶</a></dt>
-<dd><p>Used to represent a single complex infinity.</p>
 </dd></dl>
 
 </section>
@@ -359,7 +354,6 @@ represent a single complex infinity.</p>
             <ul>
 <li><a class="reference internal" href="#">Beta function</a><ul>
 <li><a class="reference internal" href="#boring_math.special_functions.beta.beta"><code class="docutils literal notranslate"><span class="pre">beta()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.special_functions.beta.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
 </ul>
 </li>
 </ul>

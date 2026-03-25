@@ -2,6 +2,11 @@ Special Functions
 -----------------
 
 .. toctree::
+    :caption: Mathematical Constants
+
+    constants
+
+.. toctree::
     :caption: Exponential Functions
 
     exponential/index
