@@ -5,7 +5,7 @@ Pythonic FP dependencies.
 Coordinated releases
 ====================
 
-2026-02-TBA - 2.1.1
+2026-03-24 - 2.1.1
 -------------------
 
 ========================= ===================================== =======
@@ -17,7 +17,7 @@ Number Theory             boring-math-number-theory             2.0.1
 Probability Distributions boring-math-probability-distributions 0.8.2
 Pythagorean Triples       boring-math-pythagorean-triples       0.8.4
 Recursive Functions       boring-math-recursive-functions       1.0.1
-Special Functions         boring-math-special-functions         0.2.0
+Special Functions         boring-math-special-functions         4.0.0
 ========================= ===================================== =======
 
 This release reflects mostly docstring updates.

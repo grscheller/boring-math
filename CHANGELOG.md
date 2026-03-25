@@ -16,6 +16,12 @@ changes when
 
 ## Important Milestones
 
+### 2026-03-24 - PyPI Boring Math release 2.2.0
+
+Released boring-math.special-functions PyPI release 4.0.0.
+
+- minor tweaks to Boring Math homepage.
+
 ### 2026-03-03 - Updated docs and homepage.
 
 For boring-math-special-functions release 3.0.0
