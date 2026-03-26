@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math-probability-distributions
+    $ pip install boring-math.probability-distributions
 
 Importing the modules
 ---------------------

@@ -7,6 +7,7 @@ boring_math.probability_distributions.distributions
 .. toctree::
     :caption: continuous
 
+    beta
     normal
     uniform
 
