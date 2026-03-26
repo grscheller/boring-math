@@ -303,6 +303,35 @@ represent a single complex infinity.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.beta.beta_real">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.beta.</span></span><span class="sig-name descname"><span class="pre">beta_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.beta.beta_real" title="Link to this definition">¶</a></dt>
+<dd><p>Beta function valid for all real values of x, y &gt; 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not valid for extended value reals.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using natural logs for more numerical stability.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – First argument to analytically continued beta function.</p></li>
+<li><p><strong>y</strong> – Second argument to analytically continued beta function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">beta(x,</span> <span class="pre">y)</span></code> where <code class="docutils literal notranslate"><span class="pre">inf</span></code> is returned.
+to denote singular points.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If x &lt;= 0 or y &lt;= 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -354,6 +383,7 @@ represent a single complex infinity.</p>
             <ul>
 <li><a class="reference internal" href="#">Beta function</a><ul>
 <li><a class="reference internal" href="#boring_math.special_functions.beta.beta"><code class="docutils literal notranslate"><span class="pre">beta()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.beta.beta_real"><code class="docutils literal notranslate"><span class="pre">beta_real()</span></code></a></li>
 </ul>
 </li>
 </ul>
