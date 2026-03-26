@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math-abstract-algebra
+    $ pip install boring-math.abstract-algebra
 
 Importing the modules
 ---------------------

@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math-recursive-functions
+    $ pip install boring-math.recursive-functions
 
 Importing the modules
 ---------------------

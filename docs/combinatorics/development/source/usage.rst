@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math-combinatorics
+    $ pip install boring-math.combinatorics
 
 Importing the modules
 ---------------------

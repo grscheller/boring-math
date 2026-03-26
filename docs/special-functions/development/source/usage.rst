@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math-special-functions
+    $ pip install boring-math.special-functions
 
 Importing the modules
 ---------------------
