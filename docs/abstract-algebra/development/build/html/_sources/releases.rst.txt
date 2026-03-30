@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-abstract-algebra:** boring_math.abstract_algebra
 

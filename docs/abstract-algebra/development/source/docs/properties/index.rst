@@ -1,5 +1,5 @@
 properties
-==========
+----------
 
 .. automodule:: boring_math.abstract_algebra.properties
     :synopsis:

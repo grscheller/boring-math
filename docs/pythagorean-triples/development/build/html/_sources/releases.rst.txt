@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-pythagorean-triples:** boring_math.pythagorean_triples
 

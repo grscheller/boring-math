@@ -1,5 +1,5 @@
 boring_math.probability_distributions
-=====================================
+-------------------------------------
 
 .. toctree::
     :caption: Modules

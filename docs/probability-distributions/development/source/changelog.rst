@@ -1,5 +1,5 @@
 Changelog
-=========
+---------
 
 Changelog for the
 `boring-math-probability-distributions

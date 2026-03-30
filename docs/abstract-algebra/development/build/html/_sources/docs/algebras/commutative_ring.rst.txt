@@ -1,5 +1,5 @@
 commutative ring
-================
+----------------
 
 .. automodule:: boring_math.abstract_algebra.algebras.commutative_ring
     :show-inheritance:

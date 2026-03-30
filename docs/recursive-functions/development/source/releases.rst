@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-recursive-functions:** boring_math.recursive_functions
 

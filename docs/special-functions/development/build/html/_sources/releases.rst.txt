@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-special-functions:** boring_math.special_functions
              

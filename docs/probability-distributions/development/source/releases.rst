@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-probability-distributions:** boring_math.probability_distributions
 

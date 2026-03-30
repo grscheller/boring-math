@@ -1,5 +1,5 @@
 PyPI releases
-=============
+-------------
 
 **boring-math-number-theory:** boring_math.number_theory
 
