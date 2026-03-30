@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math.number-theory
+    $ pip install boring-math-number-theory
 
 Importing the modules
 ---------------------

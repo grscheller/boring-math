@@ -5,7 +5,7 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-# 
+#
 # Must match what is in pyproject.toml, also update proposed_release_string accordingly
 # when generating the docs for an actual, not proposed, release.
 #
@@ -13,7 +13,7 @@
 project = 'Boring Math - Recursive Functions'
 copyright = '2023-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '1.0.1+' 
+release = '1.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

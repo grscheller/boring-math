@@ -7,7 +7,7 @@ one of the
 `Boring Math <https://grscheller.github.io/boring-math/>`_
 PyPI projects.
 
-**Proposed PyPI 0.8.2+ release**
+**Proposed PyPI 0.8.2 release**
 
 .. automodule:: boring_math.probability_distributions
     :synopsis:

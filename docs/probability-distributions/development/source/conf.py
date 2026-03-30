@@ -13,7 +13,7 @@
 project = 'Boring Math - Probability Distributions'
 copyright = '2023-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.8.2+' 
+release = '0.8.2' 
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

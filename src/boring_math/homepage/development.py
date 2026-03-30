@@ -1,6 +1,6 @@
 """
 Semantic Versioning
-===================
+-------------------
 
 Maintainer has adopted strict 3 digit `semantic versioning <https://semver.org>`_
 and does not put `caps on dependencies <https://iscinumpy.dev/post/bound-version-constraints>`_.
@@ -10,7 +10,7 @@ projects as libraries, For those concerned with stability, periodically known co
 sets of releases are given in the Releases section of these docs.
 
 Changelog
-=========
+---------
 
 Pythonic FP overarching
 `CHANGELOG <https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md>`_.
@@ -18,7 +18,7 @@ Pythonic FP overarching
 Each individual Boring Math project has its own CHANGELOG too.
 
 Module Dependencies
-===================
+-------------------
 
 All non-typing related dependencies. Arrows point from modules to their dependencies.
 
@@ -48,8 +48,8 @@ All non-typing related dependencies. Arrows point from modules to their dependen
         probability_distributions -> math;
         probability_distributions -> "mathplotlib.pyplot";
         probability_distributions -> "pythonic_fp.fptools";
-        special_functions -> math;
         special_functions -> cmath;
+        special_functions -> math;
     }
 
 """

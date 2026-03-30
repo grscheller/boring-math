@@ -13,8 +13,6 @@ Install the project into your Python environment:
 Importing the modules
 ---------------------
 
-Import the functions from either or both the ``number_theory`` or ``combinatorics``
-
 .. code:: python
 
     from boring_math.recursive_functions.examples import ackermann_list

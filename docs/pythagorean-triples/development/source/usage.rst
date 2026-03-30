@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math.pythagorean-triples
+    $ pip install boring-math-pythagorean-triples
 
 Importing the modules
 ---------------------

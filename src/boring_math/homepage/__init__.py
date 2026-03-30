@@ -11,12 +11,12 @@ Daddy's Boring Math Projects
     - Claims the boring-math name on PyPI for the overall effort.
     - Hosts on *GitHub Pages*
 
-    - The Boring Math homepage.
-    - Sphinx API & documentation for each Boring Math project.
+      - The Boring Math homepage.
+      - Sphinx API & documentation for each Boring Math project.
 
     - Provides locations for overarching CHANGELOG and README files.
 
-    - Each Boring Math project has its own CHANGELOG and README files.
+      - Each Boring Math project has its own CHANGELOG and README files.
 
 .. tip::
 
@@ -26,5 +26,5 @@ Daddy's Boring Math Projects
 """
 
 __author__ = 'Geoffrey R. Scheller'
-__copyright__ = 'Copyright (c) 2016-2025 Geoffrey R. Scheller'
+__copyright__ = 'Copyright (c) 2016-2026 Geoffrey R. Scheller'
 __license__ = 'Apache License 2.0'

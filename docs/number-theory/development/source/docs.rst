@@ -1,5 +1,5 @@
-number_theory
--------------
+Number Theory Library
+---------------------
 
 .. automodule:: boring_math.number_theory
     :members:
