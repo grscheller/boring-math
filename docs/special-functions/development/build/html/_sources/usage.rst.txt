@@ -8,7 +8,7 @@ Install the project into your Python environment:
 
 .. code:: console
 
-    $ pip install boring-math.special-functions
+    $ pip install boring-math-special-functions
 
 Importing the modules
 ---------------------
@@ -23,4 +23,4 @@ Importing the modules
     from boring_math.special_functions.ctrig import csin, ccos, ctan
 
     from boring_math.special_functions.gamma import gamma, gamma_real
-    from boring_math.special_functions.beta import beta
+    from boring_math.special_functions.beta import beta, beta_real

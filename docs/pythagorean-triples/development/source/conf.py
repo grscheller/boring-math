@@ -13,7 +13,7 @@
 project = 'Boring Math - Pythagorean Triples'
 copyright = '2016-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.8.4+' 
+release = '0.8.4' 
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
