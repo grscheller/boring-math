@@ -9,14 +9,14 @@ Special Functions
 .. toctree::
     :caption: Exponential Functions
 
-    exponential/index
+    exponential
 
 .. toctree::
     :caption: Trigonometry Functions
 
-    trigonometry/index
+    trigonometry
 
 .. toctree::
     :caption: Gamma Related Functions
 
-    gamma_family/index
+    gamma_family
