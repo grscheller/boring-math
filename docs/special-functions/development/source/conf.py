@@ -20,6 +20,7 @@ release = '5.0.0'
 
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.graphviz',
 ]
 autodoc_member_order = 'bysource'
@@ -29,6 +30,8 @@ exclude_patterns: list[str] = []
 
 # -- Options for Sphinx
 autoclass_content = 'both'
+autosummary_generate = True
+autosummary_recursive = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

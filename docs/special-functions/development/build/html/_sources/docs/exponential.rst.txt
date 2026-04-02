@@ -1,5 +1,8 @@
 Exponential functions
 ---------------------
 
-.. automodule:: boring_math.special_functions.exponential
-    :members:
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
+
+   boring_math.special_functions.exponential

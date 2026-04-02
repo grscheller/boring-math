@@ -1,0 +1,14 @@
+﻿boring\_math.special\_functions.gamma\_family
+=============================================
+
+.. automodule:: boring_math.special_functions.gamma_family
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   beta
+   gamma

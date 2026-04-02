@@ -1,5 +1,8 @@
 Trigonometry
 ------------
 
-.. automodule:: boring_math.special_functions.trigonometry
-    :members:
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
+
+   boring_math.special_functions.trigonometry

@@ -1,0 +1,22 @@
+boring\_math.special\_functions.exponential.exp
+===============================================
+
+.. automodule:: boring_math.special_functions.exponential.exp
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      mindepth
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      cexp
+      cexp0
+      exp
+      exp0
+      shift0
+   

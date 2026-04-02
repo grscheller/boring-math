@@ -1,5 +1,8 @@
-Gamma family
-------------
+Gamma related functions
+-----------------------
 
-.. automodule:: boring_math.special_functions.gamma_family
-    :members:
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
+
+   boring_math.special_functions.gamma_family
