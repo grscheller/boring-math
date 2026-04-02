@@ -18,6 +18,7 @@ PyPI projects.
 .. toctree::
     :caption: User Documentation
 
+    description
     usage
     releases
     changelog
