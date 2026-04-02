@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Real trig functions" href="trig.html"><link rel="prev" title="Exponential functions" href="../exponential/exponential.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Real trig functions" href="trig.html"><link rel="prev" title="Exponential functions" href="../exponential/exp.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Trigonometry functions - Boring Math - Special Functions 5.0.0 documentation</title>
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -209,7 +209,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential Functions</a><input aria-label="Toggle navigation of Exponential Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../exponential/exponential.html">Exponential functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Trigonometry functions</a><input aria-label="Toggle navigation of Trigonometry functions" checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -218,7 +218,8 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma Related Functions</a><input aria-label="Toggle navigation of Gamma Related Functions" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma_family.html">Gamma family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma.html">Gamma function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gamma_family/beta.html">Beta function</a></li>
 </ul>
 </li>
 </ul>
@@ -256,13 +257,21 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="trigonometry-functions">
-<h1>Trigonometry functions<a class="headerlink" href="#trigonometry-functions" title="Link to this heading">¶</a></h1>
+          <section id="module-boring_math.special_functions.trigonometry">
+<span id="trigonometry-functions"></span><h1>Trigonometry functions<a class="headerlink" href="#module-boring_math.special_functions.trigonometry" title="Link to this heading">¶</a></h1>
+<section id="trigonometric-functions">
+<h2>Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Link to this heading">¶</a></h2>
+<div class="admonition-trigonometric-related-functions admonition">
+<p class="admonition-title">Trigonometric related functions</p>
+<p>Implementations for complex and real valued trigonometric functions
+and their inverses.</p>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Real Trig Functions</span></p>
 <ul>
@@ -307,7 +316,7 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../exponential/exponential.html">
+          <a class="prev-page" href="../exponential/exp.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
@@ -336,8 +345,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Trigonometry functions</a><ul>
+<li><a class="reference internal" href="#trigonometric-functions">Trigonometric Functions</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

@@ -218,7 +218,8 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma Related Functions</a><input aria-label="Toggle navigation of Gamma Related Functions" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma_family.html">Gamma family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma.html">Gamma function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gamma_family/beta.html">Beta function</a></li>
 </ul>
 </li>
 </ul>
@@ -243,7 +244,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/docs/exponential/exponential.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/docs/exponential/exp.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -261,16 +262,95 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.special_functions.exponential">
-<span id="exponential-functions"></span><h1>Exponential functions<a class="headerlink" href="#module-boring_math.special_functions.exponential" title="Link to this heading">¶</a></h1>
-<section id="exponential-and-logarithmic-functions">
-<h2>Exponential and Logarithmic Functions<a class="headerlink" href="#exponential-and-logarithmic-functions" title="Link to this heading">¶</a></h2>
-<div class="admonition-exponential-related-functions admonition">
-<p class="admonition-title">Exponential related functions</p>
-<p>Implementations for complex and real valued exponential functions
-and their inverses.</p>
+          <section id="module-boring_math.special_functions.exponential.exp">
+<span id="exponential-functions"></span><h1>Exponential functions<a class="headerlink" href="#module-boring_math.special_functions.exponential.exp" title="Link to this heading">¶</a></h1>
+<p>Floating point special functions about a point.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.exponential.exp.exp0">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.exp.</span></span><span class="sig-name descname"><span class="pre">exp0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.exponential.exp.exp0" title="Link to this definition">¶</a></dt>
+<dd><p>Partially factored Taylor expansion of exp about <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Best if <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">&lt;=</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code>.</p>
 </div>
-</section>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Independent variable.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Taylor series expansion of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code> centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.exponential.exp.exp">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.exp.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.exponential.exp.exp" title="Link to this definition">¶</a></dt>
+<dd><p>Exponential function good for all floating point x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Independent variable.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eˣ</span></code> otherwise <code class="docutils literal notranslate"><span class="pre">nan</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">nan</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.exponential.exp.cexp0">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.exp.</span></span><span class="sig-name descname"><span class="pre">cexp0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.exponential.exp.cexp0" title="Link to this definition">¶</a></dt>
+<dd><p>Partially factored Taylor expansion of exp about z = 0.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – independent variable</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Taylor series expansion of eᶻ centered at z = 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.exponential.exp.cexp">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.exponential.exp.</span></span><span class="sig-name descname"><span class="pre">cexp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">22</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.exponential.exp.cexp" title="Link to this definition">¶</a></dt>
+<dd><p>Exponential function good for all complex z.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Complex exp(z) has an essential singularity at infinity.
+If given an infinite argument, phase information is given
+in the returned possibly infinite value consistent the
+Python stdlib cmath.exp function.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – independent variable</p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">2</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">eᶻ</span></code> where inf is returned when <code class="docutils literal notranslate"><span class="pre">re(z)</span> <span class="pre">=</span> <span class="pre">inf</span></code>.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">z</span></code> is infinite but <code class="docutils literal notranslate"><span class="pre">re(z)</span></code> is not.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -329,7 +409,10 @@ and their inverses.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Exponential functions</a><ul>
-<li><a class="reference internal" href="#exponential-and-logarithmic-functions">Exponential and Logarithmic Functions</a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.exponential.exp.exp0"><code class="docutils literal notranslate"><span class="pre">exp0()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.exponential.exp.exp"><code class="docutils literal notranslate"><span class="pre">exp()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.exponential.exp.cexp0"><code class="docutils literal notranslate"><span class="pre">cexp0()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.exponential.exp.cexp"><code class="docutils literal notranslate"><span class="pre">cexp()</span></code></a></li>
 </ul>
 </li>
 </ul>

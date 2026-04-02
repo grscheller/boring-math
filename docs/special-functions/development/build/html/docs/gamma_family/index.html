@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Gamma family" href="gamma_family.html"><link rel="prev" title="Complex trig functions" href="../trigonometry/ctrig.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Gamma function" href="gamma.html"><link rel="prev" title="Complex trig functions" href="../trigonometry/ctrig.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Gamma Related Functions - Boring Math - Special Functions 5.0.0 documentation</title>
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -209,7 +209,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential Functions</a><input aria-label="Toggle navigation of Exponential Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../exponential/exponential.html">Exponential functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../trigonometry/index.html">Trigonometry functions</a><input aria-label="Toggle navigation of Trigonometry functions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -218,7 +218,8 @@
 </ul>
 </li>
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Gamma Related Functions</a><input aria-label="Toggle navigation of Gamma Related Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="gamma_family.html">Gamma family</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamma.html">Gamma function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="beta.html">Beta function</a></li>
 </ul>
 </li>
 </ul>
@@ -256,18 +257,37 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="gamma-related-functions">
-<h1>Gamma Related Functions<a class="headerlink" href="#gamma-related-functions" title="Link to this heading">¶</a></h1>
+          <section id="module-boring_math.special_functions.gamma_family">
+<span id="gamma-related-functions"></span><h1>Gamma Related Functions<a class="headerlink" href="#module-boring_math.special_functions.gamma_family" title="Link to this heading">¶</a></h1>
+<section id="gamma-family-of-functions">
+<h2>Gamma family of functions<a class="headerlink" href="#gamma-family-of-functions" title="Link to this heading">¶</a></h2>
+<div class="admonition-gamma-and-other-related-functions admonition">
+<p class="admonition-title">Gamma and other related functions</p>
+<p>Implementations for complex and real valued gamma and beta functions.</p>
+<p>TODO: Implement the digamma and Riemann zeta functions.</p>
+</div>
+</section>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Gamma Family Functions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Gamma Function</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="gamma_family.html">Gamma family</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gamma_family.html#gamma-family-of-functions">Gamma family of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gamma.html">Gamma function</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gamma.html#boring_math.special_functions.gamma_family.gamma.gamma"><code class="docutils literal notranslate"><span class="pre">gamma()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamma.html#boring_math.special_functions.gamma_family.gamma.gamma_real"><code class="docutils literal notranslate"><span class="pre">gamma_real()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Beta Function</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="beta.html">Beta function</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beta.html#boring_math.special_functions.gamma_family.beta.beta"><code class="docutils literal notranslate"><span class="pre">beta()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="beta.html#boring_math.special_functions.gamma_family.beta.beta_real"><code class="docutils literal notranslate"><span class="pre">beta_real()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -279,12 +299,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gamma_family.html">
+          <a class="next-page" href="gamma.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Gamma family</div>
+                <div class="title">Gamma function</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -317,8 +337,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Gamma Related Functions</a><ul>
+<li><a class="reference internal" href="#gamma-family-of-functions">Gamma family of functions</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
