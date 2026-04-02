@@ -1,0 +1,13 @@
+boring\_math.special\_functions.gamma\_family.beta
+==================================================
+
+.. automodule:: boring_math.special_functions.gamma_family.beta
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      beta
+      beta_real
+   

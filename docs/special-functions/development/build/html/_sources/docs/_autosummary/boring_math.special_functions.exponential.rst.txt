@@ -1,0 +1,13 @@
+﻿boring\_math.special\_functions.exponential
+===========================================
+
+.. automodule:: boring_math.special_functions.exponential
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   exp

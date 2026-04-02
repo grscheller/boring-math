@@ -1,0 +1,13 @@
+boring\_math.special\_functions.gamma\_family.gamma
+===================================================
+
+.. automodule:: boring_math.special_functions.gamma_family.gamma
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      gamma
+      gamma_real
+   

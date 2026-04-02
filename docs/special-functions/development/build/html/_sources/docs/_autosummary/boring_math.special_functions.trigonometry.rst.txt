@@ -1,0 +1,16 @@
+﻿boring\_math.special\_functions.trigonometry
+============================================
+
+.. automodule:: boring_math.special_functions.trigonometry
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   ctrig
+   ctrig0
+   trig
+   trig0

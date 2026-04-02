@@ -1,0 +1,14 @@
+boring\_math.special\_functions.trigonometry.ctrig
+==================================================
+
+.. automodule:: boring_math.special_functions.trigonometry.ctrig
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      ccos
+      csin
+      ctan
+   
