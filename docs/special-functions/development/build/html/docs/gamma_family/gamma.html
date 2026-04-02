@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Trigonometry functions" href="../trigonometry/index.html"><link rel="prev" title="Exponential Functions" href="index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="Beta function" href="beta.html"><link rel="prev" title="Gamma family module" href="index.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Exponential functions - Boring Math - Special Functions 5.0.0 documentation</title>
+        <title>Gamma function - Boring Math - Special Functions 5.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -208,17 +208,18 @@
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Exponential Functions</a><input aria-label="Toggle navigation of Exponential Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Exponential functions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../trigonometry/index.html">Trigonometry functions</a><input aria-label="Toggle navigation of Trigonometry functions" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../trigonometry/index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../trigonometry/trig.html">Real trig functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../trigonometry/ctrig.html">Complex trig functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma Related Functions</a><input aria-label="Toggle navigation of Gamma Related Functions" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma_family.html">Gamma family</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Gamma function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="beta.html">Beta function</a></li>
 </ul>
 </li>
 </ul>
@@ -243,7 +244,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/docs/exponential/exponential.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/docs/gamma_family/gamma.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -261,16 +262,45 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-boring_math.special_functions.exponential">
-<span id="exponential-functions"></span><h1>Exponential functions<a class="headerlink" href="#module-boring_math.special_functions.exponential" title="Link to this heading">¶</a></h1>
-<section id="exponential-and-logarithmic-functions">
-<h2>Exponential and Logarithmic Functions<a class="headerlink" href="#exponential-and-logarithmic-functions" title="Link to this heading">¶</a></h2>
-<div class="admonition-exponential-related-functions admonition">
-<p class="admonition-title">Exponential related functions</p>
-<p>Implementations for complex and real valued exponential functions
-and their inverses.</p>
+          <section id="module-boring_math.special_functions.gamma_family.gamma">
+<span id="gamma-function"></span><h1>Gamma function<a class="headerlink" href="#module-boring_math.special_functions.gamma_family.gamma" title="Link to this heading">¶</a></h1>
+<p>Gamma function.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.gamma_family.gamma.gamma">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.gamma_family.gamma.</span></span><span class="sig-name descname"><span class="pre">gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.gamma_family.gamma.gamma" title="Link to this definition">¶</a></dt>
+<dd><p>Gamma function valid for all complex values of z.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lanczos approximation of Gamma using <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">7</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">9</span></code>
+terms. The values of g and n were chosen to balance accuracy
+with speed. Typically accurate to 13 correct decimal places.</p>
+<p>Code modified from the <a class="reference external" href="https://en.wikipedia.org/wiki/Lanczos_approximation">Wikipedia Lanczos appoximation article</a>.</p>
 </div>
-</section>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> – Complex argument.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of the analytic continuation of <code class="docutils literal notranslate"><span class="pre">gamma(z)</span></code>. Uses
+<code class="docutils literal notranslate"><span class="pre">inf</span> <span class="pre">+</span> <span class="pre">infj</span></code> to represent a single complex infinity.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.special_functions.gamma_family.gamma.gamma_real">
+<span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.gamma_family.gamma.</span></span><span class="sig-name descname"><span class="pre">gamma_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.gamma_family.gamma.gamma_real" title="Link to this definition">¶</a></dt>
+<dd><p>Gamma function valid for all real values of x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> – Floating point argument.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value of <code class="docutils literal notranslate"><span class="pre">gamma(x)</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -278,12 +308,12 @@ and their inverses.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../trigonometry/index.html">
+          <a class="next-page" href="beta.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Trigonometry functions</div>
+                <div class="title">Beta function</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -294,7 +324,7 @@ and their inverses.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Exponential Functions</div>
+                <div class="title">Gamma family module</div>
                 
               </div>
             </a>
@@ -328,8 +358,9 @@ and their inverses.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Exponential functions</a><ul>
-<li><a class="reference internal" href="#exponential-and-logarithmic-functions">Exponential and Logarithmic Functions</a></li>
+<li><a class="reference internal" href="#">Gamma function</a><ul>
+<li><a class="reference internal" href="#boring_math.special_functions.gamma_family.gamma.gamma"><code class="docutils literal notranslate"><span class="pre">gamma()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.special_functions.gamma_family.gamma.gamma_real"><code class="docutils literal notranslate"><span class="pre">gamma_real()</span></code></a></li>
 </ul>
 </li>
 </ul>

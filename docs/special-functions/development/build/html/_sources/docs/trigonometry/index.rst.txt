@@ -1,5 +1,8 @@
-Trigonometry functions
-----------------------
+Trigonometry module
+-------------------
+
+.. automodule:: boring_math.special_functions.trigonometry
+    :synopsis:
 
 .. toctree::
     :caption: Real Trig Functions

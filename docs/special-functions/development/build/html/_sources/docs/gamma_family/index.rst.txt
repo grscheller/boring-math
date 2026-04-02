@@ -1,7 +1,15 @@
-Gamma Related Functions
------------------------
+Gamma family module
+-------------------
+
+.. automodule:: boring_math.special_functions.gamma_family
+    :synopsis:
 
 .. toctree::
-    :caption: Gamma Family Functions
+    :caption: Gamma function module
 
-    gamma_family
+    gamma
+
+.. toctree::
+    :caption: Beta function module
+
+    beta

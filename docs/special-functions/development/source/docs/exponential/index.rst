@@ -1,7 +1,10 @@
-Exponential Functions
----------------------
+Exponential module
+------------------
+
+.. automodule:: boring_math.special_functions.exponential
+    :synopsis:
 
 .. toctree::
-    :caption: Exponential Functions
+    :caption: Exponential functions
 
-    exponential
+    exp
