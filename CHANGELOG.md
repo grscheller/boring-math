@@ -16,6 +16,17 @@ changes when
 
 ## Important Milestones
 
+### 2026-04-02 - Sphinx autosummary boring-math-special-functions example
+
+Two new example branches created.
+
+- branch **parts**
+  - just using automodule
+  - direction I went
+- branch **whole**
+  - working auto-module example
+  - just gives function signatures, looses docstring info
+
 ### 2026-03-24 - PyPI Boring Math release 2.2.0
 
 Released boring-math.special-functions PyPI release 4.0.0.
