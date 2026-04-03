@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -265,8 +266,9 @@ exercise template.</p>
 </section>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial">
-<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.binomial.</span></span><span class="sig-name descname"><span class="pre">Binomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial" title="Link to this definition">¶</a></dt>
-<dd><p>Class for visualizing Binomial distributed data.</p>
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.binomial.</span></span><span class="sig-name descname"><span class="pre">Binomial</span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../distribution.html#boring_math.probability_distributions.distribution.DiscreteDist" title="boring_math.probability_distributions.distribution.DiscreteDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteDist</span></code></a></p>
+<p>Class for visualizing Binomial distributed data.</p>
 <p>A Binomial distribution represents the number of events with
 probability <code class="docutils literal notranslate"><span class="pre">p</span></code> happening in <code class="docutils literal notranslate"><span class="pre">n</span></code> numbers of trials.</p>
 <p>Attributes (some inherited):</p>
@@ -278,26 +280,20 @@ probability <code class="docutils literal notranslate"><span class="pre">p</span
 <li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> (int) the total number of trials</p></li>
 </ul>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__add__" title="Link to this definition">¶</a></dt>
-<dd><p>Add together two Binomial distributions with equal p.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__repr__" title="Link to this definition">¶</a></dt>
-<dd><p>Return repr(self).</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.pdf">
+<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Binomial probability distribution function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__str__">
-<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__str__" title="Link to this definition">¶</a></dt>
-<dd><p>Return str(self).</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.cdf">
+<span class="sig-name descname"><span class="pre">cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.cdf" title="Link to this definition">¶</a></dt>
+<dd><p>Binomial cumulative probability distribution function.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -313,15 +309,10 @@ probability <code class="docutils literal notranslate"><span class="pre">p</span
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.cdf">
-<span class="sig-name descname"><span class="pre">cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.cdf" title="Link to this definition">¶</a></dt>
-<dd><p>Binomial cumulative probability distribution function.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.pdf">
-<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.pdf" title="Link to this definition">¶</a></dt>
-<dd><p>Binomial probability distribution function.</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset">
+<span class="sig-name descname"><span class="pre">replace_stats_from_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../datasets.html#boring_math.probability_distributions.datasets.DataSet" title="boring_math.probability_distributions.datasets.DataSet"><span class="pre">DataSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset" title="Link to this definition">¶</a></dt>
+<dd><p>Function to calculate p and n from a data set.</p>
+<p>Where the read in data set is taken as the population.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -347,10 +338,21 @@ probability <code class="docutils literal notranslate"><span class="pre">p</span
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset">
-<span class="sig-name descname"><span class="pre">replace_stats_from_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../datasets.html#boring_math.probability_distributions.datasets.DataSet" title="boring_math.probability_distributions.datasets.DataSet"><span class="pre">DataSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset" title="Link to this definition">¶</a></dt>
-<dd><p>Function to calculate p and n from a data set.</p>
-<p>Where the read in data set is taken as the population.</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__add__" title="Link to this definition">¶</a></dt>
+<dd><p>Add together two Binomial distributions with equal p.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.binomial.Binomial.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
 </dd></dl>
 
 </dd></dl>
@@ -407,17 +409,17 @@ probability <code class="docutils literal notranslate"><span class="pre">p</span
 <li><a class="reference internal" href="#">binomial</a><ul>
 <li><a class="reference internal" href="#binomial-distribution">Binomial Distribution</a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial"><code class="docutils literal notranslate"><span class="pre">Binomial</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__add__"><code class="docutils literal notranslate"><span class="pre">Binomial.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__init__"><code class="docutils literal notranslate"><span class="pre">Binomial.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__repr__"><code class="docutils literal notranslate"><span class="pre">Binomial.__repr__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__str__"><code class="docutils literal notranslate"><span class="pre">Binomial.__str__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.pdf"><code class="docutils literal notranslate"><span class="pre">Binomial.pdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.cdf"><code class="docutils literal notranslate"><span class="pre">Binomial.cdf()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.calculate_mean"><code class="docutils literal notranslate"><span class="pre">Binomial.calculate_mean()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.calculate_stdev"><code class="docutils literal notranslate"><span class="pre">Binomial.calculate_stdev()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.cdf"><code class="docutils literal notranslate"><span class="pre">Binomial.cdf()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.pdf"><code class="docutils literal notranslate"><span class="pre">Binomial.pdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset"><code class="docutils literal notranslate"><span class="pre">Binomial.replace_stats_from_dataset()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.plot_bar_data"><code class="docutils literal notranslate"><span class="pre">Binomial.plot_bar_data()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.plot_bar_pdf"><code class="docutils literal notranslate"><span class="pre">Binomial.plot_bar_pdf()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.replace_stats_from_dataset"><code class="docutils literal notranslate"><span class="pre">Binomial.replace_stats_from_dataset()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__add__"><code class="docutils literal notranslate"><span class="pre">Binomial.__add__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__repr__"><code class="docutils literal notranslate"><span class="pre">Binomial.__repr__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.binomial.Binomial.__str__"><code class="docutils literal notranslate"><span class="pre">Binomial.__str__()</span></code></a></li>
 </ul>
 </li>
 </ul>

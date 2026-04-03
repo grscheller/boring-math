@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -255,23 +256,6 @@
 </div>
 </section>
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.number_theory.coprime">
-<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">coprime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.number_theory.coprime" title="Link to this definition">¶</a></dt>
-<dd><p>Makes 2 integers coprime by dividing out their common factors.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>m</strong> – first int for coprime calculation</p></li>
-<li><p><strong>n</strong> – second int for coprime calculation</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>coprimed values with original signs, <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> when <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="boring_math.number_theory.gcd">
 <span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">gcd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.gcd" title="Link to this definition">¶</a></dt>
 <dd><p>Uses Euclidean algorithm to compute the gcd of two integers.</p>
@@ -298,6 +282,40 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>gcd of the absolute values of <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.number_theory.lcm">
+<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">lcm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.lcm" title="Link to this definition">¶</a></dt>
+<dd><p>Find the least common multiple (lcm) of two integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – first int for lcm calculation</p></li>
+<li><p><strong>n</strong> – second int for lcm calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>lcm of the absolute values of <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.number_theory.coprime">
+<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">coprime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.number_theory.coprime" title="Link to this definition">¶</a></dt>
+<dd><p>Makes 2 integers coprime by dividing out their common factors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – first int for coprime calculation</p></li>
+<li><p><strong>n</strong> – second int for coprime calculation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>coprimed values with original signs, <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> when <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -348,47 +366,6 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="boring_math.number_theory.jacobi_symbol">
-<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">jacobi_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.jacobi_symbol" title="Link to this definition">¶</a></dt>
-<dd><p>Calculate the Jacobi Symbol <code class="docutils literal notranslate"><span class="pre">(a/n)</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Jacobi_symbol">https://en.wikipedia.org/wiki/Jacobi_symbol</a></p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> – any integer</p></li>
-<li><p><strong>n</strong> – any positive odd integer</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the Jacobi Symbol <code class="docutils literal notranslate"><span class="pre">(a/p)</span> <span class="pre">∈</span> <span class="pre">{-1,</span> <span class="pre">0,</span> <span class="pre">1}</span></code></p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>ValueError</strong> – if <code class="docutils literal notranslate"><span class="pre">n</span></code> is not a positive odd integer</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="boring_math.number_theory.lcm">
-<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">lcm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.lcm" title="Link to this definition">¶</a></dt>
-<dd><p>Find the least common multiple (lcm) of two integers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>m</strong> – first int for lcm calculation</p></li>
-<li><p><strong>n</strong> – second int for lcm calculation</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>lcm of the absolute values of <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="boring_math.number_theory.legendre_symbol">
 <span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">legendre_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.legendre_symbol" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the Legendre Symbol <code class="docutils literal notranslate"><span class="pre">(a/p)</span></code> where p is an odd prime.</p>
@@ -408,6 +385,30 @@
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ValueError</strong> – if <code class="docutils literal notranslate"><span class="pre">abs(p)</span> <span class="pre">&lt;</span> <span class="pre">3</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="boring_math.number_theory.jacobi_symbol">
+<span class="sig-prename descclassname"><span class="pre">boring_math.number_theory.</span></span><span class="sig-name descname"><span class="pre">jacobi_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#boring_math.number_theory.jacobi_symbol" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the Jacobi Symbol <code class="docutils literal notranslate"><span class="pre">(a/n)</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Jacobi_symbol">https://en.wikipedia.org/wiki/Jacobi_symbol</a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – any integer</p></li>
+<li><p><strong>n</strong> – any positive odd integer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the Jacobi Symbol <code class="docutils literal notranslate"><span class="pre">(a/p)</span> <span class="pre">∈</span> <span class="pre">{-1,</span> <span class="pre">0,</span> <span class="pre">1}</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if <code class="docutils literal notranslate"><span class="pre">n</span></code> is not a positive odd integer</p>
 </dd>
 </dl>
 </dd></dl>
@@ -517,14 +518,14 @@
             <ul>
 <li><a class="reference internal" href="#">Number Theory Library</a><ul>
 <li><a class="reference internal" href="#id1">Number Theory Library</a></li>
-<li><a class="reference internal" href="#boring_math.number_theory.coprime"><code class="docutils literal notranslate"><span class="pre">coprime()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.gcd"><code class="docutils literal notranslate"><span class="pre">gcd()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.number_theory.lcm"><code class="docutils literal notranslate"><span class="pre">lcm()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.number_theory.coprime"><code class="docutils literal notranslate"><span class="pre">coprime()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.iSqrt"><code class="docutils literal notranslate"><span class="pre">iSqrt()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.isSqr"><code class="docutils literal notranslate"><span class="pre">isSqr()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.is_prime"><code class="docutils literal notranslate"><span class="pre">is_prime()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.number_theory.jacobi_symbol"><code class="docutils literal notranslate"><span class="pre">jacobi_symbol()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.number_theory.lcm"><code class="docutils literal notranslate"><span class="pre">lcm()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.legendre_symbol"><code class="docutils literal notranslate"><span class="pre">legendre_symbol()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.number_theory.jacobi_symbol"><code class="docutils literal notranslate"><span class="pre">jacobi_symbol()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.primes"><code class="docutils literal notranslate"><span class="pre">primes()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.primes_capped"><code class="docutils literal notranslate"><span class="pre">primes_capped()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.number_theory.primes_wilson"><code class="docutils literal notranslate"><span class="pre">primes_wilson()</span></code></a></li>

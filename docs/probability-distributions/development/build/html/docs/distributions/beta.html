@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -260,8 +261,9 @@
 <span id="beta"></span><h1>beta<a class="headerlink" href="#module-boring_math.probability_distributions.distributions.beta" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta">
-<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.beta.</span></span><span class="sig-name descname"><span class="pre">Beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">α</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">β</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta" title="Link to this definition">¶</a></dt>
-<dd><p>Class for visualizing Beta distributions.</p>
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.beta.</span></span><span class="sig-name descname"><span class="pre">Beta</span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../distribution.html#boring_math.probability_distributions.distribution.ContDist" title="boring_math.probability_distributions.distribution.ContDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContDist</span></code></a></p>
+<p>Class for visualizing Beta distributions.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Beta distribution is a continuous probability distribution
@@ -274,14 +276,6 @@ defined on <code class="docutils literal notranslate"><span class="pre">(0,</spa
 <p>and <code class="docutils literal notranslate"><span class="pre">B(α,β)</span> <span class="pre">=</span> <span class="pre">Γ(α)Γ(β)/Γ(α+β)</span></code> is the normalization factor.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.__add__" title="Link to this definition">¶</a></dt>
-<dd><p>Fail if two Beta distributions are added.</p>
-<p>Beta distributions are not stable, thus the sum of two random
-beta distributed variables is not Beta distributed.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">α</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">β</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -293,15 +287,23 @@ beta distributed variables is not Beta distributed.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.pdf">
+<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Beta probability distribution function.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.cdf">
 <span class="sig-name descname"><span class="pre">cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.cdf" title="Link to this definition">¶</a></dt>
 <dd><p>Beta cumulative probability distribution function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.pdf">
-<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.pdf" title="Link to this definition">¶</a></dt>
-<dd><p>Beta probability distribution function.</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.beta.Beta.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.beta.Beta.__add__" title="Link to this definition">¶</a></dt>
+<dd><p>Fail if two Beta distributions are added.</p>
+<p>Beta distributions are not stable, thus the sum of two random
+beta distributed variables is not Beta distributed.</p>
 </dd></dl>
 
 </dd></dl>
@@ -365,11 +367,11 @@ beta distributed variables is not Beta distributed.</p>
             <ul>
 <li><a class="reference internal" href="#">beta</a><ul>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta"><code class="docutils literal notranslate"><span class="pre">Beta</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.__add__"><code class="docutils literal notranslate"><span class="pre">Beta.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.__init__"><code class="docutils literal notranslate"><span class="pre">Beta.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.__repr__"><code class="docutils literal notranslate"><span class="pre">Beta.__repr__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.cdf"><code class="docutils literal notranslate"><span class="pre">Beta.cdf()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.pdf"><code class="docutils literal notranslate"><span class="pre">Beta.pdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.cdf"><code class="docutils literal notranslate"><span class="pre">Beta.cdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.beta.Beta.__add__"><code class="docutils literal notranslate"><span class="pre">Beta.__add__()</span></code></a></li>
 </ul>
 </li>
 </ul>

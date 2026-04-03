@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -260,8 +261,9 @@
 <span id="uniform"></span><h1>uniform<a class="headerlink" href="#module-boring_math.probability_distributions.distributions.uniform" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform">
-<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.uniform.</span></span><span class="sig-name descname"><span class="pre">Uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform" title="Link to this definition">¶</a></dt>
-<dd><p>Class for visualizing Normal distributions.</p>
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.distributions.uniform.</span></span><span class="sig-name descname"><span class="pre">Uniform</span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../distribution.html#boring_math.probability_distributions.distribution.ContDist" title="boring_math.probability_distributions.distribution.ContDist"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContDist</span></code></a></p>
+<p>Class for visualizing Normal distributions.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Uniform distribution is a continuous probability
@@ -272,12 +274,6 @@ distribution with probability density function</p>
 <p><code class="docutils literal notranslate"><span class="pre">μ</span> <span class="pre">=</span> <span class="pre">mu</span> <span class="pre">=</span> <span class="pre">(a+b)/2</span> <span class="pre">=</span></code> mean value</p>
 <p><code class="docutils literal notranslate"><span class="pre">σ</span> <span class="pre">=</span> <span class="pre">sigma</span> <span class="pre">=</span> <span class="pre">(b-a)/2√3</span> <span class="pre">=</span></code> standard deviation</p>
 </div>
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__add__" title="Link to this definition">¶</a></dt>
-<dd><p>Add together two compatible Uniform distributions.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__init__" title="Link to this definition">¶</a></dt>
@@ -290,15 +286,21 @@ distribution with probability density function</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.pdf">
+<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Uniform probability distribution function.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.cdf">
 <span class="sig-name descname"><span class="pre">cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.cdf" title="Link to this definition">¶</a></dt>
 <dd><p>Uniform cumulative probability distribution function.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.pdf">
-<span class="sig-name descname"><span class="pre">pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.pdf" title="Link to this definition">¶</a></dt>
-<dd><p>Uniform probability distribution function.</p>
+<dt class="sig sig-object py" id="boring_math.probability_distributions.distributions.uniform.Uniform.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__add__" title="Link to this definition">¶</a></dt>
+<dd><p>Add together two compatible Uniform distributions.</p>
 </dd></dl>
 
 </dd></dl>
@@ -362,11 +364,11 @@ distribution with probability density function</p>
             <ul>
 <li><a class="reference internal" href="#">uniform</a><ul>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform"><code class="docutils literal notranslate"><span class="pre">Uniform</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__add__"><code class="docutils literal notranslate"><span class="pre">Uniform.__add__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__init__"><code class="docutils literal notranslate"><span class="pre">Uniform.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__repr__"><code class="docutils literal notranslate"><span class="pre">Uniform.__repr__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.cdf"><code class="docutils literal notranslate"><span class="pre">Uniform.cdf()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.pdf"><code class="docutils literal notranslate"><span class="pre">Uniform.pdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.cdf"><code class="docutils literal notranslate"><span class="pre">Uniform.cdf()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.distributions.uniform.Uniform.__add__"><code class="docutils literal notranslate"><span class="pre">Uniform.__add__()</span></code></a></li>
 </ul>
 </li>
 </ul>

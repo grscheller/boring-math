@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
@@ -257,8 +258,14 @@ Such a triple is primitive when <code class="docutils literal notranslate"><span
 Geometrically, <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span></code> represent the sides of a right triangle.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.pythagorean_triples.pythag3.</span></span><span class="sig-name descname"><span class="pre">Pythag3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_square</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3" title="Link to this definition">¶</a></dt>
-<dd><p>Pythagorean triple iteration class.</p>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.pythagorean_triples.pythag3.</span></span><span class="sig-name descname"><span class="pre">Pythag3</span></span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Pythagorean triple iteration class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_square</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares">
 <span class="sig-name descname"><span class="pre">extend_squares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">last_to_square</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares" title="Link to this definition">¶</a></dt>
@@ -351,6 +358,7 @@ triples with <code class="docutils literal notranslate"><span class="pre">a_star
             <ul>
 <li><a class="reference internal" href="#">pythag3</a><ul>
 <li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3"><code class="docutils literal notranslate"><span class="pre">Pythag3</span></code></a><ul>
+<li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3.__init__"><code class="docutils literal notranslate"><span class="pre">Pythag3.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3.extend_squares"><code class="docutils literal notranslate"><span class="pre">Pythag3.extend_squares()</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.pythagorean_triples.pythag3.Pythag3.triples"><code class="docutils literal notranslate"><span class="pre">Pythag3.triples()</span></code></a></li>
 </ul>

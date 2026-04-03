@@ -9,10 +9,6 @@ PyPI projects.
 
 **Proposed PyPI 1.1.1 release**
 
-.. automodule:: boring_math.abstract_algebra
-    :synopsis:
-    :no-index:
-
 .. toctree::
     :caption: Overview
     :hidden:
@@ -22,12 +18,14 @@ PyPI projects.
 .. toctree::
     :caption: User Guide
 
+    description
     usage
     releases
     changelog
 
 .. toctree::
     :caption: API Documentation
+    :maxdepth: 2
 
     docs/algebras/index
     docs/properties/index

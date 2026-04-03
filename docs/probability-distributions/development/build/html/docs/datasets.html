@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
@@ -265,8 +266,9 @@
 </ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet">
-<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.datasets.</span></span><span class="sig-name descname"><span class="pre">DataSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet" title="Link to this definition">¶</a></dt>
-<dd><p>Class containing sample or population data.</p>
+<span class="property"><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.datasets.</span></span><span class="sig-name descname"><span class="pre">DataSet</span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class containing sample or population data.</p>
 <ul class="simple">
 <li><p>all data internally stored as floats (even integer data)</p></li>
 <li><p>data sorted smallest to largest</p></li>
@@ -278,17 +280,6 @@
 </ul>
 </li>
 </ul>
-<dl class="py method">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet.__init__" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet.__weakref__" title="Link to this definition">¶</a></dt>
-<dd><p>list of weak references to the object</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet.read_data_from_file">
 <span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">read_data_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MayBe</span><span class="p"><span class="pre">[</span></span><span class="pre">Self</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet.read_data_from_file" title="Link to this definition">¶</a></dt>
@@ -305,12 +296,47 @@
 </ul>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet._calculate_stats">
+<span class="sig-name descname"><span class="pre">_calculate_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet._calculate_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate data statistics</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet._calculate_mean">
+<span class="sig-name descname"><span class="pre">_calculate_mean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MayBe</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet._calculate_mean" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the mean of the data set, if it exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet._calculate_stdev">
+<span class="sig-name descname"><span class="pre">_calculate_stdev</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MayBe</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet._calculate_stdev" title="Link to this definition">¶</a></dt>
+<dd><p>From the data set, calculate &amp; return the stdev if it exists.</p>
+<ul class="simple">
+<li><p>If sample is True, calculate a sample standard deviation</p></li>
+<li><p>If sample is False, calculate a population standard deviation</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSet._calculate_quartiles">
+<span class="sig-name descname"><span class="pre">_calculate_quartiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MayBe</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSet._calculate_quartiles" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate first, second (median), and third quartiles</p>
+<p>Using the “trimmed mid-range” of the data.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSets">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">boring_math.probability_distributions.datasets.</span></span><span class="sig-name descname"><span class="pre">DataSets</span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSets" title="Link to this definition">¶</a></dt>
-<dd><p>Base class for managing data sets.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for managing data sets.</p>
 <ul class="simple">
 <li><p>data sets can be samples or populations</p></li>
 <li><p>methods provided to</p>
@@ -325,12 +351,6 @@
 <dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSets.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSets.__init__" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="boring_math.probability_distributions.datasets.DataSets.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#boring_math.probability_distributions.datasets.DataSets.__weakref__" title="Link to this definition">¶</a></dt>
-<dd><p>list of weak references to the object</p>
-</dd></dl>
 
 </dd></dl>
 
@@ -393,14 +413,16 @@
             <ul>
 <li><a class="reference internal" href="#">datasets</a><ul>
 <li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet"><code class="docutils literal notranslate"><span class="pre">DataSet</span></code></a><ul>
-<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet.__init__"><code class="docutils literal notranslate"><span class="pre">DataSet.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet.__weakref__"><code class="docutils literal notranslate"><span class="pre">DataSet.__weakref__</span></code></a></li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet.read_data_from_file"><code class="docutils literal notranslate"><span class="pre">DataSet.read_data_from_file()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet.__init__"><code class="docutils literal notranslate"><span class="pre">DataSet.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet._calculate_stats"><code class="docutils literal notranslate"><span class="pre">DataSet._calculate_stats()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet._calculate_mean"><code class="docutils literal notranslate"><span class="pre">DataSet._calculate_mean()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet._calculate_stdev"><code class="docutils literal notranslate"><span class="pre">DataSet._calculate_stdev()</span></code></a></li>
+<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSet._calculate_quartiles"><code class="docutils literal notranslate"><span class="pre">DataSet._calculate_quartiles()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSets"><code class="docutils literal notranslate"><span class="pre">DataSets</span></code></a><ul>
 <li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSets.__init__"><code class="docutils literal notranslate"><span class="pre">DataSets.__init__()</span></code></a></li>
-<li><a class="reference internal" href="#boring_math.probability_distributions.datasets.DataSets.__weakref__"><code class="docutils literal notranslate"><span class="pre">DataSets.__weakref__</span></code></a></li>
 </ul>
 </li>
 </ul>

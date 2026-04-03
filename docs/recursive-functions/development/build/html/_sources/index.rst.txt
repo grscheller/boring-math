@@ -9,9 +9,6 @@ PyPI projects.
 
 **Proposed PyPI 1.0.1 release**
 
-.. automodule:: boring_math.recursive_functions
-    :synopsis:
-
 .. toctree::
     :caption: Overview
     :hidden:
@@ -21,12 +18,14 @@ PyPI projects.
 .. toctree::
     :caption: User Documentation
 
+    description
     usage
     releases
     changelog
 
 .. toctree::
     :caption: API Documentation
+    :maxdepth: 2
 
     docs/ackermann
     docs/fibonacci

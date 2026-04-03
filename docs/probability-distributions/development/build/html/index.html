@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Usage" href="usage.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Description" href="description.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Boring Math - Probability Distributions 0.8.2 documentation</title>
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -251,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -264,49 +265,15 @@ one of the
 <a class="reference external" href="https://grscheller.github.io/boring-math/">Boring Math</a>
 PyPI projects.</p>
 <p><strong>Proposed PyPI 0.8.2 release</strong></p>
-<section id="probability-distributions">
-<span id="module-boring_math.probability_distributions"></span><h2>Probability Distributions<a class="headerlink" href="#probability-distributions" title="Link to this heading">¶</a></h2>
-<div class="admonition-visualize-probability-distributions admonition">
-<p class="admonition-title">Visualize probability distributions</p>
-<p>Distributions can be compared to either sample or population
-data. Package originally derived from a Udacity exercise.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Package overview:</strong></p>
-<ul class="simple">
-<li><p>boring_math.probability_distributions.dataset</p>
-<ul>
-<li><p>Class <strong>Dataset</strong></p>
-<ul>
-<li><p>contains either sample or population data</p></li>
-<li><p>generates sample/population statistics</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>boring_math.probability_distributions.distribution</p>
-<ul>
-<li><p>Abstract Class <strong>Distribution</strong></p>
-<ul>
-<li><p>represents a probability distribution</p></li>
-</ul>
-</li>
-<li><p>bm.probability_distributions.distributions</p>
-<ul>
-<li><p>Concrete <strong>Distributions</strong></p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="description.html#probability-distributions">Probability Distributions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#how-to-installing-the-package">How to installing the package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#importing-the-modules">Importing the modules</a></li>
@@ -319,7 +286,12 @@ data. Package originally derived from a Udacity exercise.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/index.html">boring_math.probability_distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/index.html">boring_math.probability_distributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/datasets.html">datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/distribution.html">distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/distributions/index.html">boring_math.probability_distributions.distributions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -329,12 +301,12 @@ data. Package originally derived from a Udacity exercise.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="usage.html">
+          <a class="next-page" href="description.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Usage</div>
+                <div class="title">Description</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -357,27 +329,8 @@ data. Package originally derived from a Udacity exercise.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">boring-math-probability-distributions</a><ul>
-<li><a class="reference internal" href="#probability-distributions">Probability Distributions</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

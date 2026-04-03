@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Usage" href="usage.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Description" href="description.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Boring Math - Recursive Functions 1.0.1 documentation</title>
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -200,6 +200,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases.html">PyPI releases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -246,7 +247,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -259,45 +260,15 @@ one of the
 <a class="reference external" href="https://grscheller.github.io/boring-math/">Boring Math</a>
 PyPI projects.</p>
 <p><strong>Proposed PyPI 1.0.1 release</strong></p>
-<section id="recursive-functions">
-<span id="module-boring_math.recursive_functions"></span><h2>Recursive Functions<a class="headerlink" href="#recursive-functions" title="Link to this heading">¶</a></h2>
-<p>Package to explore efficient ways to implement recursive functions. This
-project is more about exploring how to implement recursive functions
-efficiently than exposing tools to do such.</p>
-<div class="admonition-ackermann-s-function admonition">
-<p class="admonition-title">Ackermann’s Function</p>
-<p>Ackermann’s function is an example of a function that is computable
-but not primitively recursive. It quickly becomes computationally
-intractable for relatively small values of m.</p>
-<p>Ackermann function is defined recursively by</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">ackermann(0,n)</span> <span class="pre">=</span> <span class="pre">n+1</span></code> for <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">ackermann(m,0)</span> <span class="pre">=</span> <span class="pre">ackermann(m-1,1)</span></code> for <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">ackermann(m,n)</span> <span class="pre">=</span> <span class="pre">ackermann(m-1,</span> <span class="pre">ackermann(m,n-1))</span></code> for <code class="docutils literal notranslate"><span class="pre">m,</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p>
-</div></blockquote>
-</div>
-<div class="admonition-fibonacci-sequences admonition">
-<p class="admonition-title">Fibonacci Sequences</p>
-<p>The Fibonacci sequence is usually taught in grade school as the
-first recursive function that is not either an arithmetic or geometric
-progression.</p>
-<p>The Fibonacci sequence is traditionally defined as</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">f₁</span> <span class="pre">=</span> <span class="pre">1</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">f₂</span> <span class="pre">=</span> <span class="pre">1</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">fₙ₊₂</span> <span class="pre">=</span> <span class="pre">fₙ₊₁</span> <span class="pre">+</span> <span class="pre">fₙ</span></code></p>
-</div></blockquote>
-<p>Actually, the Fibonacci sequence can be extended in both directions.</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">...,</span> <span class="pre">13,</span> <span class="pre">-8,</span> <span class="pre">5,</span> <span class="pre">-3,</span> <span class="pre">2,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">13,</span> <span class="pre">...</span></code></p>
-</div></blockquote>
-</div>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="description.html#mathematical-special-functions">Mathematical special functions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#how-to-installing-the-package">How to installing the package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#importing-the-modules">Importing the modules</a></li>
@@ -324,14 +295,8 @@ progression.</p>
 <li class="toctree-l1"><a class="reference internal" href="docs/cli/index.html">CLI Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="docs/cli/index.html#entry-points-for-automatically-generated-cli-scripts">Entry points for automatically generated CLI scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs/cli/index.html#example-applications">Example applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docs/cli/ackermann_cli.html">ackermann_cli</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="docs/cli/ackermann_cli.html#boring_math.recursive_functions.cli.ackermann_cli.ackermann_list_cli"><code class="docutils literal notranslate"><span class="pre">ackermann_list_cli()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="docs/cli/fibonacci_cli.html">fibonacci_cli</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="docs/cli/fibonacci_cli.html#boring_math.recursive_functions.cli.fibonacci_cli.fibonacci"><code class="docutils literal notranslate"><span class="pre">fibonacci()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="docs/cli/ackermann_cli.html">ackermann_cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/cli/fibonacci_cli.html">fibonacci_cli</a></li>
 </ul>
 </li>
 </ul>
@@ -343,12 +308,12 @@ progression.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="usage.html">
+          <a class="next-page" href="description.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Usage</div>
+                <div class="title">Description</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -371,27 +336,8 @@ progression.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">boring-math-recursive-functions</a><ul>
-<li><a class="reference internal" href="#recursive-functions">Recursive Functions</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
