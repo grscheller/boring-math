@@ -21,7 +21,7 @@ Boring Math
 
 .. toctree::
     :caption: Releases
-    :maxdepth: 1
+    :maxdepth: 2
 
     top_level_releases
     compatible_versions

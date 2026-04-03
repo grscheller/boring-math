@@ -9,9 +9,6 @@ PyPI projects.
 
 **Proposed PyPI 0.8.4 release**
 
-.. automodule:: boring_math.pythagorean_triples
-    :synopsis:
-
 .. toctree::
     :caption: Overview
     :hidden:
@@ -21,13 +18,14 @@ PyPI projects.
 .. toctree::
     :caption: User Documentation
 
+    description
     usage
     releases
     changelog
 
 .. toctree::
     :caption: API Documentation
-    :maxdepth: 1
+    :maxdepth: 2
 
     docs/pythag3
     docs/cli/index

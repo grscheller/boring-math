@@ -18,11 +18,13 @@ PyPI projects.
 .. toctree::
     :caption: User Documentation
 
+    description
     usage
     releases
     changelog
 
 .. toctree::
     :caption: API Documentation
+    :maxdepth: 2
 
     docs

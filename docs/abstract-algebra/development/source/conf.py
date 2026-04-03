@@ -1,13 +1,10 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+# https://www.sphinx-doc.org/en/master/usage/index.html
 #
-# Must match what is in pyproject.toml, also update proposed_release_string accordingly
-# when generating the docs for an actual, not proposed, release.
+# Must match what is in pyproject.toml, also delete "Proposed"
+# in the release string in source/index.rst when generating
+# the docs for an actual, not proposed, release.
 
 from typing import Any
 from sphinx.application import Sphinx
@@ -35,13 +32,11 @@ def setup(app: Sphinx) -> None:
     app.connect('autodoc-skip-member', skip_abc_methods)
 
 
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.graphviz',
 ]
+
 autodoc_default_options = {
     'members': True,
     'private-members': True,
@@ -60,9 +55,6 @@ autodoc_warningiserror = False
 
 templates_path = ['_templates']
 exclude_patterns: list[str] = []
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme_options = {
     'light_css_variables': {
