@@ -208,17 +208,20 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../constants/index.html">Mathematical constants module</a><input aria-label="Toggle navigation of Mathematical constants module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../constants/constants.html">Mathematical Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="trig.html">Real trig functions</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Complex trig functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma.html">Gamma function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gamma_family/beta.html">Beta function</a></li>
 </ul>
@@ -265,20 +268,33 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.special_functions.trigonometry.ctrig0">
 <span id="complex-trig-functions"></span><h1>Complex trig functions<a class="headerlink" href="#module-boring_math.special_functions.trigonometry.ctrig0" title="Link to this heading">¶</a></h1>
-<p>Complex valued special functions about a point.</p>
+<div class="admonition-real-valued-sine-cosine-tangent-about-z-0 admonition">
+<p class="admonition-title">Real valued sine, cosine, tangent about <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<p>The named only argument <code class="docutils literal notranslate"><span class="pre">n</span></code> must be at least <code class="docutils literal notranslate"><span class="pre">20</span></code>
+to totally agree with stdlib cmath for <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">|z|</span> <span class="pre">&lt;</span> <span class="pre">1</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For small <code class="docutils literal notranslate"><span class="pre">|z|</span></code> you can get away with smaller <code class="docutils literal notranslate"><span class="pre">n</span></code>
+values to reduce the number of computations.</p>
+</div>
+</div>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.ctrig0.csin0">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.ctrig0.</span></span><span class="sig-name descname"><span class="pre">csin0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">depth</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.ctrig0.csin0" title="Link to this definition">¶</a></dt>
 <dd><p>Partially factored Taylor expansion of sine about <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">2π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">20</span></code>.</p>
+<p>Best if</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">22</span></code>.</p></li>
+</ul>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code></p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -293,13 +309,17 @@
 <dd><p>Partially factored Taylor expansion of cosine about <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">2π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">22</span></code>.</p>
+<p>Best if</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">22</span></code>.</p></li>
+</ul>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – independent variable</p></li>
-<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code></p></li>
+<li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -314,13 +334,17 @@
 <dd><p>Tangent centered about <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Best if <code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">20</span></code>.</p>
+<p>Best if</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">20</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">|z|</span> <span class="pre">≤</span> <span class="pre">π</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">≥</span> <span class="pre">22</span></code>.</p></li>
+</ul>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – Independent variable.</p></li>
-<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code>.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -329,16 +353,28 @@
 </dl>
 </dd></dl>
 
-<p id="module-boring_math.special_functions.trigonometry.ctrig">Complex valued trig functions.</p>
+<div class="admonition-complex-valued-sine-cosine-tangent admonition" id="module-boring_math.special_functions.trigonometry.ctrig">
+<p class="admonition-title">Complex valued sine, cosine, tangent</p>
+<p>The named only argument <code class="docutils literal notranslate"><span class="pre">n</span></code> must be at least <code class="docutils literal notranslate"><span class="pre">22</span></code>
+to agree with the ones from stdlib cmath.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">|z|</span> <span class="pre">&lt;</span> <span class="pre">1</span></code> you can get away with smaller <code class="docutils literal notranslate"><span class="pre">n</span></code>
+values to reduce the number of computations.</p>
+</div>
+</div>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.ctrig.csin">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.ctrig.</span></span><span class="sig-name descname"><span class="pre">csin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">depth</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.ctrig.csin" title="Link to this definition">¶</a></dt>
-<dd><p>Complex sine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+<dd><div class="admonition-complex-tangent admonition">
+<p class="admonition-title">Complex tangent</p>
+<p>Complex sine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – Independent variable.</p></li>
-<li><p><strong>n</strong> – Terms in expansion, must have 2 &lt;= n &lt;= 84.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -350,12 +386,15 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.ctrig.ccos">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.ctrig.</span></span><span class="sig-name descname"><span class="pre">ccos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">depth</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.ctrig.ccos" title="Link to this definition">¶</a></dt>
-<dd><p>Complex cosine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+<dd><div class="admonition-complex-cosine admonition">
+<p class="admonition-title">Complex cosine</p>
+<p>Complex cosine valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – Independent variable.</p></li>
-<li><p><strong>n</strong> – Terms in expansion, must have 2 &lt;= n &lt;= 84.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -367,12 +406,15 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.ctrig.ctan">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.ctrig.</span></span><span class="sig-name descname"><span class="pre">ctan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">depth</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.ctrig.ctan" title="Link to this definition">¶</a></dt>
-<dd><p>Complex tangent valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+<dd><div class="admonition-complex-tangent admonition">
+<p class="admonition-title">Complex tangent</p>
+<p>Complex tangent valid for all <code class="docutils literal notranslate"><span class="pre">z∈ℂ</span></code>.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>z</strong> – Independent variable.</p></li>
-<li><p><strong>n</strong> – Terms in expansion, must have 2 &lt;= n &lt;= 84.</p></li>
+<li><p><strong>n</strong> – Terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">≤</span> <span class="pre">n</span> <span class="pre">≤</span> <span class="pre">84</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

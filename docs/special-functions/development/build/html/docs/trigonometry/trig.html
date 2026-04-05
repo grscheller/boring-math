@@ -208,17 +208,20 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../constants.html">Mathematical Constants</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../constants/index.html">Mathematical constants module</a><input aria-label="Toggle navigation of Mathematical constants module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../constants/constants.html">Mathematical Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Real trig functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ctrig.html">Complex trig functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../gamma_family/gamma.html">Gamma function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gamma_family/beta.html">Beta function</a></li>
 </ul>
@@ -265,11 +268,23 @@
         <article role="main" id="furo-main-content">
           <section id="module-boring_math.special_functions.trigonometry.trig0">
 <span id="real-trig-functions"></span><h1>Real trig functions<a class="headerlink" href="#module-boring_math.special_functions.trigonometry.trig0" title="Link to this heading">¶</a></h1>
-<p>Floating point trigonometric functions about a point.</p>
+<div class="admonition-floating-point-sine-cosine-tangent-about-0 admonition">
+<p class="admonition-title">Floating point sine, cosine, tangent about <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<p>The named only argument <code class="docutils literal notranslate"><span class="pre">n</span></code> must be at least <code class="docutils literal notranslate"><span class="pre">22</span></code>
+to agree with the ones from stdlib math.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">|z|</span> <span class="pre">&lt;</span> <span class="pre">1</span></code> you can get away with smaller <code class="docutils literal notranslate"><span class="pre">n</span></code>
+values to reduce the number of computations.</p>
+</div>
+</div>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.trig0.sin0">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.trig0.</span></span><span class="sig-name descname"><span class="pre">sin0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">epth)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.trig0.sin0" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of sine centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<dd><div class="admonition-sine-centered-at-x-0 admonition">
+<p class="admonition-title">Sine centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<p>Partially factored Taylor series expansion of sine
+centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Best n to use</p>
@@ -280,15 +295,16 @@
 </ul>
 <p>The default is <code class="docutils literal notranslate"><span class="pre">n=20</span></code>.</p>
 </div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>θ</strong> – angle in radians</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Taylor series expansion of sine(x) centered at <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<dd class="field-even"><p>Taylor series expansion of sine(θ) centered at <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -296,7 +312,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.trig0.cos0">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.trig0.</span></span><span class="sig-name descname"><span class="pre">cos0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">epth)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.trig0.cos0" title="Link to this definition">¶</a></dt>
-<dd><p>Partially factored Taylor expansion of cosine centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<dd><div class="admonition-cosine-centered-at-x-0 admonition">
+<p class="admonition-title">Cosine centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<p>Partially factored Taylor series expansion of cosine
+centered at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Best n to use</p>
@@ -307,10 +326,11 @@
 </ul>
 <p>The default is <code class="docutils literal notranslate"><span class="pre">n=20</span></code>.</p>
 </div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>θ</strong> – angle in radians</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code></p></li>
 </ul>
 </dd>
@@ -323,7 +343,10 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.trig0.tan0">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.trig0.</span></span><span class="sig-name descname"><span class="pre">tan0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">epth)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.trig0.tan0" title="Link to this definition">¶</a></dt>
-<dd><p>Tangent centered about <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<dd><div class="admonition-tangent-centered-at-0 admonition">
+<p class="admonition-title">Tangent centered at <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<p>Partially factored Taylor series expansion of tangent
+centered at <code class="docutils literal notranslate"><span class="pre">θ</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Best n to use</p>
@@ -332,11 +355,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">15</span></code> when <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">θ</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">12</span></code> when <code class="docutils literal notranslate"><span class="pre">-π/2</span> <span class="pre">&lt;=</span> <span class="pre">θ</span> <span class="pre">&lt;=</span> <span class="pre">π/2</span></code></p></li>
 </ul>
+<p>The default is <code class="docutils literal notranslate"><span class="pre">n=20</span></code>.</p>
+</div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – angle in radians</p></li>
+<li><p><strong>θ</strong> – angle in radians</p></li>
 <li><p><strong>n</strong> – terms in expansion, must have <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">84</span></code></p></li>
 </ul>
 </dd>
@@ -346,7 +371,10 @@
 </dl>
 </dd></dl>
 
-<p id="module-boring_math.special_functions.trigonometry.trig">Floating point trigonometric functions.</p>
+<div class="admonition-floating-point-trigonometric-functions admonition" id="module-boring_math.special_functions.trigonometry.trig">
+<p class="admonition-title">Floating point trigonometric functions.</p>
+<p>Valid for all extended real value <code class="docutils literal notranslate"><span class="pre">θ</span></code>.</p>
+</div>
 <dl class="py function">
 <dt class="sig sig-object py" id="boring_math.special_functions.trigonometry.trig.sin">
 <span class="sig-prename descclassname"><span class="pre">boring_math.special_functions.trigonometry.trig.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">θ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#boring_math.special_functions.trigonometry.trig.sin" title="Link to this definition">¶</a></dt>

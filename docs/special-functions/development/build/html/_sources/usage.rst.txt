@@ -15,6 +15,8 @@ Importing the modules
 
 .. code:: python
 
+    from boring_math.special_functions.constants import infinity, e, pi
+
     from boring_math.special_functions.exponential.exp import exp0, exp, cexp0, cexp
 
     from boring_math.special_functions.trigonmetry.trig0 import sin0, cos0, tan0

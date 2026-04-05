@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Mathematical Constants" href="constants.html"><link rel="prev" title="Changelog" href="../changelog.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Mathematical constants module" href="constants/index.html"><link rel="prev" title="Changelog" href="../changelog.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Special Functions - Boring Math - Special Functions 5.0.0 documentation</title>
@@ -176,7 +176,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -208,17 +208,20 @@
 <p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Special Functions</a><input aria-label="Toggle navigation of Special Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="constants.html">Mathematical Constants</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="constants/index.html">Mathematical constants module</a><input aria-label="Toggle navigation of Mathematical constants module" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="constants/constants.html">Mathematical Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="exponential/index.html">Exponential module</a><input aria-label="Toggle navigation of Exponential module" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exponential/exp.html">Exponential functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="trigonometry/index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="trigonometry/index.html">Trigonometry module</a><input aria-label="Toggle navigation of Trigonometry module" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="trigonometry/trig.html">Real trig functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="trigonometry/ctrig.html">Complex trig functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="gamma_family/index.html">Gamma family module</a><input aria-label="Toggle navigation of Gamma family module" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="gamma_family/gamma.html">Gamma function</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gamma_family/beta.html">Beta function</a></li>
 </ul>
@@ -258,20 +261,31 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="special-functions">
-<h1>Special Functions<a class="headerlink" href="#special-functions" title="Link to this heading">¶</a></h1>
+          <section id="module-boring_math.special_functions">
+<span id="special-functions"></span><h1>Special Functions<a class="headerlink" href="#module-boring_math.special_functions" title="Link to this heading">¶</a></h1>
+<section id="mathematical-special-functions">
+<h2>Mathematical special functions<a class="headerlink" href="#mathematical-special-functions" title="Link to this heading">¶</a></h2>
+<div class="admonition-special-functions-for-mathematics-and-physics admonition">
+<p class="admonition-title">Special functions for mathematics and physics</p>
+<p>Implementations for classical complex and real valued special
+functions.</p>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Mathematical Constants</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="constants.html">Mathematical Constants</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="constants.html#boring_math.special_functions.constants.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="constants.html#boring_math.special_functions.constants.e"><code class="docutils literal notranslate"><span class="pre">e</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="constants.html#boring_math.special_functions.constants.pi"><code class="docutils literal notranslate"><span class="pre">pi</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants/index.html">Mathematical constants module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="constants/constants.html">Mathematical Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="constants/constants.html#boring_math.special_functions.constants.infinity"><code class="docutils literal notranslate"><span class="pre">infinity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="constants/constants.html#boring_math.special_functions.constants.e"><code class="docutils literal notranslate"><span class="pre">e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="constants/constants.html#boring_math.special_functions.constants.pi"><code class="docutils literal notranslate"><span class="pre">pi</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -279,33 +293,19 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Exponential Functions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="exponential/index.html">Exponential module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="exponential/index.html#exponential-and-logarithmic-functions">Exponential and Logarithmic Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exponential/exp.html">Exponential functions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="exponential/index.html">Exponential module</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Trigonometry Functions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="trigonometry/index.html">Trigonometry module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="trigonometry/index.html#trigonometric-functions">Trigonometric Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trigonometry/trig.html">Real trig functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trigonometry/ctrig.html">Complex trig functions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="trigonometry/index.html">Trigonometry module</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Gamma Related Functions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="gamma_family/index.html">Gamma family module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gamma_family/index.html#gamma-family-of-functions">Gamma family of functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamma_family/gamma.html">Gamma function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamma_family/beta.html">Beta function</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gamma_family/index.html">Gamma family module</a></li>
 </ul>
 </div>
 </section>
@@ -315,12 +315,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="constants.html">
+          <a class="next-page" href="constants/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Mathematical Constants</div>
+                <div class="title">Mathematical constants module</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -353,8 +353,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Special Functions</a><ul>
+<li><a class="reference internal" href="#mathematical-special-functions">Mathematical special functions</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
