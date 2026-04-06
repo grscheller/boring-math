@@ -6,8 +6,9 @@ Special Functions
 
 .. toctree::
     :caption: Mathematical Constants
+    :maxdepth: 1
 
-    constants/index
+    constants
 
 .. toctree::
     :caption: Exponential Functions

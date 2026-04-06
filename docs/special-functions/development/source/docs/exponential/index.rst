@@ -1,5 +1,5 @@
-Exponential module
-------------------
+Exponential
+-----------
 
 .. automodule:: boring_math.special_functions.exponential
     :synopsis:
