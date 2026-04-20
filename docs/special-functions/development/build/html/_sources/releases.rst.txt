@@ -8,7 +8,7 @@ PyPI releases
 +=====================================================================================================+==============+===================================+
 | `development <https://grscheller.github.io/boring-math/special-functions/development/build/html/>`_ |              |                                   |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+
-| `v5.0.0 <https://grscheller.github.io/boring-math/special-functions/v5.0.0/build/html/>`_           | TBD          | Restructured package              |
+| `v5.0.0 <https://grscheller.github.io/boring-math/special-functions/v5.0.0/build/html/>`_           | 2026-04-20   | Restructured package              |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+
 | `v4.0.0 <https://grscheller.github.io/boring-math/special-functions/v4.0.0/build/html/>`_           | 2026-03-24   | Added beta function               |
 +-----------------------------------------------------------------------------------------------------+--------------+-----------------------------------+

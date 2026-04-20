@@ -1,12 +1,41 @@
 """
-Known Boring Math compatible versions their consistent
-Pythonic FP dependencies.
+Known consistent Boring Math compatible versions and their
+consistent Pythonic FP dependencies.
 
-Coordinated releases
-====================
+Known Compatible Versions
+=========================
 
-2026-03-24 - 2.1.1
+2026-04-20 - 2.3.0
 -------------------
+
+Mostly worked on special-functions and probability-distributions.
+
+========================= ===================================== =======
+Name                      PyPI Boring Math Project              Version
+========================= ===================================== =======
+Abstract Algebra          boring-math-abstract-algebra          1.1.1
+Combinatorics             boring-math-combinatorics             2.0.1
+Number Theory             boring-math-number-theory             2.0.1
+Probability Distributions boring-math-probability-distributions 1.0.0
+Pythagorean Triples       boring-math-pythagorean-triples       0.8.4
+Recursive Functions       boring-math-recursive-functions       1.0.1
+Special Functions         boring-math-special-functions         5.0.0
+========================= ===================================== =======
+
+========================= ========================== =======
+Name                      PyPI Pythonic FP Project   Version
+========================= ========================== =======
+Booleans                  pythonic-fp-booleans       3.0.0
+Circular Array            pythonic-fp-circulararray  6.0.1
+FP Tools                  pythonic-fp-fptools        5.2.0
+Gadgets                   pythonic-fp-gadgets        4.0.2
+Iterables                 pythonic-fp-iterables      5.1.3
+========================= ========================== =======
+
+2026-03-24 - 2.2.0
+-------------------
+
+This release reflects mostly documentation improvements.
 
 ========================= ===================================== =======
 Name                      PyPI Project                          Version
@@ -20,10 +49,20 @@ Recursive Functions       boring-math-recursive-functions       1.0.1
 Special Functions         boring-math-special-functions         4.0.0
 ========================= ===================================== =======
 
-This release reflects mostly docstring updates.
+========================= ========================== =======
+Name                      PyPI Pythonic FP Project   Version
+========================= ========================== =======
+Booleans                  pythonic-fp-booleans       2.2.0
+Circular Array            pythonic-fp-circulararray  6.0.1
+FP Tools                  pythonic-fp-fptools        5.2.0
+Gadgets                   pythonic-fp-gadgets        4.0.2
+Iterables                 pythonic-fp-iterables      5.1.3
+========================= ========================== =======
 
 2025-12-02 - 2.1.0
 ------------------
+
+Earliest consistent version with current libraries.
 
 ========================= ===================================== =======
 Name                      PyPI Project                          Version
@@ -37,58 +76,14 @@ Recursive Functions       boring-math-recursive-functions       1.0.0
 Special Functions         boring-math-special-functions         0.1.0
 ========================= ===================================== =======
 
-Pythonic FP dependencies these brought in on 2025-12-02 were
-
-.. code:: console
-
-    $ pip list | grep pythonic
-    pythonic-fp-booleans                  2.0.0
-    pythonic-fp-circulararray             6.0.0
-    pythonic-fp-fptools                   5.1.2
-    pythonic-fp-gadgets                   3.1.0
-    pythonic-fp-iterables                 5.1.2
-    (bm) [grs@hamilton4: ~]
-
-With the test dependencies includes too,
-
-.. code:: console
-
-    (bm_test) [grs@hamilton4: ~]
-    $ pip list | grep pythonic
-    pythonic-fp-booleans                  2.0.0
-    pythonic-fp-circulararray             6.0.0
-    pythonic-fp-fptools                   5.1.2
-    pythonic-fp-gadgets                   3.1.0
-    pythonic-fp-iterables                 5.1.2
-    pythonic-fp-numpy                     0.1.1
-
-For which all current applicable Boring Math tests passed.
-
-----
-
-2025-08-04 - 1.1.3
-------------------
-
-========================= ===================================== =======
-Name                      PyPI Project                          Version
-========================= ===================================== =======
-Integer Math              boring-math-integer-math              1.0.2
-Probability Distributions boring-math-probability-distributions 0.8.0
-Pythagorean Triples       boring-math-pythagorean-triples       0.8.2
-Recursive Functions       boring-math-recursive-functions       0.8.1
-========================= ===================================== =======
-
-The Pythonic FP external dependencies these brought in on 2025-11-10 were
-
-.. code:: console
-
-    $ pip list | grep pythonic
-    pythonic-fp-booleans                  2.0.0
-    pythonic-fp-circulararray             6.0.0
-    pythonic-fp-fptools                   5.1.2
-    pythonic-fp-gadgets                   3.1.0
-    pythonic-fp-iterables                 5.1.2
-
-For which all current applicable Boring Math tests passed.
+========================= ========================== =======
+Name                      PyPI Pythonic FP Project   Version
+========================= ========================== =======
+Booleans                  pythonic-fp-booleans       2.1.0
+Circular Array            pythonic-fp-circulararray  6.0.0
+FP Tools                  pythonic-fp-fptools        5.1.2
+Gadgets                   pythonic-fp-gadgets        4.0.1
+Iterables                 pythonic-fp-iterables      5.1.2
+========================= ========================== =======
 
 """

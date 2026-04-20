@@ -12,7 +12,7 @@ from sphinx.application import Sphinx
 project = 'Boring Math - Probability Distributions'
 copyright = '2023-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '0.9.0' 
+release = '1.0.0' 
 
 
 def skip_abc_methods(
