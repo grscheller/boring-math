@@ -23,9 +23,8 @@ For more information visit the project's
 | Recursive Functions | [boring-math-recursive-functions][105] | [gh][205] | [gh_pages][305] | boring_math.recursive_functions |
 | Special Functions | [boring-math-special-functions][106] | [gh][206] | [gh_pages][306] | boring_math.special_functions |
 
-These are fun little math projects which I enjoy doing. They have many
-loose threads. They are as much for me to learn Python as they are for
-me to play with math.
+These started out as fun little math projects which I enjoy doing. The
+direction these seem to be taking is that of mathematical libraries.
 
 ## Copyright and License
 
