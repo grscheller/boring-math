@@ -1,19 +1,20 @@
 Boring Math
------------
+===========
 
 .. automodule:: boring_math.homepage.intro
-    :synopsis:
+    :no-members:
+    :ignore-module-all:
     :no-index:
 
 .. toctree::
-    :caption: Boring Math
+    :caption: Overview
     :hidden:
 
     self
 
 .. toctree::
-    :caption: Development
-    :maxdepth: 2
+    :caption: Boring Math
+    :maxdepth: 1
 
     overview
     development
@@ -25,3 +26,9 @@ Boring Math
 
     top_level_releases
     compatible_versions
+
+.. toctree::
+    :caption: Boring Math Projects
+    :maxdepth: 2
+
+    projects/index
