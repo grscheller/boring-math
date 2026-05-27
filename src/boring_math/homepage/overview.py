@@ -6,6 +6,6 @@ The overall effort's name is
 - Each project's name begins with *"boring-math-"* on PyPI and GitHub.
 - Each project implements a top-level package in the ``boring_math`` Python namespace.
 - Here are all the Boring Math projects on `PyPI and GitHub
-  <https://github.com/grscheller/boring-math/blob/main/README.md>`_.
+  <https://grscheller.github.io/boring-math/homepage/build/html/projects/index.html>`_.
 
 """
