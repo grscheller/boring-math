@@ -30,6 +30,11 @@ Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
 Homepage = "https://grscheller.github.io/boring-math"
 Source = "https://github.com/grscheller/boring-math"
 
+[project.optional-dependencies]
+test = [
+  "pytest>=8.4.1",
+]
+
 [tool.flit.sdist]
 exclude = [
   "docs/",
