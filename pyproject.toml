@@ -23,7 +23,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = []
-dynamic = ["description"]
+description = "Boring Math homepage and coordinated releases."
 
 [project.urls]
 Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
@@ -51,18 +51,23 @@ warn_redundant_casts = true
 warn_return_any = true
 warn_unused_configs = true
 
-[tool.pylsp-mypy]
-enabled = true
-live-mode = true
-dmypy = false
-strict = true
-report_progress = true
+[tool.pytest]
+addopts = ["-ra"]
+consider_namespace_packages = true
+testpaths = ["tests/"]
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py314"
 
 [tool.ruff.lint.flake8-quotes]
 docstring-quotes = "double"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+  "E731",
+  "C901",
+]
+"**/*.py" = ["E741"]
 
 [tool.ruff.format]
 quote-style = "single"
