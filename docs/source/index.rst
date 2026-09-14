@@ -16,16 +16,8 @@ Boring Math
     :caption: Boring Math
     :maxdepth: 1
 
-    overview
+    description
     development
-    docs
-
-.. toctree::
-    :caption: Releases
-    :maxdepth: 2
-
-    top_level_releases
-    compatible_versions
 
 .. toctree::
     :caption: Boring Math Projects

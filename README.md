@@ -13,18 +13,21 @@ For more information visit the project's
 
 ## Boring Math projects
 
-| Name | PyPI | GitHub | Docs | Python Package |
-|:---- |:----:|:------:|:----:|:-------------- |
-| Abstract Algebra | [boring-math-abstract-algebra][100] | [gh][200] | [gh_pages][300] | boring_math.abstract_algebra |
-| Combinatorics | [boring-math-combinatorics][101] | [gh][201] | [gh_pages][301] | boring_math.combinatorics |
-| Number Theory | [boring-math-number-theory][102] | [gh][202] | [gh_pages][302] | boring_math.number_theory |
-| Prob Distributions | [boring-math-probability-distributions][103] | [gh][203] | [gh_pages][303] | boring_math.probability_distributions |
-| Pythagorean Triples | [boring-math-pythagorean-triples][104] | [gh][204] | [gh_pages][304] | boring_math.pythagorean_triples |
-| Recursive Functions | [boring-math-recursive-functions][105] | [gh][205] | [gh_pages][305] | boring_math.recursive_functions |
-| Special Functions | [boring-math-special-functions][106] | [gh][206] | [gh_pages][306] | boring_math.special_functions |
+| Name | Links | Python Package |
+|:---- |:-----:|:-------------- |
+| Abstract Algebra | [boring-math-abstract-algebra][101] | boring_math.abstract_algebra |
+| Combinatorics | [boring-math-combinatorics][102] | boring_math.combinatorics |
+| Number Theory | [coring-math-number-theory][103] | boring_math.number_theory |
+| Prob Distributions | [boring-math-probability-distributions][104] | boring_math.probability_distributions |
+| Pythagorean Triples | [boring-math-pythagorean-triples][105] | boring_math.pythagorean_triples |
+| Recursive Functions | [boring-math-recursive-functions][106] | boring_math.recursive_functions |
+| Special Functions | [boring-math-special-functions][107] | boring_math.special_functions |
 
 These started out as fun little math projects which I enjoy doing. The
 direction these seem to be taking is that of mathematical libraries.
+
+**Note:** There is no need for an end user to install the
+`boring-math` project itself.
 
 ## Copyright and License
 
@@ -32,24 +35,10 @@ Copyright (c) 2016-2026 Geoffrey R. Scheller. Licensed under the Apache
 License, Version 2.0. See the LICENSE file for details.
 
 
-[100]: https://pypi.org/project/boring-math-abstract-algebra
-[101]: https://pypi.org/project/boring-math-combinatorics
-[102]: https://pypi.org/project/boring-math-number-theory
-[103]: https://pypi.org/project/boring-math-probability-distributions
-[104]: https://pypi.org/project/boring-math-pythagorean-triples
-[105]: https://pypi.org/project/boring-math-recursive-functions
-[106]: https://pypi.org/project/boring-math-special-functions
-[200]: https://github.com/grscheller/boring-math-abstract-algebra
-[201]: https://github.com/grscheller/boring-math-combinatorics
-[202]: https://github.com/grscheller/boring-math-number-theory
-[203]: https://github.com/grscheller/boring-math-probability-distributions
-[204]: https://github.com/grscheller/boring-math-pythagorean-triples
-[205]: https://github.com/grscheller/boring-math-recursive-functions
-[206]: https://github.com/grscheller/boring-math-special-functions
-[300]: https://grscheller.github.io/boring-math/abstract-algebra
-[301]: https://grscheller.github.io/boring-math/combinatorics
-[302]: https://grscheller.github.io/boring-math/number-theory
-[303]: https://grscheller.github.io/boring-math/probability-distributions
-[304]: https://grscheller.github.io/boring-math/pythagorean-triples
-[305]: https://grscheller.github.io/boring-math/recursive-functions
-[306]: https://grscheller.github.io/boring-math/special-functions
+[101]: https://grscheller.github.io/boring-math/projects/abstract-algebra.html
+[102]: https://grscheller.github.io/boring-math/projects/combinatorics.html
+[103]: https://grscheller.github.io/boring-math/projects/number-theory.html
+[104]: https://grscheller.github.io/boring-math/projects/probability-distributions.html
+[105]: https://grscheller.github.io/boring-math/projects/pythagorean-triples.html
+[106]: https://grscheller.github.io/boring-math/projects/recursive-functions.html
+[107]: https://grscheller.github.io/boring-math/projects/special-functions.html

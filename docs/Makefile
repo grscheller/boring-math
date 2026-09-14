@@ -1,4 +1,4 @@
-# Minimal makefile for Sphinx documentation
+# Makefile for Sphinx overarching documentation
 #
 
 # You can set these variables from the command line, and also
@@ -13,14 +13,13 @@ TEMPLATEDIR   = source/_templates
 
 # Put it first so that "make" without argument is like "make help".
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	@"$(SPHINXBUILD)" -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
-Makefile:
-	mkdir -p $(STATICDIR) $(TEMPLATEDIR)
-	rm -rf build source/abstract_algebra/_autosummary
+clean:
+	rm -rf "$(BUILDDIR)"
 
-.PHONY: help Makefile
+.PHONY: help clean Makefile
 
 # Catch-all target: route all unknown targets to Sphinx
 %: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
+	@"$(SPHINXBUILD)" -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)

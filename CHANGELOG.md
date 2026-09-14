@@ -1,20 +1,28 @@
 # CHANGELOG
 
-## Daddy's boring math library
+## Daddy's boring math projects
 
-Mathematical hobby projects. Done under the PyPI boring-math namespace.
+Mathematical hobby projects. All done under the Python boring_math namespace.
 
-## Release based versioning
+## Release versioning
 
-Unlike the PyPI projects that make up Boring Math, which use strict semantic versioning,
-the overall version number is based on consistent relative release. The release string
-changes when
+Unlike the PyPI projects that make up Boring Math, which use strict
+semantic versioning, the release string for pythonic-fp changes when
 
-- **MAJOR:** a consistent, coordinated release of Boring Math PyPI projects happens
-- **MINOR:** breaking API changes are made to a Boring Math PyPI project or a new project is add
-- **PATCH:** minor code improvements and homepage updates are made
+- **major:** for paradigm shifts
+- **minor:** homepage changes
+- **patch:** typos, git/pypi thrashing, pure eye-candy
 
 ## Important Milestones
+
+### 2026-09-13 - Major Paradigm shift, PyPI release 5.0.0
+
+Transitioned the management of my virtual environments from pyenv to uv.
+Unlike pyenv, which is shell based, uv is project based. I can treat the
+individual projects making up the Boring Math effort as independent
+projects with regards to calculating their dependencies. With uv there
+is no need to have coordinated releases of known consistent versions of
+the projects.
 
 ### 2026-04-02 - Sphinx autosummary boring-math-special-functions example
 

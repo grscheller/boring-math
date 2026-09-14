@@ -5,14 +5,15 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "boring-math"
 version = "3.0.0"
+description = "Boring Math homepage - for packagers/forkers."
 readme = "README.md"
 requires-python = ">=3.13"
 authors = [
   { name = "Geoffrey R. Scheller", email = "geoffrey@scheller.com" },
 ]
 keywords = [
-  "mathematics",
   "hobby",
+  "mathematics",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -23,14 +24,17 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = []
-description = "Boring Math homepage and coordinated releases."
 
 [project.urls]
 Changelog = "https://github.com/grscheller/boring-math/blob/main/CHANGELOG.md"
 Homepage = "https://grscheller.github.io/boring-math"
 Source = "https://github.com/grscheller/boring-math"
 
-[project.optional-dependencies]
+[dependency-groups]
+docs = [
+  "furo>=2025.12.19",
+  "sphinx>=9.1",
+]
 test = [
   "pytest>=8.4.1",
 ]
@@ -43,6 +47,11 @@ exclude = [
 [tool.flit.module]
 name = "boring_math.homepage"
 
+[tool.pytest]
+addopts = ["-ra"]
+consider_namespace_packages = true
+testpaths = ["tests/"]
+
 [tool.mypy]
 explicit_package_bases = true
 local_partial_types = true
@@ -50,11 +59,6 @@ namespace_packages = true
 warn_redundant_casts = true
 warn_return_any = true
 warn_unused_configs = true
-
-[tool.pytest]
-addopts = ["-ra"]
-consider_namespace_packages = true
-testpaths = ["tests/"]
 
 [tool.ruff]
 target-version = "py314"

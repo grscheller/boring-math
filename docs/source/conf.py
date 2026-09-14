@@ -7,7 +7,7 @@
 project = 'Boring Math'
 copyright = '2016-2026, Geoffrey R. Scheller'
 author = 'Geoffrey R. Scheller'
-release = '2.2.0'
+release = '3.0.0'
 
 extensions = [
     'sphinx.ext.autodoc',
