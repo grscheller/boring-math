@@ -15,7 +15,7 @@ semantic versioning, the release string for pythonic-fp changes when
 
 ## Important Milestones
 
-### 2026-09-13 - Major Paradigm shift, PyPI release 5.0.0
+### 2026-09-13 - Major Paradigm shift, PyPI release 3.0.0
 
 Transitioned the management of my virtual environments from pyenv to uv.
 Unlike pyenv, which is shell based, uv is project based. I can treat the

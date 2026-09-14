@@ -1,6 +1,6 @@
 # Daddy's Boring Math Projects
 
-Collection of Python PyPI projects of a mathematical nature.
+Collection of Python projects of a mathematical nature.
 It's purpose is to host and provide infrastructure for my
 Python mathematical hobby projects.
 

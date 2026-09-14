@@ -35,8 +35,18 @@ docs = [
   "furo>=2025.12.19",
   "sphinx>=9.1",
 ]
+pub = [
+  "flit",
+]
 test = [
   "pytest>=8.4.1",
+  "boring-math-abstract-algebra",
+  "boring-math-combinatorics",
+  "boring-math-number-theory",
+  "boring-math-probability-distributions",
+  "boring-math-pythagorean-triples",
+  "boring-math-recursive-functions",
+  "boring-math-special-functions",
 ]
 
 [tool.flit.sdist]
