@@ -1,8 +1,7 @@
 # CHANGELOG
 
-## Daddy's boring math projects
-
-Mathematical hobby projects. All done under the Python boring_math namespace.
+Daddy's boring math projects. Mathematical hobby projects. All done
+under the Python boring_math namespace.
 
 ## Release versioning
 
