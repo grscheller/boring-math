@@ -9,7 +9,7 @@ Unlike the PyPI projects that make up Boring Math, which use strict
 semantic versioning, the release string for pythonic-fp changes when
 
 - **major:** for paradigm shifts
-- **minor:** homepage changes
+- **minor:** homepage changes, additional integration tests
 - **patch:** typos, git/pypi thrashing, pure eye-candy
 
 ## Important Milestones
