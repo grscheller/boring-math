@@ -17,7 +17,7 @@ For more information visit the project's
 |:---- |:-----:|:-------------- |
 | Abstract Algebra | [boring-math-abstract-algebra][101] | boring_math.abstract_algebra |
 | Combinatorics | [boring-math-combinatorics][102] | boring_math.combinatorics |
-| Number Theory | [coring-math-number-theory][103] | boring_math.number_theory |
+| Number Theory | [boring-math-number-theory][103] | boring_math.number_theory |
 | Prob Distributions | [boring-math-probability-distributions][104] | boring_math.probability_distributions |
 | Pythagorean Triples | [boring-math-pythagorean-triples][105] | boring_math.pythagorean_triples |
 | Recursive Functions | [boring-math-recursive-functions][106] | boring_math.recursive_functions |
@@ -35,10 +35,10 @@ Copyright (c) 2016-2026 Geoffrey R. Scheller. Licensed under the Apache
 License, Version 2.0. See the LICENSE file for details.
 
 
-[101]: https://grscheller.github.io/boring-math/projects/abstract-algebra.html
+[101]: https://grscheller.github.io/boring-math/projects/abstract_algebra.html
 [102]: https://grscheller.github.io/boring-math/projects/combinatorics.html
-[103]: https://grscheller.github.io/boring-math/projects/number-theory.html
-[104]: https://grscheller.github.io/boring-math/projects/probability-distributions.html
-[105]: https://grscheller.github.io/boring-math/projects/pythagorean-triples.html
-[106]: https://grscheller.github.io/boring-math/projects/recursive-functions.html
-[107]: https://grscheller.github.io/boring-math/projects/special-functions.html
+[103]: https://grscheller.github.io/boring-math/projects/number_theory.html
+[104]: https://grscheller.github.io/boring-math/projects/probability_distributions.html
+[105]: https://grscheller.github.io/boring-math/projects/pythagorean_triples.html
+[106]: https://grscheller.github.io/boring-math/projects/recursive_functions.html
+[107]: https://grscheller.github.io/boring-math/projects/special_functions.html
